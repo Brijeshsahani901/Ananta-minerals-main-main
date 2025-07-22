@@ -18,15 +18,16 @@ const Header1 = ({
     <>
       <header>
         
-        <div className="header__top">
+        <div className="header__top"
+>
           <div className="container">
             <div className="row align-items-center">
              
-<div className="col-12 d-flex justify-content-center my-2">
+<div className="col-12 d-flex justify-content-center my-2" >
 
       <div className="header__top-logo logo text-lg-left">
         <img
-          src="https://brijesh.alpinesoftit.com/site6/assets/ananta.png"
+          src="/site6/assets/ananta-logo-transparent.png"
           onClick={() => router.push('/')} // Wrap in arrow function
           alt="Logo"
           style={{
@@ -50,12 +51,15 @@ const Header1 = ({
           className={`${scroll ? "active-height" : ""}`}
         />
         <div
+    style={{ background: "radial-gradient(circle, #000033, #000011)" }}
+
+
           id="sticky-header"
           className={`tg-header__area ${scroll ? "sticky-menu" : ""}`}
         >
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
+          <div className="container" >
+            <div className="row" >
+              <div className="col-12" >
                 <Menu
                   handleMobileMenuOpen={handleMobileMenuOpen}
                   handleSidebarOpen={handleSidebarOpen}

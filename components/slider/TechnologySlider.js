@@ -54,13 +54,13 @@
 //     </>
 //   );
 // }
-
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import SupplyChainSteps from "../supplyChainSteps";
 import AlternateTechSodiumIon from "../alternateTechSodiumIonBattery";
 import MilitaryDronesAssembly from "../militaryDroneAssembly";
 import SolarPV from "../SolarPv";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function TechnologySlider() {
   const totalSlides = 4;
@@ -72,7 +72,7 @@ export default function TechnologySlider() {
 
   const nextSlide = () => {
     setNextClicked(true);
-    setTimeout(() => setNextClicked(false), 150); // reset after animation
+    setTimeout(() => setNextClicked(false), 150);
     setIndex((prevIndex) => (prevIndex + 1) % totalSlides);
   };
 
@@ -84,46 +84,65 @@ export default function TechnologySlider() {
 
   const buttonBaseStyle = {
     position: "absolute",
-    top: "10px",
     zIndex: 20,
     cursor: "pointer",
-    backgroundColor: "#fff",
+    backgroundColor: "transparent",
     padding: "8px 12px",
     borderRadius: "4px",
-    boxShadow: "0 0 5px rgba(0,0,0,0.3)",
-    transition: "transform 0.1s ease, background-color 0.1s ease",
+    transition: "transform 0.1s ease",
     userSelect: "none",
-  };
-
-  const clickedStyle = {
-    transform: "scale(0.92)",
-    // backgroundColor: "#e0e0e0",
+    boxShadow: "none",
+    ...(prevClicked || nextClicked ? { transform: "scale(0.92)" } : {}),
   };
 
   return (
     <div style={{ position: "relative" }}>
-      {/* Custom Prev Button */}
-      <div
-        onClick={prevSlide}
-        style={{
-          ...buttonBaseStyle,
-          left: "10px",
-          ...(prevClicked ? clickedStyle : {}),
-        }}
-      >
-        &#8592; Prev
+      {/* Desktop View - Buttons at Top */}
+      <div className="d-none d-md-block">
+        <div
+          onClick={prevSlide}
+          style={{
+            ...buttonBaseStyle,
+            top: "10px",
+            left: "10px",
+          }}
+        >
+          <FiChevronLeft size={28} color="#333" />
+        </div>
+        <div
+          onClick={nextSlide}
+          style={{
+            ...buttonBaseStyle,
+            top: "10px",
+            right: "10px",
+          }}
+        >
+          <FiChevronRight size={28} color="#333" />
+        </div>
       </div>
 
-      {/* Custom Next Button */}
-      <div
-        onClick={nextSlide}
-        style={{
-          ...buttonBaseStyle,
-          right: "10px",
-          ...(nextClicked ? clickedStyle : {}),
-        }}
-      >
-        Next &#8594;
+      {/* Mobile View - Buttons at Bottom */}
+      <div className="d-md-none">
+        <div
+          onClick={prevSlide}
+          style={{
+            ...buttonBaseStyle,
+            bottom: "10px",
+            left: "10px",
+          }}
+        >
+          <FiChevronLeft size={28} color="#333" />
+        </div>
+        <div
+          onClick={nextSlide}
+          style={{
+            ...buttonBaseStyle,
+            bottom: "10px",
+            right: "10px",
+          }}
+        >
+          <FiChevronRight size={28} color="#333" />
+        </div>
       </div>
 
       <Carousel
@@ -132,25 +151,23 @@ export default function TechnologySlider() {
         interval={null}
         controls={false}
         indicators
+        touch={false} // This disables swipe gestures on all devices
       >
         <Carousel.Item>
           <div className="d-block w-100">
             <SupplyChainSteps />
           </div>
         </Carousel.Item>
-
         <Carousel.Item>
           <div className="d-block w-100">
             <AlternateTechSodiumIon />
           </div>
         </Carousel.Item>
-
         <Carousel.Item>
           <div className="d-block w-100">
             <MilitaryDronesAssembly />
           </div>
         </Carousel.Item>
-
         <Carousel.Item>
           <div className="d-block w-100">
             <SolarPV />

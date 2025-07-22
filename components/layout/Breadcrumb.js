@@ -11,7 +11,7 @@ export default function Breadcrumb({ breadcrumbCategory, breadcrumbPostTitle }) 
                                 <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb">
                                         <li className="breadcrumb-item"><Link href="/">Home</Link></li>
-                                        {breadcrumbCategory && <li className="breadcrumb-item"><Link href="/blog">{breadcrumbCategory}</Link></li>}
+                                        {breadcrumbCategory && <li className="breadcrumb-item"><Link href="#">{breadcrumbCategory}</Link></li>}
 
                                         {breadcrumbPostTitle && <li className="breadcrumb-item active" aria-current="page">{breadcrumbPostTitle}</li>}
                                     </ol>

@@ -15,6 +15,8 @@ import {
   LogarithmicScale,
 } from "chart.js";
 import { Bar, Line, Pie } from "react-chartjs-2";
+import SolarPV from "@/components/SolarPv";
+import { FaDownload } from "react-icons/fa";
 
 // Register all ChartJS components
 ChartJS.register(
@@ -207,8 +209,8 @@ export default function MineralSecurity() {
     console.log(basePath);
     const link = document.createElement("a");
 
-    link.href = `${basePath}/assets/downloads/Renewable_Energy_Applications.docx`; // ✅ correct URL
-    link.download = "Renewable_Energy_Applications.docx";
+    link.href = `${basePath}/assets/downloads/Renewable_Energy_Applications.pdf`; // ✅ correct URL
+    link.download = "Renewable_Energy_Applications.pdf";
     console.log(link);
     document.body.appendChild(link);
     link.click();
@@ -221,7 +223,12 @@ export default function MineralSecurity() {
         breadcrumbCategory="Energy"
         breadcrumbPostTitle="Critical Minerals for India's Renewable Energy Transition"
       >
-        <section className="blog-details-area pt-80 pb-100">
+        <section
+          className="blog-details-area "
+          style={{
+            backgroundImage: `url("https://brijesh.alpinesoftit.com/site3/static/media/home-shape.684c9f3deb5fb22fbe2f.png")`,
+          }}
+        >
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-1"></div>
@@ -234,42 +241,45 @@ export default function MineralSecurity() {
                         Transition
                       </h1>
 
-                      <div className="post-meta">
-                        <span className="date">
+                    <div className="post-meta">
+                        <p className="date">
                           <b>Date</b> :- July 2025
-                        </span>{" "}
-                        <br />
-                        <span className="author">
-                          <b>Author</b> :- By Prema Bountra
-                        </span>
+                        </p>
+                        <p className="author">
+                          <b>Author(s)</b> :- By Ayan Barman
+
+                        </p>
                         <br />
                         <button
                           onClick={handleDownload}
-                          className="download"
+                          className="btn btn-primary rounded d-inline-flex align-items-center"
                           style={{
-                            background: "none",
-                            border: "none",
-                            color: "blue",
-                            cursor: "pointer",
-                            padding: 0,
+                            padding: "0.4rem 0.75rem",
+                            fontSize: "0.75rem",
+                            textTransform: "none",
+                            lineHeight: 1,
+                            fontWeight: 500,
+                            margintop: "5px",
                           }}
                         >
+                          <FaDownload
+                            className="me-1"
+                            style={{ fontSize: "0.85rem" }}
+                          />
                           Download Study
                         </button>
                       </div>
 
                       <div
-                        className="infographics-placeholder"
                         style={{
-                          height: "400px",
                           background: "#f5f5f5",
-                          margin: "30px 0",
+                          margin: "50px 0",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
                         }}
                       >
-                        [Infographics Component Will Be Placed Here]
+                        <SolarPV />
                       </div>
 
                       <div className="content-section">

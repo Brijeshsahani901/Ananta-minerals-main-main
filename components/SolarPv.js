@@ -7,10 +7,21 @@ import {
   FaSolarPanel,
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function SolarPV() {
   const [hoveredStep, setHoveredStep] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const hoverInfo = {
     1: {
@@ -143,30 +154,34 @@ export default function SolarPV() {
   }) => {
     return (
       <motion.div
-        onMouseEnter={() => setHoveredStep(step)}
-        onMouseLeave={() => setHoveredStep(null)}
-        whileHover={{ scale: 1.05 }}
-        transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+        onMouseEnter={() => !isMobile && setHoveredStep(step)}
+        onMouseLeave={() => !isMobile && setHoveredStep(null)}
+        onClick={() =>
+          isMobile && setHoveredStep(hoveredStep === step ? null : step)
+        }
+        whileHover={{ scale: isMobile ? 1 : 1.05 }}
+        transition={{ type: "spring", stiffness: 200, damping: 15 }}
         className="position-relative text-center"
         style={{
-          flex: '1 1 140px',
-          margin: '2px',
-          maxWidth: '180px',
-          marginRight: '20px',
+          flex: "0 0 auto",
+          minWidth: "140px",
+          maxWidth: "180px",
+          margin: "2px 10px",
+          width: isMobile ? "100%" : "auto",
         }}
       >
         {/* Icon */}
-       <div
+        <div
           className="rounded-circle d-flex justify-content-center align-items-center shadow-sm"
           style={{
-            width: '50px',
-            height: '50px',
-            position: 'absolute',
-            [iconPosition]: '-16px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            border: `3px solid #873461`,
-            backgroundColor: '#fff',
+            width: "50px",
+            height: "50px",
+            position: "absolute",
+            [iconPosition]: "-16px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            border: `3px solid #4f948b`,
+            backgroundColor: "#fff",
             zIndex: 2,
           }}
         >
@@ -174,71 +189,80 @@ export default function SolarPV() {
         </div>
 
         {/* Card */}
-          <div
+        <div
           className="bg-white shadow-sm px-3 py-3"
           style={{
-            paddingTop: iconPosition === 'top' ? '38px' : '16px',
-            paddingBottom: iconPosition === 'bottom' ? '38px' : '16px',
-            borderRadius: '10px',
-            borderTop: iconPosition === 'top' ? `3px solid #873461` : undefined,
-            borderBottom: iconPosition === 'bottom' ? `3px solid #873461` : undefined,
-            fontSize: '0.85rem',
-            minHeight: '150px',
-            marginTop : "100px"
+            paddingTop: iconPosition === "top" ? "38px" : "16px",
+            paddingBottom: iconPosition === "bottom" ? "38px" : "16px",
+            borderRadius: "10px",
+            borderTop: iconPosition === "top" ? `3px solid #4f948b` : undefined,
+            borderBottom:
+              iconPosition === "bottom" ? `3px solid #4f948b` : undefined,
+            fontSize: "0.85rem",
+            minHeight: isMobile ? "auto" : "150px",
+            marginTop: isMobile ? "40px" : "100px",
           }}
         >
-          <div className="text-muted mb-1" style={{ fontSize: '0.75rem' }}>{step}</div>
-          <div className="fw-bold" style={{ fontSize: '0.9rem' }}>{title}</div>
+          <div className="text-muted mb-1" style={{ fontSize: "0.75rem" }}>
+            {step}
+          </div>
+          <div className="fw-bold" style={{ fontSize: "0.9rem" }}>
+            {title}
+          </div>
           {subtitle && (
-            <p className="text-muted mt-1 mb-0" style={{ fontSize: '0.75rem', lineHeight: '1.3' }}>
+            <p
+              className="text-muted mt-1 mb-0"
+              style={{ fontSize: "0.75rem", lineHeight: "1.3" }}
+            >
               {subtitle}
             </p>
           )}
         </div>
 
         {/* Bar */}
-         <div
-          className="position-absolute w-100"
-          style={{
-            height: '10px',
-            bottom: iconPosition === 'top' ? '-5px' : undefined,
-            top: iconPosition === 'bottom' ? '-5px' : undefined,
-            backgroundColor: "#962b27",
-            borderRadius: '4px',
-            zIndex: 1,
-          }}
-        />
-
-
-        {/* Notches */}
-        {showRightNotch && (
+        {!isMobile && (
           <div
-            className="position-absolute"
+            className="position-absolute w-100"
             style={{
-              width: 0,
-              height: 0,
-              right: '-12px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              borderTop: '12px solid transparent',
-              borderBottom: '12px solid transparent',
-              borderLeft: `12px solid #962b27`,
+              height: "10px",
+              bottom: iconPosition === "top" ? "-5px" : undefined,
+              top: iconPosition === "bottom" ? "-5px" : undefined,
+              backgroundColor: "#c05538",
+              borderRadius: "4px",
               zIndex: 1,
             }}
           />
         )}
-        {showLeftNotch && (
+
+        {/* Notches */}
+        {!isMobile && showRightNotch && (
           <div
             className="position-absolute"
             style={{
               width: 0,
               height: 0,
-              left: '-12px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              borderTop: '12px solid transparent',
-              borderBottom: '12px solid transparent',
-              borderRight: `12px solid #925375`,
+              right: "-12px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              borderTop: "12px solid transparent",
+              borderBottom: "12px solid transparent",
+              borderLeft: `12px solid #4f948b`,
+              zIndex: 1,
+            }}
+          />
+        )}
+        {!isMobile && showLeftNotch && (
+          <div
+            className="position-absolute"
+            style={{
+              width: 0,
+              height: 0,
+              left: "-12px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              borderTop: "12px solid transparent",
+              borderBottom: "12px solid transparent",
+              borderRight: `12px solid #c05538`,
               zIndex: 1,
             }}
           />
@@ -248,60 +272,64 @@ export default function SolarPV() {
   };
 
   return (
-   <div
-  className="solar-pv-container"
-  style={{
-    width: '100%',
-    maxWidth: '1000px',
-    margin: '0 auto',
-    backgroundColor: '#d9d9d9',
-    padding: '1rem',
-    boxSizing: 'border-box',
-    overflow: 'hidden',
-    display: 'flex',
-    flexDirection: 'column',
-    position: 'relative',
-  }}
->
-
+    <div
+      className="solar-pv-container"
+      style={{
+        width: '100%',
+        maxWidth: '1000px',
+        margin: '0 auto',
+        backgroundColor: '#d9d9d9',
+        padding: '1rem',
+        boxSizing: 'border-box',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'relative',
+          height:"70vh",
+      }}
+    >
       <div className="text-center mb-3">
-        <h4 style={{ fontSize: '1.2rem', color: '#2c3e50', marginBottom: '0.5rem' }}>
+        <h4 style={{ 
+          fontSize: isMobile ? '1.1rem' : '1.2rem', 
+          color: '#2c3e50', 
+          marginBottom: '0.5rem' 
+        }}>
           Solar PV - Global Manufacturing Process
         </h4>
         <p
           className="text-muted"
           style={{
-            fontSize: '0.9rem',
+            fontSize: isMobile ? '0.8rem' : '0.9rem',
             marginBottom: '1rem',
             maxWidth: '90%',
             margin: '0 auto',
           }}
         >
-          Explore the stages of solar PV production from raw materials to finished cells.
+          Explore the stages of solar PV production from raw materials to finished cells
         </p>
       </div>
 
-      {/* Central Hover Info Box */}
-      {hoveredStep && hoverInfo[hoveredStep] && (
-         <motion.div
+      {/* Desktop Hover Info Box */}
+      {!isMobile && hoveredStep && hoverInfo[hoveredStep] && (
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           className="position-absolute text-white p-3 shadow"
           style={{
-            top: '75px',
-            left: '500',
-            transform: 'translateX(-50%)',
-            backgroundColor: '#4e4e4e',
-            borderRadius: '10px',
-            width: '94%',
-            maxWidth: '1200px',
-            fontSize: '13px',
-            zIndex: 100,
+            top: "75px",
+            left: "500",
+            transform: "translateX(-50%)",
+            backgroundColor: "#4e4e4e",
+            borderRadius: "10px",
+            width: "94%",
+            maxWidth: "1200px",
+            fontSize: "13px",
+            zIndex: 18,
           }}
         >
-          <div className="fw-bold mb-2 text-center">{hoverInfo[hoveredStep].title}</div>
+          <div className="fw-bold text-center mb-2">{hoverInfo[hoveredStep].title}</div>
           {hoverInfo[hoveredStep].items.map((item, i) => (
             <div key={i} className="mb-1">
               <strong>{item.name}</strong>: {item.detail}
@@ -311,24 +339,57 @@ export default function SolarPV() {
       )}
 
       {/* Steps */}
-     <div
-  className="step-cards-container d-flex h-100"
-  style={{
-    overflowX: 'auto',
-    overflowY: 'auto',
-    flexWrap: 'nowrap',
-    scrollSnapType: 'x mandatory',
-    WebkitOverflowScrolling: 'touch',
-    paddingBottom: '1rem',
-  }}
->
-  {steps.map((s, i) => (
-    <div key={i} style={{ scrollSnapAlign: 'start',marginTop : "10vh" }}>
-      <StepCard {...s} setHoveredStep={setHoveredStep} />
-    </div>
-  ))}
-</div>
-
+      <div
+        className="step-cards-container d-flex h-100"
+        style={{
+         overflow:'auto',
+          flexWrap: isMobile ? 'wrap' : 'nowrap',
+          justifyContent: isMobile ? 'center' : 'flex-start',
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+          paddingBottom: '1rem',
+          gap: isMobile ? '20px' : '0',
+          paddingTop: "5vh",
+        }}
+      >
+        {steps.map((s, i) => (
+          <div 
+            key={i} 
+            style={{ 
+              scrollSnapAlign: 'start',
+              marginTop: isMobile ? '20px' : '50px',
+              width: isMobile ? '100%' : 'auto',
+            }}
+          >
+            <StepCard 
+              {...s} 
+              setHoveredStep={setHoveredStep} 
+            />
+            {isMobile && hoveredStep === s.step && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                className="text-white p-3 mt-2 shadow"
+                style={{
+                  backgroundColor: '#4e4e4e',
+                  borderRadius: '10px',
+                  fontSize: '12px',
+                  margin: '0 10px',
+                }}
+              >
+                <div className="fw-bold text-center mb-2">
+                  {hoverInfo[s.step].title}
+                </div>
+                {hoverInfo[s.step].items.map((item, i) => (
+                  <div key={i} className="mb-1">
+                    <strong>{item.name}</strong>: {item.detail}
+                  </div>
+                ))}
+              </motion.div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

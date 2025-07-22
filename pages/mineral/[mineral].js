@@ -138,132 +138,126 @@ export default function MineralDetails() {
     };
 
     return (
-        <Layout breadcrumbCategory={item.category} breadcrumbPostTitle={item.title}>
-            <motion.section 
-              className="blog-details-area pt-80 pb-100"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-1">
-                            <motion.div 
-                              className="blog-details-social"
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: 0.2 }}
-                            >
-                                <ul className="list-wrap">
-                                    <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                    <li><Link href="#"><i className="fab fa-twitter" /></Link></li>
-                                    <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                    <li><Link href="#"><i className="fab fa-behance" /></Link></li>
-                                    <li><Link href="#"><i className="fas fa-share" /></Link></li>
-                                </ul>
-                            </motion.div>
-                        </div>
-                        <div className="col-xl-11 col-lg-10">
-                            <motion.div 
-                              className="blog-details-wrap"
-                              variants={containerVariants}
-                              initial="hidden"
-                              animate="visible"
-                            >
-                                <motion.ul 
-                                  className="tgbanner__content-meta list-wrap"
-                                  variants={itemVariants}
-                                >
-                                    <li className="category"><Link href="/blog">{item.category}</Link></li>
-                                    {/* <li><span className="by">By</span> <Link href="/blog">{item.author.name}</Link></li>
-                                    <li>{item.date}</li>
-                                    <li>{item.comments} comments</li> */}
-                                </motion.ul>
-                                
-                                <motion.h2 
-                                  className="title"
-                                  variants={itemVariants}
-                                >
-                                  {item.title}
-                                </motion.h2>
-                                
-                                <motion.div 
-                                  className="blog-details-thumb"
-                                  variants={fadeIn}
-                                >
-                                    <img src={`/assets/img/${item.group}/${item.img}`} alt="" style={{ width: "100%" }} />
-                                </motion.div>
-                                
-                                <motion.div 
-                                  className="blog-details-content"
-                                  variants={containerVariants}
-                                >
-                                    {item.sections.map((section, index) => (
-                                        <motion.div 
-                                          key={index}
-                                          variants={itemVariants}
-                                        >
-                                            <h3 className="">{section.title}</h3>
-                                            {renderContent(section.content)}
-                                        </motion.div>
-                                    ))}
-                                    
-                                
-                                </motion.div>
-                                
-                               
-                                
-                                <motion.div 
-                                  className="blog-avatar-wrap"
-                                  variants={itemVariants}
-                                >
-                                   
-                                    <div className="blog-avatar-content">
-                                        <p>{item.author.name} is a {item.author.role} with expertise in critical mineral supply chains and battery technologies.</p>
-                                        <h5 className="name">{item.author.name}</h5>
-                                        <span className="designation">{item.author.role}</span>
-                                    </div>
-                                </motion.div>
-                            </motion.div>
-                        </div>
-                        {/* <div className="col-xl-3 col-lg-4 col-md-6">
-                            <BlogSidebar />
-                        </div> */}
-                    </div>
-                </div>
-            </motion.section>
+      <Layout breadcrumbCategory={item.category} breadcrumbPostTitle={item.title}>
+  <motion.section
+    className="blog-details-area"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.6 }}
+   style={{ backgroundImage: `url("https://brijesh.alpinesoftit.com/site3/static/media/home-shape.684c9f3deb5fb22fbe2f.png")` }}
+  >
+    <div className="container">
+      <div className="row justify-content-center gx-5">
+        {/* Social Icons */}
+        {/* <div className="col-lg-1 d-none d-lg-block">
+          <motion.div
+            className="blog-details-social sticky-top"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <ul className="list-wrap">
+              {["facebook-f", "twitter", "linkedin-in", "behance", "share"].map((icon, i) => (
+                <li key={i}>
+                  <Link href="#">
+                    <i className={`fab fa-${icon}`} />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div> */}
 
-            <style jsx>{`
-                .custom-bullet-list {
-                    list-style-type: none;
-                    padding-left: 1.5rem;
-                }
-                
-                .custom-bullet-item {
-                    position: relative;
-                    margin-bottom: 0.75rem;
-                    padding-left: 1.5rem;
-                    line-height: 1.6;
-                }
-                
-                .custom-bullet-item::before {
-                    content: "•";
-                    position: absolute;
-                    left: 0;
-                    color: var(--tg-theme-primary);
-                    font-size: 1.5rem;
-                    line-height: 1;
-                }
-                
-                .blog-details-content ul.list-wrap {
-                    margin-top: 1rem;
-                    margin-bottom: 1.5rem;
-                }
-                
-                .blog-details-content li {
-                    margin-bottom: 0.5rem;
-                }
-            `}</style>
-        </Layout>
+        {/* Main Blog Content */}
+        <div className="col-xl-10 col-lg-11">
+          <motion.div
+            className="blog-details-wrap bg-white p-5 rounded shadow-sm"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.ul className="tgbanner__content-meta list-wrap mb-4" variants={itemVariants}>
+              <li className="category  text-white py-2 px-3 fs-6">
+                <Link href="/blog">{item.category}</Link>
+              </li>
+            </motion.ul>
+
+            <motion.h2 className="title display-5 fw-bold mb-4" variants={itemVariants}>
+              {item.title}
+            </motion.h2>
+
+            <motion.div className="blog-details-thumb mb-5" variants={fadeIn}>
+              {/* {item.img &&  <img
+                src={`/assets/img/${item.group}/${item.img}`}
+                alt={item.title}
+                className="img-fluid rounded"
+              />} */}
+             
+            </motion.div>
+
+            <motion.div className="blog-details-content" variants={containerVariants}>
+              {item.sections.map((section, index) => (
+                <motion.div key={index} className="mb-5" variants={itemVariants}>
+                  <h3 className="fs-3 fw-semibold mb-3">{section.title}</h3>
+                 <p>{renderContent(section.content)}</p> 
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Author Box */}
+            <motion.div className="blog-avatar-wrap bg-light p-4 mt-5 rounded d-flex align-items-center" variants={itemVariants}>
+              <div>
+                <p className="mb-2 text-muted">
+                  {item.author.name} is a {item.author.role} with expertise in critical mineral supply chains and battery technologies.
+                </p>
+                <h5 className="name mb-1">{item.author.name}</h5>
+                <span className="designation text-muted">{item.author.role}</span>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  </motion.section>
+
+  <style jsx>{`
+    .blog-details-social ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .blog-details-social li a {
+      color: #333;
+      background: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+
+    .blog-details-social li a:hover {
+      color: white;
+      background: var(--tg-theme-primary);
+    }
+
+    .title {
+      line-height: 1.3;
+    }
+
+    .blog-details-content ul.list-wrap {
+      padding-left: 1.5rem;
+    }
+
+    .blog-details-content li {
+      margin-bottom: 0.5rem;
+    }
+  `}</style>
+</Layout>
+
     );
 }

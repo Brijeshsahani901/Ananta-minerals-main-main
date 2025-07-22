@@ -1,11 +1,12 @@
-import Link from "next/link"
+import { FaXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Footer1({}) {
-    return (
-        <>
-            <footer className="footer-area black-bg mt-3">
-                <div className="container">
-                    {/* <div className="footer__top-wrap">
+  return (
+    <>
+      <footer className="footer-area black-bg mt-3">
+        <div className="container">
+          {/* <div className="footer__top-wrap">
                         <div className="row">
                             <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                                 <div className="footer__widget">
@@ -99,28 +100,59 @@ export default function Footer1({}) {
                             </div>
                         </div>
                     </div> */}
-                  
-                    <div className="footer__copyright">
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="copyright__text">
-                                    <p>Designed by <a href="https://alpinesoftit.com/">AlpineSoft It Solutions</a> - {new Date().getFullYear()}</p>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="copyright__menu">
-                                    <ul className="footer__social">
-                                        <li><Link href="#">Contact Us</Link></li>
-                                         <li><Link href="#"><i className="fab fa-facebook-f" /> Facebook </Link></li>
-                                        <li><Link href="#"><i className="fab fa-twitter" /> Twitter </Link></li>
-                                        <li><Link href="#"><i className="fab fa-youtube" /> Youtube </Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+          <div className="footer__copyright">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="copyright__text">
+                  <p>
+                    Designed by{" "}
+                    <a href="https://alpinesoftit.com/">
+                      AlpineSoft It Solutions
+                    </a>{" "}
+                    - {new Date().getFullYear()}
+                  </p>
                 </div>
-            </footer>
-        </>
-    )
+              </div>
+              <div className="col-lg-6">
+                <div className="copyright__menu">
+                  <ul
+                    className="footer__social"
+                    style={{
+                      listStyle: "none",
+                      display: "flex",
+                      gap: "50px",
+                      padding: 0,
+                      margin: 0,
+                      alignItems: "center",
+                      marginRight: "20px",
+                    }}
+                  >
+                    <li>
+                      <Link href="#">Contact Us</Link>
+                    </li>
+                    <li>
+                      <Link href="#" aria-label="Twitter">
+                        <FaXTwitter size={20} />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#" aria-label="LinkedIn">
+                        <FaLinkedinIn size={20} />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#" aria-label="Instagram">
+                        <FaInstagram size={20} />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
 }

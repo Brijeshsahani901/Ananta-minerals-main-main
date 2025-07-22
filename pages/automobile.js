@@ -12,6 +12,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import AlternateTechSodiumIon from "@/components/alternateTechSodiumIonBattery";
+import { FaDownload } from "react-icons/fa";
 
 ChartJS.register(
   CategoryScale,
@@ -159,8 +161,8 @@ export default function Automobile() {
     console.log(basePath);
     const link = document.createElement("a");
 
-    link.href = `${basePath}/assets/downloads/Automobile.docx`; // ✅ correct URL
-    link.download = "Automobile.docx";
+    link.href = `${basePath}/assets/downloads/Automobile.pdf`; // ✅ correct URL
+    link.download = "Automobile.pdf";
     console.log(link);
     document.body.appendChild(link);
     link.click();
@@ -173,7 +175,7 @@ export default function Automobile() {
         breadcrumbCategory="Agriculture"
         breadcrumbPostTitle="Automobile Industry and Battery Applications"
       >
-        <section className="blog-details-area pt-80 pb-100">
+        <section className="blog-details-area" style={{ backgroundImage: `url("https://brijesh.alpinesoftit.com/site3/static/media/home-shape.684c9f3deb5fb22fbe2f.png")` }}>
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-1"></div>
@@ -186,42 +188,41 @@ export default function Automobile() {
                       </h1>
 
                       <div className="post-meta">
-                        <span className="date">
+                        <p className="date">
                           <b>Date</b> :- July 2025
-                        </span>{" "}
+                        </p>
+                        <p className="author">
+                          <b>Author(s)</b> :- By Ayan Barman 
+
+                        </p>
                         <br />
-                        <span className="author">
-                          <b>Author</b> :- By Prema Bountra
-                        </span>
-                        <br />
-                        <button
-                          onClick={handleDownload}
-                          className="download"
-                          style={{
-                            background: "none",
-                            border: "none",
-                            color: "blue",
-                            cursor: "pointer",
-                            padding: 0,
-                            // textDecoration: "underline",
-                          }}
-                        >
-                          Download Study
-                        </button>
+                         <button
+                         onClick={handleDownload}
+                         className="btn btn-primary rounded d-inline-flex align-items-center"
+                         style={{
+                           padding: "0.4rem 0.75rem",
+                           fontSize: "0.75rem",
+                           textTransform: "none",
+                           lineHeight: 1,
+                           fontWeight: 500,
+                           margintop : "5px"
+                         }}
+                       >
+                         <FaDownload className="me-1" style={{ fontSize: "0.85rem" }} />
+                         Download Study
+                       </button>
                       </div>
 
-                      <div
-                        className="infographics-placeholder"
+                     <div
                         style={{
-                          height: "400px",
                           background: "#f5f5f5",
-                          margin: "30px 0",
+                          margin: "50px 0",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
                         }}
                       >
-                        [Infographics Component Will Be Placed Here later]
+                       <AlternateTechSodiumIon/>
                       </div>
 
                       <div className="content-section">

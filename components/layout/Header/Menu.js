@@ -4,10 +4,6 @@ import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const ThemeSwitch = dynamic(() => import("@/components/elements/ThemeSwitch"), {
-  ssr: false,
-});
-
 export default function Menu({
   handleMobileMenuOpen,
   handleSidebarOpen,
@@ -156,8 +152,8 @@ const sectorItems = [
 
   return (
   <>
-  <div className="tgmenu__wrap">
-    <nav className="tgmenu__nav">
+  <div className="tgmenu__wrap" >
+    <nav className="tgmenu__nav"   >
       {logoAlt && (
         <motion.div
           className="d-flex gap-4 align-items-center"
@@ -191,6 +187,7 @@ const sectorItems = [
         style={{ position: "relative", zIndex: 9999 }}
       >
         <motion.ul
+      
           key={animationKeyRef.current}
           className="navigation"
           initial={shouldAnimate ? "hidden" : false}
@@ -205,7 +202,48 @@ const sectorItems = [
             },
           }}
         >
+          {router.pathname !== "/" && (
+  <motion.li
+    key="back-button"
+    initial={{ opacity: 0, x: -20 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -20 }}
+    transition={{ duration: 0.3 }}
+    whileHover={{
+      scale: 1.05,
+      boxShadow: "0 10px 20px rgba(102, 126, 234, 0.5)",
+    }}
+    whileTap={{ scale: 0.95 }}
+   onClick={() => router.push("/")}
+    style={{
+      margin: "0.5rem",
+      borderRadius: "999px",
+      cursor: "pointer",
+      backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.12)",
+      overflow: "hidden",
+      minWidth: "fit-content",
+      transition: "box-shadow 0.3s ease",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "40px",
+      height: "40px",
+    }}
+  >
+    <i
+      className="fas fa-long-arrow-left"
+      style={{
+        color: "white",
+        fontSize: "1rem",
+      }}
+    />
+  </motion.li>
+)}
+
+
           <motion.li
+          
             variants={{
               hidden: { opacity: 0, y: -20 },
               visible: {
@@ -222,9 +260,11 @@ const sectorItems = [
             className={router.pathname === "/about" ? "active" : ""}
           >
             <Link href="/about">
-              About
+            <span   style={{ color:"white"}}> About</span>
+             
               {router.pathname === "/about" && (
                 <motion.div
+                
                   className="nav-indicator"
                   layoutId="navIndicator"
                   initial={false}
@@ -246,7 +286,7 @@ const sectorItems = [
             onMouseLeave={() => setIsSubMenuOpen(false)}
           >
             <Link href="/alternate-tech">
-              Alternate tech
+             <span   style={{ color:"white"}}> Alternate tech</span>
               {router.pathname === "/alternate-tech" && (
                 <motion.div
                   className="nav-indicator"
@@ -295,52 +335,51 @@ const sectorItems = [
                     overflowY: "auto",
                   }}
                 >
-                  {alternateTechItems.map((item) => (
-                    <motion.li
-                      key={item.path}
-                      variants={{
-                        hidden: { opacity: 0, y: -10 },
-                        visible: { opacity: 1, y: 0 },
-                      }}
-                      whileHover={{ scale: 1.03 }}
-                      className={router.pathname === item.path ? "active" : ""}
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        overflow: "hidden",
-                        borderRadius: "8px",
-                        cursor: "pointer",
-                        transition: "all 0.3s ease",
-                        backgroundColor: "transparent",
-                        boxShadow: "none",
-                      }}
-                    >
-                      <Link href={item.path}>
-                        <div style={{ textDecoration: "none" }}>
-                          <img
-                            src={item.image}
-                            alt={item.label}
-                            style={{
-                              width: "100%",
-                              height: "100px",
-                              objectFit: "cover",
-                              borderRadius: "8px",
-                              boxShadow: "0 6px 12px rgba(0,0,0,0.1)",
-                            }}
-                          />
-                          <div style={{
-                            padding: "0.2rem",
-                            fontWeight: 500,
-                            fontSize: "0.75rem",
-                            textAlign: "center",
-                            color: "#333",
-                          }}>
-                            {item.label}
-                          </div>
-                        </div>
-                      </Link>
-                    </motion.li>
-                  ))}
+{alternateTechItems.map((item) => (
+  <motion.li
+    key={item.path}
+    // initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    whileHover={{
+      scale: 1.05,
+      // boxShadow: "0 10px 20px rgba(102, 126, 234, 0.5)", // downward shadow with purple-blue tint
+    }}
+    whileTap={{ scale: 0.95 }}
+    // transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    className={router.pathname === item.path ? "active" : ""}
+    style={{
+      margin: "0.5rem",
+      borderRadius: "999px",
+      cursor: "pointer",
+      backgroundImage: "linear-gradient(135deg, rgb(102, 126, 234) 0%, rgb(0, 52, 128) 100%)",
+      // boxShadow: "0 4px 10px rgba(0, 0, 0, 0.12)", // subtle default shadow
+      overflow: "hidden",
+      minWidth: "fit-content",
+      // transition: "box-shadow 0.3s ease",
+    }}
+  >
+    <Link href={item.path} passHref legacyBehavior>
+      <a
+        className="d-flex justify-content-center align-items-center text-white text-decoration-none"
+        style={{
+          padding: "0.49rem 1.1rem",
+          fontSize: "0.9rem",
+          fontWeight: 600,
+          whiteSpace: "nowrap",
+          borderRadius: "999px",
+          letterSpacing: "0.4px",
+          textTransform: "none"
+          // backdropFilter: "blur(8px)",
+          // WebkitBackdropFilter: "blur(8px)",
+          // transition: "color 0.2s ease",
+        }}
+      >
+        {item.label}
+      </a>
+    </Link>
+  </motion.li>
+))}
+
                 </motion.ul>
               )}
             </AnimatePresence>
@@ -363,7 +402,8 @@ const sectorItems = [
             className={router.pathname === "/opinion" ? "active" : ""}
           >
             <Link href="/opinion">
-              Opinion (archive)
+               <span   style={{ color:"white"}}>Opinion (archive)</span>
+              
               {router.pathname === "/opinion" && (
                 <motion.div
                   className="nav-indicator"
@@ -388,7 +428,8 @@ const sectorItems = [
             onMouseLeave={() => setIsSubMenuOpen(false)}
           >
             <Link href="/sectors">
-              Sectors
+              <span   style={{ color:"white"}}>Sectors</span>
+              
               {router.pathname === "/sectors" && (
                 <motion.div
                   className="nav-indicator"
@@ -435,52 +476,51 @@ const sectorItems = [
                     minWidth: "500px",
                   }}
                 >
-                  {sectorItems.map((item) => (
-                    <motion.li
-                      key={item.path}
-                      variants={{
-                        hidden: { opacity: 0, y: -10 },
-                        visible: { opacity: 1, y: 0 },
-                      }}
-                      whileHover={{ scale: 1.03 }}
-                      className={router.pathname === item.path ? "active" : ""}
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        overflow: "hidden",
-                        borderRadius: "8px",
-                        cursor: "pointer",
-                        transition: "all 0.3s ease",
-                        backgroundColor: "transparent",
-                        boxShadow: "none",
-                      }}
-                    >
-                      <Link href={item.path}>
-                        <div style={{ textDecoration: "none" }}>
-                          <img
-                            src={item.image}
-                            alt={item.label}
-                            style={{
-                              width: "100%",
-                              height: "100px",
-                              objectFit: "cover",
-                              borderRadius: "8px",
-                              boxShadow: "0 6px 12px rgba(0,0,0,0.1)",
-                            }}
-                          />
-                          <div style={{
-                            padding: "0.2rem",
-                            fontWeight: 500,
-                            fontSize: "0.75rem",
-                            textAlign: "center",
-                            color: "#333",
-                          }}>
-                            {item.label}
-                          </div>
-                        </div>
-                      </Link>
-                    </motion.li>
-                  ))}
+                {sectorItems.map((item) => (
+ <motion.li
+    key={item.path}
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    whileHover={{
+      scale: 1.05,
+      boxShadow: "0 10px 20px rgba(102, 126, 234, 0.5)", // downward shadow with purple-blue tint
+    }}
+    whileTap={{ scale: 0.95 }}
+    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    className={router.pathname === item.path ? "active" : ""}
+    style={{
+      margin: "0.5rem",
+      borderRadius: "999px",
+      cursor: "pointer",
+      backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.12)", // subtle default shadow
+      overflow: "hidden",
+      minWidth: "fit-content",
+      transition: "box-shadow 0.3s ease",
+    }}
+  >
+    <Link href={item.path} passHref legacyBehavior>
+      <a
+        className="d-flex justify-content-center align-items-center text-white text-decoration-none"
+        style={{
+          padding: "0.49rem 1.1rem",
+          fontSize: "0.9rem",
+          fontWeight: 600,
+          whiteSpace: "nowrap",
+          borderRadius: "999px",
+          letterSpacing: "0.4px",
+          backdropFilter: "blur(8px)",
+          WebkitBackdropFilter: "blur(8px)",
+          transition: "color 0.2s ease",
+             textTransform: "none"
+        }}
+      >
+        {item.label}
+      </a>
+    </Link>
+  </motion.li>
+))}
+
                 </motion.ul>
               )}
             </AnimatePresence>
@@ -503,7 +543,8 @@ const sectorItems = [
             className={router.pathname === "/supply-chain" ? "active" : ""}
           >
             <Link href="/supply-chain">
-              Supply chain
+              <span   style={{ color:"white"}}>Supply chain</span>
+              
               {router.pathname === "/supply-chain" && (
                 <motion.div
                   className="nav-indicator"

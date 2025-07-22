@@ -1,368 +1,314 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import * as React from "react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 import {
   FaAccessibleIcon,
   FaBrain,
   FaCogs,
   FaFlask,
   FaChargingStation,
-} from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+} from "react-icons/fa";
+import { gsap } from "gsap";
 
-export default function MilitaryDronesAssembly() {
-  const [hoveredStep, setHoveredStep] = useState(null);
+export default function MilitaryDronesWithGsapTilt() {
+  const [activeStep, setActiveStep] = React.useState(1);
+  const [hoveredStep, setHoveredStep] = React.useState(null);
+  const cardRefs = React.useRef({}); // To store refs of cards
 
-  const hoverInfo = {
-    1: {
-      title: 'Frame Fabrication',
-      items: [
-        {
-          name: 'Aluminium',
-          detail: 'DJI sky city Frame shop, Shenzhen, China',
-        },
-        {
-          name: 'Titanium',
-          detail: 'Composite Airframe shop (Aerovironment, Inc.), Simi Valley, USA',
-        },
-        {
-          name: 'Samarium',
-          detail: 'Airframe Plant (Pomrot SA), Paris, France',
-        },
-        {
-          name: 'Niobium',
-          detail: 'Cyclone Composites (Ebit Systems Ltd.), Haifa, Israel',
-        },
-      ],
-    },
-    2: {
-      title: 'Motor & Propeller Production',
-      items: [
-        {
-          name: 'Neodymium, Praseodymium & Dysprosium',
-          detail: 'T-MOTOR Propulsion Systems, Nanchang, China',
-        },
-        {
-          name: 'Boron',
-          detail: 'Electric Drive Unit Plant (Aerovironment, Inc.), Simi Valley, USA',
-        },
-        {
-          name: 'Iron & Cobalt',
-          detail: 'In-House Motor Lines (Pomrot SA), Paris, France',
-        },
-        {
-          name: 'Cobalt',
-          detail: 'Rotary-Wing Drive (Ebit Systems Ltd.), Haifa, Israel',
-        },
-      ],
-    },
-    3: {
-      title: 'Avionics & Electronics Production',
-      items: [
-        {
-          name: 'Gallium & Germanium',
-          detail: 'Flight Control Module Lines (DJI), Shenzhen, China',
-        },
-        {
-          name: 'Indium & Tantalum',
-          detail: 'Avionics Integration (Skylab, Inc.), Schwenksville, USA',
-        },
-        {
-          name: 'Silver, Gold & Copper',
-          detail: 'Embedded Systems Plant (Pomrot SA), Paris, France',
-        },
-        {
-          name: 'Tungsten',
-          detail: 'UAV Electronics Center (Ebit Systems Ltd.), Haifa, Israel',
-        },
-      ],
-    },
-    4: {
-      title: 'Battery-Pack Assembly',
-      items: [
-        {
-          name: 'Lithium',
-          detail: 'Gigabattery Nevada (Tesla, Inc.), Sparks, USA',
-        },
-        {
-          name: 'Cobalt, Nickel & Manganese',
-          detail: 'Indonesia Battery Corp & CATL Gigafactory, West Java (Indonesia/China)',
-        },
-        {
-          name: 'Graphite',
-          detail: 'Battery Module Plant (Saft Groupe S.A.), Nersac, France',
-        },
-        {
-          name: 'Graphite (Synthetic)',
-          detail: 'Custom Cells Pack Facility (EMF partner), Israel',
-        },
-      ],
-    },
-    5: {
-      title: 'Software & Flight-Control R&D',
-      items: [
-        {
-          name: 'DJI',
-          detail: 'Shenzhen, China - Flight control algorithms and autonomous systems',
-        },
-        {
-          name: 'Aerovironment, Inc.',
-          detail: 'Simi Valley, USA - Military-grade navigation and control systems',
-        },
-        {
-          name: 'Pomrot SA',
-          detail: 'Paris, France - Secure communication and data link systems',
-        },
-        {
-          name: 'Ebit Systems Ltd.',
-          detail: 'Haifa, Israel - AI-based targeting and mission planning systems',
-        },
-      ],
-    },
+  const icons = {
+    1: <FaAccessibleIcon size={28} color="#68d8c0" />,
+    2: <FaBrain size={28} color="#68d8c0" />,
+    3: <FaCogs size={28} color="#68d8c0" />,
+    4: <FaFlask size={28} color="#68d8c0" />,
+    5: <FaChargingStation size={28} color="#68d8c0" />,
   };
 
   const steps = [
-    {
-      step: 1,
-      title: 'Frame Fabrication',
-      icon: <FaAccessibleIcon size={20} />,
-      iconPosition: 'top',
-      color: '#3083DC',
-      showRightNotch: true,
-    },
-    {
-      step: 2,
-      title: 'Motor & Propeller Production',
-      icon: <FaBrain size={20} />,
-      iconPosition: 'bottom',
-      color: '#1F3C88',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 3,
-      title: 'Avionics & Electronics Production',
-      icon: <FaCogs size={20} />,
-      iconPosition: 'top',
-      color: '#4E4E4E',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 4,
-      title: 'Battery-Pack Assembly',
-      icon: <FaFlask size={20} />,
-      iconPosition: 'bottom',
-      color: '#1F3C88',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 5,
-      title: 'Software & Flight-Control R&D',
-      icon: <FaChargingStation size={20} />,
-      iconPosition: 'top',
-      color: '#3083DC',
-      showLeftNotch: true,
-    },
+    { id: 1, title: "Frame Fabrication" },
+    { id: 2, title: "Motor & Propeller Production" },
+    { id: 3, title: "Avionics & Electronics Production" },
+    { id: 4, title: "Battery-Pack Assembly" },
+    { id: 5, title: "Software & Flight-Control R&D" },
   ];
 
-  const StepCard = ({
-    step,
-    title,
-    subtitle,
-    icon,
-    iconPosition,
-    color,
-    showRightNotch,
-    showLeftNotch,
-    setHoveredStep,
-  }) => {
-    return (
-      <motion.div
-        onMouseEnter={() => setHoveredStep(step)}
-        onMouseLeave={() => setHoveredStep(null)}
-        whileHover={{ scale: 1.05 }}
-        transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-        className="position-relative text-center"
-        style={{
-          flex: '1 1 140px',
-          margin: '2px',
-          maxWidth: '180px',
-          marginRight: '20px',
-        }}
-      >
-        {/* Icon */}
-         <div
-          className="rounded-circle d-flex justify-content-center align-items-center shadow-sm"
-          style={{
-            width: '50px',
-            height: '50px',
-            position: 'absolute',
-            [iconPosition]: '-16px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            border: `3px solid #4f948b`,
-            backgroundColor: '#fff',
-            zIndex: 2,
-          }}
-        >
-          {icon}
-        </div>
+  const stepDetails = {
+    1: [
+      "Aluminium — DJI sky city Frame shop, Shenzhen, China",
+      "Titanium — Aerovironment, Inc., Simi Valley, USA",
+      "Samarium — Pomrot SA, Paris, France",
+      "Niobium — Ebit Systems Ltd., Haifa, Israel",
+    ],
+    2: [
+      "Neodymium — T-MOTOR, Nanchang, China",
+      "Boron — Aerovironment, Inc., Simi Valley, USA",
+      "Iron & Cobalt — Pomrot SA, Paris, France",
+      "Cobalt — Ebit Systems Ltd., Haifa, Israel",
+    ],
+    3: [
+      "Gallium & Germanium — DJI, Shenzhen, China",
+      "Indium & Tantalum — Skylab, Inc., USA",
+      "Silver, Gold & Copper — Pomrot SA, France",
+      "Tungsten — Ebit Systems Ltd., Israel",
+    ],
+    4: [
+      "Lithium — Tesla Gigabattery, Nevada, USA",
+      "Cobalt, Nickel, Manganese — Indonesia/CATL, West Java",
+      "Graphite — Saft Groupe S.A., France",
+      "Synthetic Graphite — Custom Cells, Israel",
+    ],
+    5: [
+      "DJI — Shenzhen, China",
+      "Aerovironment — Simi Valley, USA",
+      "Pomrot SA — Paris, France",
+      "Ebit Systems Ltd. — Haifa, Israel",
+    ],
+  };
 
-        {/* Card */}
-         <div
-          className="bg-white shadow-sm px-3 py-3"
-          style={{
-            paddingTop: iconPosition === 'top' ? '38px' : '16px',
-            paddingBottom: iconPosition === 'bottom' ? '38px' : '16px',
-            borderRadius: '10px',
-            borderTop: iconPosition === 'top' ? `3px solid #4f948b` : undefined,
-            borderBottom: iconPosition === 'bottom' ? `3px solid #4f948b` : undefined,
-            fontSize: '0.85rem',
-            minHeight: '150px',
-            marginTop : "100px"
-          }}
-        >
-          <div className="text-muted mb-1" style={{ fontSize: '0.75rem' }}>{step}</div>
-          <div className="fw-bold" style={{ fontSize: '0.9rem' }}>{title}</div>
-          {subtitle && (
-            <p className="text-muted mt-1 mb-0" style={{ fontSize: '0.75rem', lineHeight: '1.3' }}>
-              {subtitle}
-            </p>
-          )}
-        </div>
+  // Handle mouse move for tilt effect
+  const handleMouseMove = (e, id) => {
+    const card = cardRefs.current[id];
+    if (!card) return;
 
-        {/* Bar */}
-      <div
-          className="position-absolute w-100"
-          style={{
-            height: '10px',
-            bottom: iconPosition === 'top' ? '-5px' : undefined,
-            top: iconPosition === 'bottom' ? '-5px' : undefined,
-            backgroundColor: "#c05538",
-            borderRadius: '4px',
-            zIndex: 1,
-          }}
-        />
+    const rect = card.getBoundingClientRect();
+    const cardWidth = rect.width;
+    const cardHeight = rect.height;
 
+    // Calculate mouse position relative to center (-1 to 1)
+    const x = ((e.clientX - rect.left) / cardWidth) * 2 - 1;
+    const y = ((e.clientY - rect.top) / cardHeight) * 2 - 1;
 
-        {/* Notches */}
-        {showRightNotch && (
-          <div
-            className="position-absolute"
-            style={{
-              width: 0,
-              height: 0,
-              right: '-12px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              borderTop: '12px solid transparent',
-              borderBottom: '12px solid transparent',
-              borderLeft: `12px solid #4f948b`,
-              zIndex: 1,
-            }}
-          />
-        )}
-        {showLeftNotch && (
-          <div
-            className="position-absolute"
-            style={{
-              width: 0,
-              height: 0,
-              left: '-12px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              borderTop: '12px solid transparent',
-              borderBottom: '12px solid transparent',
-              borderRight: `12px solid #c05538`,
-              zIndex: 1,
-            }}
-          />
-        )}
-      </motion.div>
-    );
+    // Max rotation angles
+    const maxRotateX = 25; // degrees
+    const maxRotateY = 25;
+
+    gsap.to(card, {
+      duration: 0.3,
+      rotationX: -y * maxRotateX,
+      rotationY: x * maxRotateY,
+      scale: 1.05,
+      ease: "power3.out",
+      transformPerspective: 600,
+      transformOrigin: "center",
+      boxShadow:
+        "0 20px 40px rgba(0,0,0,0.25), 0 12px 20px rgba(0,0,0,0.15)",
+      overwrite: "auto",
+    });
+  };
+
+  // Reset card tilt on mouse leave
+  const handleMouseLeave = (id) => {
+    const card = cardRefs.current[id];
+    if (!card) return;
+
+    gsap.to(card, {
+      duration: 0.5,
+      rotationX: 0,
+      rotationY: 0,
+      scale: 1,
+      ease: "power3.out",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+      overwrite: "auto",
+    });
+
+    setHoveredStep(null);
+  };
+
+  // On mouse enter, show snackbar info
+  const handleMouseEnter = (id) => {
+    setHoveredStep(id);
+  };
+
+  // Keyboard focus effects
+  const handleFocus = (id) => {
+    setHoveredStep(id);
+    const card = cardRefs.current[id];
+    if (!card) return;
+
+    gsap.to(card, {
+      duration: 0.4,
+      rotationX: 0,
+      rotationY: 0,
+      scale: 1.05,
+      ease: "power3.out",
+      boxShadow:
+        "0 20px 40px rgba(0,0,0,0.25), 0 12px 20px rgba(0,0,0,0.15)",
+      overwrite: "auto",
+    });
+  };
+
+  const handleBlur = (id) => {
+    const card = cardRefs.current[id];
+    if (!card) return;
+
+    gsap.to(card, {
+      duration: 0.4,
+      rotationX: 0,
+      rotationY: 0,
+      scale: 1,
+      ease: "power3.out",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+      overwrite: "auto",
+    });
+
+    setHoveredStep(null);
   };
 
   return (
     <div
-  className="solar-pv-container"
-  style={{
-    width: '100%',
-    maxWidth: '1000px',
-    margin: '0 auto',
-    backgroundColor: '#d9d9d9',
-    padding: '1rem',
-    boxSizing: 'border-box',
-    overflow: 'hidden',
-    display: 'flex',
-    flexDirection: 'column',
-    position: 'relative',
-  }}
->
-      <div className="text-center mb-3">
-        <h4 style={{ fontSize: '1.2rem', color: '#2c3e50', marginBottom: '0.5rem' }}>
-          Military Drones Assembly
-        </h4>
-        <p
-          className="text-muted"
-          style={{
-            fontSize: '0.9rem',
-            marginBottom: '1rem',
-            maxWidth: '90%',
-            margin: '0 auto',
-          }}
-        >
-           Critical Minerals Supply Chain
-        </p>
+      style={{
+        maxWidth: 960,
+        margin: "auto",
+        padding: 20,
+        background: "#e8f0f2",
+        borderRadius: 16,
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        userSelect: "none",
+        position: "relative",
+      }}
+    >
+      <h2
+        style={{
+          textAlign: "center",
+          marginBottom: 40,
+          color: "#234e52",
+          fontWeight: "700",
+          textShadow: "1px 1px 3px rgba(0,0,0,0.1)",
+        }}
+      >
+        Military Drones Assembly Timeline
+      </h2>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          gap: 24,
+          flexWrap: "wrap",
+        }}
+      >
+        {steps.map(({ id, title }) => {
+          const isActive = id === activeStep;
+          return (
+            <div
+              key={id}
+              ref={(el) => {
+                if (el) {
+                  cardRefs.current[id] = el;
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-pressed={isActive}
+              aria-label={`Select step ${id}: ${title}`}
+              onClick={() => setActiveStep(id)}
+              onMouseEnter={() => handleMouseEnter(id)}
+              onMouseMove={(e) => handleMouseMove(e, id)}
+              onMouseLeave={() => handleMouseLeave(id)}
+              onFocus={() => handleFocus(id)}
+              onBlur={() => handleBlur(id)}
+              style={{
+                cursor: "pointer",
+                borderRadius: 20,
+                padding: 24,
+                width: 180,
+                background: isActive
+                  ? "linear-gradient(145deg, #3f8e7d, #3a786d)"
+                  : "linear-gradient(145deg, #ffffff, #e6e6e6)",
+                color: isActive ? "#ffffff" : "#1f2d3d",
+                boxShadow: isActive
+                  ? "0 12px 24px rgba(63, 142, 125, 0.4)"
+                  : "0 8px 20px rgba(0, 0, 0, 0.08)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 16,
+                userSelect: "none",
+                transformStyle: "preserve-3d",
+                willChange: "transform",
+                transition: "all 0.35s ease",
+                outline: "none",
+              }}
+            >
+              <div
+                style={{
+                  width: 72,
+                  height: 72,
+                  borderRadius: "50%",
+                  background: isActive
+                    ? "radial-gradient(circle at 30% 30%, #1e3a3a, #234e52)"
+                    : "radial-gradient(circle at 30% 30%, #e0f7f6, #b2e1df)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  boxShadow: isActive
+                    ? "0 4px 10px rgba(0, 0, 0, 0.5), inset 0 0 8px #68d8c0"
+                    : "0 4px 8px rgba(44, 122, 123, 0.3)",
+                  transition: "all 0.3s ease",
+                  flexShrink: 0,
+                }}
+              >
+                {icons[id]}
+              </div>
+              <div
+                style={{
+                  fontSize: 16,
+                  textAlign: "center",
+                  fontWeight: "600",
+                  userSelect: "none",
+                  textShadow: isActive
+                    ? "0 0 5px rgba(255, 255, 255, 0.3)"
+                    : "none",
+                }}
+              >
+                {title}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
-      {/* Central Hover Info Box */}
-      {hoveredStep && hoverInfo[hoveredStep] && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="position-absolute text-white p-3 shadow"
-          style={{
-            top: '75px',
-            left: '500',
-            transform: 'translateX(-50%)',
-            backgroundColor: '#4e4e4e',
-            borderRadius: '10px',
-            width: '94%',
-            maxWidth: '1200px',
-            fontSize: '13px',
-            zIndex: 100,
-          }}
-        >
-          <div className="fw-bold mb-2 text-center">{hoverInfo[hoveredStep].title}</div>
-          {hoverInfo[hoveredStep].items.map((item, i) => (
-            <div key={i} className="mb-1">
-              <strong>{item.name}</strong>: {item.detail}
-            </div>
-          ))}
-        </motion.div>
-      )}
-
-      {/* Steps */}
-      <div
-  className="step-cards-container d-flex h-100"
-  style={{
-    overflowX: 'auto',
-    overflowY: 'auto',
-    flexWrap: 'nowrap',
-    scrollSnapType: 'x mandatory',
-    WebkitOverflowScrolling: 'touch',
-    paddingBottom: '1rem',
-  }}
->
-  {steps.map((s, i) => (
-    <div key={i} style={{ scrollSnapAlign: 'start',marginTop : "10vh" }}>
-      <StepCard {...s} setHoveredStep={setHoveredStep} />
-    </div>
-  ))}
-</div>
+      {/* Snackbar at top left */}
+      <Snackbar
+        open={hoveredStep !== null}
+        anchorOrigin={{ vertical: "top", horizontal: "left" }}
+        autoHideDuration={null}
+        onClose={() => setHoveredStep(null)}
+        sx={{ pointerEvents: "none" }}
+      >
+        {hoveredStep !== null && (
+          <Alert
+            severity="success"
+            variant="filled"
+            onClose={() => setHoveredStep(null)}
+            sx={{
+              pointerEvents: "auto",
+              minWidth: 320,
+              fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+              userSelect: "text",
+              backgroundColor: "#0d2a47",
+              color: "#ffffff",
+              boxShadow:
+                "0 8px 20px rgba(0,0,0,0.3), inset 0 0 10px #1a3c6e",
+            }}
+          >
+            <strong>{steps.find((s) => s.id === hoveredStep).title}</strong>
+            <ul
+              style={{
+                paddingLeft: 20,
+                marginTop: 8,
+                marginBottom: 0,
+                userSelect: "text",
+              }}
+            >
+              {stepDetails[hoveredStep].map((item, idx) => (
+                <li key={idx} style={{ marginBottom: 4 }}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Alert>
+        )}
+      </Snackbar>
     </div>
   );
 }
