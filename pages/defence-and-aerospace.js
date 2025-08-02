@@ -1,20 +1,17 @@
-import BlogSidebar from "@/components/elements/BlogSidebar";
 import Layout from "@/components/layout/Layout";
-import Link from "next/link";
-
-import SolarPV from "@/components/SolarPv";
+import MilitaryDronesAssembly from "@/components/militaryDroneAssembly";
 import { FaDownload } from "react-icons/fa";
 import { useState, useRef } from "react";
 import gsap from "gsap";
 
-export default function MineralSecurity() {
+export default function DefenceAerospace() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const criticalRef = useRef(null);
 
   const handleMouseEnter = (ref) => {
     gsap.to(ref.current, {
       duration: 0.3,
-      scale: 1.03,
+      scale: 1.02,
       textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
       ease: "power2.out",
     });
@@ -31,7 +28,7 @@ export default function MineralSecurity() {
 
   const handleDownload = () => {
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-    const pdfUrl = `${basePath}/assets/downloads/Renewable_Energy_Applications.pdf`;
+    const pdfUrl = `${basePath}/assets/downloads/Defence_and_Aerospace.pdf`;
 
     // Open the PDF in a new browser tab
     window.open(pdfUrl, "_blank");
@@ -40,17 +37,17 @@ export default function MineralSecurity() {
   return (
     <>
       <Layout
-        breadcrumbCategory="Energy"
-        breadcrumbPostTitle="Critical Minerals for India's Renewable Energy Transition"
+        breadcrumbCategory="Defence"
+        breadcrumbPostTitle="Mineral Security in India's Defence and Aerospace Supply Chain"
       >
         <section
-          className="blog-details-area "
+          className="blog-details-area"
           style={{
-            backgroundImage: `url("${basePath}static/media/home-shape.684c9f3deb5fb22fbe2f.png")`,
+            backgroundImage: `url("${basePath}/static/media/home-shape.684c9f3deb5fb22fbe2f.png")`,
           }}
         >
           <div>
-            <SolarPV />
+            <MilitaryDronesAssembly />
           </div>
           <div className="container mt-50">
             <div className="row justify-content-center">
@@ -62,50 +59,53 @@ export default function MineralSecurity() {
                       <div
                         className="document-box mb-4"
                         style={{
-                          // border: "1px solid #dee2e6",
                           borderRadius: "5px",
                           backgroundColor: "#fff",
                           overflow: "hidden",
                         }}
                       >
                         <div className="row g-0">
-                          <div className="col-md-4" > 
+                          <div className="col-md-4">
                             <img
-                              src={`${basePath}/assets/sectors_images/renewable.jpg`}
+                              src={`${basePath}/assets/sectors_images/defence.jpg`}
                               alt="automobile"
                               className="img-fluid h-100 w-100"
-                              style={{ objectFit: "cover",borderRadius : "20px" }}
+                                      style={{ objectFit: "cover" , borderRadius: "20px", }}
                             />
                           </div>
-                          <div className="col-md-8">
+                          <div className="col-md-8 ml-3">
                             {/* <Link href="/supply-chain/critical-pathway"> */}
                             <h2
-                              className="mb-4"
+                            className="mb-4"
                               style={{ cursor: "pointer" }}
                               onClick={handleDownload}
                               ref={criticalRef}
                               onMouseEnter={() => handleMouseEnter(criticalRef)}
                               onMouseLeave={() => handleMouseLeave(criticalRef)}
                             >
-                              Critical Minerals for India's Renewable Energy
-                              Transition
+                              Mineral Security in India's Defence and Aerospace
+                              Supply Chain
                             </h2>
                             {/* </Link> */}
                             <p>
-                              The renewable energy sector is increasingly
-                              vulnerable to supply, pricing, and processing
-                              challenges concerning key transition
-                              minerals—copper, platinum group metals (PGMs), and
-                              tellurium. These are essential for wind turbines,
-                              solar photovoltaic cells, hydrogen electrolysers,
-                              and grid-scale electrification systems. Copper
-                              supply is under strain due to falling ore grades,
-                              high energy costs in top producers like Chile and
-                              Peru, and delays in new project permits. PGMs,
-                              especially platinum and iridium, are
-                              geopolitically risky due to their concentration in
-                              South Africa and Russia, directly impacting
-                              hydrogen fuel cell scale-up. 
+                              The defence and aerospace sectors represent the
+                              technological apex of India's industrial
+                              ambitions, underpinning national security,
+                              regional power projection, and strategic autonomy.
+                              These sectors are becoming increasingly
+                              mineral-intensive, driven by the adoption of
+                              hypersonic platforms, miniaturised electronic
+                              warfare systems, directed energy weapons, and
+                              advanced jet propulsion technologies. India's
+                              defence and aerospace minerals landscape is
+                              characterized by high import dependency for all
+                              high-purity strategic minerals, with complete
+                              external reliance for at least five critical
+                              minerals. There are no strategic stockpiling
+                              mechanisms for elements such as tantalum, rhenium,
+                              or niobium, and minimal domestic refining and
+                              separation capacity, particularly for REEs, PGMs,
+                              and hafnium.
                             </p>
                             <div
                               style={{
@@ -120,22 +120,23 @@ export default function MineralSecurity() {
                             ></div>
                             <p className="date">
                               July 2025 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              Ayan Barman
+                              Prerna Bountra
                             </p>
                           </div>
                         </div>
                       </div>
+
                       {/* <h1 className="title">
-                        Critical Minerals for India's Renewable Energy
-                        Transition
+                        Mineral Security in India's Defence and Aerospace Supply
+                        Chain
                       </h1>
 
-                      <div className="post-meta">
+                     <div className="post-meta">
                         <p className="date">
                           <b>Date</b> :- July 2025
                         </p>
                         <p className="author">
-                          <b>Author(s)</b> :- By Ayan Barman
+                          <b>Author(s)</b> :- By Prerna Bountra
                         </p>
                         <br />
                         <button
@@ -167,33 +168,30 @@ export default function MineralSecurity() {
                           justifyContent: "center",
                         }}
                       >
-                        <SolarPV />
+                        <MilitaryDronesAssembly />
                       </div>
 
                       <div className="content-section">
                         <h3 className="content-title">Overview</h3>
                         <p>
-                          The renewable energy sector is increasingly vulnerable
-                          to supply, pricing, and processing challenges
-                          concerning key transition minerals—copper, platinum
-                          group metals (PGMs), and tellurium. These are
-                          essential for wind turbines, solar photovoltaic cells,
-                          hydrogen electrolysers, and grid-scale electrification
-                          systems.
+                          The defence and aerospace sectors represent the
+                          technological apex of India's industrial ambitions,
+                          underpinning national security, regional power
+                          projection, and strategic autonomy. These sectors are
+                          becoming increasingly mineral-intensive, driven by the
+                          adoption of hypersonic platforms, miniaturised
+                          electronic warfare systems, directed energy weapons,
+                          and advanced jet propulsion technologies.
                         </p>
                         <p>
-                          Copper supply is under strain due to falling ore
-                          grades, high energy costs in top producers like Chile
-                          and Peru, and delays in new project permits. PGMs,
-                          especially platinum and iridium, are geopolitically
-                          risky due to their concentration in South Africa and
-                          Russia, directly impacting hydrogen fuel cell
-                          scale-up. Tellurium, a low-extraction byproduct of
-                          copper refining used in CdTe solar panels, is hampered
-                          by limited refining capacity and remains a bottleneck.
-                          Without strategic intervention, these constraints may
-                          derail India's clean energy targets and slow solar and
-                          hydrogen tech deployment.
+                          India's defence and aerospace minerals landscape is
+                          characterized by high import dependency for all
+                          high-purity strategic minerals, with complete external
+                          reliance for at least five critical minerals. There
+                          are no strategic stockpiling mechanisms for elements
+                          such as tantalum, rhenium, or niobium, and minimal
+                          domestic refining and separation capacity,
+                          particularly for REEs, PGMs, and hafnium.
                         </p>
                       </div> */}
                     </div>

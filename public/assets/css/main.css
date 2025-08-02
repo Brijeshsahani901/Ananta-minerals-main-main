@@ -31,15 +31,16 @@
     19. Dark Mode
 .latest__post-item::before
 **********************************************/
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
 
 :root {
-  --tg-body-font-family: 'Lora', serif;
-  --tg-heading-font-family: 'Lora', serif;
-
+  --tg-body-font-family: 'Inter', sans-serif;
+  --tg-heading-font-family: 'Inter', sans-serif;
   --tg-icon-font-family: "Font Awesome 5 Pro";
-  --tg-body-font-size: 17px;
-  --tg-body-line-height: 1.8;
+  --tg-body-font-size: 18px;
+  --tg-body-line-height: 1.5;
   --tg-heading-line-height: 1.4;
   --tg-common-color-blue: #0d6efd;
   --tg-common-color-indigo: #6610f2;
@@ -54,7 +55,7 @@
   --tg-common-color-white: #fff;
   --tg-common-color-gray: #fff;
   --tg-common-color-black: #000;
-  --tg-body-color: #3e3e3e;
+  --tg-body-color: #0f0f0f;
   --tg-heading-color: #111111;
  --tg-theme-primary: #2084ef;
 
@@ -88,9 +89,34 @@ body {
 }
 
 
+
 /* .solar-pv-container {
   aspect-ratio: 16 / 9;
 } */
+
+@media (max-width: 1220px) {
+  .mt-responsive {
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 1220px) {
+  .hide-on-small {
+    display: none !important;
+  }
+}
+
+.navColor{
+  background-color:  #2F4156
+}
+
+
+::-webkit-scrollbar {
+  height: 2px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+}
 
 @media (max-width: 992px) {
   .solar-pv-container {
@@ -114,14 +140,19 @@ body {
 
 .vertical-divider {
   display: none;
+  width: 1px;
+  background-color: black;
+  height: 70vh;
+  margin: 0 15px;
+  padding: 0;
 }
 
-@media (min-width: 992px) {
-  /* Show only on devices wider than 992px (Bootstrap lg breakpoint) */
+@media (min-width: 1200px) {
   .vertical-divider {
     display: block;
   }
 }
+
 
 
 
@@ -146,12 +177,14 @@ body {
 /* styles/globals.css or component CSS */
 .carousel-item > div {
   height: 80vh;
-  overflow-y: auto; /* allow inner scroll */
+  max-height: 70vh;
+  overflow-y: none; /* allow inner scroll */
   -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
 }
 
-
-
+.sscroll-container::-webkit-scrollbar {
+  display: none;
+}
 
 
 a, a:hover, a:focus, a:active {
@@ -281,6 +314,14 @@ h6 {
   display: block;
   transition: all 0.5s ease-out 0s;
   transform: scale(1);
+}
+
+.text-blue{
+  color : #2F4156
+}
+
+.text-light-blue{
+  color : #6296eb
 }
 
 p {
@@ -629,7 +670,7 @@ input[type=color] {
 }
 
 .black-bg {
-  background: var(--tg-common-color-black);
+  background-color: #2F4156;
 }
 
 /*=============================
@@ -987,6 +1028,8 @@ input[type=color] {
   }
 }
 
+
+
 /*=============================
     00. Section Title
 ===============================*/
@@ -1060,11 +1103,11 @@ input[type=color] {
 	02. Header
 ===============================*/
 .header__top {
-  padding: 40px 0 23px;
+  padding: 15px 23px;
 }
 @media (max-width: 1199.98px) {
   .header__top {
-    padding: 25px 0 25px;
+    padding: 15px 25px;
   }
 }
 .header__top-search {
@@ -1361,8 +1404,8 @@ input[type=color] {
 }
 
 .tgmenu__wrap {
-  border-top: 1px solid var(--tg-border-1);
-  border-bottom: 1px solid var(--tg-border-1);
+  /* border-top: 1px solid var(--tg-border-1); */
+  /* border-bottom: 1px solid var(--tg-border-1); */
   padding: 0 20px;
 }
 @media (max-width: 991.98px) {
@@ -1641,7 +1684,7 @@ input[type=color] {
   top: 0;
   width: 100%;
   z-index: 99;
-  background: var(--tg-common-color-gray);
+  /* background: var(--tg-common-color-gray); */
   animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
   box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
   border-radius: 0;
@@ -2243,7 +2286,7 @@ input[type=color] {
     04. Banner
 ===============================*/
 .tgbanner__area {
-  padding: 80px 0 0;
+  padding: 25px 0 0;
 }
 .tgbanner__grid {
   display: grid;

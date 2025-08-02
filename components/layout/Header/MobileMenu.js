@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   const [isActive, setIsActive] = useState({
     status: false,
     key: "",
@@ -38,7 +40,7 @@ const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
   const sectorItems = [
     { path: "/agriculture", label: "Agriculture" },
     { path: "/automobile", label: "Automobile" },
-    { path: "/defense-and-aerospace", label: "Defence & Aerospace" },
+    { path: "/defence-and-aerospace", label: "Defence & Aerospace" },
     { path: "/renewable-energy", label: "Renewable Energy" },
   ];
 
@@ -50,9 +52,11 @@ const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
             <i className="fas fa-times" />
           </div>
 
+          
+
           <div className="nav-logo">
             <img
-              src="https://brijesh.alpinesoftit.com/site6/assets/ananta.png"
+              src={`${basePath}/assets/ananta.png`}
               alt="Logo"
               style={{
                 height: "60px",
@@ -76,30 +80,6 @@ const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
           <div className="tgmobile__menu-outer">
             <ul className="navigation">
 
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-
-              <li className="menu-item-has-children" onClick={() => handleToggle(1)}>
-                <Link href="#">Alternate Tech</Link>
-                <ul
-                  className="sub-menu"
-                  style={{ display: isActive.key === 1 ? "block" : "none" }}
-                >
-                  {alternateTechItems.map((item) => (
-                    <li key={item.path}>
-                      <Link href={item.path}>{item.label}</Link>
-                    </li>
-                  ))}
-                </ul>
-                <div className={`dropdown-btn ${isActive.key === 1 ? "open" : ""}`}>
-                  <span className="plus-line" />
-                </div>
-              </li>
-
-                 <li>
-                <Link href="/opinion">Opinion (archive)</Link>
-              </li>
 
               <li className="menu-item-has-children" onClick={() => handleToggle(2)}>
                 <Link href="#">Sectors</Link>
@@ -118,10 +98,37 @@ const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
                 </div>
               </li>
 
+                <li>
+                <Link href="/supply-chain">Supply Chain</Link>
+              </li>
            
 
-              <li>
-                <Link href="/supply-chain">Supply Chain</Link>
+              <li className="menu-item-has-children" onClick={() => handleToggle(1)}>
+                <Link href="#">Alternate Tech</Link>
+                <ul
+                  className="sub-menu"
+                  style={{ display: isActive.key === 1 ? "block" : "none" }}
+                >
+                  {alternateTechItems.map((item) => (
+                    <li key={item.path}>
+                      <Link href={item.path}>{item.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+                <div className={`dropdown-btn ${isActive.key === 1 ? "open" : ""}`}>
+                  <span className="plus-line" />
+                </div>
+              </li>
+
+                
+
+
+           
+
+            
+
+                 <li>
+                <Link href="/about">About</Link>
               </li>
 
               {/* <li className="menu-item-has-children" onClick={() => handleToggle(3)}>

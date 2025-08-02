@@ -1,407 +1,379 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import * as React from "react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 import {
   FaAccessibleIcon,
   FaBrain,
   FaCogs,
   FaFlask,
   FaChargingStation,
-} from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+} from "react-icons/fa";
+import { gsap } from "gsap";
 
-export default function AlternateTechSodiumIon() {
-  const [hoveredStep, setHoveredStep] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
+export default function AlternateTechSodiumIonSupplyChain() {
+  const [activeStep, setActiveStep] = React.useState(null);
+  const [hoveredStep, setHoveredStep] = React.useState(null);
+  const [snackbarHovered, setSnackbarHovered] = React.useState(false);
+  const cardRefs = React.useRef({});
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  const icons = {
+    1: <FaAccessibleIcon size={28} color="#c38d41" />,
+    2: <FaBrain size={28} color="#c38d41" />,
+    3: <FaCogs size={28} color="#c38d41" />,
+    4: <FaFlask size={28} color="#c38d41" />,
+    5: <FaChargingStation size={28} color="#c38d41" />,
+  };
 
-  const hoverInfo = {
-    1: {
-      title: 'Mining & Raw Materials',
-      items: [
-        {
-          name: 'Sodium carbonate (soda salt)',
-          detail: 'U.S., China & Turkey',
-        },
-        {
-          name: 'Metal carbon precursor',
-          detail: 'Biomass source globally; processed by Na ion firms',
-        },
-        {
-          name: 'Iron compound',
-          detail: 'Australia, Brazil, China',
-        },
-      ],
-    },
-    2: {
-      title: 'Refining & Chemical Processing',
-      items: [
-        {
-          name: 'Soda Ash – Sodium Carbonate',
-          detail: 'U.S., China, Turkey process soda ash for battery-grade supply',
-        },
-        {
-          name: 'Processed to battery grade',
-          detail: 'By Chinese and European firms',
-        },
-        {
-          name: 'Carbonic Chemicals',
-          detail: 'Refined in Europe and Asia for Prussian-like-type carboids',
-        },
-      ],
-    },
-    3: {
-      title: 'Precursor & Active-Material Production',
-      items: [
-        {
-          name: 'Prussian-Blue Carbon Synthesis',
-          detail: 'Produced and scaled via Northwall CATL (Chinese), Prussian white carboids for its "Master" range',
-        },
-        {
-          name: 'Hard Carbon Anodes',
-          detail: 'Developed by MIT and scaled by CATL (China), Atifus (Sweden), National USA with biomass-derived sources',
-        },
-      ],
-    },
-    4: {
-      title: 'Cell Design & Pilot Manufacturing',
-      items: [
-        {
-          name: 'CATL (China)',
-          detail: 'Producing cells in Yibin and Quânça',
-        },
-        {
-          name: 'BYD (China)',
-          detail: 'Xuzhou plant 300Wh capacity under construction',
-        },
-        {
-          name: 'Hilda Battery (China)',
-          detail: 'Optimal performance cells, scaling 5-10kWh',
-        },
-        {
-          name: 'Faradion (UK)',
-          detail: '1.0Wh target in India',
-        },
-        {
-          name: 'Natron Energy (USA)',
-          detail: 'Prussian blue cells for industrial storage; Michigan facility producing > 0.6/0.9kW/m²',
-        },
-      ],
-    },
-    5: {
-      title: 'Module & Pack Assembly',
-      items: [
-        {
-          name: 'Modular integration',
-          detail: 'Pack built with aluminum-based interconnector and BMS integration primarily in China, Europe, and the U.S. (Nation, RTG, Northwall)',
-        },
-      ],
-    },
+  const iconsWhite = {
+    1: <FaAccessibleIcon size={28} color="#fff" />,
+    2: <FaBrain size={28} color="#fff" />,
+    3: <FaCogs size={28} color="#fff" />,
+    4: <FaFlask size={28} color="#fff" />,
+    5: <FaChargingStation size={28} color="#fff" />,
   };
 
   const steps = [
-    {
-      step: 1,
-      title: 'Mining & Raw Materials',
-      icon: <FaAccessibleIcon size={20} />,
-      iconPosition: 'top',
-      color: '#3083DC',
-      showRightNotch: true,
-    },
-    {
-      step: 2,
-      title: 'Refining & Chemical Processing',
-      icon: <FaBrain size={20} />,
-      iconPosition: 'bottom',
-      color: '#1F3C88',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 3,
-      title: 'Precursor & Active-Material Production',
-      icon: <FaCogs size={20} />,
-      iconPosition: 'top',
-      color: '#4E4E4E',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 4,
-      title: 'Cell Design & Pilot Manufacturing',
-      icon: <FaFlask size={20} />,
-      iconPosition: 'bottom',
-      color: '#1F3C88',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 5,
-      title: 'Module & Pack Assembly',
-      icon: <FaChargingStation size={20} />,
-      iconPosition: 'top',
-      color: '#3083DC',
-      showLeftNotch: true,
-    },
+    { id: 1, title: "Mining & Raw Materials" },
+    { id: 2, title: "Refining & Chemical Processing" },
+    { id: 3, title: "Precursor & Active‑Material Production" },
+    { id: 4, title: "Pilot Manufacturing" },
+    { id: 5, title: "Module & Pack Assembly" },
   ];
 
-  const StepCard = ({
-    step,
-    title,
-    subtitle,
-    icon,
-    iconPosition,
-    color,
-    showRightNotch,
-    showLeftNotch,
-    setHoveredStep,
-  }) => {
-    return (
-   <motion.div
-        onMouseEnter={() => !isMobile && setHoveredStep(step)}
-        onMouseLeave={() => !isMobile && setHoveredStep(null)}
-        onClick={() =>
-          isMobile && setHoveredStep(hoveredStep === step ? null : step)
-        }
-        whileHover={{ scale: isMobile ? 1 : 1.05 }}
-        transition={{ type: "spring", stiffness: 200, damping: 15 }}
-        className="position-relative text-center"
-        style={{
-          flex: "0 0 auto",
-          minWidth: "140px",
-          maxWidth: "180px",
-          margin: "2px 10px",
-          width: isMobile ? "100%" : "auto",
-        }}
-      >
-        {/* Icon */}
-        <div
-          className="rounded-circle d-flex justify-content-center align-items-center shadow-sm"
-          style={{
-            width: "50px",
-            height: "50px",
-            position: "absolute",
-            [iconPosition]: "-16px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            border: `3px solid #4f948b`,
-            backgroundColor: "#fff",
-            zIndex: 2,
-          }}
-        >
-          {icon}
-        </div>
+  const stepDetails = {
+    1: [
+      "Sodium carbonate (soda salt) — U.S., China & Turkey",
+      "Metal‑carbon precursor — Biomass source worldwide",
+      "Iron compound — Australia, Brazil, China",
+    ],
+    2: [
+      "Soda ash to battery‑grade chemicals — U.S., China, Turkey",
+      "Processed chemicals — Chinese & European firms",
+      "Carbonic chemicals — Europe & Asia for Prussian‑type carboids",
+    ],
+    3: [
+      "Prussian‑Blue carbon synthesis — CATL (China)",
+      "Hard‑carbon anodes — MIT, CATL (China), Atifus (Sweden)",
+    ],
+    4: [
+      "CATL cells — Yibin & Quanzhou",
+      "BYD cells — pilot plant Xuzhou (300 Wh)",
+      "Hilda Battery — 5–10 kWh cells (China)",
+      "Faradion — 1 Wh sodium‑ion demo (UK/India)",
+      "Natron Energy — Prussian‑blue cells (Michigan, USA)",
+    ],
+    5: [
+      "Module & Pack assembly — aluminum interconnect & BMS integration (China, Europe, USA)",
+    ],
+  };
 
-        {/* Card */}
-        <div
-          className="bg-white shadow-sm px-3 py-3"
-          style={{
-            paddingTop: iconPosition === "top" ? "38px" : "16px",
-            paddingBottom: iconPosition === "bottom" ? "38px" : "16px",
-            borderRadius: "10px",
-            borderTop: iconPosition === "top" ? `3px solid #4f948b` : undefined,
-            borderBottom:
-              iconPosition === "bottom" ? `3px solid #4f948b` : undefined,
-            fontSize: "0.85rem",
-            minHeight: isMobile ? "auto" : "150px",
-            marginTop: isMobile ? "40px" : "100px",
-          }}
-        >
-          <div className="text-muted mb-1" style={{ fontSize: "0.75rem" }}>
-            {step}
-          </div>
-          <div className="fw-bold" style={{ fontSize: "0.9rem" }}>
-            {title}
-          </div>
-          {subtitle && (
-            <p
-              className="text-muted mt-1 mb-0"
-              style={{ fontSize: "0.75rem", lineHeight: "1.3" }}
-            >
-              {subtitle}
-            </p>
-          )}
-        </div>
+  const handleMouseMove = (e, id) => {
+    const card = cardRefs.current[id];
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
 
-        {/* Bar */}
-        {!isMobile && (
-          <div
-            className="position-absolute w-100"
-            style={{
-              height: "10px",
-              bottom: iconPosition === "top" ? "-5px" : undefined,
-              top: iconPosition === "bottom" ? "-5px" : undefined,
-              backgroundColor: "#c05538",
-              borderRadius: "4px",
-              zIndex: 1,
-            }}
-          />
-        )}
+    gsap.to(card, {
+      duration: 0,
+      rotationX: -y * 25,
+      rotationY: x * 25,
+      scale: 1.05,
+      ease: "power3.out",
+      transformPerspective: 600,
+      transformOrigin: "center",
+      boxShadow: "0 20px 40px rgba(0,0,0,0.25)",
+      overwrite: "auto",
+    });
+  };
 
-        {/* Notches */}
-        {!isMobile && showRightNotch && (
-          <div
-            className="position-absolute"
-            style={{
-              width: 0,
-              height: 0,
-              right: "-12px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              borderTop: "12px solid transparent",
-              borderBottom: "12px solid transparent",
-              borderLeft: `12px solid #4f948b`,
-              zIndex: 1,
-            }}
-          />
-        )}
-        {!isMobile && showLeftNotch && (
-          <div
-            className="position-absolute"
-            style={{
-              width: 0,
-              height: 0,
-              left: "-12px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              borderTop: "12px solid transparent",
-              borderBottom: "12px solid transparent",
-              borderRight: `12px solid #c05538`,
-              zIndex: 1,
-            }}
-          />
-        )}
-      </motion.div>
-    );
+  const handleMouseLeave = (id) => {
+    const card = cardRefs.current[id];
+    if (!card) return;
+    gsap.to(card, {
+      duration: 0.5,
+      rotationX: 0,
+      rotationY: 0,
+      scale: 1,
+      ease: "power3.out",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+      overwrite: "auto",
+    });
+
+    const fillEl = card.querySelector(".fill");
+    if (fillEl) {
+      gsap.to(fillEl, {
+        duration: 0.5,
+        height: 0,
+        ease: "power3.out",
+      });
+    }
+    
+    // Only reset hover state if not hovering over snackbar
+    if (!snackbarHovered) {
+      setHoveredStep(null);
+    }
+  };
+
+  const handleMouseEnter = (id) => {
+    setHoveredStep(id);
+    const card = cardRefs.current[id];
+    if (!card) return;
+
+    const fillEl = card.querySelector(".fill");
+    if (fillEl) {
+      gsap.to(fillEl, {
+        duration: 0.5,
+        height: "100%",
+        ease: "power3.out",
+      });
+    }
+  };
+
+  const handleFocus = (id) => {
+    setHoveredStep(id);
+    const card = cardRefs.current[id];
+    if (!card) return;
+    gsap.to(card, {
+      duration: 0.4,
+      scale: 1.05,
+      boxShadow: "0 20px 40px rgba(0,0,0,0.25)",
+      ease: "power3.out",
+    });
+
+    const fillEl = card.querySelector(".fill");
+    if (fillEl) {
+      gsap.to(fillEl, {
+        duration: 0.5,
+        height: "100%",
+        ease: "power3.out",
+      });
+    }
+  };
+
+  const handleBlur = (id) => {
+    const card = cardRefs.current[id];
+    if (!card) return;
+    gsap.to(card, {
+      duration: 0.4,
+      scale: 1,
+      boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+      ease: "power3.out",
+    });
+
+    const fillEl = card.querySelector(".fill");
+    if (fillEl) {
+      gsap.to(fillEl, {
+        duration: 0.5,
+        height: 0,
+        ease: "power3.out",
+      });
+    }
+    
+    // Only reset hover state if not hovering over snackbar
+    if (!snackbarHovered) {
+      setHoveredStep(null);
+    }
+  };
+
+  const handleSnackbarMouseEnter = () => {
+    setSnackbarHovered(true);
+  };
+
+  const handleSnackbarMouseLeave = () => {
+    setSnackbarHovered(false);
+    setHoveredStep(null);
   };
 
   return (
     <div
-      className="solar-pv-container"
-       style={{
-        width: '100%',
-        maxWidth: '1000px',
-        margin: '0 auto',
-        backgroundColor: '#d9d9d9',
-        padding: '1rem',
-        boxSizing: 'border-box',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        position: 'relative',
-          height:"70vh",
+      style={{
+        // maxWidth: 960,
+        margin: "auto",
+        padding: 20,
+        background: "#f5f5f5",
+        borderRadius: 16,
+        // userSelect: "none",
+            maxHeight : "68vh",
+            minHeight : "68vh",
+        position: "relative",
+        zIndex: 1,
       }}
     >
-      <div className="text-center mb-3">
-        <h4 style={{ 
-          fontSize: isMobile ? '1.1rem' : '1.2rem', 
-          color: '#2c3e50', 
-          marginBottom: '0.5rem' 
-        }}>
-          Alternate Tech Sodium Ion Battery
-        </h4>
-        <p
-          className="text-muted"
-          style={{
-            fontSize: isMobile ? '0.8rem' : '0.9rem',
-            marginBottom: '1rem',
-            maxWidth: '90%',
-            margin: '0 auto',
-          }}
-        >
-          Explore the stages of sodium ion battery production and key players globally
-        </p>
-      </div>
-
-      {/* Desktop Hover Info Box */}
-      {!isMobile && hoveredStep && hoverInfo[hoveredStep] && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="position-absolute text-white p-3 shadow"
-          style={{
-            top: "75px",
-            left: "500",
-            transform: "translateX(-50%)",
-            backgroundColor: "#4e4e4e",
-            borderRadius: "10px",
-            width: "94%",
-            maxWidth: "1200px",
-            fontSize: "13px",
-            zIndex: 18,
-          }}
-        >
-          <div className="fw-bold text-center mb-2">{hoverInfo[hoveredStep].title}</div>
-          {hoverInfo[hoveredStep].items.map((item, i) => (
-            <div key={i} className="mb-1">
-              <strong>{item.name}</strong>: {item.detail}
-            </div>
-          ))}
-        </motion.div>
-      )}
-
-      {/* Steps */}
-      <div
-        className="step-cards-container d-flex h-100"
+      <h2
         style={{
-        overflow:'auto',
-          flexWrap: isMobile ? 'wrap' : 'nowrap',
-          justifyContent: isMobile ? 'center' : 'flex-start',
-          scrollSnapType: 'x mandatory',
-          WebkitOverflowScrolling: 'touch',
-          paddingBottom: '1rem',
-          gap: isMobile ? '20px' : '0',
-          paddingTop: "5vh",
+          textAlign: "center",
+          marginBottom: 40,
+          color: "gray",
+          fontWeight: "700",
         }}
       >
-        {steps.map((s, i) => (
-          <div 
-            key={i} 
-            style={{ 
-              scrollSnapAlign: 'start',
-              marginTop: isMobile ? '20px' : '50px',
-              width: isMobile ? '100%' : 'auto',
-            }}
-          >
-            <StepCard 
-              {...s} 
-              setHoveredStep={setHoveredStep} 
-            />
-            {isMobile && hoveredStep === s.step && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                className="text-white p-3 mt-2 shadow"
+        Sodium-Ion Battery Supply Chain
+      </h2>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          gap: 40,
+          // flexWrap: "wrap",
+          position: "relative",
+          overflowX : "scroll",
+          zIndex: 1,
+              marginBottom : "5vh"
+        }}
+      >
+        {steps.map(({ id, title }) => {
+          const isActive = id === activeStep;
+          const isHovered = id === hoveredStep;
+
+          return (
+            <div
+              key={id}
+              ref={(el) => (cardRefs.current[id] = el)}
+              tabIndex={0}
+              role="button"
+              aria-pressed={isActive}
+              onClick={() => setActiveStep(id)}
+              onMouseEnter={() => handleMouseEnter(id)}
+              // onMouseMove={(e) => handleMouseMove(e, id)}
+              // onMouseLeave={() => handleMouseLeave(id)}
+              // onFocus={() => handleFocus(id)}
+              // onBlur={() => handleBlur(id)}
+              style={{
+                cursor: "pointer",
+                borderRadius: 20,
+                // paddingX: "1vw",
+                // width: "auto",
+                position: "relative",
+                       width : "100px",
+                maxWidth : "100px",
+                minWidth : "100px",
+                // color: isActive || isHovered ? "#fff" : "#1f2d3d",
+                // boxShadow: isActive
+                //   ? "0 12px 24px rgba(195, 141, 65, 0.4)"
+                //   : "0 8px 20px rgba(0,0,0,0.08)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 16,
+                // transformStyle: "preserve-3d",
+                // willChange: "transform",
+                // transition: "color 0.35s ease",
+                outline: "none",
+                // background: "linear-gradient(145deg, #ffffff, #e6e6e6)",
+                // overflowX: "scroll",
+                zIndex: isActive || isHovered ? 2 : 1,
+              }}
+            >
+              <div
+                className="fill"
                 style={{
-                  backgroundColor: '#4e4e4e',
-                  borderRadius: '10px',
-                  fontSize: '12px',
-                  margin: '0 10px',
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: 0,
+                  // background: "linear-gradient(145deg, #c38d41, #6f7e40)",
+                  borderRadius: 20,
+                  zIndex: 0,
+                  pointerEvents: "none",
+                }}
+              />
+
+              <div
+                style={{
+                  width: 72,
+                  height: 72,
+                  borderRadius: "50%",
+                  // background: isActive || isHovered
+                  //   ? "rgba(255,255,255,0.3)"
+                  //   : "radial-gradient(circle at 30% 30%, #f9f3ea, #ece3d8)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  boxShadow: isActive || isHovered
+                    ? "0 4px 10px rgba(0,0,0,0.5), inset 0 0 8px #c38d41"
+                    : "0 4px 8px rgba(111, 126, 64, 0.3)",
+                  transition: "all 0.3s ease",
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
-                <div className="fw-bold text-center mb-2">
-                  {hoverInfo[s.step].title}
-                </div>
-                {hoverInfo[s.step].items.map((item, i) => (
-                  <div key={i} className="mb-1">
-                    <strong>{item.name}</strong>: {item.detail}
-                  </div>
-                ))}
-              </motion.div>
-            )}
-          </div>
-        ))}
+                {isActive || isHovered ? iconsWhite[id] : icons[id]}
+              </div>
+              <div
+                style={{
+                  fontSize: 16,
+                  textAlign: "center",
+                  fontWeight: "600",
+                  textShadow:
+                    isActive || isHovered
+                      ? "0 0 5px rgba(255,255,255,0.3)"
+                      : "none",
+                  position: "relative",
+                  color : "gray",
+                  zIndex: 1,
+                }}
+              >
+                {title}
+              </div>
+            </div>
+          );
+        })}
       </div>
+
+<div className="mb-4" style={{ textAlign: "center" }}>
+        <em className="px-2 mt-4 fw-normal" style={{fontSize : "14px", textAlign : "center" ,fontWeight : "500" }}>
+      This infographic lays out the end‑to‑end sodium‑ion battery value chain—from soda‑ash and hard‑carbon mining through chemical refining, Prussian‑blue cathode and hard‑carbon anode synthesis, to pilot cell manufacturing and final module assembly. It highlights global raw‑material sources (U.S., China, Turkey, Australia) alongside pioneering firms like Altris (Sweden), CATL and BYD (China), Faradion (UK) and Natron (USA), showing where new sodium‑ion technologies are being scaled. By mapping each stage and its key players, the graphic underscores emerging supply‑chain opportunities and strategic hotspots for diversifying away from lithium‑based systems.
+     </em>
+      </div>
+
+
+      <Snackbar
+        open={hoveredStep !== null || activeStep !== null}
+        anchorOrigin={{ vertical: "top", horizontal: "bottom" }}
+        autoHideDuration={null}
+        onClose={() => {
+          if (!snackbarHovered) {
+            setHoveredStep(null);
+          }
+        }}
+         style={{
+            position: "relative",
+            top: "-19vh",
+            left: -10,
+            zIndex: 9999,
+          }}
+      >
+        <div 
+          onMouseEnter={handleSnackbarMouseEnter}
+          onMouseLeave={handleSnackbarMouseLeave}
+        >
+          <Alert
+            severity="success"
+            variant="filled"
+            onClose={() => setHoveredStep(null)}
+            sx={{
+              pointerEvents: "auto",
+              minWidth: 320,
+              userSelect: "text",
+              backgroundColor: "#6f7e40",
+              color: "#ffffff",
+              '&:hover': {
+                boxShadow: '0 0 10px rgba(0,0,0,0.3)',
+              },
+            }}
+          >
+            <strong>{steps.find((s) => s.id === (hoveredStep || activeStep))?.title}</strong>
+            <ul style={{ marginTop: 8, paddingLeft: 20 }}>
+              {stepDetails[hoveredStep || activeStep]?.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+          </Alert>
+        </div>
+      </Snackbar>
     </div>
   );
 }
