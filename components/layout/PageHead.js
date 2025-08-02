@@ -5,9 +5,9 @@ const PageHead = ({ headTitle }) => {
         <>
             <Head>
                 <title>
-                    {headTitle ? headTitle : "Critical Minerals - Essential for Clean Energy"}
+                    {headTitle ? headTitle : "Ananta-Critical Minerals Dashboard"}
                 </title>
-                <link rel="shortcut icon" href="/assets/img/favicon.png" />
+                <link rel="shortcut icon" href="favicon.png" />
                 <link rel="preconnect" href="https://fonts.bunny.net" />
                 <link
                     href="https://fonts.bunny.net/css?family=roboto:300,300i,400,400i,500,500i,700,700i,900,900i"

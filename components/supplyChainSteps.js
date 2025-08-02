@@ -1,422 +1,372 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import * as React from "react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 import {
-  FaAccessibleIcon,
-  FaBrain,
-  FaCogs,
+  FaMountain,
+  FaFilter,
+  FaIndustry,
   FaFlask,
-  FaChargingStation,
-} from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+  FaMicrochip,
+} from "react-icons/fa";
+import { gsap } from "gsap";
 
 export default function SupplyChainSteps() {
-  const [hoveredStep, setHoveredStep] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [hoveredStep, setHoveredStep] = React.useState(null);
+  const [activeStep, setActiveStep] = React.useState(null);
+  const [snackbarHovered, setSnackbarHovered] = React.useState(false);
+  const cardRefs = React.useRef({});
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  const hoverInfo = {
-    1: {
-      title: 'Mineral Extraction',
-      countries: [
-        {
-          name: 'Lithium (spodumene hard-rock & brine)',
-          detail: 'Australia (Greenbushes spodumene), Chile & Argentina (Salar brine)',
-        },
-        {
-          name: 'Nickel (laterite & sulfide)',
-          detail: 'Indonesia, Philippines (laterite HPAL), Canada, Russia (sulfide deposits)',
-        },
-        {
-          name: 'Cobalt (by product of copper/nickel)',
-          detail: 'DRC (70% of global mine output)',
-        },
-        {
-          name: 'Graphite (natural)',
-          detail: 'China, Mozambique, Brazil',
-        },
-        {
-          name: 'Manganese (oxide & sulfate)',
-          detail: 'South Africa, Australia',
-        },
-      ],
-    },
-    2: {
-      title: 'Concentration',
-      countries: [
-        {
-          name: 'Australia',
-          detail: 'Rincon Operation, Tianqi Lithium - Western Australia',
-        },
-        {
-          name: 'Indonesia',
-          detail: 'Pomalaa Nickel Plant, PT Aneka Tambang (ANTAM) - Sulawesi',
-        },
-        {
-          name: 'China',
-          detail: 'Baotou Rare Earth Processing Plant, China Northern Rare Earth Group - Inner Mongolia',
-        },
-      ],
-    },
-    3: {
-      title: 'Refining',
-      countries: [
-        {
-          name: 'China',
-          detail: 'Yichun Lithium Refining Facility, Ganfeng Lithium - Jiangxi Province',
-        },
-        {
-          name: 'South Korea',
-          detail: 'Yulchon Lithium Hydroxide Plant, POSCO Pilbara Lithium Solution - Gwangyang, Jeollanam-do',
-        },
-        {
-          name: 'Japan',
-          detail: 'Niihama Nickel Refinery, Sumitomo Metal Mining - Niihama',
-        },
-      ],
-    },
-    4: {
-      title: 'Precursor & Active-Material Synthesis',
-      countries: [
-        {
-          name: 'China',
-          detail: 'Ningde Gigafactory (Active-Material Line), CATL - Fujian Province',
-        },
-        {
-          name: 'South Korea',
-          detail: 'Ochang Energy Plant, LG Energy Solution - North Chungcheong Province',
-        },
-        {
-          name: 'Poland',
-          detail: 'Nysa Cathode Plant, Umicore Battery Materials Poland - Nysa',
-        },
-      ],
-    },
-    5: {
-      title: 'Electrode & Component Fabrication',
-      countries: [
-        {
-          name: 'China',
-          detail: 'Wuxi Electrode-Fabrication Center, SVOLT Energy Technology - Jiangsu Province',
-        },
-        {
-          name: 'Japan',
-          detail: 'Suminoe Factory, Panasonic Energy Co., Ltd. - Osaka',
-        },
-        {
-          name: 'South Korea',
-          detail: 'Cathode Coating Line, POSCO Future M - Gwangyang, Jeollanam-do',
-        },
-      ],
-    },
+  const icons = {
+    1: <FaMountain size={28} color="#00B9B3" />,
+    2: <FaFilter size={28} color="#00B9B3" />,
+    3: <FaIndustry size={28} color="#00B9B3" />,
+    4: <FaFlask size={28} color="#00B9B3" />,
+    5: <FaMicrochip size={28} color="#00B9B3" />,
   };
 
   const steps = [
-    {
-      step: 1,
-      title: 'Mineral Extraction',
-      icon: <FaAccessibleIcon size={20} />,
-      iconPosition: 'top',
-      color: '#3083DC',
-      showRightNotch: true,
-    },
-    {
-      step: 2,
-      title: 'Concentration',
-      subtitle: '(Crushing/Grinding → Concentrates)',
-      icon: <FaBrain size={20} />,
-      iconPosition: 'bottom',
-      color: '#1F3C88',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 3,
-      title: 'Refining',
-      subtitle: '(Smelting & Chemical purification)',
-      icon: <FaCogs size={20} />,
-      iconPosition: 'top',
-      color: '#4E4E4E',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 4,
-      title: 'Material Synthesis',
-      icon: <FaFlask size={20} />,
-      iconPosition: 'bottom',
-      color: '#1F3C88',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 5,
-      title: 'Electrode Fabrication',
-      icon: <FaChargingStation size={20} />,
-      iconPosition: 'top',
-      color: '#3083DC',
-      showLeftNotch: true,
-    },
+    { id: 1, title: "Mineral Extraction" },
+    { id: 2, title: "Concentration" },
+    { id: 3, title: "Refining" },
+    { id: 4, title: "Precursor & Active Material Synthesis" },
+    { id: 5, title: "Electrode & Component Fabric" },
   ];
 
-  const StepCard = ({
-    step,
-    title,
-    subtitle,
-    icon,
-    iconPosition,
-    color,
-    showRightNotch,
-    showLeftNotch,
-    setHoveredStep,
-  }) => {
-    return (
-        <motion.div
-        onMouseEnter={() => !isMobile && setHoveredStep(step)}
-        onMouseLeave={() => !isMobile && setHoveredStep(null)}
-        onClick={() =>
-          isMobile && setHoveredStep(hoveredStep === step ? null : step)
-        }
-        whileHover={{ scale: isMobile ? 1 : 1.05 }}
-        transition={{ type: "spring", stiffness: 200, damping: 15 }}
-        className="position-relative text-center"
-        style={{
-          flex: "0 0 auto",
-          minWidth: "140px",
-          maxWidth: "180px",
-          margin: "2px 10px",
-          width: isMobile ? "100%" : "auto",
-        }}
-      >
-        {/* Icon */}
-        <div
-          className="rounded-circle d-flex justify-content-center align-items-center shadow-sm"
-          style={{
-            width: "50px",
-            height: "50px",
-            position: "absolute",
-            [iconPosition]: "-16px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            border: `3px solid #4f948b`,
-            backgroundColor: "#fff",
-            zIndex: 2,
-          }}
-        >
-          {icon}
-        </div>
+  const stepDetails = {
+    1: [
+      "Lithium — Australia (Greenbushes), Chile & Argentina (Salar brine)",
+      "Nickel — Indonesia, Philippines, Canada, Russia",
+      "Cobalt — DRC (70% of global supply)",
+      "Graphite — China, Mozambique, Brazil",
+      "Manganese — South Africa, Australia",
+    ],
+    2: [
+      "Australia — Tianqi Lithium, Western Australia",
+      "Indonesia — Pomalaa Nickel Plant, Sulawesi",
+      "China — Baotou Rare Earth, Inner Mongolia",
+    ],
+    3: [
+      "China — Ganfeng Lithium Refining, Jiangxi",
+      "South Korea — POSCO Pilbara, Gwangyang",
+      "Japan — Sumitomo Refinery, Niihama",
+    ],
+    4: [
+      "China — CATL Active-Material Line, Fujian",
+      "South Korea — LG Energy, Ochang",
+      "Poland — Umicore Cathode Plant, Nysa",
+    ],
+    5: [
+      "China — SVOLT Electrode Center, Jiangsu",
+      "Japan — Panasonic, Osaka",
+      "South Korea — POSCO Future M, Gwangyang",
+    ],
+  };
 
-        {/* Card */}
-        <div
-          className="bg-white shadow-sm px-3 py-3"
-          style={{
-            paddingTop: iconPosition === "top" ? "38px" : "16px",
-            paddingBottom: iconPosition === "bottom" ? "38px" : "16px",
-            borderRadius: "10px",
-            borderTop: iconPosition === "top" ? `3px solid #4f948b` : undefined,
-            borderBottom:
-              iconPosition === "bottom" ? `3px solid #4f948b` : undefined,
-            fontSize: "0.85rem",
-            minHeight: isMobile ? "auto" : "150px",
-            marginTop: isMobile ? "40px" : "100px",
-          }}
-        >
-          <div className="text-muted mb-1" style={{ fontSize: "0.75rem" }}>
-            {step}
-          </div>
-          <div className="fw-bold" style={{ fontSize: "0.9rem" }}>
-            {title}
-          </div>
-          {subtitle && (
-            <p
-              className="text-muted mt-1 mb-0"
-              style={{ fontSize: "0.75rem", lineHeight: "1.3" }}
-            >
-              {subtitle}
-            </p>
-          )}
-        </div>
+  const isStepActive = (id) => id === hoveredStep || id === activeStep;
 
-        {/* Bar */}
-        {!isMobile && (
-          <div
-            className="position-absolute w-100"
-            style={{
-              height: "10px",
-              bottom: iconPosition === "top" ? "-5px" : undefined,
-              top: iconPosition === "bottom" ? "-5px" : undefined,
-              backgroundColor: "#c05538",
-              borderRadius: "4px",
-              zIndex: 1,
-            }}
-          />
-        )}
+  const handleMouseMove = (e, id) => {
+    const card = cardRefs.current[id];
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
 
-        {/* Notches */}
-        {!isMobile && showRightNotch && (
-          <div
-            className="position-absolute"
-            style={{
-              width: 0,
-              height: 0,
-              right: "-12px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              borderTop: "12px solid transparent",
-              borderBottom: "12px solid transparent",
-              borderLeft: `12px solid #4f948b`,
-              zIndex: 1,
-            }}
-          />
-        )}
-        {!isMobile && showLeftNotch && (
-          <div
-            className="position-absolute"
-            style={{
-              width: 0,
-              height: 0,
-              left: "-12px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              borderTop: "12px solid transparent",
-              borderBottom: "12px solid transparent",
-              borderRight: `12px solid #c05538`,
-              zIndex: 1,
-            }}
-          />
-        )}
-      </motion.div>
-    );
+    gsap.to(card, {
+      duration: 0,
+      rotationX: -y * 25,
+      rotationY: x * 25,
+      scale: 1.05,
+      ease: "power3.out",
+      transformPerspective: 600,
+      transformOrigin: "center",
+      boxShadow: "0 20px 40px rgba(0,0,0,0.25), 0 12px 20px rgba(0,0,0,0.15)",
+      overwrite: "auto",
+    });
+  };
+
+  const resetCard = (id) => {
+    const card = cardRefs.current[id];
+    if (!card) return;
+
+    gsap.to(card, {
+      duration: 0.5,
+      rotationX: 0,
+      rotationY: 0,
+      scale: 1,
+      ease: "power3.out",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+      overwrite: "auto",
+    });
+
+    // Only reset hover state if not hovering over snackbar
+    if (!snackbarHovered) {
+      setHoveredStep(null);
+    }
+  };
+
+  const focusCard = (id) => {
+    setHoveredStep(id);
+    const card = cardRefs.current[id];
+    if (!card) return;
+
+    gsap.to(card, {
+      duration: 0.4,
+      rotationX: 0,
+      rotationY: 0,
+      scale: 1.05,
+      ease: "power3.out",
+      boxShadow: "0 20px 40px rgba(0,0,0,0.25), 0 12px 20px rgba(0,0,0,0.15)",
+      overwrite: "auto",
+    });
+  };
+
+  const blurCard = (id) => {
+    const card = cardRefs.current[id];
+    if (!card) return;
+
+    gsap.to(card, {
+      duration: 0.4,
+      rotationX: 0,
+      rotationY: 0,
+      scale: 1,
+      ease: "power3.out",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+      overwrite: "auto",
+    });
+
+    // Only reset hover state if not hovering over snackbar
+    if (!snackbarHovered) {
+      setHoveredStep(null);
+    }
+  };
+
+  const handleSnackbarMouseEnter = () => {
+    setSnackbarHovered(true);
+  };
+
+  const handleSnackbarMouseLeave = () => {
+    setSnackbarHovered(false);
+    setHoveredStep(null);
   };
 
   return (
     <div
-      className="solar-pv-container"
       style={{
-        width: '100%',
-        maxWidth: '1000px',
-        margin: '0 auto',
-        backgroundColor: '#d9d9d9',
-        padding: '1rem',
-        boxSizing: 'border-box',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        position: 'relative',
-        height:"70vh",
+        margin: "auto",
+        padding: 20,
+        // background: "rgb(247 240 247)",
+        // maxHeight : "50vh",
+        backgroundColor : "#B8E3E9",
+        borderRadius: 16,
+            maxHeight : "68vh",
+              minHeight : "68vh",
+        position: "relative",
+        zIndex: 1,
       }}
     >
-      <div className="text-center mb-3">
-        <h4 style={{ 
-          fontSize: isMobile ? '1.1rem' : '1.2rem', 
-          color: '#2c3e50', 
-          marginBottom: '0.5rem' 
-        }}>
-          EV Battery Supply Chain
-        </h4>
-        <p
-          className="text-muted"
-          style={{
-            fontSize: isMobile ? '0.8rem' : '0.9rem',
-            marginBottom: '1rem',
-            maxWidth: '90%',
-            margin: '0 auto',
-          }}
-        >
-          Global Manufacturing Process and Key Players
-        </p>
-      </div>
-
-      {/* Desktop Hover Info Box */}
-      {!isMobile && hoveredStep && hoverInfo[hoveredStep] && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="position-absolute text-white p-3 shadow"
-          style={{
-            top: "75px",
-            left: "500",
-            transform: "translateX(-50%)",
-            backgroundColor: "#4e4e4e",
-            borderRadius: "10px",
-            width: "94%",
-            maxWidth: "1200px",
-            fontSize: "13px",
-            zIndex: 18,
-          }}
-        >
-          <div className="fw-bold text-center mb-2">{hoverInfo[hoveredStep].title}</div>
-          {hoverInfo[hoveredStep].countries.map((c, i) => (
-            <div key={i} className="mb-1">
-              <strong>{c.name}</strong>: {c.detail}
-            </div>
-          ))}
-        </motion.div>
-      )}
-
-      {/* Steps */}
-      <div
-        className="step-cards-container d-flex h-100"
+      <h2
         style={{
-        overflow:'auto',
-          flexWrap: isMobile ? 'wrap' : 'nowrap',
-          justifyContent: isMobile ? 'center' : 'flex-start',
-          scrollSnapType: 'x mandatory',
-          WebkitOverflowScrolling: 'touch',
-          paddingBottom: '1rem',
-          gap: isMobile ? '20px' : '0',
-          paddingTop: "5vh",
+          textAlign: "center",
+          marginBottom: 40,
+          color: "gray",
+          fontWeight: "700",
         }}
       >
-        {steps.map((s, i) => (
-          <div 
-            key={i} 
-            style={{ 
-              scrollSnapAlign: 'start',
-              marginTop: isMobile ? '20px' : '50px',
-              width: isMobile ? '100%' : 'auto',
-            }}
-          >
-          
-            {isMobile && hoveredStep === s.step && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                className="text-white p-3 mt-2 shadow"
+        EV Battery Supply Chain
+      </h2>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          gap: 40,
+          // flexWrap: "wrap",
+          position: "relative",
+                 overflowX : "scroll",
+                //  width : "100px",
+          zIndex: 1,
+          marginBottom : "15px"
+        }}
+      >
+        {steps.map(({ id, title }) => {
+          const isActive = isStepActive(id);
+
+          return (
+            <div
+              key={id}
+              ref={(el) => el && (cardRefs.current[id] = el)}
+              tabIndex={0}
+              role="button"
+              aria-pressed={isActive}
+              onClick={() => {
+                setActiveStep((prev) => (prev === id ? null : id));
+              }}
+              onMouseEnter={() => setHoveredStep(id)}
+              // onMouseMove={(e) => handleMouseMove(e, id)}
+              // onMouseLeave={() => resetCard(id)}
+              // onFocus={() => focusCard(id)}
+              // onBlur={() => blurCard(id)}
+              style={{
+                cursor: "pointer",
+                borderRadius: 20,
+                // paddingX: "1vw",
+                // width: "auto",
+                position: "relative",
+                // color: isActive || isHovered ? "#fff" : "#1f2d3d",
+                // boxShadow: isActive
+                //   ? "0 12px 24px rgba(195, 141, 65, 0.4)"
+                //   : "0 8px 20px rgba(0,0,0,0.08)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 16,
+                    width : "100px",
+                maxWidth : "100px",
+                minWidth : "100px",
+                // transformStyle: "preserve-3d",
+                // willChange: "transform",
+                // transition: "color 0.35s ease",
+                outline: "none",
+                // background: "linear-gradient(145deg, #ffffff, #e6e6e6)",
+                // overflowX: "scroll",
+                zIndex: isActive ? 2 : 1,
+              }}
+            >
+              <div
+                className="overlay"
                 style={{
-                  backgroundColor: '#4e4e4e',
-                  borderRadius: '10px',
-                  fontSize: '12px',
-                  margin: '0 10px',
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: isActive ? "100%" : "0%",
+                  // background: "linear-gradient(to top, #962b27, #7d305b)",
+                  borderRadius: 20,
+                  zIndex: 0,
+                  pointerEvents: "none",
+                  transition: "height 0.4s ease-in-out",
+                }}
+              />
+
+              <div
+                style={{
+                  position: "relative",
+                  zIndex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: 16,
                 }}
               >
-                <div className="fw-bold text-center mb-2">
-                  {hoverInfo[s.step].title}
+                <div
+                  style={{
+                    width: 72,
+                    height: 72,
+                    borderRadius: "50%",
+                    // backgroundColor : "white",
+                    // background: isActive
+                    //   ? "#ffffff"
+                    //   : "radial-gradient(circle at 30% 30%, #fbeaea, #e5cfd2)",
+                     color: "red",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    boxShadow: isActive
+                      ? "0 4px 10px rgba(0,0,0,0.5), inset 0 0 8px #962b27"
+                      : "0 4px 8px rgba(125, 48, 91, 0.3)",
+                    transition: "all 0.3s ease",
+                    marginBottom: 12,
+                    zIndex: 1,
+                  }}
+                >
+                  {icons[id]}
                 </div>
-                {hoverInfo[s.step].countries.map((c, i) => (
-                  <div key={i} className="mb-1">
-                    <strong>{c.name}</strong>: {c.detail}
-                  </div>
-                ))}
-              </motion.div>
-            )}
-              <StepCard 
-              {...s} 
-              setHoveredStep={setHoveredStep} 
-            />
-          </div>
-        ))}
+                <div
+                  style={{
+                    fontSize: 16,
+                    textAlign: "center",
+                    fontWeight: "600",
+                     color: "gray",
+                    textShadow: isActive
+                      ? "0 0 5px rgba(255, 255, 255, 0.3)"
+                      : "none",
+                    zIndex: 1,
+                  }}
+                >
+                  {title}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
+
+<div className="mb-4"  style={{ textAlign: "center" }}>
+        <em className="px-2 mt-4 fw-normal" style={{fontSize : "14px", textAlign : "center" ,fontWeight : "500" }}>
+        This infographic traces the full EV‑battery value chain—from lithium,
+        nickel, cobalt and graphite extraction in Australia, Chile, DRC and
+        beyond, through concentration and refining hubs in China, South Korea
+        and Japan, to precursor synthesis and electrode fabrication across Asia
+        and Europe. By aligning each processing stage with its dominant minerals
+        and flagship facilities (e.g., Pilgangoora’s spodumene operation,
+        Ganfeng’s lithium refinery, CATL’s active‑material line), it exposes the
+        geographically dispersed network underpinning electric‑vehicle
+        batteries. Its goal is to spotlight critical chokepoints and strategic
+        dependencies in the global battery supply chain, underscoring where
+        diversification and resilient sourcing are most needed.
+      </em>
+      </div>
+
+
+      <Snackbar
+        open={hoveredStep !== null || activeStep !== null}
+        anchorOrigin={{ vertical: "top", horizontal: "bottom" }}
+        autoHideDuration={null}
+        onClose={() => {
+          if (!snackbarHovered) {
+            setHoveredStep(null);
+            setActiveStep(null);
+          }
+        }}
+       style={{
+            position: "relative",
+            top: "-19vh",
+            left: -10,
+            zIndex: 9999,
+          }}
+      >
+        <div 
+          onMouseEnter={handleSnackbarMouseEnter}
+          onMouseLeave={handleSnackbarMouseLeave}
+        >
+          <Alert
+            severity="success"
+            variant="filled"
+            onClose={() => {
+              setHoveredStep(null);
+              setActiveStep(null);
+            }}
+            sx={{
+              pointerEvents: "auto",
+              minWidth: 320,
+              maxHeight : "20vh",
+              userSelect: "text",
+              backgroundColor: "#005451",
+              color: "#ffffff",
+              '&:hover': {
+                boxShadow: '0 0 10px rgba(0,0,0,0.3)',
+              },
+            }}
+          >
+            <strong>{steps.find((s) => s.id === (hoveredStep || activeStep))?.title}</strong>
+            <ul style={{ marginTop: 8, paddingLeft: 20 }}>
+              {stepDetails[hoveredStep || activeStep]?.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+          </Alert>
+        </div>
+      </Snackbar>
     </div>
   );
 }

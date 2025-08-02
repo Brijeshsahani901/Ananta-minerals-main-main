@@ -3,100 +3,100 @@ import Link from "next/link";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useRef, useEffect } from "react";
-
-const data = [
-  {
-    path: "/agriculture",
-    label: "Agriculture",
-    img: "https://media.istockphoto.com/id/543212762/photo/tractor-cultivating-field-at-spring.jpg?s=612x612&w=0&k=20&c=uJDy7MECNZeHDKfUrLNeQuT7A1IqQe89lmLREhjIJYU=",
-  },
-  {
-    path: "/automobile",
-    label: "Automobile",
-    img: "https://t4.ftcdn.net/jpg/03/05/62/85/360_F_305628557_uLekPhLRHrGjSL8KfPFqOX0JQbjL4D6.jpg",
-  },
-  {
-    path: "/defense-and-aerospace",
-    label: "Defence & Aerospace",
-    img: "https://media.istockphoto.com/id/1393877368/photo/jet-fighters-flying-over-the-clouds.jpg?s=612x612&w=0&k=20&c=55sIGBxms9CeOogF2euYJHLK1G8O97Zs614dnHZn2YM=",
-  },
-  {
-    path: "/renewable-energy",
-    label: "Renewable energy",
-    img: "https://drmcet.ac.in/wp-content/uploads/2024/06/Renewable-energy-image.png",
-  },
-];
+import { useRef, useEffect, useState } from "react";
 
 export default function TrendingSlider({ showItem }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [isSwiperReady, setIsSwiperReady] = useState(false);
+
+  const data = [
+    {
+      path: "/agriculture",
+      label: "Agriculture",
+      img: `${basePath}/assets/sectors_images/agriculture.jpg`,
+    },
+    {
+      path: "/automobile",
+      label: "Automobile",
+      img: `${basePath}/assets/sectors_images/automobile.jpg`,
+    },
+    {
+      path: "/defence-and-aerospace",
+      label: "Defence & Aerospace",
+      img: `${basePath}/assets/sectors_images/defence.jpg`,
+    },
+    {
+      path: "/renewable-energy",
+      label: "Renewable Energy",
+      img: `${basePath}/assets/sectors_images/renewable.jpg`,
+    },
+  ];
+
+  useEffect(() => {
+    setIsSwiperReady(true);
+  }, []);
 
   return (
     <div className="relative">
-      <Swiper
-        modules={[Navigation]}
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-        }}
-//        onSwiper={(swiper) => {
-//   setTimeout(() => {
-//     swiper.navigation.init(); // ❌ REMOVE THIS
-//     swiper.navigation.update(); // ❌ AND THIS
-//   });
-// }}
-        breakpoints={{
-          640: {
-            slidesPerView: showItem,
-            loop: true,
-          },
-        }}
-        className="swiper-wrapper"
-      >
-        {data.map((item, i) => (
-          <SwiperSlide key={i}>
-            <div className="trending__post">
-              <div className="trending__post-thumb tgImage__hover">
-                <Link href={item.path}>
-                  <img src={item.img} alt={item.label} className="w-full" />
-                </Link>
-              </div>
-              <div className="trending__post-content">
-                <h4
-                  className="title tgcommon__hover"
-                  style={{ color: "#4a8bdf", textDecoration: "none" }}
-                >
-                  <Link
-                    href={item.path}
-                    style={{ color: "#4a8bdf", textDecoration: "none" }}
-                  >
-                    {item.label}
+      {isSwiperReady && (
+        <Swiper
+          modules={[Navigation]}
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            576: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            992: { slidesPerView: 4 },
+          }}
+        >
+          {data.map((item, i) => (
+            <SwiperSlide key={i}>
+              <div className="trending__post col-md-12">
+                <div className="trending__post-thumb group">
+                  <Link href={item.path}>
+                    <div className="image-wrapper group">
+                      <img
+                        src={item.img}
+                        alt={item.label}
+                        className="zoom-image w-full"
+                        style={{ borderRadius: "20px" }}
+                      />
+
+                      {/* Top-left label (hidden on hover) */}
+                      <div className="label-top-left group-hover-hidden">
+                        <span>{item.label}</span>
+                      </div>
+
+                      {/* Center overlay label (shows on hover) */}
+                      <div className="label-overlay">
+                        <span>{item.label}</span>
+                      </div>
+                    </div>
                   </Link>
-                </h4>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
 
-      {/* Custom navigation buttons with refs */}
-      <button
-        ref={prevRef}
-        className="swiper-button-prev !opacity-50 !text-white !w-8 !h-8 md:!hidden"
-      ></button>
-      <button
-        ref={nextRef}
-        className="swiper-button-next !opacity-50 !text-white !w-8 !h-8 md:!hidden"
-      ></button>
+      {/* Custom navigation buttons (visible only on mobile) */}
+      <button ref={prevRef} className="swiper-button-prev flex md:hidden" />
+      <button ref={nextRef} className="swiper-button-next flex md:hidden" />
 
+      {/* Custom styles */}
       <style jsx global>{`
         .swiper-button-next,
         .swiper-button-prev {
@@ -114,12 +114,15 @@ export default function TrendingSlider({ showItem }) {
           z-index: 10;
           cursor: pointer;
         }
+
         .swiper-button-prev {
           left: 10px;
         }
+
         .swiper-button-next {
           right: 10px;
         }
+
         .swiper-button-next:after,
         .swiper-button-prev:after {
           font-size: 16px;
@@ -131,6 +134,62 @@ export default function TrendingSlider({ showItem }) {
           .swiper-button-prev {
             display: none !important;
           }
+        }
+
+        .image-wrapper {
+          position: relative;
+          overflow: hidden;
+          border-radius: 20px;
+        }
+
+        .zoom-image {
+          transition: transform 0.5s ease;
+        }
+
+        .group:hover .zoom-image {
+          transform: scale(1.1);
+        }
+
+        .label-overlay {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(0, 0, 0, 0.85);
+          color: #ffffff;
+          padding: 10px 20px;
+          border-radius: 6px;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          pointer-events: none;
+          font-weight: 700;
+          font-size: 18px;
+          white-space: nowrap;
+          z-index: 2;
+        }
+
+        .group:hover .label-overlay {
+          opacity: 1;
+        }
+
+        .label-top-left {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          background-color: rgba(0, 0, 0, 0.75);
+          color: #fff;
+          padding: 6px 12px;
+          border-radius: 10px;
+          font-weight: 600;
+          font-size: 14px;
+          z-index: 3;
+          transition: opacity 0.3s ease;
+        }
+
+        /* Hide the top-left label on hover */
+        .group:hover .label-top-left {
+          opacity: 0;
+          visibility: hidden;
         }
       `}</style>
     </div>

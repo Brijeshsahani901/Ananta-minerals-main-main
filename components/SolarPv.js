@@ -1,395 +1,385 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import * as React from "react";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 import {
   FaMountain,
   FaIndustry,
   FaFilter,
   FaCube,
   FaSolarPanel,
-} from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+} from "react-icons/fa";
+import { gsap } from "gsap";
 
 export default function SolarPV() {
-  const [hoveredStep, setHoveredStep] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [hoveredStep, setHoveredStep] = React.useState(null);
+  const [activeStep, setActiveStep] = React.useState(null);
+  const [isHoveringSnackbar, setIsHoveringSnackbar] = React.useState(false);
+  const cardRefs = React.useRef({});
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  const icons = {
+    1: <FaMountain size={28} color="#517891" />,
+    2: <FaIndustry size={28} color="#517891" />,
+    3: <FaFilter size={28} color="#517891" />,
+    4: <FaCube size={28} color="#517891" />,
+    5: <FaSolarPanel size={28} color="#517891" />,
+  };
 
-  const hoverInfo = {
-    1: {
-      title: 'QUARTZ (SiO₂) MINING',
-      items: [
-        {
-          name: 'Critical Mineral',
-          detail: 'Quartz (SiO₂) – feedstock for silicon',
-        },
-        {
-          name: 'Company & Origin',
-          detail: 'The Quartz Corp, Rana Mines, Norway',
-        },
-      ],
-    },
-    2: {
-      title: 'METALLURGICAL-GRADE SILICON PRODUCTION',
-      items: [
-        {
-          name: 'Critical Mineral',
-          detail: 'Silicon (Si) – refined from quartz for further purification',
-        },
-        {
-          name: 'Company & Origin',
-          detail: 'Wacker Chemie, Burghausen, Germany',
-        },
-      ],
-    },
-    3: {
-      title: 'POLYSILICON PURIFICATION',
-      items: [
-        {
-          name: 'Critical Mineral',
-          detail: 'Silicon (Si) – purified to select value (>99.9999 %)',
-        },
-        {
-          name: 'Company & Origin',
-          detail: 'Hemlock Semiconductor, Hemlock, Michigan, USA',
-        },
-      ],
-    },
-    4: {
-      title: 'MONOCRYSTALLINE SILICON INGOT & WAFER PRODUCTION',
-      items: [
-        {
-          name: 'Critical Mineral',
-          detail: 'Silicon (Si) – cast into ingots and sliced into wafers',
-        },
-        {
-          name: 'Company & Origin',
-          detail: 'LONG Green Energy, Xi\'an, China',
-        },
-      ],
-    },
-    5: {
-      title: 'CELL METALLIZATION',
-      items: [
-        {
-          name: 'Critical Mineral',
-          detail: 'Silicon (Si) – wafer substrate',
-        },
-        {
-          name: 'Critical Mineral',
-          detail: 'Silver (Ag) – frontside metallization paste',
-        },
-        {
-          name: 'Company & Origin',
-          detail: 'JinkoSolar, Haining, Zhejiang, China',
-        },
-      ],
-    },
+  const iconsHover = {
+    1: <FaMountain size={28} color="#ffffff" />,
+    2: <FaIndustry size={28} color="#ffffff" />,
+    3: <FaFilter size={28} color="#ffffff" />,
+    4: <FaCube size={28} color="#ffffff" />,
+    5: <FaSolarPanel size={28} color="#ffffff" />,
   };
 
   const steps = [
-    {
-      step: 1,
-      title: 'Quartz (SiO₂) Mining',
-      icon: <FaMountain size={20} />,
-      iconPosition: 'top',
-      color: '#3083DC',
-      showRightNotch: true,
-    },
-    {
-      step: 2,
-      title: 'Metallurgical-Grade Silicon Production',
-      icon: <FaIndustry size={20} />,
-      iconPosition: 'bottom',
-      color: '#1F3C88',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 3,
-      title: 'Polysilicon Purification',
-      icon: <FaFilter size={20} />,
-      iconPosition: 'top',
-      color: '#4E4E4E',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 4,
-      title: 'Monocrystalline Silicon Ingot & Wafer Production',
-      icon: <FaCube size={20} />,
-      iconPosition: 'bottom',
-      color: '#1F3C88',
-      showLeftNotch: true,
-      showRightNotch: true,
-    },
-    {
-      step: 5,
-      title: 'Cell Metallization',
-      icon: <FaSolarPanel size={20} />,
-      iconPosition: 'top',
-      color: '#3083DC',
-      showLeftNotch: true,
-    },
+    { id: 1, title: "Quartz (SiO₂) Mining" },
+    { id: 2, title: "Metallurgical-grade Silicon Production" },
+    { id: 3, title: "Polysilicon Purification" },
+    { id: 4, title: "Ingot & Wafer Production" },
+    { id: 5, title: "Cell Metallization" },
   ];
 
-  const StepCard = ({
-    step,
-    title,
-    subtitle,
-    icon,
-    iconPosition,
-    color,
-    showRightNotch,
-    showLeftNotch,
-    setHoveredStep,
-  }) => {
-    return (
-      <motion.div
-        onMouseEnter={() => !isMobile && setHoveredStep(step)}
-        onMouseLeave={() => !isMobile && setHoveredStep(null)}
-        onClick={() =>
-          isMobile && setHoveredStep(hoveredStep === step ? null : step)
-        }
-        whileHover={{ scale: isMobile ? 1 : 1.05 }}
-        transition={{ type: "spring", stiffness: 200, damping: 15 }}
-        className="position-relative text-center"
-        style={{
-          flex: "0 0 auto",
-          minWidth: "140px",
-          maxWidth: "180px",
-          margin: "2px 10px",
-          width: isMobile ? "100%" : "auto",
-        }}
-      >
-        {/* Icon */}
-        <div
-          className="rounded-circle d-flex justify-content-center align-items-center shadow-sm"
-          style={{
-            width: "50px",
-            height: "50px",
-            position: "absolute",
-            [iconPosition]: "-16px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            border: `3px solid #4f948b`,
-            backgroundColor: "#fff",
-            zIndex: 2,
-          }}
-        >
-          {icon}
-        </div>
-
-        {/* Card */}
-        <div
-          className="bg-white shadow-sm px-3 py-3"
-          style={{
-            paddingTop: iconPosition === "top" ? "38px" : "16px",
-            paddingBottom: iconPosition === "bottom" ? "38px" : "16px",
-            borderRadius: "10px",
-            borderTop: iconPosition === "top" ? `3px solid #4f948b` : undefined,
-            borderBottom:
-              iconPosition === "bottom" ? `3px solid #4f948b` : undefined,
-            fontSize: "0.85rem",
-            minHeight: isMobile ? "auto" : "150px",
-            marginTop: isMobile ? "40px" : "100px",
-          }}
-        >
-          <div className="text-muted mb-1" style={{ fontSize: "0.75rem" }}>
-            {step}
-          </div>
-          <div className="fw-bold" style={{ fontSize: "0.9rem" }}>
-            {title}
-          </div>
-          {subtitle && (
-            <p
-              className="text-muted mt-1 mb-0"
-              style={{ fontSize: "0.75rem", lineHeight: "1.3" }}
-            >
-              {subtitle}
-            </p>
-          )}
-        </div>
-
-        {/* Bar */}
-        {!isMobile && (
-          <div
-            className="position-absolute w-100"
-            style={{
-              height: "10px",
-              bottom: iconPosition === "top" ? "-5px" : undefined,
-              top: iconPosition === "bottom" ? "-5px" : undefined,
-              backgroundColor: "#c05538",
-              borderRadius: "4px",
-              zIndex: 1,
-            }}
-          />
-        )}
-
-        {/* Notches */}
-        {!isMobile && showRightNotch && (
-          <div
-            className="position-absolute"
-            style={{
-              width: 0,
-              height: 0,
-              right: "-12px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              borderTop: "12px solid transparent",
-              borderBottom: "12px solid transparent",
-              borderLeft: `12px solid #4f948b`,
-              zIndex: 1,
-            }}
-          />
-        )}
-        {!isMobile && showLeftNotch && (
-          <div
-            className="position-absolute"
-            style={{
-              width: 0,
-              height: 0,
-              left: "-12px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              borderTop: "12px solid transparent",
-              borderBottom: "12px solid transparent",
-              borderRight: `12px solid #c05538`,
-              zIndex: 1,
-            }}
-          />
-        )}
-      </motion.div>
-    );
+  const stepDetails = {
+    1: [
+      "Quartz (SiO₂) – feedstock for silicon – The Quartz Corp, Rana Mines (Norway)",
+      "Critical Mineral: Quartz (SiO₂) – feedstock for silicon",
+      "Company & Origin: The Quartz Corp, Rana Mines, Norway",
+    ],
+    2: [
+      "Metallurgical-grade Silicon – Wacker Chemie (Burghausen, Germany)",
+      "Critical Mineral: Silicon (Si) – refined from quartz for further purification",
+      "Company & Origin: Wacker Chemie, Burghausen, Germany",
+    ],
+    3: [
+      "Polysilicon (>99.9999%) – Hemlock Semiconductor (Michigan, USA)",
+      "Critical Mineral: Silicon (Si) – purified to solar‑grade (>99.9999 %)",
+      "Company & Origin: Hemlock Semiconductor, Hemlock, Michigan, USA",
+    ],
+    4: [
+      "Monocrystalline ingot & wafer – LONG Green Energy (Xi'an, China)",
+      "Critical Mineral: Silicon (Si) – cast into ingots and sliced into wafers",
+      "Company & Origin: LONGi Green Energy, Xi'an, China",
+    ],
+    5: [
+      "Cell metallization – Silver paste on Si wafer – JinkoSolar (Zhejiang, China)",
+      "Silicon (Si) – wafer substrate",
+      "Silver (Ag) – via metallization step above",
+      "Company & Origin: JinkoSolar, Haining, Zhejiang, China",
+    ],
   };
+
+  // const handleMouseMove = (e, id) => {
+  //   const card = cardRefs.current[id];
+  //   if (!card) return;
+  //   const rect = card.getBoundingClientRect();
+  //   const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  //   const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+
+  //   gsap.to(card, {
+  //     duration: 0,
+  //     rotationX: -y * 40,
+  //     rotationY: x * 40,
+  //     scale: 1.08,
+  //     ease: "power3.out",
+  //     transformPerspective: 600,
+  //     transformOrigin: "center",
+  //     boxShadow: "0 35px 80px rgba(0,0,0,0.5)",
+  //     overwrite: "auto",
+  //   });
+
+  //   const overlay = card.querySelector(".overlay");
+  //   if (overlay) {
+  //     gsap.to(overlay, {
+  //       duration: 0.5,
+  //       height: "100%",
+  //       ease: "power3.out",
+  //     });
+  //   }
+  // };
+
+  // const handleMouseLeave = (id) => {
+  //   const card = cardRefs.current[id];
+  //   if (!card) return;
+
+  //   gsap.to(card, {
+  //     duration: 0.5,
+  //     rotationX: 0,
+  //     rotationY: 0,
+  //     scale: 1,
+  //     ease: "power3.out",
+  //     boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+  //     overwrite: "auto",
+  //   });
+
+  //   if (activeStep !== id) {
+  //     const overlay = card.querySelector(".overlay");
+  //     if (overlay) {
+  //       gsap.to(overlay, {
+  //         duration: 0.5,
+  //         height: "0%",
+  //         ease: "power3.inOut",
+  //       });
+  //     }
+  //   }
+
+  //   if (activeStep === null && !isHoveringSnackbar) {
+  //     setHoveredStep(null);
+  //   }
+  // };
+
+  const handleCardClick = (id) => {
+    setActiveStep((prev) => (prev === id ? null : id));
+  };
+
+  // React.useEffect(() => {
+  //   if (activeStep !== null) {
+  //     Object.entries(cardRefs.current).forEach(([key, card]) => {
+  //       if (!card) return;
+  //       const overlay = card.querySelector(".overlay");
+  //       if (!overlay) return;
+
+  //       if (parseInt(key, 10) === activeStep) {
+  //         gsap.to(overlay, {
+  //           duration: 0.5,
+  //           height: "100%",
+  //           ease: "power3.out",
+  //         });
+  //       } else {
+  //         gsap.to(overlay, {
+  //           duration: 0.5,
+  //           height: "0%",
+  //           ease: "power3.inOut",
+  //         });
+  //       }
+  //     });
+  //   } else {
+  //     Object.entries(cardRefs.current).forEach(([key, card]) => {
+  //       if (!card) return;
+  //       const overlay = card.querySelector(".overlay");
+  //       if (!overlay) return;
+  //       if (hoveredStep && parseInt(key, 10) === hoveredStep) {
+  //         gsap.to(overlay, {
+  //           duration: 0.5,
+  //           height: "100%",
+  //           ease: "power3.out",
+  //         });
+  //       } else {
+  //         gsap.to(overlay, {
+  //           duration: 0.5,
+  //           height: "0%",
+  //           ease: "power3.inOut",
+  //         });
+  //       }
+  //     });
+  //   }
+  // }, [activeStep, hoveredStep]);
+
+  const infoStep = activeStep !== null ? activeStep : hoveredStep;
 
   return (
     <div
-      className="solar-pv-container"
       style={{
-        width: '100%',
-        maxWidth: '1000px',
-        margin: '0 auto',
-        backgroundColor: '#d9d9d9',
-        padding: '1rem',
-        boxSizing: 'border-box',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        position: 'relative',
-          height:"70vh",
+        margin: "auto",
+        padding: 20,
+        // background: "rgb(227 222 241)",
+        backgroundColor: "#C8D9E6",
+        borderRadius: 16,
+        position: "relative",
+        maxHeight : "68vh",
+            minHeight : "68vh",
+        zIndex: 1,
       }}
     >
-      <div className="text-center mb-3">
-        <h4 style={{ 
-          fontSize: isMobile ? '1.1rem' : '1.2rem', 
-          color: '#2c3e50', 
-          marginBottom: '0.5rem' 
-        }}>
-          Solar PV - Global Manufacturing Process
-        </h4>
-        <p
-          className="text-muted"
-          style={{
-            fontSize: isMobile ? '0.8rem' : '0.9rem',
-            marginBottom: '1rem',
-            maxWidth: '90%',
-            margin: '0 auto',
-          }}
-        >
-          Explore the stages of solar PV production from raw materials to finished cells
-        </p>
-      </div>
-
-      {/* Desktop Hover Info Box */}
-      {!isMobile && hoveredStep && hoverInfo[hoveredStep] && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="position-absolute text-white p-3 shadow"
-          style={{
-            top: "75px",
-            left: "500",
-            transform: "translateX(-50%)",
-            backgroundColor: "#4e4e4e",
-            borderRadius: "10px",
-            width: "94%",
-            maxWidth: "1200px",
-            fontSize: "13px",
-            zIndex: 18,
-          }}
-        >
-          <div className="fw-bold text-center mb-2">{hoverInfo[hoveredStep].title}</div>
-          {hoverInfo[hoveredStep].items.map((item, i) => (
-            <div key={i} className="mb-1">
-              <strong>{item.name}</strong>: {item.detail}
-            </div>
-          ))}
-        </motion.div>
-      )}
-
-      {/* Steps */}
-      <div
-        className="step-cards-container d-flex h-100"
+      <h2
         style={{
-         overflow:'auto',
-          flexWrap: isMobile ? 'wrap' : 'nowrap',
-          justifyContent: isMobile ? 'center' : 'flex-start',
-          scrollSnapType: 'x mandatory',
-          WebkitOverflowScrolling: 'touch',
-          paddingBottom: '1rem',
-          gap: isMobile ? '20px' : '0',
-          paddingTop: "5vh",
+          textAlign: "center",
+          marginBottom: 40,
+           color: "gray",
+          fontWeight: "700",
         }}
       >
-        {steps.map((s, i) => (
-          <div 
-            key={i} 
-            style={{ 
-              scrollSnapAlign: 'start',
-              marginTop: isMobile ? '20px' : '50px',
-              width: isMobile ? '100%' : 'auto',
-            }}
-          >
-            <StepCard 
-              {...s} 
-              setHoveredStep={setHoveredStep} 
-            />
-            {isMobile && hoveredStep === s.step && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                className="text-white p-3 mt-2 shadow"
+        Solar PV Cells Supply Chain
+      </h2>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          gap: 40,         // flexWrap: "wrap",
+          position: "relative",
+             overflowX : "scroll",
+          zIndex: 1,
+              marginBottom : "5vh"
+        }}
+      >
+        {steps.map(({ id, title }) => {
+          const isHovered = id === hoveredStep;
+          const isActive = id === activeStep;
+          const isHighlighted = isHovered || isActive;
+
+          return (
+            <div
+              key={id}
+              ref={(el) => (cardRefs.current[id] = el)}
+              tabIndex={0}
+              role="button"
+              // onClick={() => handleCardClick(id)}
+              onMouseEnter={() => setHoveredStep(id)}
+              // onMouseMove={(e) => handleMouseMove(e, id)}
+              // onMouseLeave={() => handleMouseLeave(id)}
+              style={{
+                 cursor: "pointer",
+                borderRadius: 20,
+                // paddingX: "1vw",
+                // width: "auto",
+                position: "relative",
+                // color: isActive || isHovered ? "#fff" : "#1f2d3d",
+                // boxShadow: isActive
+                //   ? "0 12px 24px rgba(195, 141, 65, 0.4)"
+                //   : "0 8px 20px rgba(0,0,0,0.08)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 16,
+                    width : "100px",
+                maxWidth : "100px",
+                minWidth : "100px",
+                // transformStyle: "preserve-3d",
+                // willChange: "transform",
+                // transition: "color 0.35s ease",
+                outline: "none",
+                // background: "linear-gradient(145deg, #ffffff, #e6e6e6)",
+                // overflowX: "scroll",
+                zIndex: isHighlighted ? 2 : 1,
+              }}
+            >
+              <div
+                className="overlay"
                 style={{
-                  backgroundColor: '#4e4e4e',
-                  borderRadius: '10px',
-                  fontSize: '12px',
-                  margin: '0 10px',
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "0%",
+                  background: "linear-gradient(to bottom, #2d3990, #4a82be)",
+                  pointerEvents: "none",
+                  zIndex: 0,
+                  borderRadius: 20,
+                  willChange: "height",
+                }}
+              />
+              <div
+                style={{
+                  position: "relative",
+                  zIndex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: 16,
                 }}
               >
-                <div className="fw-bold text-center mb-2">
-                  {hoverInfo[s.step].title}
+                <div
+                  style={{
+                    width: 72,
+                    height: 72,
+                    borderRadius: "50%",
+                    background: isHighlighted
+                      ? "#ffffff33"
+                      : "radial-gradient(circle at 30% 30%, #e5e9f5, #dfe4ec)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    boxShadow: isHighlighted
+                      ? "0 4px 12px rgba(255,255,255,0.6), inset 0 0 8px #ffffff"
+                      : "0 4px 8px rgba(74,130,190,0.3)",
+                    transition: "all 0.3s ease",
+                  }}
+                >
+                  {isHighlighted ? iconsHover[id] : icons[id]}
                 </div>
-                {hoverInfo[s.step].items.map((item, i) => (
-                  <div key={i} className="mb-1">
-                    <strong>{item.name}</strong>: {item.detail}
-                  </div>
-                ))}
-              </motion.div>
-            )}
-          </div>
-        ))}
+                <div
+                  style={{
+                    fontSize: 16,
+                    textAlign: "center",
+                    fontWeight: 600,
+                    transition: "color 0.3s ease",
+                    color: "gray",
+                  }}
+                >
+                  {title}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
+
+   <div className="mb-4"  style={{ textAlign: "center" }}>
+        <em className="px-2 mt-4 fw-normal" style={{fontSize : "14px", textAlign : "center" ,fontWeight : "500" }}>
+        This infographic outlines the end‑to‑end supply chain for solar
+        photovoltaic cell manufacturing, from quartz mining in Norway through
+        silicon purification in the U.S. and Germany to wafer slicing in China
+        and silver metallization in Germany. By pairing each production stage
+        with its critical mineral inputs (quartz, silicon, silver) and flagship
+        facilities, it highlights the global network of suppliers that underpin
+        clean‑energy technology. The graphic’s intent is to reveal potential
+        chokepoints and strategic dependencies—emphasizing how securing
+        high‑purity materials is vital for scaling solar deployment worldwide.
+      </em>
+      </div>
+
+      {infoStep && (
+        <Snackbar
+          open={true}
+          anchorOrigin={{ vertical: "top", horizontal: "bottom" }}
+          autoHideDuration={null}
+          onClose={() => {
+            if (!isHoveringSnackbar) {
+              setHoveredStep(null);
+              setActiveStep(null);
+            }
+          }}
+          style={{
+            position: "relative",
+            top: "-17vh",
+            left: -10,
+            zIndex: 9999,
+          }}
+        >
+          <div
+            onMouseEnter={() => setIsHoveringSnackbar(true)}
+            onMouseLeave={() => setIsHoveringSnackbar(false)}
+          >
+            <Alert
+              severity="success"
+              variant="filled"
+              onClose={() => {
+                setHoveredStep(null);
+                setActiveStep(null);
+              }}
+              sx={{
+                pointerEvents: "auto",
+                minWidth: 320,
+                userSelect: "text",
+                backgroundColor: "#517891",
+                color: "#ffffff",
+                boxShadow: "0 8px 20px rgba(0,0,0,0.3), inset 0 0 10px #1a3c6e",
+                "&:hover": {
+                  cursor: "default",
+                },
+              }}
+            >
+              <strong>{steps.find((s) => s.id === infoStep)?.title}</strong>
+              <ul style={{ marginTop: 8, paddingLeft: 20 }}>
+                {stepDetails[infoStep]?.map((d, i) => (
+                  <li key={i}>{d}</li>
+                ))}
+              </ul>
+            </Alert>
+          </div>
+        </Snackbar>
+      )}
     </div>
   );
 }

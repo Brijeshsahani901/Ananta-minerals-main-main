@@ -105,6 +105,7 @@ export default function TechnologySlider() {
             ...buttonBaseStyle,
             top: "10px",
             left: "10px",
+            zIndex: 5,
           }}
         >
           <FiChevronLeft size={28} color="#333" />
@@ -115,6 +116,7 @@ export default function TechnologySlider() {
             ...buttonBaseStyle,
             top: "10px",
             right: "10px",
+            zIndex: 5,
           }}
         >
           <FiChevronRight size={28} color="#333" />
@@ -155,6 +157,11 @@ export default function TechnologySlider() {
       >
         <Carousel.Item>
           <div className="d-block w-100">
+            <SolarPV />
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="">
             <SupplyChainSteps />
           </div>
         </Carousel.Item>
@@ -166,11 +173,6 @@ export default function TechnologySlider() {
         <Carousel.Item>
           <div className="d-block w-100">
             <MilitaryDronesAssembly />
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <SolarPV />
           </div>
         </Carousel.Item>
       </Carousel>

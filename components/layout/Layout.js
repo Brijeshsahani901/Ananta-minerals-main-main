@@ -125,22 +125,22 @@ const Layout = ({ headerStyle, footerStyle, children, breadcrumbCategory, breadc
                 handleSidebarClose={handleSidebarClose}
             /> : null}
 
-           {/* <main
+         <main
         className="main"
         style={{
-          backgroundImage: 'url("https://www.transparenttextures.com/patterns/cutcube.png")',
+        //   backgroundImage: 'url("https://www.transparenttextures.com/patterns/cutcube.png")',
           backgroundRepeat: 'repeat',
           backgroundSize: 'auto',
           backgroundAttachment: 'fixed',
-          backgroundColor: '#b0babf'
+        //   backgroundColor: '#b0babf'
         }}
-      > */}
-        {breadcrumbCategory && (
+      > 
+        {/* {breadcrumbCategory && (
           <Breadcrumb breadcrumbCategory={breadcrumbCategory} breadcrumbPostTitle={breadcrumbPostTitle} />
-        )}
+        )} */}
 
-        {children}
-      {/* </main> */}
+        <div style={{margin : "0vh 0px" }}>{children}</div>
+      </main>
 
 
             {!footerStyle && < Footer1 />}
