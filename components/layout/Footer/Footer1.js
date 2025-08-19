@@ -11,113 +11,11 @@ export default function Footer1({}) {
     <>
       <footer className="footer-area black-bg mt-3">
         <div className="container">
-          {/* <div className="footer__top-wrap">
-                        <div className="row">
-                            <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                                <div className="footer__widget">
-                                    <h4 className="fw-title">Worldwide</h4>
-                                    <ul className="list-wrap">
-                                        <li><Link href="#">U.N.</Link></li>
-                                        <li><Link href="#">Conflicts</Link></li>
-                                        <li><Link href="#">Terrorism</Link></li>
-                                        <li><Link href="#">Disasters</Link></li>
-                                        <li><Link href="#">Global Economy</Link></li>
-                                        <li><Link href="#">Environment</Link></li>
-                                        <li><Link href="#">Religion</Link></li>
-                                        <li><Link href="#">Scandals</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                                <div className="footer__widget">
-                                    <h4 className="fw-title">Politics</h4>
-                                    <ul className="list-wrap">
-                                        <li><Link href="#">Executive</Link></li>
-                                        <li><Link href="#">Senate</Link></li>
-                                        <li><Link href="#">House</Link></li>
-                                        <li><Link href="#">Judiciary</Link></li>
-                                        <li><Link href="#">Global Economy</Link></li>
-                                        <li><Link href="#">Foreign policy</Link></li>
-                                        <li><Link href="#">Polls</Link></li>
-                                        <li><Link href="#">Elections</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                                <div className="footer__widget">
-                                    <h4 className="fw-title">Entertainment</h4>
-                                    <ul className="list-wrap">
-                                        <li><Link href="#">Celebrity News</Link></li>
-                                        <li><Link href="#">Movies</Link></li>
-                                        <li><Link href="#">TV News</Link></li>
-                                        <li><Link href="#">Disasters</Link></li>
-                                        <li><Link href="#">Music News</Link></li>
-                                        <li><Link href="#">Environment</Link></li>
-                                        <li><Link href="#">Style News</Link></li>
-                                        <li><Link href="#">Entertainment Video</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                                <div className="footer__widget">
-                                    <h4 className="fw-title">Business</h4>
-                                    <ul className="list-wrap">
-                                        <li><Link href="#">Environment</Link></li>
-                                        <li><Link href="#">Conflicts</Link></li>
-                                        <li><Link href="#">Terrorism</Link></li>
-                                        <li><Link href="#">Disasters</Link></li>
-                                        <li><Link href="#">Global Economy</Link></li>
-                                        <li><Link href="#">Environment</Link></li>
-                                        <li><Link href="#">Religion</Link></li>
-                                        <li><Link href="#">Scandals</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                                <div className="footer__widget">
-                                    <h4 className="fw-title">Health</h4>
-                                    <ul className="list-wrap">
-                                        <li><Link href="#">Movies</Link></li>
-                                        <li><Link href="#">Conflicts</Link></li>
-                                        <li><Link href="#">Terrorism</Link></li>
-                                        <li><Link href="#">Disasters</Link></li>
-                                        <li><Link href="#">Global Economy</Link></li>
-                                        <li><Link href="#">Scandals</Link></li>
-                                        <li><Link href="#">Environment</Link></li>
-                                        <li><Link href="#">Religion</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                                <div className="footer__widget">
-                                    <h4 className="fw-title">Trending In</h4>
-                                    <ul className="list-wrap">
-                                        <li><Link href="#">U.N.</Link></li>
-                                        <li><Link href="#">Conflicts</Link></li>
-                                        <li><Link href="#">Terrorism</Link></li>
-                                        <li><Link href="#">Disasters</Link></li>
-                                        <li><Link href="#">Global Economy</Link></li>
-                                        <li><Link href="#">Environment</Link></li>
-                                        <li><Link href="#">Religion</Link></li>
-                                        <li><Link href="#">Scandals</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
-
           <div className="footer__copyright">
             <div className="row">
-              <div className="col-lg-6">
-                <div className="copyright__text">
-                  <p>
-                    Designed by
-                    {/* <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://alpinesoftit.com/"
-                    > */}
-                    &nbsp;
+              <div className="col-lg-6" >
+                  <p style={{color : "gray"}}>
+                    Designed by &nbsp;
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -126,10 +24,8 @@ export default function Footer1({}) {
                     >
                       Alpinesoft IT Solutions Pvt Ltd
                     </a>
-                    &nbsp;
-                    {/* </a>{" "} */}- {new Date().getFullYear()}
+                    &nbsp; - {new Date().getFullYear()}
                   </p>
-                </div>
               </div>
               <div className="col-lg-6">
                 <div className="copyright__menu">
@@ -169,7 +65,7 @@ export default function Footer1({}) {
                         display: "flex",
                         justifyContent: "space-between",
                         width: "full",
-                        flex : 1
+                        flex: 1,
                       }}
                     >
                       <li>
@@ -207,7 +103,6 @@ export default function Footer1({}) {
                           target="_blank"
                           rel="noopener noreferrer"
                           href="https://anantaaspencentre.in"
-                      
                         >
                           <FaGlobe size={16} />
                         </a>

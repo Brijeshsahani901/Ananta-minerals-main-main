@@ -52,7 +52,7 @@ const mineralPosts = [
     description: "",
     downloadUrl: "#", // Add your actual download link here
     path: "https://stratnewsglobal.com/world-news/india-uk-tech-pact-expands-focus-to-critical-minerals-frontier-domains/",
-    author: "StratNews Globa",
+    author: "StratNews Global",
     date: "25th July, 2025",
     img: "",
   },
@@ -87,7 +87,34 @@ const mineralPosts = [
     date: "13th July, 2025",
     img: "",
   },
+  {
+    id: 9,
+    title: "DISRUPTION IN THE SUPPLY OF RARE EARTH MAGNETS",
+    description: "",
+    downloadUrl: "#", // Add your actual download link here
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2151394",
+    author: "PIB",
+    date: "13th July, 2025",
+    img: "",
+  },
+  {
+    id: 10,
+    title:
+      "Mines Ministry Recognizes Seven Centres of Excellence to work under the National Critical Mineral Mission",
+    description: "",
+    downloadUrl: "#", // Add your actual download link here
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2151287",
+    author: "PIB",
+    date: "13th July, 2025",
+    img: "",
+  },
 ];
+
+const sortedMineralPosts = [...mineralPosts].sort((a, b) => {
+  const dateA = new Date(a.date.replace(/(\d+)(st|nd|rd|th)/, '$1'));
+  const dateB = new Date(b.date.replace(/(\d+)(st|nd|rd|th)/, '$1'));
+  return dateB - dateA; // Descending order
+});
 
 export default function Home1() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -99,7 +126,6 @@ export default function Home1() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
-  const borderColor = "rgba(0, 0, 0, 0.25)";
   const borderThickness = "0.5px";
 
   return (
@@ -117,7 +143,7 @@ export default function Home1() {
               }}
             >
               {/* Left: Technology Slider */}
-              <div className="col-xl-9 col-lg-12 col-12">
+              <div className="col-xl-9 col-12 slider-show">
                 <motion.div
                   initial="hidden"
                   animate="visible"
@@ -128,11 +154,11 @@ export default function Home1() {
               </div>
 
               {/* Vertical Divider */}
-              <div className="vertical-divider d-none d-lg-block" />
+              <div className="vertical-divider" />
 
               {/* Right: Blog Posts */}
               <motion.div
-                className="col-lg-3 col-md-12 mt-responsive"
+                className="col-xl-3"
                 style={{
                   maxHeight: "70vh",
                   overflowY: "auto",
@@ -145,31 +171,32 @@ export default function Home1() {
                 }}
                 variants={staggerContainer}
               >
-                  <div
+                <div
                   style={{
                     padding: "16px 12px",
                     borderBottom: "1px solid #ddd",
                     backgroundColor: "#ffffff",
                     position: "sticky",
                     top: 0,
-                    width : "full",
-                    flex : 1,
+                    width: "full",
+                    flex: 1,
                     zIndex: 10,
                   }}
                 >
-                  <h3 style={{ marginLeft : "-1vw", fontSize: "20px", color: "#2F4156" }}>
-                    What's new
+                  <h3 style={{ marginLeft: "-1vw", fontSize: "20px" }}>
+                    What's New
                   </h3>
                 </div>
                 {/* Loop through posts here */}
-                {mineralPosts.map((post, index) => (
+                {sortedMineralPosts.map((post, index) => (
                   <div className="d-flex" key={post.id}>
                     <div className={post.img == "" ? "col-12" : "col-8"}>
-                      <Link
+                      <a
                         href={
                           /^https?:\/\//.test(post.path) ? post.path : post.path
                         }
-                        passHref
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <motion.div variants={postItem}>
                           <div style={{ marginTop: "10px" }}>
@@ -188,7 +215,6 @@ export default function Home1() {
                                 onMouseLeave={(e) =>
                                   (e.currentTarget.style.color = "")
                                 }
-                                href={post.path}
                               >
                                 {post.title}
                               </div>
@@ -230,7 +256,7 @@ export default function Home1() {
                             </div>
                           </div>
                         </motion.div>
-                      </Link>
+                      </a>
 
                       {index !== mineralPosts.length - 1 && (
                         <div
@@ -263,7 +289,6 @@ export default function Home1() {
                   </div>
                 ))}
               </motion.div>
-
             </div>
           </div>
 
@@ -318,7 +343,7 @@ export default function Home1() {
                       </div> */}
           <div className=" mb-3 pb-3">
             <h3 style={{ marginLeft: "8vw", marginBottom: "3vh" }}>
-              Latest Updates
+              Latest Uploads
             </h3>
             <DocumentSlider />
           </div>

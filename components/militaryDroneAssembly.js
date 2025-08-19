@@ -219,6 +219,7 @@ export default function MilitaryDronesWithGsapTilt() {
               role="button"
               aria-pressed={isActive}
               onMouseEnter={() => setHoveredStep(id)}
+                onMouseLeave={() => setHoveredStep(null)}  
               // onMouseMove={(e) => tiltCard(e, id)}
               // onMouseLeave={() => resetCard(id)}
               // onFocus={() => focusCard(id)}

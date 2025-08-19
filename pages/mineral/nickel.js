@@ -47,7 +47,7 @@ export default function About() {
             alt="About"
             style={{
               width: "100%",
-              height: "70vh",
+            height : "400px",
               display: "block",
               objectFit: "cover",
             }}

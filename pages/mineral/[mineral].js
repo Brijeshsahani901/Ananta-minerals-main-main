@@ -144,7 +144,7 @@ export default function MineralDetails() {
             alt="Mineral Visual"
             style={{
               width: "100%",
-              height: "70vh",
+            height : "400px",
               objectFit: "cover",
             }}
           />

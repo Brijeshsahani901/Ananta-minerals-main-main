@@ -48,7 +48,7 @@ export default function Potash() {
             alt="Potash"
             style={{
               width: "100%",
-              height: "70vh",
+            height : "400px",
               display: "block",
               objectFit: "cover",
             }}

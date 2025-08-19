@@ -123,7 +123,7 @@
     },
     {
       path: "/renewable-energy",
-      label: "Renewable energy",
+      label: "Renewable Energy",
       image:
         "https://drmcet.ac.in/wp-content/uploads/2024/06/Renewable-energy-image.png", // Cobalt ore image
     },
