@@ -202,6 +202,7 @@ export default function SupplyChainSteps() {
                 setActiveStep((prev) => (prev === id ? null : id));
               }}
               onMouseEnter={() => setHoveredStep(id)}
+                onMouseLeave={() => setHoveredStep(null)}  
               // onMouseMove={(e) => handleMouseMove(e, id)}
               // onMouseLeave={() => resetCard(id)}
               // onFocus={() => focusCard(id)}

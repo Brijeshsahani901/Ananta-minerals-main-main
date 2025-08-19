@@ -601,7 +601,7 @@ export default function Menu({
                 whileHover={{ scale: 1.05 }}
                 className={router.pathname === "/supply-chain" ? "active" : ""}
               >
-                <Link href="">
+                <Link href="/whats-new">
                   <span style={{ color: "white" }}>What's New</span>
 
                   {router.pathname === "/supply-chain" && (
@@ -695,7 +695,10 @@ export default function Menu({
                       <div className="">
                         <button
                           className="btn"
-                          style={{ backgroundColor: "#F5EFEB" , color : "#2F4156" }}
+                          style={{
+                            backgroundColor: "#F5EFEB",
+                            color: "#2F4156",
+                          }}
                           type="submit"
                         >
                           <i className="fas fa-search"></i>
@@ -934,8 +937,8 @@ export default function Menu({
               margin: "0.5rem",
               borderRadius: "999px",
               cursor: "pointer",
-              backgroundImage:
-                "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+              color: "#F5EFEB",
+
               boxShadow: "0 4px 10px rgba(0, 0, 0, 0.12)",
               overflow: "hidden",
               minWidth: "fit-content",
@@ -948,9 +951,9 @@ export default function Menu({
             }}
           >
             <i
-              className="fas fa-long-arrow-left text-primary"
+              className="fas fa-long-arrow-left"
               style={{
-                // color: "white",
+                color: "white",
                 fontSize: "1rem",
               }}
             />

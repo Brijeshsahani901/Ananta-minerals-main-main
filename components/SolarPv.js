@@ -226,6 +226,7 @@ export default function SolarPV() {
               role="button"
               // onClick={() => handleCardClick(id)}
               onMouseEnter={() => setHoveredStep(id)}
+              onMouseLeave={() => setHoveredStep(null)}  
               // onMouseMove={(e) => handleMouseMove(e, id)}
               // onMouseLeave={() => handleMouseLeave(id)}
               style={{
@@ -329,57 +330,44 @@ export default function SolarPV() {
       </em>
       </div>
 
-      {infoStep && (
-        <Snackbar
-          open={true}
-          anchorOrigin={{ vertical: "top", horizontal: "bottom" }}
-          autoHideDuration={null}
-          onClose={() => {
-            if (!isHoveringSnackbar) {
-              setHoveredStep(null);
-              setActiveStep(null);
-            }
-          }}
-          style={{
-            position: "relative",
-            top: "-17vh",
-            left: -10,
-            zIndex: 9999,
-          }}
-        >
-          <div
-            onMouseEnter={() => setIsHoveringSnackbar(true)}
-            onMouseLeave={() => setIsHoveringSnackbar(false)}
-          >
-            <Alert
-              severity="success"
-              variant="filled"
-              onClose={() => {
-                setHoveredStep(null);
-                setActiveStep(null);
-              }}
-              sx={{
-                pointerEvents: "auto",
-                minWidth: 320,
-                userSelect: "text",
-                backgroundColor: "#517891",
-                color: "#ffffff",
-                boxShadow: "0 8px 20px rgba(0,0,0,0.3), inset 0 0 10px #1a3c6e",
-                "&:hover": {
-                  cursor: "default",
-                },
-              }}
-            >
-              <strong>{steps.find((s) => s.id === infoStep)?.title}</strong>
-              <ul style={{ marginTop: 8, paddingLeft: 20 }}>
-                {stepDetails[infoStep]?.map((d, i) => (
-                  <li key={i}>{d}</li>
-                ))}
-              </ul>
-            </Alert>
-          </div>
-        </Snackbar>
-      )}
+    {hoveredStep && (
+  <Snackbar
+    open={true}
+    anchorOrigin={{ vertical: "top", horizontal: "bottom" }}
+    autoHideDuration={null}
+    style={{
+      position: "relative",
+      top: "-17vh",
+      left: -10,
+      zIndex: 9999,
+    }}
+  >
+    <Alert
+      severity="success"
+      variant="filled"
+      onClose={() => setHoveredStep(null)}
+      sx={{
+        pointerEvents: "auto",
+        minWidth: 320,
+        userSelect: "text",
+        backgroundColor: "#517891",
+        color: "#ffffff",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.3), inset 0 0 10px #1a3c6e",
+        "&:hover": {
+          cursor: "default",
+        },
+      }}
+    >
+      <strong>{steps.find((s) => s.id === hoveredStep)?.title}</strong>
+      <ul style={{ marginTop: 8, paddingLeft: 20 }}>
+        {stepDetails[hoveredStep]?.map((d, i) => (
+          <li key={i}>{d}</li>
+        ))}
+      </ul>
+    </Alert>
+  </Snackbar>
+)}
+
     </div>
   );
 }

@@ -236,6 +236,7 @@ export default function AlternateTechSodiumIonSupplyChain() {
               aria-pressed={isActive}
               onClick={() => setActiveStep(id)}
               onMouseEnter={() => handleMouseEnter(id)}
+                onMouseLeave={() => setHoveredStep(null)}  
               // onMouseMove={(e) => handleMouseMove(e, id)}
               // onMouseLeave={() => handleMouseLeave(id)}
               // onFocus={() => handleFocus(id)}

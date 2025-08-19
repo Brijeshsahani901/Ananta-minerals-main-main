@@ -14,7 +14,7 @@ const DocumentSlider = () => {
       image: `${basePath}/assets/minerals_images/battery.jpg`,
       title: "Critical Pathways: Building India's Mineral Value Chain",
       link: "/supply-chain/critical-pathway",
-      content: "India's ambition for critical mineral independence rests on a complex sequence of capabilities that span the full length of the value chain, from geological mapping and resource estimation to the final integration of metals into defence systems or electronic devices.",
+      content: "India's ambition for critical mineral independence rests on a complex sequence of capabilities that span the full length of the value chain, from geological mapping and resource estimation to the final...",
       author: "Prerna Bountra",
       date: "July 2025",
       category: "Research Report"
@@ -42,14 +42,14 @@ const DocumentSlider = () => {
   };
 
   // Auto-advance slides every 5 seconds (only when not hovered)
-  useEffect(() => {
-    if (!isHovered) {
-      const timer = setTimeout(() => {
-        nextSlide();
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [currentSlide, isHovered]);
+  // useEffect(() => {
+  //   if (!isHovered) {
+  //     const timer = setTimeout(() => {
+  //       nextSlide();
+  //     }, 5000);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [currentSlide, isHovered]);
 
   const slideVariants = {
     enter: (direction) => ({
@@ -90,7 +90,8 @@ const DocumentSlider = () => {
         boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
         overflow: "hidden",
         position: "relative",
-        height: "360px",
+        height: "300px",
+        maxHeight : "600px",
         border: "1px solid rgba(0,0,0,0.05)"
       }}>   
         <AnimatePresence custom={direction} mode="wait">
@@ -105,9 +106,11 @@ const DocumentSlider = () => {
                 exit="exit"
                 className="position-absolute w-100 h-100"
               >
-                <div className="row g-0 h-100">
+               <div className="d-flex flex-column flex-md-row h-100 w-100">
+
                     
-                  <div className="col-md-5 h-100 position-relative">
+                  <div className="w-100 w-md-50 position-relative" style={{  minHeight: "200px" }}
+>
                     
                     <motion.img
                       src={slide.image}
