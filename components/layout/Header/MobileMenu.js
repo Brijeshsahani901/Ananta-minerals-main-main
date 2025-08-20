@@ -119,6 +119,9 @@ const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
                   <span className="plus-line" />
                 </div>
               </li>
+                <li>
+                <Link href="/whats-new">What's New</Link>
+              </li>
 
                 
 

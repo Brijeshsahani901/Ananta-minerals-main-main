@@ -19,7 +19,7 @@ export default function ClosingLoop() {
             alt="About"
             style={{
               width: "100%",
-              height: "79vh",
+              height: "60vw",
               display: "block",
               objectFit: "cover",
             }}

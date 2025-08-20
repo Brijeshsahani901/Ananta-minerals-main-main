@@ -19,7 +19,7 @@ export default function CriticalPathway() {
             alt="About"
             style={{
               width: "100%",
-              height: "79vh",
+              height: "60vh",
               display: "block",
               objectFit: "cover",
             }}
