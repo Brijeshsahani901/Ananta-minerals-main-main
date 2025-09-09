@@ -9,12 +9,26 @@ import {
   FaMicrochip,
 } from "react-icons/fa";
 import { gsap } from "gsap";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function SupplyChainSteps() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
   const [activeStep, setActiveStep] = React.useState(null);
   const [snackbarHovered, setSnackbarHovered] = React.useState(false);
   const cardRefs = React.useRef({});
+  const isMobile = useMediaQuery("(max-width:768px)");
+
+    const [snackbarTop, setSnackbarTop] = React.useState(getTopOffset());
+  
+  function getTopOffset() {
+    return window.innerWidth <= 768 ? -280 : -150;
+  }
+  
+  React.useEffect(() => {
+    const handleResize = () => setSnackbarTop(getTopOffset());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const icons = {
     1: <FaMountain size={28} color="#00B9B3" />,
@@ -151,18 +165,8 @@ export default function SupplyChainSteps() {
 
   return (
     <div
-      style={{
-        margin: "auto",
-        padding: 20,
-        // background: "rgb(247 240 247)",
-        // maxHeight : "50vh",
-        backgroundColor : "#B8E3E9",
-        borderRadius: 16,
-            maxHeight : "68vh",
-              minHeight : "68vh",
-        position: "relative",
-        zIndex: 1,
-      }}
+         className="responsivec-container"
+
     >
       <h2
         style={{
@@ -175,19 +179,18 @@ export default function SupplyChainSteps() {
         EV Battery Supply Chain
       </h2>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          gap: 40,
-          // flexWrap: "wrap",
-          position: "relative",
-                 overflowX : "scroll",
-                //  width : "100px",
-          zIndex: 1,
-          marginBottom : "15px"
-        }}
-      >
+         <div
+  style={{
+    display: "flex",
+    justifyContent: isMobile ? "center" : "space-between",
+    gap: 5,
+    flexWrap: "wrap",
+    position: "relative",
+    zIndex: 1,
+    marginBottom: "5vh",
+    padding: "0 10px"
+  }}
+>
         {steps.map(({ id, title }) => {
           const isActive = isStepActive(id);
 
@@ -331,7 +334,7 @@ export default function SupplyChainSteps() {
         }}
        style={{
             position: "relative",
-            top: "-19vh",
+            top: snackbarTop,
             left: -10,
             zIndex: 9999,
           }}

@@ -9,12 +9,29 @@ import {
   FaSolarPanel,
 } from "react-icons/fa";
 import { gsap } from "gsap";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 
 export default function SolarPV() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
   const [activeStep, setActiveStep] = React.useState(null);
   const [isHoveringSnackbar, setIsHoveringSnackbar] = React.useState(false);
   const cardRefs = React.useRef({});
+
+  const [snackbarTop, setSnackbarTop] = React.useState(getTopOffset());
+  const isMobile = useMediaQuery("(max-width:768px)");
+
+
+function getTopOffset() {
+  return window.innerWidth <= 768 ? -280 : -150;
+}
+
+React.useEffect(() => {
+  const handleResize = () => setSnackbarTop(getTopOffset());
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
 
   const icons = {
     1: <FaMountain size={28} color="#517891" />,
@@ -179,17 +196,7 @@ export default function SolarPV() {
 
   return (
     <div
-      style={{
-        margin: "auto",
-        padding: 20,
-        // background: "rgb(227 222 241)",
-        backgroundColor: "#C8D9E6",
-        borderRadius: 16,
-        position: "relative",
-        maxHeight : "68vh",
-            minHeight : "68vh",
-        zIndex: 1,
-      }}
+     className="responsivec-container"
     >
       <h2
         style={{
@@ -202,17 +209,19 @@ export default function SolarPV() {
         Solar PV Cells Supply Chain
       </h2>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          gap: 40,         // flexWrap: "wrap",
-          position: "relative",
-             overflowX : "scroll",
-          zIndex: 1,
-              marginBottom : "5vh"
-        }}
-      >
+          <div
+  style={{
+    display: "flex",
+    justifyContent: isMobile ? "center" : "space-between",
+    gap: 5,
+    flexWrap: "wrap",
+    position: "relative",
+    zIndex: 1,
+    marginBottom: "5vh",
+    padding: "0 10px"
+  }}
+>
+
         {steps.map(({ id, title }) => {
           const isHovered = id === hoveredStep;
           const isActive = id === activeStep;
@@ -331,43 +340,45 @@ export default function SolarPV() {
       </div>
 
     {hoveredStep && (
-  <Snackbar
-    open={true}
-    anchorOrigin={{ vertical: "top", horizontal: "bottom" }}
-    autoHideDuration={null}
-    style={{
-      position: "relative",
-      top: "-17vh",
-      left: -10,
-      zIndex: 9999,
+<Snackbar
+  open={true}
+  anchorOrigin={{ vertical: "top", horizontal: "bottom" }}
+  autoHideDuration={null}
+  style={{
+    position: "relative",
+    top: snackbarTop,
+    left: -10,
+    zIndex: 9999,
+  }}
+>
+  <Alert
+    severity="success"
+    variant="filled"
+    onClose={() => setHoveredStep(null)}
+    sx={{
+      pointerEvents: "auto",
+      minWidth: 320,
+      userSelect: "text",
+      backgroundColor: "#517891",
+      color: "#ffffff",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.3), inset 0 0 10px #1a3c6e",
+      "&:hover": {
+        cursor: "default",
+      },
     }}
   >
-    <Alert
-      severity="success"
-      variant="filled"
-      onClose={() => setHoveredStep(null)}
-      sx={{
-        pointerEvents: "auto",
-        minWidth: 320,
-        userSelect: "text",
-        backgroundColor: "#517891",
-        color: "#ffffff",
-        boxShadow: "0 8px 20px rgba(0,0,0,0.3), inset 0 0 10px #1a3c6e",
-        "&:hover": {
-          cursor: "default",
-        },
-      }}
-    >
-      <strong>{steps.find((s) => s.id === hoveredStep)?.title}</strong>
-      <ul style={{ marginTop: 8, paddingLeft: 20 }}>
-        {stepDetails[hoveredStep]?.map((d, i) => (
-          <li key={i}>{d}</li>
-        ))}
-      </ul>
-    </Alert>
-  </Snackbar>
+    <strong>{steps.find((s) => s.id === hoveredStep)?.title}</strong>
+    <ul style={{ marginTop: 8, paddingLeft: 20 }}>
+      {stepDetails[hoveredStep]?.map((d, i) => (
+        <li key={i}>{d}</li>
+      ))}
+    </ul>
+  </Alert>
+</Snackbar>
+
 )}
 
     </div>
   );
 }
+ 

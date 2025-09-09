@@ -85,9 +85,56 @@ body {
   padding: 0;
   height: 100%;
   scroll-behavior: auto !important;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.swiper-wrapper {
+  padding-bottom: 10px;
+}
+
+
+@media (min-width: 768px) {
+  .swiper {
+    overflow-x: auto;
+  }
+}
+
+
+/* styles.css */
+.responsivec-container {
+  margin: auto;
+  padding: 20px;
+  background-color: #C8D9E6;
+  border-radius: 16px;
+  position: relative;
+  min-height: 68%;
+  /* max-height: 68vh; */
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .responsivec-container {
+    max-height: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsivec-container {
+    max-height: 100%;
+  }
+}
 
 
 
@@ -153,7 +200,7 @@ body {
   /* display: none; */
   width: 1px;
   background-color: black;
-  height: 70vh;
+  height: 450px;
   margin: 0 15px;
   padding: 0;
 }
@@ -197,15 +244,15 @@ body {
 
 /* styles/globals.css or component CSS */
 .carousel-item > div {
-  height: 80vh;
-  max-height: 70vh;
-  overflow-y: none; /* allow inner scroll */
+  /* height: 80vh; */
+  /* max-height: 70vh; */
+  overflow-y: none;
   -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
 }
 
-.sscroll-container::-webkit-scrollbar {
+/* .sscroll-container::-webkit-scrollbar {
   display: none;
-}
+} */
 
 
 a, a:hover, a:focus, a:active {

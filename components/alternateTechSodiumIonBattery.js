@@ -9,12 +9,26 @@ import {
   FaChargingStation,
 } from "react-icons/fa";
 import { gsap } from "gsap";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function AlternateTechSodiumIonSupplyChain() {
   const [activeStep, setActiveStep] = React.useState(null);
   const [hoveredStep, setHoveredStep] = React.useState(null);
   const [snackbarHovered, setSnackbarHovered] = React.useState(false);
   const cardRefs = React.useRef({});
+  const isMobile = useMediaQuery("(max-width:768px)");
+
+  const [snackbarTop, setSnackbarTop] = React.useState(getTopOffset());
+
+  function getTopOffset() {
+    return window.innerWidth <= 768 ? -280 : -150;
+  }
+
+  React.useEffect(() => {
+    const handleResize = () => setSnackbarTop(getTopOffset());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const icons = {
     1: <FaAccessibleIcon size={28} color="#c38d41" />,
@@ -108,7 +122,7 @@ export default function AlternateTechSodiumIonSupplyChain() {
         ease: "power3.out",
       });
     }
-    
+
     // Only reset hover state if not hovering over snackbar
     if (!snackbarHovered) {
       setHoveredStep(null);
@@ -169,7 +183,7 @@ export default function AlternateTechSodiumIonSupplyChain() {
         ease: "power3.out",
       });
     }
-    
+
     // Only reset hover state if not hovering over snackbar
     if (!snackbarHovered) {
       setHoveredStep(null);
@@ -186,20 +200,7 @@ export default function AlternateTechSodiumIonSupplyChain() {
   };
 
   return (
-    <div
-      style={{
-        // maxWidth: 960,
-        margin: "auto",
-        padding: 20,
-        background: "#f5f5f5",
-        borderRadius: 16,
-        // userSelect: "none",
-            maxHeight : "68vh",
-            minHeight : "68vh",
-        position: "relative",
-        zIndex: 1,
-      }}
-    >
+    <div className="responsivec-container">
       <h2
         style={{
           textAlign: "center",
@@ -214,13 +215,13 @@ export default function AlternateTechSodiumIonSupplyChain() {
       <div
         style={{
           display: "flex",
-          justifyContent: "space-around",
-          gap: 40,
-          // flexWrap: "wrap",
+          justifyContent: isMobile ? "center" : "space-between",
+          gap: 5,
+          flexWrap: "wrap",
           position: "relative",
-          overflowX : "scroll",
           zIndex: 1,
-              marginBottom : "5vh"
+          marginBottom: "5vh",
+          padding: "0 10px",
         }}
       >
         {steps.map(({ id, title }) => {
@@ -236,7 +237,7 @@ export default function AlternateTechSodiumIonSupplyChain() {
               aria-pressed={isActive}
               onClick={() => setActiveStep(id)}
               onMouseEnter={() => handleMouseEnter(id)}
-                onMouseLeave={() => setHoveredStep(null)}  
+              onMouseLeave={() => setHoveredStep(null)}
               // onMouseMove={(e) => handleMouseMove(e, id)}
               // onMouseLeave={() => handleMouseLeave(id)}
               // onFocus={() => handleFocus(id)}
@@ -244,26 +245,15 @@ export default function AlternateTechSodiumIonSupplyChain() {
               style={{
                 cursor: "pointer",
                 borderRadius: 20,
-                // paddingX: "1vw",
-                // width: "auto",
                 position: "relative",
-                       width : "100px",
-                maxWidth : "100px",
-                minWidth : "100px",
-                // color: isActive || isHovered ? "#fff" : "#1f2d3d",
-                // boxShadow: isActive
-                //   ? "0 12px 24px rgba(195, 141, 65, 0.4)"
-                //   : "0 8px 20px rgba(0,0,0,0.08)",
+                width: "100px",
+                maxWidth: "100px",
+                minWidth: "100px",
+                margin: "2px", // Add spacing around
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 gap: 16,
-                // transformStyle: "preserve-3d",
-                // willChange: "transform",
-                // transition: "color 0.35s ease",
-                outline: "none",
-                // background: "linear-gradient(145deg, #ffffff, #e6e6e6)",
-                // overflowX: "scroll",
                 zIndex: isActive || isHovered ? 2 : 1,
               }}
             >
@@ -293,9 +283,10 @@ export default function AlternateTechSodiumIonSupplyChain() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  boxShadow: isActive || isHovered
-                    ? "0 4px 10px rgba(0,0,0,0.5), inset 0 0 8px #c38d41"
-                    : "0 4px 8px rgba(111, 126, 64, 0.3)",
+                  boxShadow:
+                    isActive || isHovered
+                      ? "0 4px 10px rgba(0,0,0,0.5), inset 0 0 8px #c38d41"
+                      : "0 4px 8px rgba(111, 126, 64, 0.3)",
                   transition: "all 0.3s ease",
                   position: "relative",
                   zIndex: 1,
@@ -313,7 +304,7 @@ export default function AlternateTechSodiumIonSupplyChain() {
                       ? "0 0 5px rgba(255,255,255,0.3)"
                       : "none",
                   position: "relative",
-                  color : "gray",
+                  color: "gray",
                   zIndex: 1,
                 }}
               >
@@ -324,12 +315,23 @@ export default function AlternateTechSodiumIonSupplyChain() {
         })}
       </div>
 
-<div className="mb-4" style={{ textAlign: "center" }}>
-        <em className="px-2 mt-4 fw-normal" style={{fontSize : "14px", textAlign : "center" ,fontWeight : "500" }}>
-      This infographic lays out the end‑to‑end sodium‑ion battery value chain—from soda‑ash and hard‑carbon mining through chemical refining, Prussian‑blue cathode and hard‑carbon anode synthesis, to pilot cell manufacturing and final module assembly. It highlights global raw‑material sources (U.S., China, Turkey, Australia) alongside pioneering firms like Altris (Sweden), CATL and BYD (China), Faradion (UK) and Natron (USA), showing where new sodium‑ion technologies are being scaled. By mapping each stage and its key players, the graphic underscores emerging supply‑chain opportunities and strategic hotspots for diversifying away from lithium‑based systems.
-     </em>
+      <div className="mb-4" style={{ textAlign: "center" }}>
+        <em
+          className="px-2 mt-4 fw-normal"
+          style={{ fontSize: "14px", textAlign: "center", fontWeight: "500" }}
+        >
+          This infographic lays out the end‑to‑end sodium‑ion battery value
+          chain—from soda‑ash and hard‑carbon mining through chemical refining,
+          Prussian‑blue cathode and hard‑carbon anode synthesis, to pilot cell
+          manufacturing and final module assembly. It highlights global
+          raw‑material sources (U.S., China, Turkey, Australia) alongside
+          pioneering firms like Altris (Sweden), CATL and BYD (China), Faradion
+          (UK) and Natron (USA), showing where new sodium‑ion technologies are
+          being scaled. By mapping each stage and its key players, the graphic
+          underscores emerging supply‑chain opportunities and strategic hotspots
+          for diversifying away from lithium‑based systems.
+        </em>
       </div>
-
 
       <Snackbar
         open={hoveredStep !== null || activeStep !== null}
@@ -340,14 +342,14 @@ export default function AlternateTechSodiumIonSupplyChain() {
             setHoveredStep(null);
           }
         }}
-         style={{
-            position: "relative",
-            top: "-19vh",
-            left: -10,
-            zIndex: 9999,
-          }}
+        style={{
+          position: "relative",
+          top: snackbarTop,
+          left: -10,
+          zIndex: 9999,
+        }}
       >
-        <div 
+        <div
           onMouseEnter={handleSnackbarMouseEnter}
           onMouseLeave={handleSnackbarMouseLeave}
         >
@@ -361,12 +363,14 @@ export default function AlternateTechSodiumIonSupplyChain() {
               userSelect: "text",
               backgroundColor: "#6f7e40",
               color: "#ffffff",
-              '&:hover': {
-                boxShadow: '0 0 10px rgba(0,0,0,0.3)',
+              "&:hover": {
+                boxShadow: "0 0 10px rgba(0,0,0,0.3)",
               },
             }}
           >
-            <strong>{steps.find((s) => s.id === (hoveredStep || activeStep))?.title}</strong>
+            <strong>
+              {steps.find((s) => s.id === (hoveredStep || activeStep))?.title}
+            </strong>
             <ul style={{ marginTop: 8, paddingLeft: 20 }}>
               {stepDetails[hoveredStep || activeStep]?.map((item, idx) => (
                 <li key={idx}>{item}</li>

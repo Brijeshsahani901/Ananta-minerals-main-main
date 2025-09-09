@@ -9,6 +9,7 @@ import {
   FaRocket,
 } from "react-icons/fa";
 import { gsap } from "gsap";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function MilitaryDronesWithGsapTilt() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
@@ -16,6 +17,19 @@ export default function MilitaryDronesWithGsapTilt() {
   const [snackbarHovered, setSnackbarHovered] = React.useState(false);
   const cardRefs = React.useRef({});
   const snackbarRef = React.useRef(null);
+    const isMobile = useMediaQuery("(max-width:768px)");
+
+    const [snackbarTop, setSnackbarTop] = React.useState(getTopOffset());
+  
+  function getTopOffset() {
+    return window.innerWidth <= 768 ? -280 : -150;
+  }
+  
+  React.useEffect(() => {
+    const handleResize = () => setSnackbarTop(getTopOffset());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
 
   const icons = {
@@ -169,16 +183,8 @@ export default function MilitaryDronesWithGsapTilt() {
 
   return (
     <div
-      style={{
-        margin: "auto",
-        padding: 20,
-        background: "#e8f0f2",
-        borderRadius: 16,
-        position: "relative",
-            maxHeight : "1200px",
-             minHeight : "68vh",
-        zIndex: 1,
-      }}
+         className="responsivec-container"
+
     >
       <h2
         style={{
@@ -191,18 +197,18 @@ export default function MilitaryDronesWithGsapTilt() {
         Military Drones Assembly Supply Chain
       </h2>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          // flexWrap: "wrap",
-          gap: 40,
-          position: "relative",
-           overflowX : "scroll",
-          zIndex: 1,
-              marginBottom : "35px"
-        }}
-      >
+            <div
+  style={{
+    display: "flex",
+    justifyContent: isMobile ? "center" : "space-between",
+    gap: 5,
+    flexWrap: "wrap",
+    position: "relative",
+    zIndex: 1,
+    marginBottom: "5vh",
+    padding: "0 10px"
+  }}
+>
         {steps.map(({ id, title }) => {
           const isActive = id === hoveredStep || id === activeStep;
 
@@ -331,11 +337,12 @@ export default function MilitaryDronesWithGsapTilt() {
           }}
          style={{
             position: "relative",
-            top: "-15vh",
+            top: snackbarTop,
             left: -10,
             zIndex: 9999,
           }}
         >
+          
           <div
             ref={snackbarRef}
             onMouseEnter={handleSnackbarMouseEnter}

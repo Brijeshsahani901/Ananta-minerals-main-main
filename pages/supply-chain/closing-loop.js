@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
+import { Card, Badge } from "react-bootstrap";
 
 export default function ClosingLoop() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -19,7 +20,7 @@ export default function ClosingLoop() {
             alt="About"
             style={{
               width: "100%",
-              height: "60vw",
+              height: "60vh",
               display: "block",
               objectFit: "cover",
             }}
@@ -30,9 +31,6 @@ export default function ClosingLoop() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-12 col-lg-10">
-              <div className="blog-post-wrapper">
-                <div className="latest__post-item">
-                  <div className="latest__post-content">
                     <div style={{ marginTop: "30px" }}>
                       <div
                         className="p-4"
@@ -328,12 +326,25 @@ export default function ClosingLoop() {
                           seamless incorporation of recovered minerals into
                           domestic battery manufacturing pipelines.
                         </p>
+                           <Card
+                      className="d-flex align-items-center flex-row p-5 mt-5"
+                      style={{ backgroundColor: "#fff6f6" }}
+                    >
+                      <img
+                        src="/profile.jpg" // Replace with actual path or external URL
+                        alt="Author"
+                        width={60}
+                        height={60}
+                        className="rounded-circle me-3"
+                      />
+                      <div>
+                        <h6 className="mb-1">Ayaan Barman</h6>
+                        <Badge bg="success">Author</Badge>
+                      </div>
+                    </Card>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </motion.section>

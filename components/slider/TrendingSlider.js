@@ -20,7 +20,7 @@ export default function TrendingSlider({ showItem }) {
     {
       path: "/automobile",
       label: "Automobile",
-      img: `${basePath}/assets/sectors_images/automobile.jpg`,
+      img: `https://www.autoworldjournal.com/wp-content/uploads/2024/04/A-Look-at-the-World-Automobile-Industry-in-2030-1.jpg`,
     },
     {
       path: "/defence-and-aerospace",
@@ -30,7 +30,7 @@ export default function TrendingSlider({ showItem }) {
     {
       path: "/renewable-energy",
       label: "Renewable Energy",
-      img: `${basePath}/assets/sectors_images/renewable.jpg`,
+      img: `https://www.herofutureenergies.com/blog/wp-content/uploads/2024/10/hybrid-renewable-energy-1.jpg`,
     },
   ];
 
@@ -64,9 +64,7 @@ export default function TrendingSlider({ showItem }) {
           {data.map((item, i) => (
             <SwiperSlide key={i}>
               <div className="trending__post col-md-12">
-                <div className="trending__post-thumb group">
                   <Link href={item.path}>
-                    <div className="image-wrapper group">
                       <img
                         src={item.img}
                         alt={item.label}
@@ -83,9 +81,7 @@ export default function TrendingSlider({ showItem }) {
                       <div className="label-overlay">
                         <span>{item.label}</span>
                       </div>
-                    </div>
                   </Link>
-                </div>
               </div>
             </SwiperSlide>
           ))}

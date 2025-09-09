@@ -934,7 +934,7 @@ export default function Menu({
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push("/")}
             style={{
-              margin: "0.5rem",
+              marginLeft: "-80px",
               borderRadius: "999px",
               cursor: "pointer",
               color: "#F5EFEB",
