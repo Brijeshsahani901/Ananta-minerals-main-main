@@ -53,12 +53,12 @@ export const WorldMap = ({
                     onMouseLeave={() => {
                       setTooltipContent("");
                     }}
-                    onClick={() => {
-                      if (countryData && !selectedInitiative) {
-                        onCountrySelect(countryData);
-                        onInitiativeSelect(null);
-                      }
-                    }}
+                    // onClick={() => {
+                    //   if (countryData && !selectedInitiative) {
+                    //     onCountrySelect(countryData);
+                    //     onInitiativeSelect(null);
+                    //   }
+                    // }}
                     fill={
                       isHighlighted
                         ? selectedInitiative

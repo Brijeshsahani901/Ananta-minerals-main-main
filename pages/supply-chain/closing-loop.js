@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Card, Badge } from "react-bootstrap";
+import { FaUserCircle } from "react-icons/fa";
 
 export default function ClosingLoop() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -326,22 +327,53 @@ export default function ClosingLoop() {
                           seamless incorporation of recovered minerals into
                           domestic battery manufacturing pipelines.
                         </p>
-                           <Card
-                      className="d-flex align-items-center flex-row p-5 mt-5"
-                      style={{ backgroundColor: "#fff6f6" }}
-                    >
-                      <img
-                        src="/profile.jpg" // Replace with actual path or external URL
-                        alt="Author"
-                        width={60}
-                        height={60}
-                        className="rounded-circle me-3"
-                      />
-                      <div>
-                        <h6 className="mb-1">Ayaan Barman</h6>
-                        <Badge bg="success">Author</Badge>
-                      </div>
-                    </Card>
+
+                        <Card
+  className="d-flex flex-column flex-md-row gap-4 p-4 mt-5 shadow-sm"
+  style={{
+    backgroundColor: "#fff6f6",
+    borderRadius: "10px",
+  }}
+>
+  {/* Author Icon */}
+  <div
+    style={{
+      width: "100px",
+      height: "100px",
+      borderRadius: "50%",
+      backgroundColor: "#e9ecef",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+      flexShrink: 0,
+    }}
+  >
+    <FaUserCircle size={60} color="#2F4156" />
+  </div>
+
+  {/* Text Content */}
+  <div style={{ flex: 1 }}>
+    <div className="d-flex align-items-center mb-3 gap-2">
+      <h5 className="mb-0 fw-semibold text-dark">Ayan Barman</h5>
+      <Badge bg="success" pill>
+        Author
+      </Badge>
+    </div>
+
+    <p className="text-muted" style={{ lineHeight: 1.6 }}>
+      Ayan Barman is an international relations researcher at Ananta Aspen Centre focusing on the
+      geopolitical implications of critical minerals. He holds a BA in Liberal & Humanities Studies
+      from O.P. Jindal University, where he studied global security dynamics. Ayan has contributed
+      to policy reports at NITI Aayog and authored articles on geopolitical issues with the Observer
+      Research Foundation. He has also worked at British Petroleum (BP) as an executive. He is
+      dedicated to enhancing India’s role in global governance and promoting sustainable development
+      in critical minerals.
+    </p>
+  </div>
+</Card>
+
+                      
                       </div>
                     </div>
                   </div>

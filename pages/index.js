@@ -4,10 +4,11 @@ import Layout from "@/components/layout/Layout";
 import TrendingSlider from "@/components/slider/TrendingSlider";
 import TechnologySlider from "@/components/slider/TechnologySlider";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import DocumentSlider from "@/components/slider/documentSlider";
 import Map from "@/components/Map";
+import { mineralPosts } from "@/util/mineralData";
 
 const staggerContainer = {
   hidden: {},
@@ -22,132 +23,6 @@ const postItem = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
-
-// Sample posts array (unchanged, not shown here for brevity)
-const mineralPosts = [
-  {
-    id: 1,
-    title: "Disruption In The Supply Of Rare Earth Magnets",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2151394",
-    author: "PIB",
-    date: "13th July, 2025",
-    img: "",
-  },
-  {
-    id: 2,
-    title:
-      "Mines Ministry Recognizes Seven Centres of Excellence to work under the National Critical Mineral Mission",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2151287",
-    author: "PIB",
-    date: "13th July, 2025",
-    img: "",
-  },
-  {
-    id: 3,
-    title: "Parliament Question: Rare Earth Minerals",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2147282",
-    author: "PIB",
-    date: "13th July, 2025",
-    img: "",
-  },
-  {
-    id: 4,
-    title: " India in talks with Chile and Peru to source Critical Minerals",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://www.reuters.com/world/china/india-holding-talks-with-chile-peru-sourcing-critical-minerals-trade-ministry-2025-07-15",
-    author: "Reuters",
-    date: "15th July, 2025",
-    img: "",
-  },
-  {
-    id: 5,
-    title: "India-UK Tech Pact shifts focus towards Critical Minerals",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://stratnewsglobal.com/world-news/india-uk-tech-pact-expands-focus-to-critical-minerals-frontier-domains/",
-    author: "StratNews Global",
-    date: "25th July, 2025",
-    img: "",
-  },
-  {
-    id: 6,
-    title: "India’s Rare Earth Partnership with Africa",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://africa.businessinsider.com/local/lifestyle/india-ramps-up-rare-earth-partnership-with-5-african-nations-to-counter-chinas/1k9kg7f",
-    author: "Business Insider Africa",
-    date: "28th July, 2025",
-    img: "",
-  },
-  {
-    id: 7,
-    title: "Hindustan Zinc secures Potash block- REE and Tungsten up next",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://energy.economictimes.indiatimes.com/news/coal/hindustan-zinc-secures-potash-block-adds[…]tungsten-assets-in-critical-minerals-push/122608335",
-    author: "ET Energy World",
-    date: "17th July, 2025",
-    img: "",
-  },
-  {
-    id: 8,
-    title: "New Tech: Autonomous Vehicle designed for deep ocean mining",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://astrobiology.com/2025/07/ocean-world-exploration-new-autonomous-vehicle-studies-deep-ocean-critical-minerals.html#:~:text=Ocean%20World%20Exploration%3A%20New%20Autonomous%20Vehicle%20Studies%20Deep%20Ocean%20Critical%20Minerals,-By%20Keith%20Cowing&text=A%20new%20autonomous%20underwater%20vehicle,waters%20near%20the%20Mariana%20Trench",
-    author: "Astribiology",
-    date: "13th July, 2025",
-    img: "",
-  },
-  {
-    id: 9,
-    title:
-      "India and the UK have committed £1.8 million to expand the UK–India Critical Minerals Supply Chain Observatory",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://www.logisticsinsider.in/india-and-uk-invest-1-8-million-to-launch-worlds-first-critical-minerals-supply-chain-observatory/",
-    author: "Logistics Insider",
-    date: "18th August, 2025",
-    img: "",
-  },
-  {
-    id: 10,
-    title:
-      "India's Critical Minerals Push: 5 policy pillars proposed for India's rare earth self-reliance",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://www.logisticsinsider.in/india-and-uk-invest-1-8-million-to-launch-worlds-first-critical-minerals-supply-chain-observatory/",
-    author: " Times of India",
-    date: "16th August, 2025",
-    img: "",
-  },
-  {
-    id: 11,
-    title: "India–Japan MoC on Critical Minerals & Clean Energy",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://economictimes.indiatimes.com/news/india/india-japan-working-together-to-bolster-cri[…]hains/articleshow/123593939.cms?utm_source=chatgpt.com",
-    author: "The Economic Times",
-    date: "30 August 2025",
-    img: "",
-  },
-  {
-    id: 12,
-    title:
-      "India Joins Global Semiconductor-Oriented Trade Strategy through Quad",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://www.reuters.com/world/china/india-backs-quad-group-ahead-modis-japan-visit-amid-strained-us-ties-2025-08-26/?utm_source=chatgpt.com",
-    author: "Reuters",
-    date: "27–28 August 2025",
-    img: "",
-  },
-  {
-    id: 13,
-    title:
-      "India Clears ₹1,500 Crore Incentive Scheme for Critical Mineral Recycling",
-    downloadUrl: "#", // Add your actual download link here
-    path: "https://www.financialexpress.com/business/industry-government-approves-rs-1500-crore-recy[…]s-to-generate-70000-jobs-3965968/?utm_source=chatgpt.com",
-    author: "Financial Express",
-    date: "13 September 2025",
-    img: "",
-  },
-];
 
 const sortedMineralPosts = [...mineralPosts].sort((a, b) => {
   const dateA = new Date(a.date.replace(/(\d+)(st|nd|rd|th)/, "$1"));
@@ -166,6 +41,25 @@ export default function Home1() {
     },
   };
   const borderThickness = "0.5px";
+
+  const [isMobile, setIsMobile] = useState(false);
+  const whatsNewRef = useRef(null);
+
+  useEffect(() => {
+    // Check if device is mobile
+    const checkIsMobile = () => {
+      return window.innerWidth < 768;
+    };
+
+    setIsMobile(checkIsMobile());
+
+    const handleResize = () => {
+      setIsMobile(checkIsMobile());
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
@@ -187,18 +81,16 @@ export default function Home1() {
 
               {/* Right: What's New section */}
               <motion.div
+                ref={whatsNewRef}
                 className="col-12 col-lg-4 px-4"
                 style={{
-                  // minHeight: "450px",
-                  height: "auto",
-                  maxHeight: "510px",
-                  overflowY: "auto",
+                  height: isMobile ? "auto" : "auto",
+                  maxHeight: isMobile ? "none" : "510px",
+                  overflowY: isMobile ? "visible" : "auto",
                   overflowX: "hidden",
                   scrollbarWidth: "none",
                   msOverflowStyle: "none",
-                  WebkitOverflowScrolling: "touch", // <- smooth scroll on iOS
-                  // touchAction: "pan-y", // <- allow vertical scrolling to bubble
-                  // overscrollBehavior: "contain", // <- stop scroll trapping
+                  WebkitOverflowScrolling: "touch",
                 }}
                 variants={staggerContainer}
               >
@@ -207,7 +99,7 @@ export default function Home1() {
                     padding: "16px 12px",
                     borderBottom: "1px solid #ddd",
                     backgroundColor: "#ffffff",
-                    position: "sticky",
+                    position: isMobile ? "relative" : "sticky",
                     top: 0,
                     zIndex: 10,
                   }}
@@ -328,44 +220,13 @@ export default function Home1() {
 
           {/* Document Slider */}
           <div className="mb-3 pb-3 px-md-5">
-            <h3 style={{ marginLeft: "8vw", marginBottom: "3vh" }}>
+            <h3 style={{ marginBottom: "0px" }}>
               Latest Uploads
             </h3>
             <DocumentSlider />
           </div>
 
           <hr
-            style={{
-              border: "none",
-              borderTop: `${borderThickness} solid black`,
-              margin: "40px 0",
-              width: "100%",
-            }}
-          />
-
-          {/* Sectors in Focus */}
-          <motion.section
-            variants={fadeInUp}
-            style={{
-              paddingBottom: "20px",
-              paddingTop:
-                typeof window !== "undefined" && window.innerWidth < 768
-                  ? "20px"
-                  : "0",
-            }}
-          >
-            <div className="px-md-5 px-4">
-              <div className="trending__slider">
-                <div className="swiper-container trending-active">
-                  <h3 style={{ marginBottom: "3vh" }}>Sectors in Focus</h3>
-                  <TrendingSlider showItem={4} />
-                </div>
-              </div>
-            </div>
-          </motion.section>
-
-
-   <hr
             style={{
               border: "none",
               borderTop: `${borderThickness} solid black`,
@@ -388,6 +249,35 @@ export default function Home1() {
           >
             <div className="px-md-5 px-2">
               <Map />
+            </div>
+          </motion.section>
+
+          <hr
+            style={{
+              border: "none",
+              borderTop: `${borderThickness} solid black`,
+              margin: "40px 0",
+              width: "100%",
+            }}
+          />
+          {/* Sectors in Focus */}
+          <motion.section
+            variants={fadeInUp}
+            style={{
+              paddingBottom: "20px",
+              paddingTop:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? "20px"
+                  : "0",
+            }}
+          >
+            <div className="px-md-5 px-4">
+              <div className="trending__slider">
+                <div className="swiper-container trending-active">
+                  <h3 style={{ marginBottom: "3vh" }}>Sectors in Focus</h3>
+                  <TrendingSlider showItem={4} />
+                </div>
+              </div>
             </div>
           </motion.section>
         </motion.section>

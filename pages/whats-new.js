@@ -125,10 +125,61 @@ export default function WhatsNew() {
         "A Primus Partners report lays out five policy pillars to make India self-reliant in rare-earth magnets, calling for market certainty via long-term price assurance and structured offtake agreements to spur investment and domestic demand. It recommends pilot magnet/manufacturing hubs in mineral-rich states, support for a few industrial leaders to scale up NdFeB magnet production, expansion of monazite mining and rare-earth oxide refining, and boosting NdPr output (including through IREL), along with a proposed national magnet buffer stock and a Rare Earth Innovation Hub linking industry and academia. The report also pushes for a Magnet Ecosystem Coordination Cell (under NITI Aayog/DPIIT) to improve policy coordination; recent budget measures easing customs duties on critical minerals are cited as positive momentum. Given China’s near-monopoly (estimated 85–95% of magnet production), the study warns of rising demand driven by EV and clean-energy targets and highlights nascent domestic projects (e.g., IREL’s Visakhapatnam facility) and international partnerships to secure supply.",
       downloadUrl: "#", // Add your actual download link here
       path: "https://www.logisticsinsider.in/india-and-uk-invest-1-8-million-to-launch-worlds-first-critical-minerals-supply-chain-observatory/",
-      author: " Times of India",
+      author: "Times of India",
       date: "16th August, 2025",
       img: "",
     },
+
+     {
+      id: 11,
+      title:
+        "China expands rare earths export restrictions to new elements",
+      description:
+        "Blurb : China’s expanded rare-earth controls to holmium, erbium, thulium, europium, and ytterbium elements tighten's global access to key elements essential for lasers, fiber optics, magnetic alloys, and clean-energy technologies, heightening supply insecurity across semiconductor, renewable, defense, and high-tech manufacturing industries, while accelerating diversification efforts in the U.S., EU, Japan, and India to reduce Chinese dependency.",
+      downloadUrl: "#", // Add your actual download link here
+      path: "https://www.reuters.com/world/china/china-expands-rare-earths-export-restrictions-new-elements-2025-10-09/?utm_source",
+      author: "Reuters",
+      date: "October 9, 2025",
+      img: "",
+    },
+
+{
+      id: 12,
+      title:
+        "India to inaugurate national critical mineral stockpile to safeguard rare-earth supply",
+      description:
+        "Seeking greater resilience in global supply chains, India plans a National Critical Mineral Stockpile, initially focused on rare earths. It aims for a two-month reserve, promoting private sector participation and reducing dependency on imports.",
+      downloadUrl: "#", // Add your actual download link here
+      path: "https://economictimes.indiatimes.com/industry/indl-goods/svs/metals-mining/india-to-launch-[…]icleshow/124511338.cms?utm_source",
+      author: "The Economic Times",
+      date: "October 13, 2025",
+      img: "",
+    },
+    {
+      id: 13,
+      title:
+        "CMPDI & GSI to survey rare earth elements in coal mine formations",
+      description:
+        "In a joint move, CMPDI and the Geological Survey of India are rolling out a standard protocol to explore rare earth metals in coal and surrounding strata, and plan to open a lab to validate reserves and quality.",
+      downloadUrl: "#", // Add your actual download link here
+      path: "https://timesofindia.indiatimes.com/city/ranchi/cmpdi-gsi-to-explore-rare-earth-metals-in-[…]-mines/articleshow/124461076.cms?utm_source=chatgpt.com",
+      author: "Times of India",
+      date: "October 10, 2025",
+      img: "",
+    },
+    {
+      id: 14,
+      title:
+        "China issues MOFCOM Notice 2025 No. 61 extending rare-earth export controls globally",
+      description:
+        "China’s Ministry of Commerce released Notice No. 61 (2025), expanding export-control rules on rare-earth materials and related products. The order introduces a 0.1 % threshold, meaning even foreign-made goods containing trace amounts of Chinese-origin rare earths now need an export licence, significantly widening China’s regulatory reach over global supply chains.",
+      downloadUrl: "#", // Add your actual download link here
+      path: "https://cset.georgetown.edu/publication/mofcom-notice-2025-61/?utm_source",
+      author: "CSET",
+      date: "October 9, 2025",
+      img: "",
+    },
+   
   ];
 
   const sortedWhatsnew = [...whatsnew].sort((a, b) => {

@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Card, Badge } from "react-bootstrap";
+import { FaUserCircle } from "react-icons/fa";
 
 export default function CriticalPathway() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -529,22 +530,54 @@ export default function CriticalPathway() {
                       co-creator in the global strategic materials ecosystem.
                     </p>
 
-                    <Card
-                      className="d-flex align-items-center flex-row p-5 mt-5"
-                      style={{ backgroundColor: "#fff6f6" }}
-                    >
-                      <img
-                        src="/profile.jpg" // Replace with actual path or external URL
-                        alt="Author"
-                        width={60}
-                        height={60}
-                        className="rounded-circle me-3"
-                      />
-                      <div>
-                        <h6 className="mb-1">Prerna Bountra</h6>
-                        <Badge bg="success">Author</Badge>
-                      </div>
-                    </Card>
+      <Card
+  className="d-flex flex-column flex-md-row gap-4 p-4 mt-5 shadow-sm"
+  style={{
+    backgroundColor: "#fff6f6",
+    borderRadius: "10px",
+  }}
+>
+  {/* Author Icon */}
+  <div
+    style={{
+      width: "100px",
+      height: "100px",
+      borderRadius: "50%",
+      backgroundColor: "#e9ecef",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+      flexShrink: 0,
+    }}
+  >
+    <FaUserCircle size={60} color="#2F4156" />
+  </div>
+
+  {/* Text Content */}
+  <div style={{ flex: 1 }}>
+    <div className="d-flex align-items-center mb-3 gap-2">
+      <h5 className="mb-0 fw-semibold text-dark">Prerna Bountra</h5>
+      <Badge bg="success" pill>
+        Author
+      </Badge>
+    </div>
+
+    <p className="text-muted" style={{ lineHeight: 1.6 }}>
+      Prerna Bountra is Deputy Director, International Relations at Ananta. She leads Ananta’s work
+      on the United States and climate diplomacy. She curates Track 1.5 and Track 2 dialogues and has
+      been the lead curator of the India US Forum since 2018. Her research interests include U.S.
+      domestic and foreign policy, India-US bilateral relations, the US-China-India triangle, great
+      power rivalries, the Indo-Pacific, and the geopolitics of energy. She holds degrees in
+      Sociology from Hindu College, Journalism from Xavier Institute of Communication, and
+      International Law & Diplomacy from the Indian Society of International Law. She’s passionate
+      about Hindi cinema, watches many sports but plays none, and is known to arm wrestle people who
+      trivialize pop culture.
+    </p>
+  </div>
+</Card>
+
+
                   </div>
                 </div>
             </div>

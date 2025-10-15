@@ -233,21 +233,12 @@ React.useEffect(() => {
               ref={(el) => (cardRefs.current[id] = el)}
               tabIndex={0}
               role="button"
-              // onClick={() => handleCardClick(id)}
               onMouseEnter={() => setHoveredStep(id)}
               onMouseLeave={() => setHoveredStep(null)}  
-              // onMouseMove={(e) => handleMouseMove(e, id)}
-              // onMouseLeave={() => handleMouseLeave(id)}
               style={{
                  cursor: "pointer",
                 borderRadius: 20,
-                // paddingX: "1vw",
-                // width: "auto",
                 position: "relative",
-                // color: isActive || isHovered ? "#fff" : "#1f2d3d",
-                // boxShadow: isActive
-                //   ? "0 12px 24px rgba(195, 141, 65, 0.4)"
-                //   : "0 8px 20px rgba(0,0,0,0.08)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
