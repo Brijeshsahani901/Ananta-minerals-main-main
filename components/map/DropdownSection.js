@@ -7,7 +7,7 @@ export const  DropdownSection = ({ title, isOpen, toggle, children }) => (
       style={{
         backgroundColor: isOpen ? "#F4AC3F" : "#FDDC8C",
         padding: "10px 15px",
-        fontWeight: isOpen ? "bold" : "normal",
+        // fontWeight: isOpen ? "bold" : "normal",
         cursor: "pointer",
         borderBottom: "1px solid #ccc",
       }}

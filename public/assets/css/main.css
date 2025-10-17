@@ -31,13 +31,13 @@
     19. Dark Mode
 .latest__post-item::before
 **********************************************/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 
 
 :root {
-  --tg-body-font-family: 'Inter';
-  --tg-heading-font-family: 'Inter';
+  --tg-body-font-family: 'Poppins';
+  --tg-heading-font-family: 'Poppins';
   --tg-icon-font-family: "Font Awesome 5 Pro";
   --tg-body-font-size: 18px;
   --tg-body-line-height: 1.5;

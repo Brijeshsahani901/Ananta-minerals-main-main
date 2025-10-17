@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import Layout from "@/components/layout/Layout";
 import TrendingSlider from "@/components/slider/TrendingSlider";
@@ -122,7 +122,7 @@ export default function Home1() {
                                 fontSize: "18px",
                                 margin: "8px 0 0",
                                 color: "black",
-                                fontWeight: "bold",
+                                fontWeight: "600",
                               }}
                             >
                               <div
@@ -142,7 +142,7 @@ export default function Home1() {
                                 style={{
                                   fontSize: "14px",
                                   color: "gray",
-                                  margin: "5px 0 10px",
+                                  marginTop: "10px",
                                 }}
                               >
                                 {post.description ? post.description : ""}
@@ -155,7 +155,9 @@ export default function Home1() {
                                   fontSize: "14px",
                                 }}
                               >
-                                <span style={{ color: "#2F4156" }}>
+                                <span
+                                  style={{ color: "#2F4156", fontWeight: 500 }}
+                                >
                                   {post.date}
                                 </span>
                                 <div
@@ -166,7 +168,9 @@ export default function Home1() {
                                     margin: "0 10px",
                                   }}
                                 ></div>
-                                <span style={{ color: "#2F4156" }}>
+                                <span
+                                  style={{ color: "#2F4156", fontWeight: 500 }}
+                                >
                                   {post.author}
                                 </span>
                               </div>
@@ -220,9 +224,7 @@ export default function Home1() {
 
           {/* Document Slider */}
           <div className="mb-3 pb-3 px-md-5">
-            <h3 style={{ marginBottom: "0px" }}>
-              Latest Uploads
-            </h3>
+            <h3 style={{ marginLeft: "14px" }}>Latest Uploads</h3>
             <DocumentSlider />
           </div>
 

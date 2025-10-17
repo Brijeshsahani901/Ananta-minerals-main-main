@@ -8,30 +8,25 @@ import {
   FaCube,
   FaSolarPanel,
 } from "react-icons/fa";
-import { gsap } from "gsap";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 
 export default function SolarPV() {
   const [hoveredStep, setHoveredStep] = React.useState(null);
   const [activeStep, setActiveStep] = React.useState(null);
-  const [isHoveringSnackbar, setIsHoveringSnackbar] = React.useState(false);
   const cardRefs = React.useRef({});
 
   const [snackbarTop, setSnackbarTop] = React.useState(getTopOffset());
   const isMobile = useMediaQuery("(max-width:768px)");
 
+  function getTopOffset() {
+    return window.innerWidth <= 768 ? -280 : -150;
+  }
 
-function getTopOffset() {
-  return window.innerWidth <= 768 ? -280 : -150;
-}
-
-React.useEffect(() => {
-  const handleResize = () => setSnackbarTop(getTopOffset());
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
-
+  React.useEffect(() => {
+    const handleResize = () => setSnackbarTop(getTopOffset());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const icons = {
     1: <FaMountain size={28} color="#517891" />,
@@ -86,142 +81,31 @@ React.useEffect(() => {
     ],
   };
 
-  // const handleMouseMove = (e, id) => {
-  //   const card = cardRefs.current[id];
-  //   if (!card) return;
-  //   const rect = card.getBoundingClientRect();
-  //   const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-  //   const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
-
-  //   gsap.to(card, {
-  //     duration: 0,
-  //     rotationX: -y * 40,
-  //     rotationY: x * 40,
-  //     scale: 1.08,
-  //     ease: "power3.out",
-  //     transformPerspective: 600,
-  //     transformOrigin: "center",
-  //     boxShadow: "0 35px 80px rgba(0,0,0,0.5)",
-  //     overwrite: "auto",
-  //   });
-
-  //   const overlay = card.querySelector(".overlay");
-  //   if (overlay) {
-  //     gsap.to(overlay, {
-  //       duration: 0.5,
-  //       height: "100%",
-  //       ease: "power3.out",
-  //     });
-  //   }
-  // };
-
-  // const handleMouseLeave = (id) => {
-  //   const card = cardRefs.current[id];
-  //   if (!card) return;
-
-  //   gsap.to(card, {
-  //     duration: 0.5,
-  //     rotationX: 0,
-  //     rotationY: 0,
-  //     scale: 1,
-  //     ease: "power3.out",
-  //     boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
-  //     overwrite: "auto",
-  //   });
-
-  //   if (activeStep !== id) {
-  //     const overlay = card.querySelector(".overlay");
-  //     if (overlay) {
-  //       gsap.to(overlay, {
-  //         duration: 0.5,
-  //         height: "0%",
-  //         ease: "power3.inOut",
-  //       });
-  //     }
-  //   }
-
-  //   if (activeStep === null && !isHoveringSnackbar) {
-  //     setHoveredStep(null);
-  //   }
-  // };
-
-  const handleCardClick = (id) => {
-    setActiveStep((prev) => (prev === id ? null : id));
-  };
-
-  // React.useEffect(() => {
-  //   if (activeStep !== null) {
-  //     Object.entries(cardRefs.current).forEach(([key, card]) => {
-  //       if (!card) return;
-  //       const overlay = card.querySelector(".overlay");
-  //       if (!overlay) return;
-
-  //       if (parseInt(key, 10) === activeStep) {
-  //         gsap.to(overlay, {
-  //           duration: 0.5,
-  //           height: "100%",
-  //           ease: "power3.out",
-  //         });
-  //       } else {
-  //         gsap.to(overlay, {
-  //           duration: 0.5,
-  //           height: "0%",
-  //           ease: "power3.inOut",
-  //         });
-  //       }
-  //     });
-  //   } else {
-  //     Object.entries(cardRefs.current).forEach(([key, card]) => {
-  //       if (!card) return;
-  //       const overlay = card.querySelector(".overlay");
-  //       if (!overlay) return;
-  //       if (hoveredStep && parseInt(key, 10) === hoveredStep) {
-  //         gsap.to(overlay, {
-  //           duration: 0.5,
-  //           height: "100%",
-  //           ease: "power3.out",
-  //         });
-  //       } else {
-  //         gsap.to(overlay, {
-  //           duration: 0.5,
-  //           height: "0%",
-  //           ease: "power3.inOut",
-  //         });
-  //       }
-  //     });
-  //   }
-  // }, [activeStep, hoveredStep]);
-
-  const infoStep = activeStep !== null ? activeStep : hoveredStep;
-
   return (
-    <div
-     className="responsivec-container"
-    >
+    <div className="responsivec-container">
       <h2
         style={{
           textAlign: "center",
           marginBottom: 40,
-           color: "gray",
+          color: "gray",
           fontWeight: "700",
         }}
       >
         Solar PV Cells Supply Chain
       </h2>
 
-          <div
-  style={{
-    display: "flex",
-    justifyContent: isMobile ? "center" : "space-between",
-    gap: 5,
-    flexWrap: "wrap",
-    position: "relative",
-    zIndex: 1,
-    marginBottom: "5vh",
-    padding: "0 10px"
-  }}
->
-
+      <div
+        style={{
+          display: "flex",
+          justifyContent: isMobile ? "center" : "space-between",
+          gap: 5,
+          flexWrap: "wrap",
+          position: "relative",
+          zIndex: 1,
+          marginBottom: "5vh",
+          padding: "0 10px",
+        }}
+      >
         {steps.map(({ id, title }) => {
           const isHovered = id === hoveredStep;
           const isActive = id === activeStep;
@@ -234,24 +118,19 @@ React.useEffect(() => {
               tabIndex={0}
               role="button"
               onMouseEnter={() => setHoveredStep(id)}
-              onMouseLeave={() => setHoveredStep(null)}  
+              onMouseLeave={() => setHoveredStep(null)}
               style={{
-                 cursor: "pointer",
+                cursor: "pointer",
                 borderRadius: 20,
                 position: "relative",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 gap: 16,
-                    width : "100px",
-                maxWidth : "100px",
-                minWidth : "100px",
-                // transformStyle: "preserve-3d",
-                // willChange: "transform",
-                // transition: "color 0.35s ease",
+                width: "100px",
+                maxWidth: "100px",
+                minWidth: "100px",
                 outline: "none",
-                // background: "linear-gradient(145deg, #ffffff, #e6e6e6)",
-                // overflowX: "scroll",
                 zIndex: isHighlighted ? 2 : 1,
               }}
             >
@@ -316,60 +195,61 @@ React.useEffect(() => {
         })}
       </div>
 
-   <div className="mb-4"  style={{ textAlign: "center" }}>
-        <em className="px-2 mt-4 fw-normal" style={{fontSize : "14px", textAlign : "center" ,fontWeight : "500" }}>
-        This infographic outlines the end‑to‑end supply chain for solar
-        photovoltaic cell manufacturing, from quartz mining in Norway through
-        silicon purification in the U.S. and Germany to wafer slicing in China
-        and silver metallization in Germany. By pairing each production stage
-        with its critical mineral inputs (quartz, silicon, silver) and flagship
-        facilities, it highlights the global network of suppliers that underpin
-        clean‑energy technology. The graphic’s intent is to reveal potential
-        chokepoints and strategic dependencies—emphasizing how securing
-        high‑purity materials is vital for scaling solar deployment worldwide.
-      </em>
+      <div className="mb-4" style={{ textAlign: "center" }}>
+        <em
+          className="px-2 mt-4 fw-normal"
+          style={{ fontSize: "14px", textAlign: "center", fontWeight: "500" }}
+        >
+          This infographic outlines the end‑to‑end supply chain for solar
+          photovoltaic cell manufacturing, from quartz mining in Norway through
+          silicon purification in the U.S. and Germany to wafer slicing in China
+          and silver metallization in Germany. By pairing each production stage
+          with its critical mineral inputs (quartz, silicon, silver) and
+          flagship facilities, it highlights the global network of suppliers
+          that underpin clean‑energy technology. The graphic’s intent is to
+          reveal potential chokepoints and strategic dependencies—emphasizing
+          how securing high‑purity materials is vital for scaling solar
+          deployment worldwide.
+        </em>
       </div>
 
-    {hoveredStep && (
-<Snackbar
-  open={true}
-  anchorOrigin={{ vertical: "top", horizontal: "bottom" }}
-  autoHideDuration={null}
-  style={{
-    position: "relative",
-    top: snackbarTop,
-    left: -10,
-    zIndex: 9999,
-  }}
->
-  <Alert
-    severity="success"
-    variant="filled"
-    onClose={() => setHoveredStep(null)}
-    sx={{
-      pointerEvents: "auto",
-      minWidth: 320,
-      userSelect: "text",
-      backgroundColor: "#517891",
-      color: "#ffffff",
-      boxShadow: "0 8px 20px rgba(0,0,0,0.3), inset 0 0 10px #1a3c6e",
-      "&:hover": {
-        cursor: "default",
-      },
-    }}
-  >
-    <strong>{steps.find((s) => s.id === hoveredStep)?.title}</strong>
-    <ul style={{ marginTop: 8, paddingLeft: 20 }}>
-      {stepDetails[hoveredStep]?.map((d, i) => (
-        <li key={i}>{d}</li>
-      ))}
-    </ul>
-  </Alert>
-</Snackbar>
-
-)}
-
+      {hoveredStep && (
+        <Snackbar
+          open={true}
+          anchorOrigin={{ vertical: "top", horizontal: "bottom" }}
+          autoHideDuration={null}
+          style={{
+            position: "relative",
+            top: snackbarTop,
+            left: -10,
+            zIndex: 9999,
+          }}
+        >
+          <Alert
+            severity="success"
+            variant="filled"
+            onClose={() => setHoveredStep(null)}
+            sx={{
+              pointerEvents: "auto",
+              minWidth: 320,
+              userSelect: "text",
+              backgroundColor: "#517891",
+              color: "#ffffff",
+              boxShadow: "0 8px 20px rgba(0,0,0,0.3), inset 0 0 10px #1a3c6e",
+              "&:hover": {
+                cursor: "default",
+              },
+            }}
+          >
+            <strong>{steps.find((s) => s.id === hoveredStep)?.title}</strong>
+            <ul style={{ marginTop: 8, paddingLeft: 20 }}>
+              {stepDetails[hoveredStep]?.map((d, i) => (
+                <li key={i}>{d}</li>
+              ))}
+            </ul>
+          </Alert>
+        </Snackbar>
+      )}
     </div>
   );
 }
- 

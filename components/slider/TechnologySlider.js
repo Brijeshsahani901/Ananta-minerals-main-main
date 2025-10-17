@@ -1,69 +1,14 @@
-// // components/TechnologySlider.js
-
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Navigation, Pagination } from "swiper";
-// import SupplyChainSteps from "../supplyChainSteps";
-// import data from "@/util/blogData";
-// import Link from "next/link";
-// import AlternateTechSodiumIon from "../alternateTechSodiumIonBattery";
-// import MilitaryDronesAssembly from "../militaryDroneAssembly";
-// import SolarPV from "../SolarPv";
-
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-
-// export default function TechnologySlider() {
-//   return (
-//     <>
-//       <Swiper
-//         modules={[Autoplay, Pagination, Navigation]}
-//         slidesPerView={1}
-//         spaceBetween={0}
-//         centeredSlides={true}
-//         loop={true}
-//         autoplay={{
-//           delay: 100000,
-//           disableOnInteraction: false,
-//         }}
-//         pagination={{
-//           clickable: true,
-//           el: ".block-gallery-pagination",
-//         }}
-//          noSwipingClass="no-swiping"
-//         nested={true} // ✅ Allow scrollable children
-//         touchStartPreventDefault={false} // ✅ Let inner components receive touch
-//         className="row tgslider__active"
-//       >
-//         <SwiperSlide>
-//           <SupplyChainSteps />
-//         </SwiperSlide>
-
-//         <SwiperSlide>
-//           <AlternateTechSodiumIon />
-//         </SwiperSlide>
-
-//         <SwiperSlide>
-//           <MilitaryDronesAssembly />
-//         </SwiperSlide>
-
-//         <SwiperSlide>
-//           <SolarPV /> {/* ✅ This one now scrolls properly on mobile */}
-//         </SwiperSlide>
-//       </Swiper>
-//     </>
-//   );
-// }
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import SupplyChainSteps from "../supplyChainSteps";
 import AlternateTechSodiumIon from "../alternateTechSodiumIonBattery";
 import MilitaryDronesAssembly from "../militaryDroneAssembly";
 import SolarPV from "../SolarPv";
+import RareEarthInfographic from "../RareEarthInfographic";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function TechnologySlider() {
-  const totalSlides = 4;
+  const totalSlides = 5; 
   const [index, setIndex] = useState(0);
   const [prevClicked, setPrevClicked] = useState(false);
   const [nextClicked, setNextClicked] = useState(false);
@@ -81,6 +26,9 @@ export default function TechnologySlider() {
     setTimeout(() => setPrevClicked(false), 150);
     setIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
   };
+
+  const isLastSlide = index === totalSlides - 1;
+  const arrowColor = isLastSlide ? "#fff" : "#333";
 
   const buttonBaseStyle = {
     position: "absolute",
@@ -108,7 +56,7 @@ export default function TechnologySlider() {
             zIndex: 5,
           }}
         >
-          <FiChevronLeft size={28} color="#333" />
+          <FiChevronLeft size={28} color={arrowColor} />
         </div>
         <div
           onClick={nextSlide}
@@ -119,7 +67,7 @@ export default function TechnologySlider() {
             zIndex: 5,
           }}
         >
-          <FiChevronRight size={28} color="#333" />
+          <FiChevronRight size={28} color={arrowColor} />
         </div>
       </div>
 
@@ -133,7 +81,7 @@ export default function TechnologySlider() {
             left: "10px",
           }}
         >
-          <FiChevronLeft size={28} color="#333" />
+          <FiChevronLeft size={28} color={arrowColor} />
         </div>
         <div
           onClick={nextSlide}
@@ -143,7 +91,7 @@ export default function TechnologySlider() {
             right: "10px",
           }}
         >
-          <FiChevronRight size={28} color="#333" />
+          <FiChevronRight size={28} color={arrowColor} />
         </div>
       </div>
 
@@ -153,7 +101,7 @@ export default function TechnologySlider() {
         interval={null}
         controls={false}
         indicators
-        touch={false} // This disables swipe gestures on all devices
+        touch={false} // Disable swipe gestures
       >
         <Carousel.Item>
           <div className="d-block w-100">
@@ -161,7 +109,7 @@ export default function TechnologySlider() {
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className="">
+          <div className="d-block w-100">
             <SupplyChainSteps />
           </div>
         </Carousel.Item>
@@ -173,6 +121,11 @@ export default function TechnologySlider() {
         <Carousel.Item>
           <div className="d-block w-100">
             <MilitaryDronesAssembly />
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="d-block w-100">
+            <RareEarthInfographic />
           </div>
         </Carousel.Item>
       </Carousel>
