@@ -160,4 +160,54 @@ export const mineralPosts = [
     date: "October 9, 2025",
     img: "",
   },
+  {
+    id: 15,
+    title:
+      "The United States and Australia Partner to Challenge China’s Rare Earth Dominance",
+    downloadUrl: "#", // Add your actual download link here
+    path: "https://www.whitehouse.gov/briefings-statements/2025/10/united-states-australia-framework-for-securing-of-supply-in-the-mining-and-processing-of-critical-minerals-and-rare-earths/",
+    author: "The White House, briefing",
+    date: "October 20, 2025",
+    img: "",
+  },
+   {
+    id: 16,
+    title: "US Strengthens Critical Minerals Partnerships with Malaysia and Japan",
+    downloadUrl: "#",
+    path: "#", // Keep this as fallback
+    author: "The White House", 
+    date: "October 26, 2025",
+    img: "",
+    customLinks: {
+      "Malaysia": "https://www.whitehouse.gov/briefings-statements/2025/10/memorandum-of-understanding-between-the-government-of-the-united-states-of-america-and-the-government-of-malaysia-concerning-cooperation-to-diversify-global-critical-minerals-supply-chains-and-promote/",
+      "Japan": "https://www.whitehouse.gov/briefings-statements/2025/10/united-states-japan-framework-for-securing-the-supply-of-critical-minerals-and-rare-earths-through-mining-and-processing/"
+    }
+  },
+  {
+    id: 17,
+    title: "India and Mongolia Forge Critical Minerals Partnership",
+    downloadUrl: "#",
+    path: "https://www.centralchronicle.com/india-mongolia-ink-ten-mous/#:~:text=India%2C%20Mongolia%20ink%20ten%20MoUs%20%7C%20Central%20India's%20Premier%20English%20Daily",
+    author: "Central Chronicle",
+    date: "14th October, 2025",
+    img: "",
+  },
+   {
+    id: 18,
+    title: "Deccan Gold to kick off December drilling at Chhattisgarh critical-minerals block",
+    downloadUrl: "#",
+    path: "https://economictimes.indiatimes.com/industry/indl-goods/svs/metals-mining/chhattisgarh-critical-mineral-block-drilling-to-start-in-december-says-deccan-gold-mines-md/articleshow/124942669.cms?from=mdr",
+    author: "Central Chronicle",
+    date: "30 October 2025 | The Economic Times",
+    img: "",
+  },
+   {
+    id: 19,
+    title: "China issues import licences for Indian buyers of rare-earth magnets",
+    downloadUrl: "#",
+    path: "https://www.centralchronicle.com/india-mongolia-ink-ten-mous/#:~:text=India%2C%20Mongolia%20ink%20ten%20MoUs%20%7C%20Central%20India's%20Premier%20English%20Daily",
+    author: "Central Chronicle",
+    date: "China issues import licences for Indian buyers of rare-earth magnets",
+    img: "",
+  },
 ];

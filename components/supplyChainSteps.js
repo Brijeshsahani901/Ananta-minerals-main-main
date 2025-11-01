@@ -166,7 +166,10 @@ export default function SupplyChainSteps() {
   return (
     <div
          className="responsivec-container"
-
+style={{
+       minHeight: "520px",
+       
+      }}
     >
       <h2
         style={{
@@ -306,7 +309,7 @@ export default function SupplyChainSteps() {
       </div>
 
 <div className="mb-4"  style={{ textAlign: "center" }}>
-        <em className="px-2 mt-4 fw-normal" style={{fontSize : "14px", textAlign : "center" ,fontWeight : "500" }}>
+        <em className="px-2 mt-4" style={{fontSize : "14px", textAlign : "center" }}>
         This infographic traces the full EV‑battery value chain—from lithium,
         nickel, cobalt and graphite extraction in Australia, Chile, DRC and
         beyond, through concentration and refining hubs in China, South Korea

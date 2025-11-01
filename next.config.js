@@ -24,6 +24,9 @@ dotenv.config();
 
 const nextConfig = {
   reactStrictMode: true,
+   images: {
+    unoptimized: true, // ✅ disables optimization
+  },
   output: 'export', // required for static site export
   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,

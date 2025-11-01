@@ -11,7 +11,7 @@ export default function RareEarthInfographic() {
         background: "linear-gradient(180deg, #1a2a3a, #2c3e50, #4ca1af)",
         color: "#ffffff",
         borderRadius: "15px",
-        minHeight : "480px",
+       minHeight: "520px",
         // height: "480px",
         boxSizing: "border-box",
         display: "flex",

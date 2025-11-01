@@ -47,8 +47,7 @@ export default function WhatsNew() {
     },
     {
       id: 4,
-      title:
-        " India in talks with Chile and Peru to source Critical Minerals",
+      title: " India in talks with Chile and Peru to source Critical Minerals",
       description:
         "Chile, peru (body)- India is negotiating with Chile and Peru under ongoing free‑trade pact talks to secure fixed supplies of copper concentrate and other critical minerals, with its copper import dependency set to climb to 97 percent by 2047.",
       downloadUrl: "#", // Add your actual download link here
@@ -59,8 +58,7 @@ export default function WhatsNew() {
     },
     {
       id: 5,
-      title:
-        "India-UK Tech Pact shifts focus towards Critical Minerals",
+      title: "India-UK Tech Pact shifts focus towards Critical Minerals",
       description:
         " India-Uk Tech (Body)- Prime Minister Narendra Modi and UK Prime Minister Keir Starmer expanded its remit to critical minerals and frontier domains—announcing a £1.8 million second phase for the UK–India Critical Minerals Supply Chain Observatory and the launch of a UK–India Critical Minerals Guild to advance sustainable mining, recycling and traceability for semiconductors, batteries and clean‑energy technologies.",
       downloadUrl: "#", // Add your actual download link here
@@ -71,8 +69,7 @@ export default function WhatsNew() {
     },
     {
       id: 6,
-      title:
-        "India’s Rare Earth Partnership with Africa",
+      title: "India’s Rare Earth Partnership with Africa",
       description:
         " India has deepened its strategic engagement with five African nations—Zambia, Zimbabwe, Mozambique, Malawi and Côte d’Ivoire—to secure vital rare earth element supplies and cut its dependence on China, which controls over 90 percent of global REE output.",
       downloadUrl: "#", // Add your actual download link here
@@ -83,8 +80,7 @@ export default function WhatsNew() {
     },
     {
       id: 7,
-      title:
-        "Hindustan Zinc secures Potash block- REE and Tungsten up next",
+      title: "Hindustan Zinc secures Potash block- REE and Tungsten up next",
       description:
         "Hindustan Zinc (Body)- Hindustan Zinc Ltd. has received a Letter of Intent from the Ministry of Mines for a 1,800‑hectare potash block in Hanumangarh, Rajasthan—its third critical minerals acquisition in 2025 after securing a rare earth elements block in Uttar Pradesh and a tungsten block in Andhra Pradesh under Tranche V of the Centre’s e‑auction process.",
       downloadUrl: "#", // Add your actual download link here
@@ -93,10 +89,9 @@ export default function WhatsNew() {
       date: "17th July, 2025",
       img: "",
     },
-     {
+    {
       id: 8,
-      title:
-        "New Tech: Autonomous Vehicle designed for deep ocean mining",
+      title: "New Tech: Autonomous Vehicle designed for deep ocean mining",
       description:
         "The Ocean Exploration Cooperative Institute (OECI), in partnership with NOAA, BOEM and USGS, deployed Orpheus Ocean’s new autonomous underwater vehicle—designed by WHOI—to image and sample polymetallic nodules at depths up to 5,645 m east of the Mariana Trench, marking the first direct observations of these ultra‑deep mineral-rich sites.",
       downloadUrl: "#", // Add your actual download link here
@@ -105,7 +100,7 @@ export default function WhatsNew() {
       date: "13th July, 2025",
       img: "",
     },
-     {
+    {
       id: 9,
       title:
         "India and the UK have committed £1.8 million to expand the UK–India Critical Minerals Supply Chain Observatory",
@@ -117,7 +112,7 @@ export default function WhatsNew() {
       date: "18th August, 2025",
       img: "",
     },
-     {
+    {
       id: 10,
       title:
         "India's Critical Minerals Push: 5 policy pillars proposed for India's rare earth self-reliance",
@@ -130,10 +125,9 @@ export default function WhatsNew() {
       img: "",
     },
 
-     {
+    {
       id: 11,
-      title:
-        "China expands rare earths export restrictions to new elements",
+      title: "China expands rare earths export restrictions to new elements",
       description:
         "Blurb : China’s expanded rare-earth controls to holmium, erbium, thulium, europium, and ytterbium elements tighten's global access to key elements essential for lasers, fiber optics, magnetic alloys, and clean-energy technologies, heightening supply insecurity across semiconductor, renewable, defense, and high-tech manufacturing industries, while accelerating diversification efforts in the U.S., EU, Japan, and India to reduce Chinese dependency.",
       downloadUrl: "#", // Add your actual download link here
@@ -143,7 +137,7 @@ export default function WhatsNew() {
       img: "",
     },
 
-{
+    {
       id: 12,
       title:
         "India to inaugurate national critical mineral stockpile to safeguard rare-earth supply",
@@ -179,7 +173,47 @@ export default function WhatsNew() {
       date: "October 9, 2025",
       img: "",
     },
-   
+    {
+      id: 15,
+      title:
+        "The United States and Australia Partner to Challenge China’s Rare Earth Dominance",
+      downloadUrl: "#", // Add your actual download link here
+      description:
+        "The U.S.-Australia Critical Minerals Framework creates significant strategic opportunities for India while highlighting the nation's vulnerabilities in the global critical minerals landscape. As China controls 70% of rare earth mining and 90% of processing, and has weaponised exports through restrictions on gallium, germanium, and rare earth elements, India faces severe supply chain risks for its burgeoning EV, electronics, semiconductor, and defence sectors. The bilateral framework's price floor mechanisms and $8.5 billion investment pipeline offer India potential collaboration pathways through the broader Quad Critical Minerals Initiative, launched in July 2025. India possesses the world's third-largest rare earth reserves (6.9 million tonnes) but produces merely 2,900 tonnes annually due to limited refining technology and infrastructure. The U.S.-Australia partnership emphasises that India must accelerate its National Critical Minerals Mission investments, deepen bilateral agreements with Australia for technical expertise and reliable supply, and leverage Quad cooperation to access diversified sources. Without urgent action, India's clean energy transition and strategic manufacturing ambitions remain hostage to Chinese export controls and market manipulation.",
+      path: "https://www.whitehouse.gov/briefings-statements/2025/10/united-states-australia-framework-for-securing-of-supply-in-the-mining-and-processing-of-critical-minerals-and-rare-earths/",
+      author: "The White House, briefing",
+      date: "October 20, 2025",
+      img: "",
+    },
+    {
+      id: 16,
+      title:
+        "US Strengthens Critical Minerals Partnerships with Malaysia and Japan",
+      description:
+        "The United States has recently signed Memoranda of Understanding (MoUs) on critical minerals with both Malaysia and Japan, aiming to diversify and secure global supply chains for essential rare earth elements and minerals. The US-Malaysia MoU establishes enhanced cooperation in trade, investment, and the development of Malaysia's rare earth sector, with Malaysia agreeing not to impose bans or quotas on exports of critical minerals or rare earth magnets to the US. Similarly, the US-Japan framework focuses on joint investment, coordinated stockpiling, and stable supply arrangements to strengthen bilateral supply chain resilience, incorporating technology and resource sharing. For India, these US agreements represent a shift in the global critical minerals landscape, as the US strengthens partnerships with key Asian nations. While India is not directly affected by these MoUs, the changing dynamics may encourage it to expand its own cooperation, ensure access, and keep pace with new regional supply chain standards.",
+      downloadUrl: "#",
+      path: "#",
+      author: "The White House",
+      date: "October 26, 2025",
+      img: "",
+      customLinks: {
+        Malaysia:
+          "https://www.whitehouse.gov/briefings-statements/2025/10/memorandum-of-understanding-between-the-government-of-the-united-states-of-america-and-the-government-of-malaysia-concerning-cooperation-to-diversify-global-critical-minerals-supply-chains-and-promote/",
+        Japan:
+          "https://www.whitehouse.gov/briefings-statements/2025/10/united-states-japan-framework-for-securing-the-supply-of-critical-minerals-and-rare-earths-through-mining-and-processing/",
+      },
+    },
+    {
+      id: 17,
+      title: "India and Mongolia Forge Critical Minerals Partnership",
+      description:
+        "India and Mongolia signed a Memorandum of Understanding (MoU) on October 14, 2025, to strengthen bilateral cooperation in geology and mineral resources, with a focus on critical minerals including copper. The agreement, formalized in the presence of India's Prime Minister and Mongolia's President, aims to enhance collaboration in mineral exploration, sustainable development, and management, as well as knowledge-sharing and technological exchange to ensure secure supply chains for both countries. Mongolia, with vast underexplored deposits of rare earth elements, coking coal, and copper, offers India new opportunities for resource diversification, supporting its energy, infrastructure, and manufacturing sectors. The partnership aligns with India's goals of resource security and supply chain resilience and supports Mongolia's ambitions to broaden its mineral trade relations beyond its major neighbor, China. Both sides view this MoU as a strategic step in deepening economic and technical collaboration.",
+      downloadUrl: "#",
+      path: "https://www.centralchronicle.com/india-mongolia-ink-ten-mous/#:~:text=India%2C%20Mongolia%20ink%20ten%20MoUs%20%7C%20Central%20India's%20Premier%20English%20Daily",
+      author: "Central Chronicle",
+      date: "14th October, 2025",
+      img: "",
+    },
   ];
 
   const sortedWhatsnew = [...whatsnew].sort((a, b) => {
@@ -229,15 +263,147 @@ export default function WhatsNew() {
             <div className="row justify-content-center">
               <div className="col-xl-12 col-lg-12">
                 <div className="blog-post-wrapper">
-                    <div className="latest__post-content">
-                      <div
-                        className="document-box p-4"
-                        style={{
-                          borderRadius: "8px",
-                          backgroundColor: "#f9f9f9",
-                        }}
-                      >
-                        {sortedWhatsnew.map((item, index) => (
+                  <div className="latest__post-content">
+                    <div
+                      className="document-box p-4"
+                      style={{
+                        borderRadius: "8px",
+                        backgroundColor: "#f9f9f9",
+                      }}
+                    >
+                      {sortedWhatsnew.map((item, index) =>
+                        item.customLinks ? (
+                          <div key={index} style={{ textDecoration: "none" }}>
+                            <div
+                              className="post-entry d-flex mb-5 shadow-sm"
+                              style={{
+                                position: "relative",
+                                backgroundColor: "#ffffff",
+                                borderRadius: "8px",
+                                padding: "20px 24px",
+                                transition:
+                                  "box-shadow 0.3s ease, transform 0.2s ease",
+                                cursor: "pointer",
+                              }}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.boxShadow =
+                                  "0 6px 20px rgba(0,0,0,0.1)";
+                                e.currentTarget.style.transform =
+                                  "translateY(-2px)";
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.boxShadow = "none";
+                                e.currentTarget.style.transform =
+                                  "translateY(0)";
+                              }}
+                            >
+                              {/* Unique Gradient Line */}
+                              <div
+                                style={{
+                                  width: "3px",
+                                  borderRadius: "6px",
+                                  background:
+                                    "linear-gradient(to bottom, #b7f8db, #50a7c2)",
+                                  position: "absolute",
+                                  left: "0",
+                                  top: "0",
+                                  bottom: "0",
+                                }}
+                              ></div>
+
+                              <div
+                                className="post-content"
+                                style={{ flex: 1, marginLeft: "16px" }}
+                              >
+                                <h4
+                                  style={{
+                                    color: "#2F4156",
+                                    fontWeight: "600",
+                                    transition: "color 0.3s",
+                                    marginBottom: "10px",
+                                  }}
+                                  ref={criticalRef}
+                                >
+                                  {item.title
+                                    .split(" ")
+                                    .map((word, wordIndex) => {
+                                      const linkKey = word.replace(/[.,]/g, "");
+                                      if (item.customLinks[linkKey]) {
+                                        return (
+                                          <a
+                                            key={wordIndex}
+                                            href={item.customLinks[linkKey]}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            style={{
+                                              color: "#2F4156",
+                                              textDecoration: "none",
+                                              fontWeight: "600",
+                                              borderBottom: "1px solid #2F4156",
+                                            }}
+                                            onMouseEnter={(e) => {
+                                              e.currentTarget.style.color =
+                                                "#007BFF";
+                                              e.currentTarget.style.borderBottomColor =
+                                                "#007BFF";
+                                            }}
+                                            onMouseLeave={(e) => {
+                                              e.currentTarget.style.color =
+                                                "#2F4156";
+                                              e.currentTarget.style.borderBottomColor =
+                                                "#2F4156";
+                                            }}
+                                          >
+                                            {word}{" "}
+                                          </a>
+                                        );
+                                      }
+                                      return (
+                                        <span key={wordIndex}>{word} </span>
+                                      );
+                                    })}
+                                </h4>
+
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    color: "#666",
+                                    marginBottom: "12px",
+                                    display: "flex",
+                                    alignItems: "center",
+                                  }}
+                                >
+                                  <span style={{ color: "#2F4156" }}>
+                                    {item.date}
+                                  </span>
+                                  <div
+                                    style={{
+                                      height: "12px",
+                                      width: "2px",
+                                      background: "#000",
+                                      margin: "0 10px",
+                                    }}
+                                  ></div>
+                                  <span style={{ color: "#2F4156" }}>
+                                    {item.author}
+                                  </span>
+                                </div>
+
+                                {item.description && (
+                                  <p
+                                    style={{
+                                      fontSize: "16.5px",
+                                      color: "#333",
+                                      lineHeight: "1.6",
+                                    }}
+                                  >
+                                    {item.description}
+                                  </p>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        ) : (
                           <a
                             href={
                               /^https?:\/\//.test(item.path)
@@ -279,7 +445,6 @@ export default function WhatsNew() {
                                   borderRadius: "6px",
                                   background:
                                     "linear-gradient(to bottom, #b7f8db, #50a7c2)",
-
                                   position: "absolute",
                                   left: "0",
                                   top: "0",
@@ -348,9 +513,10 @@ export default function WhatsNew() {
                               </div>
                             </div>
                           </a>
-                        ))}
-                      </div>
+                        )
+                      )}
                     </div>
+                  </div>
                 </div>
               </div>
             </div>

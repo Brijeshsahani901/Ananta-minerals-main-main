@@ -200,7 +200,7 @@ export default function AlternateTechSodiumIonSupplyChain() {
   };
 
   return (
-    <div className="responsivec-container">
+    <div className="responsivec-container" style={{ minHeight: "520px",}}>
       <h2
         style={{
           textAlign: "center",
@@ -317,8 +317,8 @@ export default function AlternateTechSodiumIonSupplyChain() {
 
       <div className="mb-4" style={{ textAlign: "center" }}>
         <em
-          className="px-2 mt-4 fw-normal"
-          style={{ fontSize: "14px", textAlign: "center", fontWeight: "500" }}
+          className="px-2 mt-4"
+          style={{ fontSize: "14px", textAlign: "center" }}
         >
           This infographic lays out the end‑to‑end sodium‑ion battery value
           chain—from soda‑ash and hard‑carbon mining through chemical refining,

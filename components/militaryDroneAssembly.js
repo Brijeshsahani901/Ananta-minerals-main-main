@@ -184,7 +184,10 @@ export default function MilitaryDronesWithGsapTilt() {
   return (
     <div
          className="responsivec-container"
-
+style={{
+        minHeight: "520px",
+       
+      }}
     >
       <h2
         style={{
@@ -320,7 +323,7 @@ export default function MilitaryDronesWithGsapTilt() {
       </div>
 
 <div className="mb-4"  style={{ textAlign: "center" }}>
-        <em className="px-2 mt-4 fw-normal" style={{fontSize : "14px", textAlign : "center" ,fontWeight : "500" }}>
+        <em className="px-2 mt-4" style={{fontSize : "14px", textAlign : "center"  }}>
      This infographic maps out the five key stages of military drone production—from frame fabrication through software R&D—highlighting the critical minerals (aluminum, rare‑earth magnets, lithium, gallium) required at each step. It further pinpoints leading facilities and global companies illustrating how global supply chains and geopolitics intersect in drone manufacturing. By laying out mineral dependencies alongside major production hubs, the graphic underscores potential bottlenecks and strategic vulnerabilities in securing essential resources for defense‑grade UAVs.
       </em>
       </div>

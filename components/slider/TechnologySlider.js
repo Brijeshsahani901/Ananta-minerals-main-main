@@ -5,10 +5,11 @@ import AlternateTechSodiumIon from "../alternateTechSodiumIonBattery";
 import MilitaryDronesAssembly from "../militaryDroneAssembly";
 import SolarPV from "../SolarPv";
 import RareEarthInfographic from "../RareEarthInfographic";
+import IndiaAfghanistan from "../IndiaAfghanistan";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function TechnologySlider() {
-  const totalSlides = 5; 
+  const totalSlides = 6;
   const [index, setIndex] = useState(0);
   const [prevClicked, setPrevClicked] = useState(false);
   const [nextClicked, setNextClicked] = useState(false);
@@ -27,8 +28,11 @@ export default function TechnologySlider() {
     setIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
   };
 
-  const isLastSlide = index === totalSlides - 1;
-  const arrowColor = isLastSlide ? "#fff" : "#333";
+  // ✅ Arrow color logic:
+  // White on last 2 slides (index 4 and 5), dark otherwise
+const isWhiteSlide = index < 2;
+const arrowColor = isWhiteSlide ? "#fff" : "#333";
+
 
   const buttonBaseStyle = {
     position: "absolute",
@@ -37,9 +41,9 @@ export default function TechnologySlider() {
     backgroundColor: "transparent",
     padding: "8px 12px",
     borderRadius: "4px",
-    transition: "transform 0.1s ease",
+    transition: "transform 0.1s ease, opacity 0.2s ease",
     userSelect: "none",
-    boxShadow: "none",
+    opacity: 0.9,
     ...(prevClicked || nextClicked ? { transform: "scale(0.92)" } : {}),
   };
 
@@ -53,10 +57,9 @@ export default function TechnologySlider() {
             ...buttonBaseStyle,
             top: "10px",
             left: "10px",
-            zIndex: 5,
           }}
         >
-          <FiChevronLeft size={28} color={arrowColor} />
+          <FiChevronLeft size={30} color={arrowColor} />
         </div>
         <div
           onClick={nextSlide}
@@ -64,10 +67,9 @@ export default function TechnologySlider() {
             ...buttonBaseStyle,
             top: "10px",
             right: "10px",
-            zIndex: 5,
           }}
         >
-          <FiChevronRight size={28} color={arrowColor} />
+          <FiChevronRight size={30} color={arrowColor} />
         </div>
       </div>
 
@@ -105,27 +107,37 @@ export default function TechnologySlider() {
       >
         <Carousel.Item>
           <div className="d-block w-100">
+            <IndiaAfghanistan />
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <div className="d-block w-100">
+            <RareEarthInfographic />
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <div className="d-block w-100">
             <SolarPV />
           </div>
         </Carousel.Item>
+
         <Carousel.Item>
           <div className="d-block w-100">
             <SupplyChainSteps />
           </div>
         </Carousel.Item>
+
         <Carousel.Item>
           <div className="d-block w-100">
             <AlternateTechSodiumIon />
           </div>
         </Carousel.Item>
+
         <Carousel.Item>
           <div className="d-block w-100">
             <MilitaryDronesAssembly />
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <RareEarthInfographic />
           </div>
         </Carousel.Item>
       </Carousel>

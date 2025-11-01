@@ -132,7 +132,7 @@ export default function BlogDetails() {
                                                     <Link href="#"><i className="far fa-check" /><img src="/assets/img/others/avatar.png" alt="img" /></Link>
                                                 </div>
                                                 <div className="blog-avatar-content">
-                                                    <p>Monty Hython is a Writer at Sarsa and has been covering emerging technologies and
+                                                    <p>Monty Hython is a Writer at critical and has been covering emerging technologies and
                                                         venture capital there since 2013. He covers a wide variety of news from early and late stage startups to massive tech behemoths.</p>
                                                     <h5 className="name">Alison Fiano</h5>
                                                     <span className="designation">OG Author</span>

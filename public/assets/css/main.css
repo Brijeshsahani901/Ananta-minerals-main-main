@@ -1,43 +1,20 @@
-/*-------------------------------------------
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-   Theme Name: Sarsa - News & Magazine HTML Template
-   Author : ThemeGenix
-   Support: themegenix@gmail.com
-   Description: Sarsa - News & Magazine HTML Template
-   Version: 1.0
+html {
+  scroll-behavior: smooth;
+}
 
-----------------------------------------------
-
-/************ TABLE OF CONTENTS **************
-
-    01. Theme Default CSS
-    02. Header
-    03. Mobile Menu
-    04. Banner
-    05. Trending Post
-    06. Featured Post
-    07. Video Post
-    08. Hand-Picked Post
-    09. Stories Post
-    10. Popular Post
-    11. Category Post
-    12. Latest Post
-    13. Minimal Post
-    14. Adventure Post
-    15. Blog
-    16. Blog Sidebar
-    17. Newsletter Post
-    18. Footer
-    19. Dark Mode
-.latest__post-item::before
-**********************************************/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-
+/* Optional: Custom smooth scrolling with better performance */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
 :root {
-  --tg-body-font-family: 'Poppins';
-  --tg-heading-font-family: 'Poppins';
+  --tg-body-font-family: 'Inter', sans-serif;
+  --tg-heading-font-family: 'Inter', sans-serif;
   --tg-icon-font-family: "Font Awesome 5 Pro";
   --tg-body-font-size: 18px;
   --tg-body-line-height: 1.5;
@@ -76,6 +53,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 
 
 body {
