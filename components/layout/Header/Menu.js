@@ -3,82 +3,11 @@
 // import { useState, useEffect, useRef } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 // import { sectorItems, alternateTechItems } from "@/util/menuItems";
+// import { getAllSearchItems } from "@/util/searchItems";
 // import Swal from "sweetalert2";
 
-// const authors = [
-//   {
-//     name: "Ayan Barman",
-//     category: "Sectors",
-//     routes: [
-//       { path: "/agriculture", label: "Agriculture", type: "sector" },
-//       { path: "/automobile", label: "Automobile", type: "sector" },
-
-//       { path: "/renewable-energy", label: "Renewable Energy", type: "sector" },
-//       {
-//         path: "/supply-chain/closing-loop",
-//         label: "Closing the Loop",
-//         type: "article",
-//       },
-//     ],
-//   },
-//   {
-//     name: "Prerna Bounter",
-//     category: "Sectors",
-//     routes: [
-//       {
-//         path: "/supply-chain/critical-pathway",
-//         label: "Critical Pathway",
-//         type: "article",
-//       },
-//       {
-//         path: "/defence-and-aerospace",
-//         label: "Defence & Aerospace",
-//         type: "sector",
-//       },
-//     ],
-//   },
-// ];
-
-// // Extract all articles from authors
-// const allArticles = authors.flatMap((author) =>
-//   author.routes.map((route) => ({
-//     ...route,
-//     name: route.label,
-//     author: author.name,
-//     category: author.category,
-//     type: "article",
-//   }))
-// );
-
-// // Combine all searchable items
-// const allSearchItems = [
-//   ...alternateTechItems.map((item) => ({
-//     ...item,
-//     category: "Alternate Tech",
-//     type: "page",
-//   })),
-//   ...sectorItems.map((item) => ({
-//     ...item,
-//     category: "Sectors",
-//     type: "page",
-//   })),
-//   { path: "/about", label: "About", category: "Pages", type: "page" },
-//   {
-//     path: "/supply-chain",
-//     label: "Supply Chains",
-//     category: "Pages",
-//     type: "page",
-//   },
-//   // Add authors
-//   ...authors.map((author) => ({
-//     name: author.name,
-//     category: author.category,
-//     routes: author.routes,
-//     type: "author",
-//   })),
-//   // Add all articles separately for filtering
-//   ...allArticles,
-// ];
+// // Get all search items by passing the required menu items
+// const allSearchItems = getAllSearchItems(alternateTechItems, sectorItems);
 
 // export default function Menu({
 //   handleMobileMenuOpen,
@@ -90,12 +19,11 @@
 //   const router = useRouter();
 //   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 //   const [shouldAnimate, setShouldAnimate] = useState(false);
-//   const animationKeyRef = useRef(0); // Key to force re-render
+//   const animationKeyRef = useRef(0);
 //   const [showEnterPopup, setShowEnterPopup] = useState(false);
 //   const enterPopupTimer = useRef(null);
 
-//   const [activeFilter, setActiveFilter] = useState("all"); // 'all', 'authors', 'articles', 'pages'
-
+//   const [activeFilter, setActiveFilter] = useState("all");
 //   const [searchQuery, setSearchQuery] = useState("");
 //   const [searchResults, setSearchResults] = useState([]);
 //   const [showResults, setShowResults] = useState(false);
@@ -125,7 +53,10 @@
 //       } else if (item.type === "article") {
 //         return (
 //           item.name.toLowerCase().includes(query) ||
-//           (item.category && item.category.toLowerCase().includes(query))
+//           item.label.toLowerCase().includes(query) ||
+//           (item.author && item.author.toLowerCase().includes(query)) ||
+//           (item.category && item.category.toLowerCase().includes(query)) ||
+//           (item.content && item.content.toLowerCase().includes(query))
 //         );
 //       } else {
 //         return (
@@ -151,20 +82,6 @@
 //       document.removeEventListener("mousedown", handleClickOutside);
 //     };
 //   }, []);
-
-//   // const handleSearch = (e) => {
-//   //   e.preventDefault();
-//   //   if (searchResults.length > 0) {
-//   //     const firstResult = searchResults[0];
-//   //     if (firstResult.type === "author") {
-//   //       router.push(firstResult.routes[0]);
-//   //     } else {
-//   //       router.push(firstResult.path);
-//   //     }
-//   //     setSearchQuery("");
-//   //     setShowResults(false);
-//   //   }
-//   // };
 
 //   const handleSearch = (e) => {
 //     e.preventDefault();
@@ -197,7 +114,9 @@
 //                   <h4 style="margin: 0 0 5px 0; color: #1FA3F3;">${
 //                     result.name
 //                   }</h4>
-//                   <div style="font-size: 0.9em; color: #777; margin-bottom: 10px;">Author</div>
+//                   <div style="font-size: 0.9em; color: #777; margin-bottom: 10px;">Author • ${
+//                     result.category
+//                   }</div>
 //                   <div style="font-size: 0.9em;">
 //                     <strong>Articles:</strong>
 //                     <ul style="padding-left: 20px; margin: 5px 0 0 0;">
@@ -220,6 +139,30 @@
 //                   </div>
 //                 </div>
 //               `;
+//               } else if (result.type === "article") {
+//                 const isExternal = result.isExternal;
+//                 const linkTarget = isExternal ? '_blank' : '_self';
+//                 const linkHref = isExternal ? result.path : basePath + result.path;
+                
+//                 return `
+//                 <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+//                   <a href="${linkHref}" 
+//                      target="${linkTarget}"
+//                      onclick="${isExternal ? '' : `event.preventDefault(); window.location.href='${linkHref}'`}"
+//                      style="color: #1FA3F3; text-decoration: none; cursor: pointer; font-weight: 500;">
+//                     ${result.label}
+//                   </a>
+//                   <div style="font-size: 0.9em; color: #777;">
+//                     ${result.category} • ${result.author} • ${result.date || ''}
+//                     ${isExternal ? ' • External Link' : ''}
+//                   </div>
+//                   ${result.content ? `
+//                   <div style="font-size: 0.85em; color: #555; margin-top: 5px;">
+//                     ${result.content.substring(0, 100)}...
+//                   </div>
+//                   ` : ''}
+//                 </div>
+//               `;
 //               } else {
 //                 return `
 //                 <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
@@ -232,7 +175,7 @@
 //                   </a>
 //                   <div style="font-size: 0.9em; color: #777;">${
 //                     result.type
-//                   }</div>
+//                   } • ${result.category}</div>
 //                 </div>
 //               `;
 //               }
@@ -275,13 +218,18 @@
 
 //   const handleResultClick = (result) => {
 //     if (result.type === "author") {
-//       router.push(result.routes[0]);
+//       router.push(result.routes[0].path);
+//     } else if (result.isExternal) {
+//       window.open(result.path, '_blank');
 //     } else {
 //       router.push(result.path);
 //     }
 //     setSearchQuery("");
 //     setShowResults(false);
 //   };
+
+//   // ... rest of your component JSX remains exactly the same as before
+//   // (The navigation structure, mobile menu, etc.)
 
 //   return (
 //     <>
@@ -352,7 +300,6 @@
 //                     borderRadius: "999px",
 //                     cursor: "pointer",
 //                     color: "#F5EFEB",
-
 //                     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.12)",
 //                     overflow: "hidden",
 //                     minWidth: "fit-content",
@@ -373,13 +320,14 @@
 //                   />
 //                 </motion.li>
 //               )}
+              
+//               {/* Sectors Menu */}
 //               <motion.li
 //                 onMouseEnter={() => setIsSubMenuOpen(true)}
 //                 onMouseLeave={() => setIsSubMenuOpen(false)}
 //               >
 //                 <Link href="#">
 //                   <span style={{ color: "white" }}>Sectors</span>
-
 //                   {router.pathname === "/sectors" && (
 //                     <motion.div
 //                       className="nav-indicator"
@@ -418,7 +366,7 @@
 //                         left: -100,
 //                         padding: "1rem",
 //                         display: "grid",
-//                         gridTemplateColumns: "repeat(1, 1fr)", // ✅ Fixed 4-column layout
+//                         gridTemplateColumns: "repeat(1, 1fr)",
 //                         gap: "2rem",
 //                         zIndex: 100,
 //                         borderRadius: "8px",
@@ -434,10 +382,10 @@
 //                             <a
 //                               style={{
 //                                 color: "white",
-//                                 fontWeight: 300, // ✅ Valid weight
-//                                 lineHeight: "1", // ✅ Tighter line height
-//                                 padding: "0.2rem 0", // ✅ Smaller vertical padding
-//                                 display: "block", // Ensures full clickable area
+//                                 fontWeight: 300,
+//                                 lineHeight: "1",
+//                                 padding: "0.2rem 0",
+//                                 display: "block",
 //                                 transition: "color 0.2s ease",
 //                               }}
 //                               onMouseEnter={(e) =>
@@ -460,6 +408,8 @@
 //                   )}
 //                 </AnimatePresence>
 //               </motion.li>
+
+//               {/* Supply Chains */}
 //               <motion.li
 //                 variants={{
 //                   hidden: { opacity: 0, y: -20 },
@@ -478,7 +428,6 @@
 //               >
 //                 <Link href="/supply-chain">
 //                   <span style={{ color: "white" }}>Supply Chains</span>
-
 //                   {router.pathname === "/supply-chain" && (
 //                     <motion.div
 //                       className="nav-indicator"
@@ -496,8 +445,9 @@
 //                   )}
 //                 </Link>
 //               </motion.li>
+
+//               {/* Alternate Tech */}
 //               <motion.li
-//                 // className="menu-item-has-children"
 //                 onMouseEnter={() => setIsSubMenuOpen(true)}
 //                 onMouseLeave={() => setIsSubMenuOpen(false)}
 //               >
@@ -543,7 +493,7 @@
 //                         padding: "2rem",
 //                         display: "grid",
 //                         gridTemplateColumns: "repeat(4, 1fr)",
-//                         gap: "1rem", // 🔽 Reduced gap between grid items
+//                         gap: "1rem",
 //                         zIndex: 100,
 //                         borderRadius: "8px",
 //                         backgroundColor: "#000",
@@ -584,6 +534,8 @@
 //                   )}
 //                 </AnimatePresence>
 //               </motion.li>
+
+//               {/* What's New */}
 //               <motion.li
 //                 variants={{
 //                   hidden: { opacity: 0, y: -20 },
@@ -598,12 +550,11 @@
 //                   },
 //                 }}
 //                 whileHover={{ scale: 1.05 }}
-//                 className={router.pathname === "/supply-chain" ? "active" : ""}
+//                 className={router.pathname === "/whats-new" ? "active" : ""}
 //               >
 //                 <Link href="/whats-new">
 //                   <span style={{ color: "white" }}>What's New</span>
-
-//                   {router.pathname === "/supply-chain" && (
+//                   {router.pathname === "/whats-new" && (
 //                     <motion.div
 //                       className="nav-indicator"
 //                       layoutId="navIndicator"
@@ -620,6 +571,8 @@
 //                   )}
 //                 </Link>
 //               </motion.li>
+
+//               {/* About */}
 //               <motion.li
 //                 variants={{
 //                   hidden: { opacity: 0, y: -20 },
@@ -638,7 +591,6 @@
 //               >
 //                 <Link href="/about">
 //                   <span style={{ color: "white" }}> About</span>
-
 //                   {router.pathname === "/about" && (
 //                     <motion.div
 //                       className="nav-indicator"
@@ -656,7 +608,10 @@
 //                   )}
 //                 </Link>
 //               </motion.li>
+
 //               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+//               {/* Search */}
 //               <motion.li
 //                 className="menu-search"
 //                 variants={{
@@ -733,7 +688,7 @@
 //                             key={
 //                               result.type === "author"
 //                                 ? result.name
-//                                 : result.path
+//                                 : result.path + result.label
 //                             }
 //                           >
 //                             {result.type === "author" ? (
@@ -760,16 +715,6 @@
 //                                     Author
 //                                   </div>
 //                                 </div>
-
-//                                 {/* <div
-//                                   style={{
-//                                     fontSize: "0.8rem",
-//                                     color: "rgba(255,255,255,0.7)",
-//                                   }}
-//                                 >
-//                                   {result.category}
-//                                 </div> */}
-
 //                                 <div style={{ marginTop: "10px" }}>
 //                                   <div
 //                                     style={{
@@ -819,40 +764,46 @@
 //                             ) : result.type === "article" ? (
 //                               <div key={`article-${result.path}`}>
 //                                 <motion.div
-//                                   // key={route.path}
 //                                   whileHover={{
 //                                     backgroundColor: "rgba(255,255,255,0.1)",
 //                                   }}
 //                                   style={{
 //                                     padding: "8px 10px",
 //                                     cursor: "pointer",
-//                                     // borderRadius: "4px",
 //                                     marginBottom: "4px",
 //                                     display: "flex",
 //                                     alignItems: "center",
 //                                     color: "white",
 //                                   }}
-//                                   href={result.path}
-//                                   onClick={() => {
-//                                     router.push(result.path);
-//                                     setSearchQuery("");
-//                                     setShowResults(false);
-//                                   }}
-//                                   //  style={{ fontWeight: 600, color: "#fff" }}
+//                                   onClick={() => handleResultClick(result)}
 //                                 >
-//                                   {result.label}
+//                                   <i
+//                                     className={`fas ${
+//                                       result.isExternal
+//                                         ? "fa-external-link-alt"
+//                                         : "fa-file-alt"
+//                                     }`}
+//                                     style={{
+//                                       marginRight: "8px",
+//                                       color: "rgba(255,255,255,0.5)",
+//                                       fontSize: "0.8rem",
+//                                     }}
+//                                   />
+//                                   <div>
+//                                     <div style={{ color: "#1FA3F3" }}>
+//                                       {result.label}
+//                                     </div>
+//                                     <div
+//                                       style={{
+//                                         fontSize: "0.7rem",
+//                                         color: "rgba(255,255,255,0.6)",
+//                                       }}
+//                                     >
+//                                       {result.author} • {result.category}
+//                                       {result.isExternal && " • External"}
+//                                     </div>
+//                                   </div>
 //                                 </motion.div>
-//                                 {/* <i
-//                                   className="fas fa-file-alt"
-//                                   style={{
-//                                     marginRight: "8px",
-//                                     color: "rgba(255,255,255,0.5)",
-//                                     fontSize: "0.8rem",
-//                                   }}
-//                                 />
-//                                 <span style={{ color: "#1FA3F3"}}>
-//                                   Article by {result.author} • {result.category}
-//                                 </span> */}
 //                               </div>
 //                             ) : (
 //                               <motion.div
@@ -888,14 +839,6 @@
 //                                     Page
 //                                   </div>
 //                                 </div>
-//                                 {/* <div
-//                                   style={{
-//                                     fontSize: "0.8rem",
-//                                     color: "rgba(255,255,255,0.7)",
-//                                   }}
-//                                 >
-//                                   {result.category}
-//                                 </div> */}
 //                               </motion.div>
 //                             )}
 //                           </div>
@@ -903,14 +846,13 @@
 //                       </motion.div>
 //                     )}
 //                   </AnimatePresence>
-
-//                   {/* ... (keep your no results message) ... */}
 //                 </div>
 //               </motion.li>
 //             </motion.ul>
 //           </div>
 //         </nav>
 
+//         {/* Mobile navigation remains the same */}
 //         <motion.div
 //           className="mobile-nav-toggler d-xl-none  d-lg-none"
 //           style={{
@@ -937,7 +879,6 @@
 //               borderRadius: "999px",
 //               cursor: "pointer",
 //               color: "#F5EFEB",
-
 //               boxShadow: "0 4px 10px rgba(0, 0, 0, 0.12)",
 //               overflow: "hidden",
 //               minWidth: "fit-content",
@@ -961,6 +902,7 @@
 //           <i className="fas fa-bars" onClick={handleMobileMenuOpen} />
 //         </motion.div>
 //       </div>
+
 //       <AnimatePresence>
 //         {showEnterPopup && (
 //           <motion.div
@@ -994,7 +936,7 @@
 //                 Available Search Options
 //               </div>
 //               <div style={{ fontSize: "0.9rem", opacity: 0.8 }}>
-//                 Try clicking the search icon to see all suggestions
+//                 Search through articles, authors, pages, and news updates
 //               </div>
 //             </div>
 //             <button
@@ -1012,28 +954,7 @@
 //           </motion.div>
 //         )}
 //       </AnimatePresence>
-//       {/* <input
-//         type="text"
-//         className="form-control"
-//         placeholder="Search pages or authors..."
-//         aria-label="Search"
-//         value={searchQuery}
-//         onChange={(e) => {
-//           setSearchQuery(e.target.value);
-//           setShowResults(false); // Don't show results while typing
-//         }}
-//         onKeyDown={(e) => {
-//           if (e.key === "Enter") {
-//             handleSearch(e);
-//             // Don't prevent default to allow form submission
-//           }
-//         }}
-//         onFocus={() => {
-//           if (searchQuery && searchResults.length > 0) {
-//             setShowResults(true);
-//           }
-//         }}
-//       /> */}
+
 //       <style jsx>{`
 //         .navigation {
 //           display: flex;
@@ -1053,8 +974,6 @@
 //           text-decoration: none;
 //           font-weight: 500;
 //           transition: color 0.3s ease;
-
-//           /* Add this line if needed */
 //           border-bottom: none;
 //           box-shadow: none;
 //         }
@@ -1074,7 +993,7 @@
 //           min-width: 200px;
 //           padding: 0rem;
 //           border-radius: 8px;
-//           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+//           boxShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 //           z-index: 100;
 //         }
 
@@ -1120,7 +1039,6 @@
 //     </>
 //   );
 // }
-
 
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -1227,32 +1145,33 @@ export default function Menu({
           .swal2-popup {
             z-index: 100000 !important;
             position: relative;
+            font-family: 'Inter', sans-serif !important;
           }
         </style>
-        <div style="text-align: left; max-height: 60vh; overflow-y: auto;">
+        <div style="text-align: left; max-height: 60vh; overflow-y: auto; font-family: 'Inter', sans-serif;">
           ${searchResults
             .map((result) => {
               if (result.type === "author") {
                 return `
-                <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
-                  <h4 style="margin: 0 0 5px 0; color: #1FA3F3;">${
+                <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; font-family: 'Inter', sans-serif;">
+                  <h4 style="margin: 0 0 5px 0; color: #1FA3F3; font-family: 'Inter', sans-serif;">${
                     result.name
                   }</h4>
-                  <div style="font-size: 0.9em; color: #777; margin-bottom: 10px;">Author • ${
+                  <div style="font-size: 0.9em; color: #777; margin-bottom: 10px; font-family: 'Inter', sans-serif;">Author • ${
                     result.category
                   }</div>
-                  <div style="font-size: 0.9em;">
+                  <div style="font-size: 0.9em; font-family: 'Inter', sans-serif;">
                     <strong>Articles:</strong>
-                    <ul style="padding-left: 20px; margin: 5px 0 0 0;">
+                    <ul style="padding-left: 20px; margin: 5px 0 0 0; font-family: 'Inter', sans-serif;">
                       ${result.routes
                         .map(
                           (route) => `
-                        <li style="margin-bottom: 5px;">
+                        <li style="margin-bottom: 5px; font-family: 'Inter', sans-serif;">
                           <a href="${basePath + route.path}" 
                              onclick="event.preventDefault(); window.location.href='${
                                basePath + route.path
                              }'"
-                             style="color: #4CAF50; text-decoration: none; cursor: pointer;">
+                             style="color: #4CAF50; text-decoration: none; cursor: pointer; font-family: 'Inter', sans-serif;">
                             ${route.label}
                           </a>
                         </li>
@@ -1269,19 +1188,19 @@ export default function Menu({
                 const linkHref = isExternal ? result.path : basePath + result.path;
                 
                 return `
-                <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+                <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; font-family: 'Inter', sans-serif;">
                   <a href="${linkHref}" 
                      target="${linkTarget}"
                      onclick="${isExternal ? '' : `event.preventDefault(); window.location.href='${linkHref}'`}"
-                     style="color: #1FA3F3; text-decoration: none; cursor: pointer; font-weight: 500;">
+                     style="color: #1FA3F3; text-decoration: none; cursor: pointer; font-family: 'Inter', sans-serif;">
                     ${result.label}
                   </a>
-                  <div style="font-size: 0.9em; color: #777;">
+                  <div style="font-size: 0.9em; color: #777; font-family: 'Inter', sans-serif;">
                     ${result.category} • ${result.author} • ${result.date || ''}
                     ${isExternal ? ' • External Link' : ''}
                   </div>
                   ${result.content ? `
-                  <div style="font-size: 0.85em; color: #555; margin-top: 5px;">
+                  <div style="font-size: 0.85em; color: #555; margin-top: 5px; font-family: 'Inter', sans-serif;">
                     ${result.content.substring(0, 100)}...
                   </div>
                   ` : ''}
@@ -1289,15 +1208,15 @@ export default function Menu({
               `;
               } else {
                 return `
-                <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+                <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; font-family: 'Inter', sans-serif;">
                   <a href="${basePath + result.path}" 
                      onclick="event.preventDefault(); window.location.href='${
                        basePath + result.path
                      }'"
-                     style="color: #1FA3F3; text-decoration: none; cursor: pointer; font-weight: 500;">
+                     style="color: #1FA3F3; text-decoration: none; cursor: pointer; font-family: 'Inter', sans-serif;">
                     ${result.label}
                   </a>
-                  <div style="font-size: 0.9em; color: #777;">${
+                  <div style="font-size: 0.9em; color: #777; font-family: 'Inter', sans-serif;">${
                     result.type
                   } • ${result.category}</div>
                 </div>
@@ -1333,6 +1252,7 @@ export default function Menu({
           .swal2-popup {
             z-index: 100000 !important;
             position: relative;
+            font-family: 'Inter', sans-serif !important;
           }
         </style>
       `,
@@ -1351,9 +1271,6 @@ export default function Menu({
     setSearchQuery("");
     setShowResults(false);
   };
-
-  // ... rest of your component JSX remains exactly the same as before
-  // (The navigation structure, mobile menu, etc.)
 
   return (
     <>
@@ -1451,7 +1368,7 @@ export default function Menu({
                 onMouseLeave={() => setIsSubMenuOpen(false)}
               >
                 <Link href="#">
-                  <span style={{ color: "white" }}>Sectors</span>
+                  <span style={{ color: "white", fontFamily: "'Inter', sans-serif" }}>Sectors</span>
                   {router.pathname === "/sectors" && (
                     <motion.div
                       className="nav-indicator"
@@ -1498,10 +1415,11 @@ export default function Menu({
                         color: "#fff",
                         width: "20vw",
                         boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+                        fontFamily: "'Inter', sans-serif",
                       }}
                     >
                       {sectorItems.map((item) => (
-                        <motion.li key={item.path}>
+                        <motion.li key={item.path} style={{ fontFamily: "'Inter', sans-serif" }}>
                           <Link href={item.path} passHref legacyBehavior>
                             <a
                               style={{
@@ -1511,6 +1429,7 @@ export default function Menu({
                                 padding: "0.2rem 0",
                                 display: "block",
                                 transition: "color 0.2s ease",
+                                fontFamily: "'Inter', sans-serif",
                               }}
                               onMouseEnter={(e) =>
                                 (e.target.style.color = "#1FA3F3")
@@ -1551,7 +1470,7 @@ export default function Menu({
                 className={router.pathname === "/supply-chain" ? "active" : ""}
               >
                 <Link href="/supply-chain">
-                  <span style={{ color: "white" }}>Supply Chains</span>
+                  <span style={{ color: "white", fontFamily: "'Inter', sans-serif" }}>Supply Chains</span>
                   {router.pathname === "/supply-chain" && (
                     <motion.div
                       className="nav-indicator"
@@ -1576,7 +1495,7 @@ export default function Menu({
                 onMouseLeave={() => setIsSubMenuOpen(false)}
               >
                 <Link href="#">
-                  <span style={{ color: "white" }}> Alternate Tech</span>
+                  <span style={{ color: "white", fontFamily: "'Inter', sans-serif" }}> Alternate Tech</span>
                   {router.pathname === "/alternate-tech" && (
                     <motion.div
                       className="nav-indicator"
@@ -1624,10 +1543,11 @@ export default function Menu({
                         color: "#fff",
                         width: "58vw",
                         boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+                        fontFamily: "'Inter', sans-serif",
                       }}
                     >
                       {alternateTechItems.map((item) => (
-                        <motion.li key={item.path}>
+                        <motion.li key={item.path} style={{ fontFamily: "'Inter', sans-serif" }}>
                           <Link href={item.path} passHref legacyBehavior>
                             <a
                               style={{
@@ -1637,6 +1557,7 @@ export default function Menu({
                                 padding: "0.2rem 0",
                                 display: "block",
                                 transition: "color 0.2s ease",
+                                fontFamily: "'Inter', sans-serif",
                               }}
                               onMouseEnter={(e) =>
                                 (e.target.style.color = "#1FA3F3")
@@ -1677,7 +1598,7 @@ export default function Menu({
                 className={router.pathname === "/whats-new" ? "active" : ""}
               >
                 <Link href="/whats-new">
-                  <span style={{ color: "white" }}>What's New</span>
+                  <span style={{ color: "white", fontFamily: "'Inter', sans-serif" }}>What's New</span>
                   {router.pathname === "/whats-new" && (
                     <motion.div
                       className="nav-indicator"
@@ -1714,7 +1635,7 @@ export default function Menu({
                 className={router.pathname === "/about" ? "active" : ""}
               >
                 <Link href="/about">
-                  <span style={{ color: "white" }}> About</span>
+                  <span style={{ color: "white", fontFamily: "'Inter', sans-serif" }}> About</span>
                   {router.pathname === "/about" && (
                     <motion.div
                       className="nav-indicator"
@@ -1754,14 +1675,14 @@ export default function Menu({
               >
                 <div
                   className="search-container"
-                  style={{ position: "relative" }}
+                  style={{ position: "relative", fontFamily: "'Inter', sans-serif" }}
                 >
                   <form onSubmit={handleSearch}>
                     <div className="input-group">
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Search articles, authors, pages..."
+                        placeholder="Search "
                         aria-label="Search"
                         value={searchQuery}
                         onChange={(e) => {
@@ -1769,6 +1690,7 @@ export default function Menu({
                           setShowResults(true);
                         }}
                         onFocus={() => setShowResults(true)}
+                        style={{ fontFamily: "'Inter', sans-serif" }}
                       />
                       <div className="">
                         <button
@@ -1776,6 +1698,7 @@ export default function Menu({
                           style={{
                             backgroundColor: "#F5EFEB",
                             color: "#2F4156",
+                            fontFamily: "'Inter', sans-serif"
                           }}
                           type="submit"
                         >
@@ -1805,6 +1728,7 @@ export default function Menu({
                           maxHeight: "400px",
                           overflowY: "auto",
                           border: "1px solid rgba(255,255,255,0.1)",
+                          fontFamily: "'Inter', sans-serif",
                         }}
                       >
                         {filteredResults.map((result) => (
@@ -1814,9 +1738,10 @@ export default function Menu({
                                 ? result.name
                                 : result.path + result.label
                             }
+                            style={{ fontFamily: "'Inter', sans-serif" }}
                           >
                             {result.type === "author" ? (
-                              <div style={{ padding: "10px 15px" }}>
+                              <div style={{ padding: "10px 15px", fontFamily: "'Inter', sans-serif" }}>
                                 <div
                                   style={{
                                     display: "flex",
@@ -1825,7 +1750,7 @@ export default function Menu({
                                   }}
                                 >
                                   <div
-                                    style={{ fontWeight: 600, color: "#fff" }}
+                                    style={{ fontWeight: 600, color: "#fff", fontFamily: "'Inter', sans-serif" }}
                                   >
                                     {result.name}
                                   </div>
@@ -1834,6 +1759,7 @@ export default function Menu({
                                       fontSize: "0.7rem",
                                       color: "rgba(255,255,255,0.5)",
                                       textTransform: "uppercase",
+                                      fontFamily: "'Inter', sans-serif"
                                     }}
                                   >
                                     Author
@@ -1845,6 +1771,7 @@ export default function Menu({
                                       fontSize: "0.8rem",
                                       color: "rgba(255,255,255,0.6)",
                                       marginBottom: "5px",
+                                      fontFamily: "'Inter', sans-serif"
                                     }}
                                   >
                                     Articles:
@@ -1863,6 +1790,7 @@ export default function Menu({
                                         marginBottom: "4px",
                                         display: "flex",
                                         alignItems: "center",
+                                        fontFamily: "'Inter', sans-serif"
                                       }}
                                       onClick={() => {
                                         router.push(route.path);
@@ -1878,7 +1806,7 @@ export default function Menu({
                                           fontSize: "0.8rem",
                                         }}
                                       />
-                                      <span style={{ color: "#1FA3F3" }}>
+                                      <span style={{ color: "#1FA3F3", fontFamily: "'Inter', sans-serif" }}>
                                         {route.label}
                                       </span>
                                     </motion.div>
@@ -1898,6 +1826,7 @@ export default function Menu({
                                     display: "flex",
                                     alignItems: "center",
                                     color: "white",
+                                    fontFamily: "'Inter', sans-serif"
                                   }}
                                   onClick={() => handleResultClick(result)}
                                 >
@@ -1914,13 +1843,14 @@ export default function Menu({
                                     }}
                                   />
                                   <div>
-                                    <div style={{ color: "#1FA3F3" }}>
+                                    <div style={{ color: "#1FA3F3", fontFamily: "'Inter', sans-serif" }}>
                                       {result.label}
                                     </div>
                                     <div
                                       style={{
                                         fontSize: "0.7rem",
                                         color: "rgba(255,255,255,0.6)",
+                                        fontFamily: "'Inter', sans-serif"
                                       }}
                                     >
                                       {result.author} • {result.category}
@@ -1939,6 +1869,7 @@ export default function Menu({
                                   cursor: "pointer",
                                   borderBottom:
                                     "1px solid rgba(255,255,255,0.05)",
+                                  fontFamily: "'Inter', sans-serif"
                                 }}
                                 onClick={() => handleResultClick(result)}
                               >
@@ -1949,7 +1880,7 @@ export default function Menu({
                                   }}
                                 >
                                   <div
-                                    style={{ fontWeight: 500, color: "#fff" }}
+                                    style={{ fontWeight: 500, color: "#fff", fontFamily: "'Inter', sans-serif" }}
                                   >
                                     {result.label}
                                   </div>
@@ -1958,6 +1889,7 @@ export default function Menu({
                                       fontSize: "0.7rem",
                                       color: "rgba(255,255,255,0.5)",
                                       textTransform: "uppercase",
+                                      fontFamily: "'Inter', sans-serif"
                                     }}
                                   >
                                     Page
@@ -1984,6 +1916,7 @@ export default function Menu({
             justifyContent: "space-between",
             width: "80%",
             alignItems: "center",
+            fontFamily: "'Inter', sans-serif"
           }}
         >
           <motion.li
@@ -2050,16 +1983,17 @@ export default function Menu({
               alignItems: "center",
               maxWidth: "90%",
               width: "auto",
+              fontFamily: "'Inter', sans-serif"
             }}
           >
             <div style={{ marginRight: "10px" }}>
               <i className="fas fa-info-circle" style={{ color: "#1FA3F3" }} />
             </div>
             <div>
-              <div style={{ fontWeight: 500, marginBottom: "5px" }}>
+              <div style={{ fontWeight: 500, marginBottom: "5px", fontFamily: "'Inter', sans-serif" }}>
                 Available Search Options
               </div>
-              <div style={{ fontSize: "0.9rem", opacity: 0.8 }}>
+              <div style={{ fontSize: "0.9rem", opacity: 0.8, fontFamily: "'Inter', sans-serif" }}>
                 Search through articles, authors, pages, and news updates
               </div>
             </div>
@@ -2084,11 +2018,13 @@ export default function Menu({
           display: flex;
           gap: 1.5rem;
           position: relative;
+          font-family: 'Inter', sans-serif !important;
         }
 
         .navigation li {
           position: relative;
           list-style: none;
+          font-family: 'Inter', sans-serif !important;
         }
 
         .navigation li a {
@@ -2096,15 +2032,14 @@ export default function Menu({
           padding: 0.5rem 0;
           color: ${white ? "#fff" : "#111"};
           text-decoration: none;
-          font-weight: 500;
           transition: color 0.3s ease;
           border-bottom: none;
           box-shadow: none;
+          font-family: 'Inter', sans-serif !important;
         }
 
         .navigation li.active a {
           color: var(--tg-theme-primary);
-          font-weight: 600;
         }
 
         .sub-menu {
@@ -2119,10 +2054,12 @@ export default function Menu({
           border-radius: 8px;
           boxShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
           z-index: 100;
+          font-family: 'Inter', sans-serif !important;
         }
 
         .sub-menu li {
           margin-bottom: 0.5rem;
+          font-family: 'Inter', sans-serif !important;
         }
 
         .sub-menu li:last-child {
@@ -2132,6 +2069,7 @@ export default function Menu({
         .sub-menu li a {
           color: ${white ? "#111" : "#fff"};
           white-space: nowrap;
+          font-family: 'Inter', sans-serif !important;
         }
 
         .sub-menu li.active a {
@@ -2142,22 +2080,38 @@ export default function Menu({
           display: flex;
           align-items: center;
           margin-left: 1rem;
+          font-family: 'Inter', sans-serif !important;
         }
 
         .input-group {
           width: 200px;
           margin-top: 10px;
+          font-family: 'Inter', sans-serif !important;
         }
 
         .input-group input {
           border-radius: 4px 0 0 4px;
           height: 36px;
+          font-family: 'Inter', sans-serif !important;
         }
 
         .input-group .btn {
           border-radius: 0 4px 4px 0;
           padding: 0 0.75rem;
           height: 36px;
+          font-family: 'Inter', sans-serif !important;
+        }
+
+        /* Ensure all text elements use Inter */
+        .tgmenu__nav,
+        .tgmenu__navbar-wrap,
+        .tgmenu__main-menu,
+        .sub-menu,
+        .search-results,
+        .search-container,
+        .search-container input,
+        .search-container button {
+          font-family: 'Inter', sans-serif !important;
         }
       `}</style>
     </>

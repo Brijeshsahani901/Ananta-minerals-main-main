@@ -149,6 +149,17 @@ export const authors = [
       },
     ],
   },
+  {
+    name: "Maitrayee Jha",
+    category: "Industry Analysis",
+    routes: [
+      {
+        path: "/supply-chain/myanmar-elections-civil-war-minerals",
+        label: "The world depends on China for its critical minerals needs but China, in turn, depends on a remote state in war-torn Myanmar.",
+        type: "article",
+      },
+    ],
+  },
 ];
 
 // Slides data
@@ -213,6 +224,28 @@ export const slides = [
     date: "November 2025",
     category: "Industry Analysis",
   },
+   {
+      id: 7,
+      image: `/assets/minerals_images/Rare Earth Minerals Mining.png`,
+      title: "Votes, Violence, and Valuable Minerals: Myanmar's Elections Amidst Civil War and Rare Earths Race",
+      link: "/supply-chain/myanmar-elections-civil-war-minerals",
+      content:
+        "The world depends on China for its critical minerals needs but China, in turn, depends on a remote state in war-torn Myanmar.",
+      author: "Maitrayee Jha",
+      date: "November 2025",
+      category: "Industry Analysis",
+    },
+    {
+      id: 8,
+      image: `/assets/minerals_images/asia-playbook.jpg`,
+      title: "From Reserves to Riches: Asia's Critical Minerals Playbook and India's Role",
+      link: "/supply-chain/asia-playbook",
+      content:
+        "India has ambitious plans to turn its rich mineral reserves into a strategic strength.",
+      author: "Ayan Barman",
+      date: "November 2025",
+      category: "Industry Analysis",
+    },
 ];
 
 // Mineral posts data
@@ -400,6 +433,33 @@ export const mineralPosts = [
     date: "14th October, 2025",
     img: "",
   },
+    {
+      id: 21,
+      title: "$142 million magnet facility set to position Malaysia as a key rare-earth hub in Asia",
+      downloadUrl: "#",
+      path: "https://www.reuters.com/world/asia-pacific/malaysia-pm-says-142-million-magnet-plant-boost-rare-earth-sector-state-media-2025-11-03/#:~:text=In%20July%2C%20Australia%27s%20Lynas%20Rare,plant%20in%20Malaysia%27s%20Kuantan%20district",
+      author: "Reuters",
+      date: "3 November, 2025",
+      img: "",
+    },
+    {
+      id: 22,
+      title: "India to skill 5.7 million workers by 2030 to power its critical minerals value chain",
+      downloadUrl: "#",
+      path: "https://economictimes.indiatimes.com/industry/indl-goods/svs/metals-mining/india-to-train-5-7-million-workers-in-mining-by-2030-to-boost-critical-minerals-push-cut-import-reliance/articleshow/125232556.cms?utm_source=chatgpt.com",
+      author: "The Economic Times",
+      date: "11 November, 2025",
+      img: "",
+    },
+      {
+      id: 23,
+      title: "Cabinet’s approval to revise royalty rates paves the way for unlocking India’s graphite, caesium, rubidium, and zirconium reserves",
+      downloadUrl: "#",
+      path: "https://www.pib.gov.in/PressReleseDetail.aspx?PRID=2189392",
+      author: "PIB India",
+      date: "12 November 2025",
+      img: "",
+    },
 ];
 
 // Extract all articles from authors

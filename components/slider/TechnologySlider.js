@@ -7,9 +7,12 @@ import SolarPV from "../SolarPv";
 import RareEarthInfographic from "../RareEarthInfographic";
 import IndiaAfghanistan from "../IndiaAfghanistan";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import IndiaAndMongolia from "../infographics/indiaAndMongolia";
+import MalaysianMineralInfographic from "../infographics/indiaMalaysiaCriticalMinerals";
+import ChinaAdvantage from "../infographics/chinaAdvantage";
 
 export default function TechnologySlider() {
-  const totalSlides = 6;
+  const totalSlides = 5;
   const [index, setIndex] = useState(0);
   const [prevClicked, setPrevClicked] = useState(false);
   const [nextClicked, setNextClicked] = useState(false);
@@ -30,7 +33,7 @@ export default function TechnologySlider() {
 
   // ✅ Arrow color logic:
   // White on last 2 slides (index 4 and 5), dark otherwise
-const isWhiteSlide = index < 2;
+const isWhiteSlide = index < 5;
 const arrowColor = isWhiteSlide ? "#fff" : "#333";
 
 
@@ -105,6 +108,22 @@ const arrowColor = isWhiteSlide ? "#fff" : "#333";
         indicators
         touch={false} // Disable swipe gestures
       >
+         <Carousel.Item>
+          <div className="d-block w-100">
+            <ChinaAdvantage/>
+          </div>
+        </Carousel.Item>
+          <Carousel.Item>
+          <div className="d-block w-100">
+            <MalaysianMineralInfographic/>
+          </div>
+        </Carousel.Item>
+         <Carousel.Item>
+          <div className="d-block w-100">
+            <IndiaAndMongolia />
+          </div>
+        </Carousel.Item>
+       
         <Carousel.Item>
           <div className="d-block w-100">
             <IndiaAfghanistan />
@@ -117,7 +136,7 @@ const arrowColor = isWhiteSlide ? "#fff" : "#333";
           </div>
         </Carousel.Item>
 
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <div className="d-block w-100">
             <SolarPV />
           </div>
@@ -139,7 +158,8 @@ const arrowColor = isWhiteSlide ? "#fff" : "#333";
           <div className="d-block w-100">
             <MilitaryDronesAssembly />
           </div>
-        </Carousel.Item>
+        </Carousel.Item> */}
+          
       </Carousel>
     </div>
   );

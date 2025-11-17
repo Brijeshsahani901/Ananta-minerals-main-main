@@ -201,7 +201,7 @@ export default function IndiaAfghanistanCollab() {
             Lithium Need
           </div>
           NITI Aayog estimates suggest India will require
-          <b style={{ color: "#ff9ff3", fontSize: "16px" }}>~56,000 metric tons</b>
+          <b style={{ color: "#ff9ff3", fontSize: "16px" }}>~56,000 metric tons </b>
             of lithium carbonate equivalent (LCE) annually by 2030 to feed its EV & battery goals.
           <br />
          India and Afghanistan can forge a strategic partnership focused on critical minerals, especially lithium, enabling India to diversify its supply chains away from China and strengthen regional resource security.

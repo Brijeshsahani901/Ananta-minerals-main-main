@@ -23,7 +23,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
    images: {
     unoptimized: true, // ✅ disables optimization
   },
