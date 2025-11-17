@@ -3,16 +3,13 @@
 import Layout from "@/components/layout/Layout";
 import TrendingSlider from "@/components/slider/TrendingSlider";
 import TechnologySlider from "@/components/slider/TechnologySlider";
-import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import DocumentSlider from "@/components/slider/documentSlider";
 import Map from "@/components/Map";
 import WhatsNewSection from "@/components/WhatsNewSection";
 
 export default function Home1() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const borderThickness = "0.5px";
-
   const [isMobile, setIsMobile] = useState(false);
   const whatsNewRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -21,10 +18,8 @@ export default function Home1() {
     const checkIsMobile = () => {
       return window.innerWidth < 768;
     };
-
     setIsMobile(checkIsMobile());
     setIsVisible(true);
-
     const handleResize = () => {
       setIsMobile(checkIsMobile());
     };
@@ -39,8 +34,6 @@ export default function Home1() {
       if (whatsNewRef.current) {
         const element = whatsNewRef.current;
         const scrollTop = element.scrollTop;
-
-        // Add shadow when scrolled
         if (scrollTop > 0) {
           element.style.boxShadow = "0 2px 8px rgba(0,0,0,0.1)";
         } else {

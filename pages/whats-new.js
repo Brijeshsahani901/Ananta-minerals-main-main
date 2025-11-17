@@ -2,12 +2,9 @@ import Layout from "@/components/layout/Layout";
 import {useRef } from "react";
 import { whatsnew } from "@/util/mineralData";
 
-
 export default function WhatsNew() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const criticalRef = useRef(null);
-
-
   const sortedWhatsnew = [...whatsnew].sort((a, b) => {
     const dateA = new Date(a.date.replace(/(\d+)(st|nd|rd|th)/, "$1"));
     const dateB = new Date(b.date.replace(/(\d+)(st|nd|rd|th)/, "$1"));
