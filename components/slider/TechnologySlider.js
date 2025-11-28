@@ -1,18 +1,15 @@
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import SupplyChainSteps from "../supplyChainSteps";
-import AlternateTechSodiumIon from "../alternateTechSodiumIonBattery";
-import MilitaryDronesAssembly from "../militaryDroneAssembly";
-import SolarPV from "../SolarPv";
 import RareEarthInfographic from "../RareEarthInfographic";
 import IndiaAfghanistan from "../IndiaAfghanistan";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import IndiaAndMongolia from "../infographics/indiaAndMongolia";
 import MalaysianMineralInfographic from "../infographics/indiaMalaysiaCriticalMinerals";
 import ChinaAdvantage from "../infographics/chinaAdvantage";
-
+import InvestInMalasiya from "../infographics/investInMalasiya";
+import Infographic520Screenshot from "../infographics/semiconductorLandscape";
 export default function TechnologySlider() {
-  const totalSlides = 5;
+  const totalSlides = 6;
   const [index, setIndex] = useState(0);
   const [prevClicked, setPrevClicked] = useState(false);
   const [nextClicked, setNextClicked] = useState(false);
@@ -33,9 +30,8 @@ export default function TechnologySlider() {
 
   // ✅ Arrow color logic:
   // White on last 2 slides (index 4 and 5), dark otherwise
-const isWhiteSlide = index < 5;
-const arrowColor = isWhiteSlide ? "#fff" : "#333";
-
+  const isWhiteSlide = index < 6;
+  const arrowColor = isWhiteSlide ? "#fff" : "#333";
 
   const buttonBaseStyle = {
     position: "absolute",
@@ -108,22 +104,35 @@ const arrowColor = isWhiteSlide ? "#fff" : "#333";
         indicators
         touch={false} // Disable swipe gestures
       >
-         <Carousel.Item>
+
+  <Carousel.Item>
           <div className="d-block w-100">
-            <ChinaAdvantage/>
+            <Infographic520Screenshot />
           </div>
         </Carousel.Item>
-          <Carousel.Item>
+       
+        <Carousel.Item>
           <div className="d-block w-100">
-            <MalaysianMineralInfographic/>
+            <InvestInMalasiya />
           </div>
         </Carousel.Item>
-         <Carousel.Item>
+
+        <Carousel.Item>
+          <div className="d-block w-100">
+            <ChinaAdvantage />
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="d-block w-100">
+            <MalaysianMineralInfographic />
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
           <div className="d-block w-100">
             <IndiaAndMongolia />
           </div>
         </Carousel.Item>
-       
+
         <Carousel.Item>
           <div className="d-block w-100">
             <IndiaAfghanistan />
@@ -159,7 +168,6 @@ const arrowColor = isWhiteSlide ? "#fff" : "#333";
             <MilitaryDronesAssembly />
           </div>
         </Carousel.Item> */}
-          
       </Carousel>
     </div>
   );

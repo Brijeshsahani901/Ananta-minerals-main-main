@@ -422,9 +422,9 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     The world depends on China for its critical minerals needs
                     but China, in turn, depends on a remote state in war-torn
                     Myanmar. Myanmar holds one of the world's largest{" "}
-                    <span style={{ color: "blue" }}>reserves</span> of heavy
+                   <a href="https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-rare-earths.pdf" target="_blank"> reserves</a> of heavy
                     rare earth elements (HREE), supplying{" "}
-                    <span style={{ color: "blue" }}>57%</span> of China's total
+                    <a href="https://www.cnbc.com/2025/06/24/chinas-rare-earth-dominance-myanmar-plays-a-critical-role-.html" target="_blank">57%</a> of China's total
                     rare earth imports in 2024, which are essential in the
                     production of advanced defence systems and green transition
                     technologies like electric vehicles and wind turbines. Under
@@ -445,12 +445,12 @@ export default function MyanmarElectionsCivilWarMinerals() {
 
                   <p className="my-3">
                     While China dominates nearly{" "}
-                    <span style={{ color: "blue" }}>90%</span> of global
+                    <a href="https://www.iea.org/reports/energy-technology-perspectives-2023/clean-energy-supply-chains-vulnerabilities" target="_blank">90%</a> of global
                     critical mineral processing capacity, it is less widely
                     recognised that its supply of certain HREEs, particularly
                     dysprosium and terbium, is significantly reliant on
                     resources extracted from Myanmar's Kachin State. Since 2017,
-                    China's HREE <span style={{ color: "blue" }}>imports</span>{" "}
+                    China's HREE <a href="https://globalwitness.org/en/campaigns/transition-minerals/fuelling-the-future-poisoning-the-present-myanmars-rare-earth-boom/" target="_blank">imports</a>{" "}
                     from Myanmar have increased exponentially because of low
                     extraction cost and lack of environmental regulations.
                   </p>
@@ -463,7 +463,7 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     Independence Army's (KIA), an ethnic armed organisation,
                     China temporarily halted HREE imports from Myanmar by
                     closing border gates. After negotiations, imports{" "}
-                    <span style={{ color: "blue" }}>resumed</span> under KIA tax
+                    <a href="https://www.stimson.org/2025/rare-earths-and-realpolitik-future-of-mediation-myanmar/" target="_blank">resumed</a> under KIA tax
                     regulation at a fixed price in April 2025, transforming
                     Myanmar's conflict economy and giving a non-state actor
                     effective control over a key global supply corridor in a
@@ -477,34 +477,34 @@ export default function MyanmarElectionsCivilWarMinerals() {
                   <p className="my-3">
                     A sequence of developments beginning in early July 2025,
                     although claimed to be{" "}
-                    <span style={{ color: "blue" }}>unrelated</span> by US
+                    <a href="https://www.reuters.com/world/asia-pacific/us-lifts-some-myanmar-sanctions-says-no-link-generals-letter-trump-2025-07-25/" target="_blank" > unrelated</a> by US
                     officials, underscores a shift in American policy towards
                     Myanmar, still referred to as{" "}
-                    <span style={{ color: "blue" }}>Burma</span> on most US
+                    <a href="https://www.state.gov/countries-areas/burma" target="_blank" > Burma</a> on most US
                     government platforms. General Hlaing, Myanmar's de facto
                     leader who seized power from the democratically elected
                     government, wrote a multi-page laudatory{" "}
-                    <span style={{ color: "blue" }}>letter</span> to President
+                    <a href="https://yangonmediagroup.com/index.php/eng-section/senior-general-sends-formal-response-to-trump?utm_source=chatgpt.com" target="_blank" > letter</a> to President
                     Trump requesting for lifting of sanctions and drawing a
                     parallel between alleged electoral fraud in both countries
                     in 2020 which he claimed had led to the losses of their
                     respective parties. The letter was written in response to
                     President Trump's earlier{" "}
-                    <span style={{ color: "blue" }}>correspondence</span>{" "}
+                    <a href="https://www.reuters.com/world/eus-von-der-leyen-had-good-exchange-with-trump-over-phone-commission-says-2025-07-07/" target="_blank" > correspondence</a>{" "}
                     regarding increased tariffs to several countries, including
                     Myanmar.
                   </p>
 
                   <p className="my-3">
                     Just a few weeks later, the US{" "}
-                    <span style={{ color: "blue" }}>lifted</span> sanctions on
+                    <a href="https://www.thehindu.com/news/international/us-lifts-sanctions-on-myanmar-junta-allies-after-general-praises-trump/article69853784.ece" target="_blank"> lifted</a> sanctions on
                     close associates of the Tatmadaw. And a few days after that,
                     reports of competing propositions on sourcing HREEs from
                     Myanmar — with KIA which is presently in control of most
                     mining areas or, alternatively, with Tatmadaw — were{" "}
-                    <span style={{ color: "blue" }}>heard</span> by the Trump
+                    <a href="https://www.reuters.com/world/china/trump-team-hears-pitches-access-myanmars-rare-earths-2025-07-28/" target="_blank">heard</a> by the Trump
                     administration. However, this potential collaboration is
-                    highly <span style={{ color: "blue" }}>impractical</span>{" "}
+                    highly <a href="https://www.stimson.org/2025/four-reasons-why-proposals-to-source-rare-earth-minerals-from-myanmar-will-not-succeed/" target="_blank">impractical</a>{" "}
                     due to the technical and logistical challenges, such as lack
                     of processing & refining capability and transport corridors,
                     among other reasons.
@@ -519,13 +519,13 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     lifted the state of emergency while retaining martial law,
                     transferring power from the State Administration Council to
                     the newly formed{" "}
-                    <span style={{ color: "blue" }}>interim government</span>,
+                    <a href="https://www.reuters.com/world/asia-pacific/myanmar-forms-interim-government-before-election-top-general-still-charge-2025-07-31/" target="_blank">interim government</a>,
                     both headed by General Hlaing. Elections have been{" "}
-                    <span style={{ color: "blue" }}>announced</span> to begin on
+                    <a href="https://www.thehindu.com/news/international/myanmar-election-to-begin-december-28-junta/article69946381.ece" target="_blank">announced</a> to begin on
                     28 December 2025 even as the civil war is ongoing, casting
                     a doubt on the feasibility of a peaceful and legitimate
                     political process. The election has been{" "}
-                    <span style={{ color: "blue" }}>boycotted</span> by several
+                    <a href="https://www.thehindu.com/news/international/myanmar-ethnic-group-vows-to-block-elections-in-its-enclave/article69920403.ece" target="_blank">boycotted</a> by several
                     major political and armed groups. These moves have not been
                     welcomed by reform advocates as steps towards democracy, but
                     rather viewed as a tactical rebranding effort, perhaps, to
@@ -534,11 +534,11 @@ export default function MyanmarElectionsCivilWarMinerals() {
 
                   <p className="my-3">
                     In order to re-legitimise authoritarian rule, a new
-                    draconian <span style={{ color: "blue" }}>electoral law</span> was
+                    draconian <a href="https://apnews.com/article/myanmar-election-democracy-law-vote-military-fc36d312dafb24a7a30e201a612239c9" target="_blank">electoral law</a> was
                     enacted right before the announcement of the upcoming
                     national election. It entails harsh penalties, including
                     death penalty, for those who oppose or disrupt the election.
-                    The <span style={{ color: "blue" }}>electoral design</span> also
+                    The <a href="https://www.stimson.org/2025/myanmars-december-election-engineering-continuity-through-institutional-redesign/" target="_blank">electoral design</a> also
                     clearly favours Tatmadaw control. While all Lower House
                     seats will be contested, many Upper House and regional
                     constituencies, mostly in ethnic minority areas, will remain
@@ -550,13 +550,13 @@ export default function MyanmarElectionsCivilWarMinerals() {
                   <p className="my-3">
                     Even prior to the 2021 civil war, Myanmar operated under
                     constrained democracy as the{" "}
-                    <span style={{ color: "blue" }}>2008 Constitution</span>,
+                    <a href="https://www.burmalibrary.org/docs5/Myanmar_Constitution-2008-en.pdf" target="_blank">2008 Constitution</a>,
                     practically written by the Tatmadaw, ensured that veto power
                     and 25% of the seats remain with them along with key
                     ministries like defence and home affairs. It also prohibited
                     Aung San Suu Kyi, the most popular leader in Myanmar, to
                     become the president as evident in article{" "}
-                    <span style={{ color: "blue" }}>59F</span> which was
+                    <a target="_blank" href="https://www.irrawaddy.com/specials/untouchable-articles-myanmars-constitution.html">59F</a> which was
                     specifically enacted for her.
                   </p>
 
@@ -567,24 +567,24 @@ export default function MyanmarElectionsCivilWarMinerals() {
                   <p className="my-3">
                     The Tatmadaw is attempting to play both sides by optimising
                     its leverage to maintain favourable ties. A Washington-based
-                    lobbying firm has <span style={{ color: "blue" }}>signed</span> a
+                    lobbying firm has <a target="_blank" href="https://www.reuters.com/world/china/myanmar-signs-deal-with-washington-lobbyists-rebuild-us-relations-2025-08-08/">signed</a> a
                     $3 million-per-year agreement with Myanmar to help restore
                     ties with the US. Concurrently, General Hlaing attended the{" "}
-                    <span style={{ color: "blue" }}>SCO summit</span>, where he
-                    also conducted a <span style={{ color: "blue" }}>meeting</span> with
+                    <a target="_blank" href="https://apnews.com/article/china-military-parade-sco-putin-xi-kim-7d71b8ef9dc3bcc5de2ee192debd87c7">SCO summit</a>, where he
+                    also conducted a <a target="_blank" href="https://www.mea.gov.in/press-releases.htm?dtl/40073/Prime_Minister_meets_with_Sr_Gen_Min_Aung_Hlaing_Chairman_of_the_State_Security_and_Peace_Commission_of_Myanmar_on_the_sidelines_of_the_SCO_Summit_Aug">meeting</a> with
                     Prime Minister Modi; China's Victory Day{" "}
-                    <span style={{ color: "blue" }}>parade</span>; and a series
-                    of <span style={{ color: "blue" }}>meetings</span> to boost
+                    <a target="_blank" href="https://www.reuters.com/world/china/factbox-who-were-foreign-leaders-chinas-military-parade-2025-09-03/">parade</a>; and a series
+                    of <a target="_blank" href="https://www.irrawaddy.com/news/burma/doubts-cast-on-myanmar-junta-bosss-pledges-to-chinese-investors.html">meetings</a> to boost
                     trade & investment with China.
                   </p>
 
                   <p className="my-3">
                     China's participation in Myanmar's critical mineral sector
-                    reflects <span style={{ color: "blue" }}>prioritising</span> economic
+                    reflects <a target="_blank" href="https://www.cnbc.com/2025/06/24/chinas-rare-earth-dominance-myanmar-plays-a-critical-role-.html">prioritiasing</a> economic
                     and strategic interests without the constraints imposed by
                     strong commitments to democratic governance, environmental
                     protection, and labour standards. The US, too, seems to be{" "}
-                    <span style={{ color: "blue" }}>deprioritising</span>{" "}
+                    <a target="_blank" href="https://foreignpolicy.com/2025/08/21/myanmar-us-trump-junta-critical-minerals-war-china-min-aung-hlaing/">deprioritising</a>{" "}
                     democracy in Myanmar, as it softens its stance on the
                     Tatmadaw and considers options to capitalise on the
                     attractive yet unrealistic potential opportunity of supply
@@ -598,19 +598,19 @@ export default function MyanmarElectionsCivilWarMinerals() {
                   <p className="my-3">
                     India signaled its interest in Kachin's resources when state
                     owned India Rare Earths Limited (IREL) and Geological Survey
-                    of India officials <span style={{ color: "blue" }}>visited</span> the
-                    region and conducted <span style={{ color: "blue" }}>meetings</span> with
+                    of India officials <a target="_blank" href="https://www.reuters.com/world/asia-pacific/myanmar-rebels-disrupt-china-rare-earth-trade-sparking-regional-scramble-2025-03-28/">visited</a> the
+                    region and conducted <a target="_blank" href="https://economictimes.indiatimes.com/news/india/myanmar-seeks-to-expand-investment-trade-ties-with-india/articleshow/118460828.cms?utm_source=chatgpt.com">meetings</a> with
                     the KIA to evaluate upstream collaboration opportunities in
                     late 2024. An intense ongoing battle starting in December
                     2024 in Bhamo, a key military and logistical hub in Kachin
                     State, has become a flashpoint, with China allegedly{" "}
-                    <span style={{ color: "blue" }}>pressuring</span> the KIA to
+                    <a href="https://www.reuters.com/world/china/china-risks-global-heavy-rare-earth-supply-stop-myanmar-rebel-victory-2025-07-08/" target="_blank">pressuring</a> the KIA to
                     halt its offensives. By August 2025, the Tatmadaw had{" "}
-                    <span style={{ color: "blue" }}>reportedly</span> regained
+                    <a target="_blank" href="https://www.irrawaddy.com/news/war-against-the-junta/myanmar-junta-retakes-bhamo-battalion-hq.html">reportedly</a> regained
                     control of the strategic town, located south of key mining
                     zones. This shift may have influenced the KIA's recent
                     willingness to consider mining partnerships with India. In a
-                    further <span style={{ color: "blue" }}>development</span>, as of
+                    further <a target="_blank" href="https://www.reuters.com/world/china/india-explores-rare-earth-deal-with-myanmar-rebels-after-chinese-curbs-2025-09-10/">development</a>, as of
                     September 2025, India's Ministry of Mines has instructed
                     both state-owned and private firms to assess the viability
                     of sourcing and transporting HREE samples from KIA-held
@@ -626,7 +626,7 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     and India-Myanmar-Thailand Trilateral Highway, India can be
                     a vital node in emerging supply chains in collaboration with
                     other countries such as Japan and South Korea with which
-                    IREL is <span style={{ color: "blue" }}>seeking partnerships</span> with.
+                    IREL is <a target="_blank" href="https://www.reuters.com/world/china/indian-miner-irel-seeks-japan-south-korea-partnerships-rare-earth-magnet-2025-08-14/">seeking partnerships</a> with.
                     However, the realisation of this potential depends on how
                     the precarious situation in Myanmar unfolds and how India
                     navigates its relationships with the fighting factions.
@@ -640,15 +640,15 @@ export default function MyanmarElectionsCivilWarMinerals() {
                   <p className="my-3">
                     India has been consistently deepening its engagement with
                     the Tatmadaw, Prime Minister Modi{" "}
-                    <span style={{ color: "blue" }}>discussed</span> rare earth
+                    <a target="_blank" href="https://www.pmindia.gov.in/en/news_updates/pm-meets-with-sr-gen-min-aung-hlaing-chairman-of-the-state-security-and-peace-commission-of-myanmar-on-the-sidelines-of-the-sco-summit/?comment=disable">discussed</a> rare earth
                     mining in his recent meeting with General Hlaing on the
                     sidelines of the SCO summit. Another high-level{" "}
-                    <span style={{ color: "blue" }}>meeting</span> was held in
+                    <a target="_blank" href="https://www.tribuneindia.com/news/world/upendra-dwivedi-meets-myanmar-army-commander-discusses-ways-to-advance-bilateral-defence-cooperation/amp">meeting</a> was held in
                     New Delhi in September 2025 during the visit of Myanmar's
                     General Ko Ko Oo, who remains under U.S. sanctions imposed
                     by the Biden administration along with other ongoing
                     military engagements. India has also{" "}
-                    <span style={{ color: "blue" }}>committed</span> to sending
+                    <a target="_blank" href="https://www.reuters.com/world/china/india-backs-myanmar-militarys-election-plan-state-media-says-2025-09-01/">committed</a> to sending
                     observers to monitor Myanmar's upcoming elections,
                     indicating a measure of support for the electoral process.
                   </p>
@@ -660,8 +660,8 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     diplomatically, but also by a range of complex challenges.
                     This includes the impact of cross-border insurgencies and
                     narcotics flow in India's Northeast, as Myanmar is now the
-                    world's largest <span style={{ color: "blue" }}>producer</span> of
-                    opium, as well as internal <span style={{ color: "blue" }}>frictions</span> between
+                    world's largest <a target="_blank" href="https://news.un.org/en/story/2023/12/1144702">producer</a> of
+                    opium, as well as internal <a target="_blank" href="https://www.newindianexpress.com/nation/2025/Mar/16/mizoram-body-urges-shah-to-reconsider-decision-to-fence-india-myanmar-border-lift-fmr-2">frictions</a> between
                     the central and state governments over the Free Movement
                     Regime, border fencing, and refugee policies.
                   </p>

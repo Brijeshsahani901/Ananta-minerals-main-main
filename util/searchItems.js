@@ -109,6 +109,11 @@ export const authors = [
         label: "Rare Earth Elements Just Got Rarer",
         type: "article",
       },
+       {
+        path: "/supply-chain/asia-playbook",
+        label: "From Reserves to Riches: Asia's Critical Minerals Playbook and India's Role",
+        type: "article",
+      },
     ],
   },
   {
@@ -156,6 +161,17 @@ export const authors = [
       {
         path: "/supply-chain/myanmar-elections-civil-war-minerals",
         label: "The world depends on China for its critical minerals needs but China, in turn, depends on a remote state in war-torn Myanmar.",
+        type: "article",
+      },
+    ],
+  },
+   {
+    name: "Mithilesh Phadke",
+    category: "Industry Analysis",
+    routes: [
+      {
+        path: "/supply-chain/beneath-the-surface",
+        label: "Beneath the Surface: India's Ambition in Deep-Sea Minerals.",
         type: "article",
       },
     ],

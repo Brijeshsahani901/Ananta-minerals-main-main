@@ -120,8 +120,7 @@ export default function WhatsNewSection() {
               underline.style.transform = "scaleX(1.2)";
               underline.style.height = "3px";
 
-              const arrow =
-                e.currentTarget.querySelector(".arrow-icon");
+              const arrow = e.currentTarget.querySelector(".arrow-icon");
               arrow.style.transform = "translateX(5px)";
               arrow.style.opacity = "1";
             }}
@@ -134,14 +133,12 @@ export default function WhatsNewSection() {
               underline.style.transform = "scaleX(1)";
               underline.style.height = "2px";
 
-              const arrow =
-                e.currentTarget.querySelector(".arrow-icon");
+              const arrow = e.currentTarget.querySelector(".arrow-icon");
               arrow.style.transform = "translateX(0px)";
               arrow.style.opacity = "0.8";
             }}
           >
             What's New
-
             <span
               className="main-underline"
               style={{
@@ -157,7 +154,6 @@ export default function WhatsNewSection() {
                 transformOrigin: "left center",
               }}
             ></span>
-
             <span
               className="arrow-icon"
               style={{
@@ -179,13 +175,11 @@ export default function WhatsNewSection() {
             className="d-flex"
             key={post.id}
             style={{
-              marginBottom:
-                index !== whatsnew.length - 1 ? "6px" : "0",
+              marginBottom: index !== whatsnew.length - 1 ? "6px" : "0",
               padding: "4px 0",
             }}
           >
             <div className={post.img === "" ? "col-12" : "col-8"}>
-
               {/* CUSTOM LINKS POST */}
               {post.customLinks ? (
                 <Link
@@ -200,12 +194,10 @@ export default function WhatsNewSection() {
                       cursor: "pointer",
                     }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.style.backgroundColor =
-                        "#f8f9fa")
+                      (e.currentTarget.style.backgroundColor = "#f8f9fa")
                     }
                     onMouseLeave={(e) =>
-                      (e.currentTarget.style.backgroundColor =
-                        "transparent")
+                      (e.currentTarget.style.backgroundColor = "transparent")
                     }
                   >
                     <h2
@@ -241,12 +233,10 @@ export default function WhatsNewSection() {
                       cursor: "pointer",
                     }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.style.backgroundColor =
-                        "#f8f9fa")
+                      (e.currentTarget.style.backgroundColor = "#f8f9fa")
                     }
                     onMouseLeave={(e) =>
-                      (e.currentTarget.style.backgroundColor =
-                        "transparent")
+                      (e.currentTarget.style.backgroundColor = "transparent")
                     }
                   >
                     <h2
@@ -279,9 +269,16 @@ export default function WhatsNewSection() {
                   marginLeft: "7px",
                   color: "#2F4156",
                   fontWeight: 500,
+                  width : "100%"
                 }}
               >
-                <span>{post.date}</span>
+                <span
+                  style={{
+                    whiteSpace: "nowrap", // ← FORCE single line
+                  }}
+                >
+                  {post.date}
+                </span>
                 <div
                   style={{
                     height: "10px",
@@ -330,8 +327,7 @@ export default function WhatsNewSection() {
                         cursor: "pointer",
                       }}
                       onMouseEnter={(e) =>
-                        (e.currentTarget.style.transform =
-                          "scale(1.03)")
+                        (e.currentTarget.style.transform = "scale(1.03)")
                       }
                       onMouseLeave={(e) =>
                         (e.currentTarget.style.transform = "scale(1)")
@@ -347,4 +343,3 @@ export default function WhatsNewSection() {
     </div>
   );
 }
-

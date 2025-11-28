@@ -47,27 +47,30 @@ export default function AsiaPlaybook() {
 
                   <p className="my-3">
                     India has ambitious plans to turn its rich mineral reserves
-                    into a strategic strength. Despite hosting about{" "}
-                    <span style={{ color: "blue" }}>6.3%</span> of global
-                    rare-earth reserves and being a top-five graphite producer,
-                    India relies heavily on imports for its critical minerals.
-                    In <span style={{ color: "blue" }}>2023</span>, it met
-                    roughly <span style={{ color: "blue" }}>80%</span> of its
-                    lithium and cobalt needs and{" "}
-                    <span style={{ color: "blue" }}>90%</span> of its rare-earth
-                    demand through imports. To address this gap, New Delhi
-                    launched the{" "}
-                    <span style={{ color: "blue" }}>
+                    into a strategic strength. Despite hosting about 6.3% of
+                    global rare-earth reserves and being a top-five graphite
+                    producer, India relies heavily on imports for its critical
+                    minerals. In 2023, it met roughly 80% of its lithium and
+                    cobalt needs and 90% of its rare-earth demand through
+                    imports. To address this gap, New Delhi launched the{" "}
+                    <a
+                      href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2120525"
+                      target="_blank"
+                    >
                       'National Critical Minerals Mission'
-                    </span>{" "}
-                    (NCMM) in{" "}
-                    <span style={{ color: "blue" }}>January 2025</span> (initial
-                    budget <span style={{ color: "blue" }}>₹16,300 cr</span>) to
-                    boost exploration, processing and recycling. Customs duties
-                    have been slashed or eliminated on many critical metals
-                    (e.g., <span style={{ color: "blue" }}>25 minerals</span>,
-                    such as lithium, REEs, and nickel, now face zero duty), and
-                    schemes are in the works to incentivise domestic processing.
+                    </a>{" "}
+                    (NCMM) in January 2025 (initial budget ₹16,300 cr) to boost
+                    exploration, processing and recycling. Customs duties have
+                    been slashed or eliminated on many{" "}
+                    <a
+                      href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2035601"
+                      target="_blank"
+                    >
+                      critical metals{" "}
+                    </a>
+                    (e.g.,25 minerals, such as lithium, REEs, and nickel, now
+                    face zero duty), and schemes are in the works to incentivise
+                    domestic processing.
                   </p>
 
                   <h3 className="my-3">
@@ -76,45 +79,58 @@ export default function AsiaPlaybook() {
 
                   <p className="my-3">
                     India's policy drive has attracted leading East Asian firms.{" "}
-                    <span style={{ color: "blue" }}>Japan's Toyota Tsusho</span>{" "}
-                    has been a pioneer: its subsidiary,{" "}
-                    <span style={{ color: "blue" }}>
-                      Toyotsu Rare Earths India (TREI)
-                    </span>
-                    , operates in{" "}
-                    <span style={{ color: "blue" }}>Andhra Pradesh</span>,
-                    refining rare-earth oxides (lanthanum, neodymium, etc.) for
-                    export to Japan's EV and tech industries. Japan's trading
-                    houses are also scouting India's resources:
-                    <span style={{ color: "blue" }}>
+                    Japan's Toyota Tsusho has been a pioneer: its subsidiary,{" "}
+                    Toyotsu Rare Earths India (TREI) ,{" "}
+                    <a href="https://trei.co.in/about.html" target="_blank">
+                      {" "}
+                      operates in Andhra Pradesh
+                    </a>
+                    , refining rare-earth oxides (lanthanum, neodymium, etc.)
+                    for export to Japan's EV and tech industries. Japan's
+                    trading houses are also scouting India's resources:
+                    <a
+                      href="https://www.japancalling.in/post/india-japan-critical-minerals-strategic-partnership-indo-pacific"
+                      target="_blank"
+                    >
                       {" "}
                       Sojitz and Mitsui
-                    </span>{" "}
+                    </a>{" "}
                     have begun evaluating joint mining/processing ventures in
                     India's mineral-rich eastern corridor. At the governmental
                     level, India and Japan signed a cooperation{" "}
-                    <span style={{ color: "blue" }}>MoU in August 2025</span> to
-                    strengthen supply chains for critical minerals and support
-                    sustainable resource development.
+                    <a
+                      href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2162043"
+                      target="_blank"
+                    >
+                      MoU in August 2025
+                    </a>{" "}
+                    to strengthen supply chains for critical minerals and
+                    support sustainable resource development.
                   </p>
 
                   <p className="my-3">
-                    Korean firms are likewise stepping up.{" "}
-                    <span style={{ color: "blue" }}>
-                      LG Energy Solution (LGES)
-                    </span>{" "}
-                    has inked an initial agreement with India's{" "}
-                    <span style={{ color: "blue" }}>JSW Energy</span> to build a
-                    <span style={{ color: "blue" }}>
-                      {" "}
+                    Korean firms are likewise stepping up. LG Energy Solution
+                    (LGES) has inked an initial agreement with India's JSW
+                    Energy to build a{" "}
+                    <a
+                      target="_blank"
+                      href="https://www.business-standard.com/companies/news/lg-energy-solution-jsw-discuss-1-5-bn-ev-battery-manufacturing-venture-124121700817_1.html"
+                    >
                       $1.5 billion, 10 GWh EV battery plant in India
-                    </span>
-                    .<span style={{ color: "blue" }}> POSCO</span> (South
-                    Korea's steel giant) has explored India's lithium and steel
-                    sectors and participates in regional battery forums.
-                    Broadly, South Korea's policy (such as its aggressive
-                    tech-industry incentives) complements India's goals of
-                    localising battery supply chains.
+                    </a>{" "}
+                    .POSCO (South Korea's steel giant) has{" "}
+                    <a
+                      target="_blank"
+                      href="https://www.just-auto.com/news/posco-invests-us765m-in-australian-lithium-jv-with-minres/"
+                    >
+                      {" "}
+                      explored India's lithium and steel sectors and
+                      participates
+                    </a>{" "}
+                    in regional battery forums. Broadly, South Korea's policy
+                    (such as its aggressive tech-industry incentives)
+                    complements India's goals of localising battery supply
+                    chains.
                   </p>
 
                   <p className="my-3">
@@ -124,49 +140,59 @@ export default function AsiaPlaybook() {
                     know-how, and India offers raw materials and growing demand.
                     These collaborations are encouraged by supportive policies
                     in all countries, such as Japan's{" "}
-                    <span style={{ color: "blue" }}>
+                    <a
+                      href="https://www.eria.org/uploads/India-ASEAN-Japan-Cooperation-for-Diversified-Resilient-Supply-Chains.pdf"
+                      target="_blank"
+                    >
                       Yen 2 trillion Supply Chain Diversification Programme
-                    </span>{" "}
-                    and{" "}
-                    <span style={{ color: "blue" }}>
-                      2022 Economic Security Act
-                    </span>{" "}
-                    provide subsidies and insurance for projects abroad—and by
-                    India's relaxed FDI rules (
-                    <span style={{ color: "blue" }}>
-                      100% automatic for minerals
-                    </span>
-                    ) and fast-tracked clearances.
+                    </a>{" "}
+                    and 2022 Economic Security Act provide subsidies and
+                    insurance for projects abroad—and by India's{" "}
+                    <a
+                      href="https://www.india-briefing.com/news/india-fdi-tracker-2025-38140.html/"
+                      target="_blank"
+                    >
+                      {" "}
+                      relaxed FDI rules{" "}
+                    </a>{" "}
+                    ( 100% automatic for minerals ) and fast-tracked clearances.
                   </p>
 
                   <h3 className="my-3">Lessons from Indonesia and Malaysia</h3>
 
                   <p className="my-3">
-                    India's neighbours offer useful contrasts.{" "}
-                    <span style={{ color: "blue" }}>Indonesia</span>, sitting on
-                    the world's largest nickel reserves, has long pursued a
-                    strict downstream strategy. Since{" "}
-                    <span style={{ color: "blue" }}>2014</span>, it has banned
-                    raw nickel exports and mandated onshore smelting. These
-                    policies unleashed a torrent of investment, mostly Chinese,
-                    into Indonesian smelters and refineries. As a result,
-                    Indonesia's processed-nickel exports jumped from about{" "}
-                    <span style={{ color: "blue" }}>
+                    India's neighbours offer useful contrasts. Indonesia,
+                    sitting on the world's largest nickel reserves, has long
+                    pursued a strict downstream strategy. Since 2014, it has
+                    banned raw nickel exports and mandated onshore smelting.
+                    These policies unleashed a torrent of investment, mostly
+                    Chinese, into Indonesian smelters and refineries. As a
+                    result, Indonesia's processed-nickel exports jumped from
+                    about{" "}
+                    <a
+                      href="https://insg.org/wp-content/uploads/2024/09/publist_The-World-Nickel-Factbook-2024.pdf"
+                      target="_blank"
+                    >
                       $1 billion in 2015 to roughly $30 billion by 2022
-                    </span>
-                    . The government's{" "}
-                    <span style={{ color: "blue" }}>
-                      2025 mining-law amendments
-                    </span>
-                    go further: miners must give priority to selling into local
-                    industries, and new licenses favour firms that build
-                    domestic refining capacity. Indonesia is even attracting EV
-                    production: in <span style={{ color: "blue" }}>2024</span>,
-                    it opened Southeast Asia's first electric-vehicle battery
-                    plant (a{" "}
-                    <span style={{ color: "blue" }}>
-                      $1 billion Hyundai/LG consortium project
-                    </span>
+                    </a>
+                    . The government's 2025{" "}
+                    <a
+                      target="_blank"
+                      href="https://www.aseanbriefing.com/news/indonesias-mining-law-amendments-boosting-the-domestic-mineral-market/"
+                    >
+                      mining-law
+                    </a>{" "}
+                    amendments go further: miners must give priority to selling
+                    into local industries, and new licenses favour firms that
+                    build domestic refining capacity. Indonesia is even
+                    attracting EV production: in 2024, it opened Southeast
+                    Asia's first electric-vehicle battery plant ({" "}
+                    <a
+                      target="_blank"
+                      href="https://www.investmentmonitor.ai/news/hyundai-and-lg-opens-ev-battery-facility-in-indonesia/"
+                    >
+                     a $1 billion Hyundai/LG consortium project
+                    </a>
                     ) to tap its nickel and cobalt. The lesson for India is
                     clear: streamlined regulations and clear domestic sales
                     rules can mobilise capital into refining and downstream
@@ -174,31 +200,28 @@ export default function AsiaPlaybook() {
                   </p>
 
                   <p className="my-3">
-                    <span style={{ color: "blue" }}>Malaysia</span> has
-                    similarly leveraged policy to boost processing. Despite
-                    about{" "}
-                    <span style={{ color: "blue" }}>16.1 million tonnes</span>{" "}
-                    of rare-earth deposits, Malaysia long lacked the technology
-                    to exploit them. Today, its government is courting
-                    investment to change that. In late{" "}
-                    <span style={{ color: "blue" }}>2025</span>, Prime Minister{" "}
-                    <span style={{ color: "blue" }}>Anwar Ibrahim</span>
-                    announced plans for a{" "}
-                    <span style={{ color: "blue" }}>
-                      600-million-ringgit (USD 140 million)
-                    </span>{" "}
-                    neodymium-magnet plant to be built in{" "}
-                    <span style={{ color: "blue" }}>Pahang</span> by Australia's{" "}
-                    <span style={{ color: "blue" }}>Lynas Rare Earths</span> and
-                    Korea's <span style={{ color: "blue" }}>JS Link</span>. This{" "}
-                    <span style={{ color: "blue" }}>3,000-tonne per year</span>{" "}
-                    facility will enable Malaysia to add value to its rare-earth
-                    output. Such projects, alongside talks on U.S. and Chinese
-                    cooperation deals, signal Malaysia's push for a diversified
-                    critical-minerals network. India can draw inspiration from
-                    this—public-private megaprojects, with outside tech, and
-                    incentives for specialised plants helped Southeast Asian
-                    nations capture downstream value.
+                    Malaysia has similarly leveraged policy to boost processing.
+                    Despite about 16.1 million tonnes of rare-earth deposits,
+                    Malaysia long lacked the technology to exploit them. Today,
+                    its government is courting investment to change that. In
+                    late 2025, Prime Minister Anwar Ibrahim announced plans for
+                    a{" "}
+                    <a
+                      href="https://www.csis.org/analysis/developing-rare-earth-processing-hubs-analytical-approach"
+                      target="_blank"
+                    >
+                      600-million-ringgit
+                    </a>{" "}
+                    (USD 140 million) neodymium-magnet plant to be built in{" "}
+                    Pahang by Australia's Lynas Rare Earths and Korea's JS Link.
+                    This 3,000-tonne per year facility will enable Malaysia to
+                    add value to its rare-earth output. Such projects, alongside
+                    talks on U.S. and Chinese cooperation deals, signal
+                    Malaysia's push for a diversified critical-minerals network.
+                    India can draw inspiration from this—public-private
+                    megaprojects, with outside tech, and incentives for
+                    specialised plants helped Southeast Asian nations capture
+                    downstream value.
                   </p>
 
                   <h3 className="my-3">India's Position</h3>
@@ -206,7 +229,7 @@ export default function AsiaPlaybook() {
                   <p className="my-3">
                     India is positioning itself as a new hub in Asia's critical
                     mineral landscape. Policies like the{" "}
-                    <span style={{ color: "blue" }}>NCMM</span>, duty waivers,
+                    NCMM, duty waivers,
                     and local-content rules are driving a flurry of deals.
                     Already, Japanese and Korean companies are lining up to
                     invest in Indian refining, batteries and magnet plants,

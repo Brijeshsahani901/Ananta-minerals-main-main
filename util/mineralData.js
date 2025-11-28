@@ -267,5 +267,15 @@ export  const whatsnew = [
       date: "12 November 2025",
       img: "",
     },
+     {
+      id: 24,
+      title: "India–Venezuela Critical-Minerals Cooperation Set for Broader Engagement",
+      description : "Venezuela is engaging with India to expand cooperation in the critical minerals sector. Discussions included reviving the India–Venezuela Joint Committee Mechanism and exploring mining and exploration collaboration, leveraging Indian companies’ presence in Venezuela.  For India, diversifying upstream sources of critical minerals (beyond the usual suppliers) is increasingly important — this partnership offers a strategic path.",
+      downloadUrl: "#",
+      path: "https://energy.economictimes.indiatimes.com/news/coal/venezuela-seeks-to-expand-critical-minerals-partnership-with-india/125374784?utm_source=chatgpt.com",
+      author: "ET EnergyWorld",
+      date: "17 November, 2025",
+      img: "",
+    },
   ];
 

@@ -47,7 +47,7 @@ export default function CriticalPathway() {
 
                   <p className="my-3">
                     On 9-10 October 2025, the Ministry of Commerce of the
-                    People's Republic of China (MOFCOM) published two formal
+                    People's Republic of China (MOFCOM) published <a target="_blank" href="https://cset.georgetown.edu/publication/mofcom-notice-2025-61/"></a>two formal
                     announcements expanding export controls related to
                     rare-earth elements (REEs) and REE-related technologies.
                   </p>
@@ -78,7 +78,7 @@ export default function CriticalPathway() {
                   </p>
 
                   <p className="my-3">
-                    China's customs data show a sharp month-on-month fall in REE
+                    China's customs data show a sharp <a href="https://wits.worldbank.org/trade/comtrade/en/country/CHN/year/2024/tradeflow/Exports/partner/ALL/product/280530" target="_blank">month-on-month fall</a> in REE
                     exports in September, intensifying market anxiety.
                   </p>
 
@@ -240,8 +240,8 @@ export default function CriticalPathway() {
                   </p>
 
                   <p className="my-3">
-                    Lok Sabha and Rajya Sabha records provide detailed
-                    inventories of India's REE efforts. Written answers list
+                    Lok Sabha and Rajya Sabha records provide <a target="_blank" href="https://sansad.in/getFile/loksabhaquestions/annex/184/AU5253_uzur2H.pdf?source=pqals&&utm_source=chatgpt.com">detailed
+                    inventories </a>of India's REE efforts. Written answers list
                     specific high-priority 'G4' stage projects targeting
                     neodymium, dysprosium and other REEs. For example, official
                     tables show G4‑stage reconnaissance of Nd-Dy deposits at

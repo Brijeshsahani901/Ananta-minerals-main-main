@@ -45,13 +45,13 @@ export default function CriticalPathway() {
                   </h2>
 
                   <p className="my-3">
-                    In October 2025, the Indian Finance Ministry cleared a Rs. 7,300-7,350 crore (USD 880-885 million) Production-Linked Incentive (PLI) to establish domestic sintered rare-earth permanent magnet (REPM) capacity for EVs, wind turbines and defence, a direct policy response to heightened supply-chain risk after China's October REE export controls. The scheme will run for 7 years and target several vertically integrated manufacturing units to reach a meaningful tonnage by 2030.
+                    In October 2025, the Indian Finance Ministry cleared a <a href="https://economictimes.indiatimes.com/industry/indl-goods/svs/metals-mining/magnet-scheme-to-offer-7300-cr-incentives/articleshow/124395414.cms?from=mdr" target="_blank" >Rs. 7,300-7,350 crore</a>  (USD 880-885 million) Production-Linked Incentive (PLI) to establish domestic sintered rare-earth permanent magnet (REPM) capacity for EVs, wind turbines and defence, a direct policy response to heightened supply-chain risk after China's October REE export controls. The scheme will run for 7 years and target several vertically integrated manufacturing units to reach a meaningful tonnage by 2030.
                   </p>
 
                   <h3 className="my-3 ">Export licences, shipping delays, and a strategic fiscal reply</h3>
 
                   <p className="my-3">
-                    On 9 October 2025, China's Ministry of Commerce announced new export controls on rare-earth elements (REEs) and related technologies. These regulations added five more REEs to China's licensing regime (effective 8 Nov 2025). Foreign-made magnets containing any Chinese-origin REE or produced with Chinese REE tech now require a Beijing export permit. Beijing aims to increase national security and curb illicit mining.
+                    On 9 October 2025, China's Ministry of Commerce announced <a href="https://cset.georgetown.edu/publication/mofcom-notice-2025-61/"  target="_black">new export controls </a> on rare-earth elements (REEs) and related technologies. These regulations added five more REEs to China's licensing regime (effective 8 Nov 2025). Foreign-made magnets containing any Chinese-origin REE or produced with Chinese REE tech now require a Beijing export permit. Beijing aims to increase national security and curb illicit mining.
                   </p>
 
                   <div className="table-responsive my-4">
@@ -101,11 +101,11 @@ export default function CriticalPathway() {
                   </p>
 
                   <p className="my-3">
-                    Notably, mining ore is only part of the story. China also dominates processing and manufacturing. Estimates suggest China accounts for roughly 70% of global REE mining, 90% of chemical separation/refining, and 93% of permanent-magnet production. This vertical integration means that even if other mines start up, bottlenecks remain in separation facilities and magnet factories.
+                    Notably, mining ore is only part of the story. China also dominates <a target="_black" href="https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-rare-earths.pdf" > processing and manufacturing.</a> Estimates suggest China accounts for roughly 70% of global REE mining, 90% of chemical separation/refining, and 93% of permanent-magnet production. This vertical integration means that even if other mines start up, bottlenecks remain in separation facilities and magnet factories.
                   </p>
 
                   <p className="my-3">
-                    China has been rapidly expanding this outreach. For example, Australia's Mt Weld mine (the world's largest concentrate) ships ore to Malaysia for refining, prompting China to get in talks for a rare earths refinery project with Kuala Lumpur. India likewise has almost no domestic magnet-making facilities: it imported 53,748 tonnes of permanent rare-earth magnets in FY2024-25, overwhelmingly from China.
+                    China has been rapidly expanding this outreach. For example, Australia's Mt Weld mine (the world's largest concentrate) ships ore to Malaysia for refining, prompting China to get in talks for a <a href="https://www.reuters.com/world/china/china-malaysia-talks-rare-earths-refinery-project-sources-say-2025-10-01/" target="_black" >rare earths refinery project </a> with Kuala Lumpur. India likewise has almost no domestic magnet-making facilities: it imported <a target="_blank" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2151394" >53,748 tonnes</a> of permanent rare-earth magnets in FY2024-25, overwhelmingly from China.
                   </p>
 
                   <div className="table-responsive my-4">
@@ -160,17 +160,17 @@ export default function CriticalPathway() {
 
                   <h3 className="my-3 ">From stockpiles to sintering, a phased substitution forecast.</h3>
 
-                  <h4 className="my-3 ">Short term (0-18 months):</h4>
+                  <h3 className="my-3 ">Short term (0-18 months):</h3>
                   <p className="my-3">
                     Stockpiling & import fixes should be prioritised. India is already planning strategic stockpiles to counter Chinese restrictions. OEMs will test ferrite or magnet-lite designs and import finished subassemblies where possible; Chinese licensing will create timing risk rather than immediate permanent cutoffs.
                   </p>
 
-                  <h4 className="my-3 ">Medium term (18-48 months):</h4>
+                  <h3 className="my-3 ">Medium term (18-48 months):</h3>
                   <p className="my-3">
                     Factory build-outs would be the next step. Greenfield magnet plants typically require 18-36 months to commission; expect initial magnet lines online in 2-3 years if capex awards, land and clearances move fast. JVs/tech licences with non-Chinese refiners (Lynas/MP Materials) or Japanese/Korean OEMs will be critical to get separation and alloying expertise.
                   </p>
 
-                  <h4 className="my-3 ">Long term (4 plus years to 2030):</h4>
+                  <h3 className="my-3 ">Long term (4 plus years to 2030):</h3>
                   <p className="my-3">
                     Conditional verticalization to be incorporated. If the PLI is coupled with secured raw-material access, i.e. domestic mining ramp-up, KABIL deals, and NCMM output, India could reach target domestic magnet capacity by 2030; full upstream independence ( which includes the separation stage till alloy production) is tentatively a 5-10 year challenge.
                   </p>
