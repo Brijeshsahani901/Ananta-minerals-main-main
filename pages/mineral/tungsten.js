@@ -70,9 +70,9 @@ export default function Tungsten() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h4 className="fade-in-on-scroll">Tungsten: Strategic Alternatives</h4>
+                        <h3 className="fade-in-on-scroll">Tungsten: Strategic Alternatives</h3>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Exploring Alternative Chemistries</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Exploring Alternative Chemistries</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Tungsten's high density and melting point have made it indispensable in defence applications, particularly in armour-piercing kinetic energy penetrators (KEPs), shaped charges, and high-temperature rocket engine components. While no perfect substitute exists, select alternatives have shown promise under specific conditions.
@@ -86,7 +86,7 @@ export default function Tungsten() {
                           Parallelly, emerging alloy designs are attempting to match tungsten's mechanical attributes. A 2024 study in the <em>International Journal of Metallurgy and Materials</em> reports that W–Ni–Fe–Re (rhenium) alloys achieved up to 30% grain refinement and 15% greater fracture toughness compared to traditional tungsten heavy alloys (WHAs). These findings are corroborated by MDPI research that finds the inclusion of just 5 wt% rhenium into W–Ni–Fe matrices improves both penetration resilience and thermal stability, potentially enabling tungsten-lite alternatives in next-generation munitions (MDPI, 2024).
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Alternate Technologies</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Alternate Technologies</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Tungsten ores, particularly wolframite and scheelite, are challenging to process due to their low-grade and refractory nature. However, Spain and Austria have pioneered techniques such as enhanced gravity separation and microwave-assisted beneficiation, significantly lowering operational costs and improving recovery rates.
@@ -96,7 +96,7 @@ export default function Tungsten() {
                           India's Chendapathar (West Bengal) and Degana (Rajasthan) tungsten deposits have remained underexploited due to historical processing challenges. A joint beneficiation pilot involving the Institute of Minerals and Materials Technology (IMMT) Bhubaneswar, Austria's MINEX, and the Geological Survey of India (GSI) could help re-evaluate these reserves using microwave-assisted disintegration and multi-gravity separation units suited for fine particle concentration.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Strengthening Supply Chains</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Strengthening Supply Chains</h4>
 
                         <p className="fade-in-on-scroll   my-4">
                           India currently imports more than 90% of its tungsten requirement, with China (71%), Russia (15%), and Vietnam (6%) as primary suppliers (IBM Yearbook, 2024, Chapter 13, p.6). Given the mineral's importance to the Indian defence sector, such concentrated import dependence poses significant geopolitical risks.
@@ -116,7 +116,7 @@ export default function Tungsten() {
                           Disclaimer: Data updated as of June 2025, next update on September 2025
                         </p>
 
-                        <h6 className="fade-in-on-scroll my-4 text-blue">References</h6>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">References</h4>
                         <ul className="fade-in-on-scroll my-4 fw-normal" style={{ listStyleType: "none", paddingLeft: 0 }}>
                           <li className="my-3">AGH University of Science and Technology. (2023). <em>Advances in Tungsten-Heavy Alloy Fabrication</em>.</li>
                           <li className="my-3">IBM Yearbook. (2024). <em>Indian Minerals Statistics 2024</em>, Chapter 13, p.6.</li>

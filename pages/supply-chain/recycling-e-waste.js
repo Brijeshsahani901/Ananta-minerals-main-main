@@ -40,9 +40,9 @@ export default function RecyclingEWaste() {
                     backgroundColor: "#fff",
                   }}
                 >
-                  <h2 className="my-3 ">
+                  <h3 className="my-3 ">
                     The Missing Discourse in CRM Recycling from E-Waste
-                  </h2>
+                  </h3>
 
                   <p className="my-3">
                     The recovery of critical raw materials (CRMs) from electronic waste has
@@ -69,7 +69,7 @@ export default function RecyclingEWaste() {
                     follows seeks to examine this distinction in detail.
                   </p>
 
-                  <h3 className="my-3 ">Differences in Recoverability Across CRMs</h3>
+                  <h4 className="my-3 ">Differences in Recoverability Across CRMs</h4>
 
                   <p className="my-3">
                     Certain critical metals in e-waste—such as copper, nickel, cobalt,
@@ -94,7 +94,7 @@ export default function RecyclingEWaste() {
                     ever be economically viable.
                   </p>
 
-                  <h3 className="my-3 ">The Role of Collection in Scaling Recovery</h3>
+                  <h4 className="my-3 ">The Role of Collection in Scaling Recovery</h4>
 
                   <p className="my-3">
                     In 2021–22, India generated an estimated 1.6 million tonnes of e-waste,
@@ -116,7 +116,7 @@ export default function RecyclingEWaste() {
                     and tested.
                   </p>
 
-                  <h3 className="my-3 ">Offtake Agreements and Market Viability</h3>
+                  <h4 className="my-3 ">Offtake Agreements and Market Viability</h4>
 
                   <p className="my-3">
                     Offtake agreements provide recyclers with committed buyers, reducing
@@ -147,7 +147,7 @@ export default function RecyclingEWaste() {
                     is a prerequisite to determining their economic viability.
                   </p>
 
-                  <h3 className="my-3 ">Policy Directions for Effective CRM Recycling</h3>
+                  <h4 className="my-3 ">Policy Directions for Effective CRM Recycling</h4>
 
                   <p className="my-3">
                     For CRMs with relatively mature recovery pathways, policy attention can

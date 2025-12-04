@@ -70,21 +70,21 @@ export default function Selenium() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h4 className="fade-in-on-scroll my-4">Selenium: Strategic Recovery and Substitution Pathways</h4>
+                        <h3 className="fade-in-on-scroll my-4">Selenium: Strategic Recovery and Substitution Pathways</h3>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Alternate Chemistries</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Alternate Chemistries</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           While there is no known agronomic substitute for selenium due to its unique biological functions in humans, livestock, and plants, nano-selenium formulations present a promising pathway for optimizing efficiency and minimizing environmental loss. Studies by Brazil's EMBRAPA have demonstrated that nano-selenium uptake in soybean plants is 30% more efficient than conventional selenium forms, requiring significantly lower application doses for similar agronomic effects (EMBRAPA, 2022). India should support translational research under the ICAR-Nano Agri Inputs Programme to validate and pilot nano-selenium use for biofortification in pulse and cereal belts, particularly in selenium-deficient regions of eastern India.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Technological Alternatives</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Technological Alternatives</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Globally, selenium is primarily obtained as a by-product of copper refining, specifically from anode slimes. However, selenium recovery from e-waste residues, including photovoltaic panels and glass decolorizers, is gaining traction under circular economy models. The European Union's SELREC program offers a scalable framework for decentralized selenium extraction units integrated within metallurgical processing clusters (EU SELREC Report, 2023). India's Green Energy Corridor and urban e-waste hubs (such as Bhiwadi and Moradabad) could serve as pilot locations for such recovery units. Additionally, high-temperature pyro-hydrometallurgical systems co-located at copper smelters could enable economic selenium capture without requiring major infrastructural overhauls.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4">Selenium Supply and Strategy Overview</h5>
+                        <h4 className="fade-in-on-scroll my-4">Selenium Supply and Strategy Overview</h4>
 
                         {/* Table */}
                         <div className="table-responsive fade-in-on-scroll my-4">
@@ -124,7 +124,7 @@ export default function Selenium() {
                           </table>
                         </div>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Strengthening Supply Chains</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Strengthening Supply Chains</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India is currently fully import-dependent on selenium, with key sourcing from countries like Japan, South Korea, and Belgium, all of whom recover it as a by-product of copper smelting. To insulate against geopolitical disruptions and price volatility, India should pursue G2G agreements with these countries, akin to Japan's joint selenium procurement framework with JX Nippon Mining & Metals. The Ministry of External Affairs' Economic Diplomacy Division should coordinate with the Ministry of Mines and Ministry of Electronics & IT to ensure cross-sectoral alignment.
@@ -138,7 +138,7 @@ export default function Selenium() {
                           Disclaimer: Data updated as of June 2025, next update on September 2025
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">References</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">References</h4>
                         <ul className="fade-in-on-scroll fw-normal" style={{ listStyleType: "none", paddingLeft: 0 }}>
                           <li className="my-3">EMBRAPA. (2022). <em>Nano Selenium Uptake in Soybean and Environmental Effects</em>. Brazilian Agricultural Research Corporation.</li>
                           <li className="my-3">EU SELREC Report. (2023). <em>Selenium Recovery for a Resilient European Circular Economy</em>. European Commission.</li>

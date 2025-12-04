@@ -40,10 +40,10 @@ export default function AsiaPlaybook() {
                     backgroundColor: "#fff",
                   }}
                 >
-                  <h2 className="my-3">
+                  <h3 className="my-3">
                     From Reserves to Riches: Asia's Critical Minerals Playbook
                     and India's Role
-                  </h2>
+                  </h3>
 
                   <p className="my-3">
                     India has ambitious plans to turn its rich mineral reserves
@@ -73,9 +73,9 @@ export default function AsiaPlaybook() {
                     domestic processing.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     Japanese and Korean Investment in India
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     India's policy drive has attracted leading East Asian firms.{" "}
@@ -158,7 +158,7 @@ export default function AsiaPlaybook() {
                     ( 100% automatic for minerals ) and fast-tracked clearances.
                   </p>
 
-                  <h3 className="my-3">Lessons from Indonesia and Malaysia</h3>
+                  <h4 className="my-3">Lessons from Indonesia and Malaysia</h4>
 
                   <p className="my-3">
                     India's neighbours offer useful contrasts. Indonesia,
@@ -224,7 +224,7 @@ export default function AsiaPlaybook() {
                     downstream value.
                   </p>
 
-                  <h3 className="my-3">India's Position</h3>
+                  <h4 className="my-3">India's Position</h4>
 
                   <p className="my-3">
                     India is positioning itself as a new hub in Asia's critical

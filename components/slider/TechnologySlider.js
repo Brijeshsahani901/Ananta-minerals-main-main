@@ -8,8 +8,9 @@ import MalaysianMineralInfographic from "../infographics/indiaMalaysiaCriticalMi
 import ChinaAdvantage from "../infographics/chinaAdvantage";
 import InvestInMalasiya from "../infographics/investInMalasiya";
 import Infographic520Screenshot from "../infographics/semiconductorLandscape";
+import SyntheticGraphite from "../infographics/syntheticGraphite";
 export default function TechnologySlider() {
-  const totalSlides = 6;
+  const totalSlides = 7;
   const [index, setIndex] = useState(0);
   const [prevClicked, setPrevClicked] = useState(false);
   const [nextClicked, setNextClicked] = useState(false);
@@ -28,9 +29,8 @@ export default function TechnologySlider() {
     setIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
   };
 
-  // ✅ Arrow color logic:
   // White on last 2 slides (index 4 and 5), dark otherwise
-  const isWhiteSlide = index < 6;
+  const isWhiteSlide = index < 7;
   const arrowColor = isWhiteSlide ? "#fff" : "#333";
 
   const buttonBaseStyle = {
@@ -105,12 +105,17 @@ export default function TechnologySlider() {
         touch={false} // Disable swipe gestures
       >
 
-  <Carousel.Item>
+            <Carousel.Item>
+          <div className="d-block w-100">
+            <SyntheticGraphite />
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
           <div className="d-block w-100">
             <Infographic520Screenshot />
           </div>
         </Carousel.Item>
-       
+
         <Carousel.Item>
           <div className="d-block w-100">
             <InvestInMalasiya />

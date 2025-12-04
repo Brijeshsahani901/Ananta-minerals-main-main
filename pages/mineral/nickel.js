@@ -69,15 +69,15 @@ export default function About() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h3 className="fade-in-on-scroll my-4"><strong>Nickel: Strategic Alternatives</strong></h3>
+                        <h3 className="fade-in-on-scroll my-4">Nickel: Strategic Alternatives</h3>
 
-                        <h5 className="fade-in-on-scroll my-4 fw-normal"><strong>Alternate Chemistries: Reducing Nickel Dependency</strong></h5>
+                        <h4 className="fade-in-on-scroll my-4 fw-normal">Alternate Chemistries: Reducing Nickel Dependency</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           With the global energy transition driving demand for electric vehicles (EVs) and stationary storage, the reliance on nickel-rich cathode chemistries—particularly nickel-manganese-cobalt (NMC) and nickel-cobalt-aluminium (NCA)—has raised concerns over long-term supply, cost volatility, and geopolitical risk. India can mitigate these vulnerabilities by accelerating the shift to nickel-free or low-nickel battery chemistries, while diversifying applications of nickel in other industrial sectors.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4  fw-normal"><em>Rise of LFP and Manganese-Based Batteries</em></h5>
+                        <h4 className="fade-in-on-scroll my-4  fw-normal"><em>Rise of LFP and Manganese-Based Batteries</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           China has led the global transition toward lithium iron phosphate (LFP) batteries, which offer lower cost, improved thermal stability, and no reliance on nickel or cobalt. Companies like BYD and Tesla now widely deploy LFP for mainstream EVs. India has begun testing such chemistries under local conditions: IIT Madras' "<a href="https://www.iitm.ac.in/happenings/press-releases-and-coverages/iit-madras-launches-zero-e-mission-drive-nations-electric" className="underline">Zero e‑mission</a>" Battery Engineering Lab is evaluating LFP cells from CATL, BYD, and Vianode to adapt them to Indian climate and usage profiles.
@@ -91,13 +91,13 @@ export default function About() {
                           Indonesia—among the world's largest nickel producers—is scaling up <a href="https://arxiv.org/abs/2108.03496?utm_source=chatgpt.com" className="underline">NCM cathode production</a> while investing in alternative chemistries as a hedge against resource bottlenecks and pricing pressures.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4  fw-normal"><em>Nickel Recycling and Circularity Innovations</em></h5>
+                        <h4 className="fade-in-on-scroll my-4  fw-normal"><em>Nickel Recycling and Circularity Innovations</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           The UK has pioneered molten salt direct recycling (MSDR) techniques to convert low-nickel <a href="https://arxiv.org/abs/2108.03496?utm_source=chatgpt.com" className="underline">NMC</a> scrap into high-performance single-crystal cathodes. These upcycling methods are currently under evaluation at CSIR--CECRI for possible scale-up in India, providing an opportunity to reduce primary nickel demand through secondary material recovery.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4  fw-normal"><em>Non-Battery Alternatives to Nickel</em></h5>
+                        <h4 className="fade-in-on-scroll my-4  fw-normal"><em>Non-Battery Alternatives to Nickel</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Beyond batteries, the substitution of nickel is gaining momentum across construction, transport, and industrial sectors:
@@ -172,39 +172,39 @@ export default function About() {
                           </table>
                         </div>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Strategic MoUs and Trade Frameworks for India</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Strategic MoUs and Trade Frameworks for India</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           To enable access to emerging nickel alternatives and technologies, India can pursue the following international partnerships:
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>LFP Cell Localization Agreement (India--U.S.)</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>LFP Cell Localization Agreement (India--U.S.)</em></h4>
 
                         <p className="fade-in-on-scroll my-4"  >
                           Establish a Technology Collaboration Agreement with General Motors and Vianode to set up an LFP cell pilot-line in an Indian Special Economic Zone (SEZ). Supported by a ₹400 crore Production Linked Incentive (PLI) for "Nickel-Free Battery Cells," this initiative would draw on GM's Indiana cell production expertise and Vianode's high-purity precursor materials.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>LNMO Scale-Up MoU (India--EU)</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>LNMO Scale-Up MoU (India--EU)</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Under the India--EU Green Tech Partnership, an MoU could be signed with Umicore and CRU Group to co-fund a 50 MWh LNMO (low-nickel cathode) manufacturing demonstration plant at BHEL, backed by EU Innovation Fund grants.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>Nickel Recycling Pact (India--UK)</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>Nickel Recycling Pact (India--UK)</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Formalize a Memorandum of Cooperation (MoC) between IIT Madras' "Zero e‑mission" lab and Imperial College's MSDR spin-out to establish a battery waste upcycling hub in India. This could recover nickel and other cathode materials from retired EV batteries, reducing import dependency.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>Australia Critical Minerals Extension</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>Australia Critical Minerals Extension</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Expand the India--Australia Critical Minerals Research Partnership to include CSIRO-led R&D on high-manganese spinel cathodes, with pilot-scale data shared with IIT Bombay and CSIR labs for local validation and adaptation.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Policy Recommendations</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Policy Recommendations</h4>
 
-                        <h5 className="fade-in-on-scroll my-4  fw-normal"><em>Strengthen Bilateral Supply Agreements</em></h5>
+                        <h4 className="fade-in-on-scroll my-4  fw-normal"><em>Strengthen Bilateral Supply Agreements</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India should deepen ties with nickel-rich nations such as Indonesia, the Philippines, and Australia. While Australia remains a key Quad and MSP partner, deeper commercial arrangements with Indonesia—already a major player in nickel refining—will be vital.
@@ -218,13 +218,13 @@ export default function About() {
                           Strategic joint ventures—akin to India's KABIL model—could be replicated for nickel exploration, extraction, and refining, ensuring long-term access to resources and minimizing pricing shocks.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 fw-normal"><em>Incentivize Domestic Development</em></h5>
+                        <h4 className="fade-in-on-scroll my-4 fw-normal"><em>Incentivize Domestic Development</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India should prioritize tax breaks, royalty waivers, and subsidies to attract foreign direct investment (FDI) into its nascent nickel value chain. Public-private partnerships must be structured to upgrade exploration technologies, establish cost-effective refining infrastructure, and localize nickel-based cathode precursor and sulfate production.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 fw-normal"><em>Export Diversification</em></h5>
+                        <h4 className="fade-in-on-scroll my-4 fw-normal"><em>Export Diversification</em></h4>
 
                         <p className="fade-in-on-scrollmy-4">
                           India must develop an export portfolio that includes raw ore, intermediates (e.g., mixed hydroxide precipitate or nickel matte), and refined nickel. This diversification will reduce India's exposure to global price cycles while bolstering its competitiveness in the international nickel supply chain.
@@ -236,7 +236,7 @@ export default function About() {
 
                         <p className="fade-in-on-scroll my-4"><em>Disclaimer: Data updated as of June 2025, next update on September 2025</em></p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">References</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">References</h4>
                         <p className="fade-in-on-scroll my-4">
                           Battery 2030+ (2024). <em>Europe's Next-Gen Battery Research Program</em>.
                         </p>

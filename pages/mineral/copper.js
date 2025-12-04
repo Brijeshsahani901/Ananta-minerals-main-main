@@ -70,9 +70,9 @@ export default function Copper() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h4 className="fade-in-on-scroll my-4">Copper Substitution and Strategic Resilience: A Roadmap for India</h4>
+                        <h3 className="fade-in-on-scroll my-4">Copper Substitution and Strategic Resilience: A Roadmap for India</h3>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Emerging Substitutes and Disruptive Chemistries</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Emerging Substitutes and Disruptive Chemistries</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Copper's role in electrical wiring, power systems, and communications infrastructure is indispensable—but increasing global demand and supply constraints have prompted the search for viable substitutes and more efficient extraction methods.
@@ -98,7 +98,7 @@ export default function Copper() {
                           </li>
                         </ul>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Strategic Pathways for India</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Strategic Pathways for India</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India's industrial growth and energy transition will drive copper demand, particularly in power, EVs, and urban infrastructure. Reducing dependence on copper imports—especially from highly concentrated markets—will require both technological adoption and strategic policy interventions.
@@ -138,7 +138,7 @@ export default function Copper() {
                           </table>
                         </div>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Enhancing Recycling and Domestic Efficiency</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Enhancing Recycling and Domestic Efficiency</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India is a leading copper recycler, yet the sector remains fragmented and technologically underdeveloped.
@@ -156,7 +156,7 @@ export default function Copper() {
                           </li>
                         </ul>
 
-                        <h5 className="fade-in-on-scroll my-3 text-blue my-4">Strategic and Regional Cooperation</h5>
+                        <h4 className="fade-in-on-scroll my-3 text-blue my-4">Strategic and Regional Cooperation</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India should mainstream copper supply resilience into multilateral and regional economic diplomacy.
@@ -179,7 +179,7 @@ export default function Copper() {
                           Disclaimer: Data updated as of June 2025, next update on September 2025
                         </p>
 
-                        <h6 className="fade-in-on-scroll my-4 text-blue">References</h6>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">References</h4>
                         <ul className="fade-in-on-scroll fw-normal" style={{ listStyleType: "none", paddingLeft: 0 }}>
                           <li className="my-2">Central Pollution Control Board, Ministry of Environment, 2010.</li>
                           <li className="my-2">Corning Inc., <em>Copper vs. Fiber Campaign</em>, 2022–2024.</li>

@@ -40,9 +40,9 @@ export default function CriticalPathway() {
                       backgroundColor: "#fff",
                     }}
                   >
-                    <h2 className="my-3 ">
+                    <h3 className="my-3 ">
                       Critical Pathways: Building India's Mineral Value Chain
-                    </h2>
+                    </h3>
 
                     <p className="my-3">
                       India's national security, space ambitions, and
@@ -68,7 +68,7 @@ export default function CriticalPathway() {
                       India's industrial base.
                     </p>
 
-                    <h3 className="my-3 ">Phase-Wise Capabilities</h3>
+                    <h4 className="my-3 ">Phase-Wise Capabilities</h4>
 
                     <p className="my-3">
                       India's ambition for critical mineral independence rests
@@ -186,10 +186,10 @@ export default function CriticalPathway() {
                       contribution, technical strengths, and known limitations.
                     </p>
 
-                    <h3 className="my-3 ">
+                    <h4 className="my-3 ">
                       India-Based Pilot Projects: Strategic Technological
                       Interventions
-                    </h3>
+                    </h4>
 
                     <p className="my-3">
                       A number of pioneering pilot projects are underway in
@@ -346,10 +346,10 @@ export default function CriticalPathway() {
                       funding mechanisms are essential.
                     </p>
 
-                    <h3 className="my-3 ">
+                    <h4 className="my-3 ">
                       International Models and Global Co-Development
                       Opportunities
-                    </h3>
+                    </h4>
 
                     <p className="my-3">
                       While India's pilot initiatives offer a promising
@@ -450,7 +450,7 @@ export default function CriticalPathway() {
                       platform for critical mineral autonomy.
                     </p>
 
-                    <h3 className="my-3 ">Strategic Roadmap</h3>
+                    <h4 className="my-3 ">Strategic Roadmap</h4>
 
                     <p className="my-3">
                       India's ambition to achieve strategic autonomy in defence,

@@ -40,10 +40,10 @@
 //                     backgroundColor: "#fff",
 //                   }}
 //                 >
-//                   <h2 className="my-3">
+//                   <h3 className="my-3">
 //                     Votes, Violence, and Valuable Minerals: Myanmar's Elections
 //                     Amidst Civil War and Rare Earths Race
-//                   </h2>
+//                   </h3>
 
 //                   <p className="my-3">
 //                     The world depends on China for its critical minerals needs
@@ -64,9 +64,9 @@
 //                     evolution of engagements with China, the US, and India.
 //                   </p>
 
-//                   <h3 className="my-3">
+//                   <h4 className="my-3">
 //                     China's Growing Reliance on Myanmar's Rare Earths
-//                   </h3>
+//                   </h4>
 
 //                   <p className="my-3">
 //                     While China dominates nearly 90% of global critical mineral
@@ -92,9 +92,9 @@
 //                     corridor in a volatile region.
 //                   </p>
 
-//                   <h3 className="my-3">
+//                   <h4 className="my-3">
 //                     Trump Administration's New Approach to Myanmar Sanctions
-//                   </h3>
+//                   </h4>
 
 //                   <p className="my-3">
 //                     A sequence of developments beginning in early July 2025,
@@ -124,9 +124,9 @@
 //                     capability and transport corridors, among other reasons.
 //                   </p>
 
-//                   <h3 className="my-3">
+//                   <h4 className="my-3">
 //                     Myanmar's 2025 Vote: Legitimacy in Question
-//                   </h3>
+//                   </h4>
 
 //                   <p className="my-3">
 //                     Since this communication, Myanmar authorities have nominally
@@ -169,9 +169,9 @@
 //                     enacted for her.
 //                   </p>
 
-//                   <h3 className="my-3">
+//                   <h4 className="my-3">
 //                     Myanmar's Diplomatic Tightrope: Balancing China and the US
-//                   </h3>
+//                   </h4>
 
 //                   <p className="my-3">
 //                     The Tatmadaw is attempting to play both sides by optimising
@@ -196,9 +196,9 @@
 //                     minerals.
 //                   </p>
 
-//                   <h3 className="my-3">
+//                   <h4 className="my-3">
 //                     India's Nascent Interest in Myanmar's Rare Earths
-//                   </h3>
+//                   </h4>
 
 //                   <p className="my-3">
 //                     India signaled its interest in Kachin's resources when state
@@ -234,10 +234,10 @@
 //                     with the fighting factions.
 //                   </p>
 
-//                   <h3 className="my-3">
+//                   <h4 className="my-3">
 //                     From Borders to Ballots: India's Stake in Myanmar's
 //                     Uncertain Future
-//                   </h3>
+//                   </h4>
 
 //                   <p className="my-3">
 //                     India has been consistently deepening its engagement with
@@ -413,10 +413,10 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     backgroundColor: "#fff",
                   }}
                 >
-                  <h2 className="my-3">
+                  <h3 className="my-3">
                     Votes, Violence, and Valuable Minerals: Myanmar's Elections
                     Amidst Civil War and Rare Earths Race
-                  </h2>
+                  </h3>
 
                   <p className="my-3">
                     The world depends on China for its critical minerals needs
@@ -439,9 +439,9 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     engagements with China, the US, and India.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     China's Growing Reliance on Myanmar's Rare Earths
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     While China dominates nearly{" "}
@@ -470,9 +470,9 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     volatile region.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     Trump Administration's New Approach to Myanmar Sanctions
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     A sequence of developments beginning in early July 2025,
@@ -510,9 +510,9 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     among other reasons.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     Myanmar's 2025 Vote: Legitimacy in Question
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     Since this communication, Myanmar authorities have nominally
@@ -560,9 +560,9 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     specifically enacted for her.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     Myanmar's Diplomatic Tightrope: Balancing China and the US
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     The Tatmadaw is attempting to play both sides by optimising
@@ -591,9 +591,9 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     of critical minerals.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     India's Nascent Interest in Myanmar's Rare Earths
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     India signaled its interest in Kachin's resources when state
@@ -632,10 +632,10 @@ export default function MyanmarElectionsCivilWarMinerals() {
                     navigates its relationships with the fighting factions.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     From Borders to Ballots: India's Stake in Myanmar's
                     Uncertain Future
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     India has been consistently deepening its engagement with

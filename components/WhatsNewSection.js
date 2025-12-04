@@ -36,16 +36,45 @@ export default function WhatsNewSection() {
   useEffect(() => {
     const el = whatsNewRef.current;
 
-    const wheelFn = (e) => {
-      const { scrollTop, scrollHeight, clientHeight } = el;
-      const atTop = scrollTop === 0;
-      const atBottom = scrollTop + clientHeight >= scrollHeight;
+    // const wheelFn = (e) => {
+    //   const { scrollTop, scrollHeight, clientHeight } = el;
+    //   const atTop = scrollTop === 0;
+    //   const atBottom = scrollTop + clientHeight >= scrollHeight;
 
-      if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) return;
+    //   if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) return;
 
-      e.preventDefault();
-      el.scrollTop += e.deltaY;
-    };
+    //   e.preventDefault();
+    //   el.scrollTop += e.deltaY;
+    // };
+
+ const wheelFn = (e) => {
+  const { scrollTop, scrollHeight, clientHeight } = el;
+  const atTop = scrollTop === 0;
+  const atBottom = scrollTop + clientHeight >= scrollHeight - 1; // tolerance
+
+  // If INSIDE scroll area → manually scroll
+  if (!atTop && !atBottom) {
+    e.preventDefault();
+    el.scrollTop += e.deltaY;
+    return;
+  }
+
+  // If AT TOP
+  if (atTop && e.deltaY < 0) {
+    // let page scroll naturally
+    return; 
+  }
+
+  // If AT BOTTOM
+  if (atBottom && e.deltaY > 0) {
+    // let page scroll naturally
+    return; 
+  }
+
+  // Otherwise normal behavior
+};
+
+
 
     el?.addEventListener("wheel", wheelFn, { passive: false });
     return () => el?.removeEventListener("wheel", wheelFn);
@@ -77,6 +106,7 @@ export default function WhatsNewSection() {
         backgroundColor: "#ffffff",
         scrollbarWidth: "thin",
         scrollbarColor: "#c1c1c1 #f1f1f1",
+        overscrollBehavior: "auto"
       }}
     >
       {/* HEADER */}

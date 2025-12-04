@@ -70,15 +70,15 @@ export default function Sulphur() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h3 className="fade-in-on-scroll my-4"><strong>Sulphur: Strategic Alternatives</strong></h3>
+                        <h3 className="fade-in-on-scroll my-4"><>Sulphur: Strategic Alternatives</></h3>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Alternate Chemistries</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Alternate Chemistries</></h4>
 
                         <p className="fade-in-on-scroll my-4 ">
                           Despite its critical role in plant metabolism, elemental sulphur remains underutilized in Indian agriculture due to its low bioavailability. An innovative solution lies in leveraging Sulphur-Oxidizing Bacteria (SOB), such as <em>Thiobacillus thiooxidans</em>, which convert elemental sulphur into plant-available sulphate. Studies by ICAR-CRIDA (2023) have shown that SOB inoculation can improve sulphur uptake by 20–30%, especially in alkaline and sulphur-deficient soils found in central and western India.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Technological Alternatives</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Technological Alternatives</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India's sulphur consumption is tightly linked to its petroleum refining and fertilizer sectors. Advancing Sulphur Recovery Units (SRUs) at domestic refineries is imperative. Technologies such as double absorption systems and catalytic reduction, employed successfully at Petronas' RAPID refinery in Malaysia, offer efficiency improvements of over 95% in sulphur recovery rates.
@@ -88,7 +88,7 @@ export default function Sulphur() {
                           In parallel, Sulphur-Enriched Compost (SEC)—produced by integrating elemental sulphur with municipal solid waste compost—presents a dual benefit: sustainable nutrient delivery and waste valorization. Urban centers like Pune and Indore, with operational composting plants, can be targeted for SEC pilots.
                         </p>
 
-                        <h4 className="fade-in-on-scroll text-blue my-4"><strong>Strengthening Supply Chains</strong></h4>
+                        <h4 className="fade-in-on-scroll text-blue my-4"><>Strengthening Supply Chains</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Sulphur procurement is currently fragmented and exposed to price volatility. To stabilize access, sulphur offtake must be institutionalized through long-term public-sector agreements with Saudi Arabia, Qatar, and the UAE. Entities such as the IOCL–RIL–ONGC consortium should be mandated to jointly pursue strategic procurement under the Ministry of Petroleum and Natural Gas. Simultaneously, these companies should upgrade SRU infrastructure across Indian refineries to meet high recovery benchmarks (≥98%), aligning with both fertilizer security and emissions control mandates.
@@ -96,7 +96,7 @@ export default function Sulphur() {
 
                         <p className="fade-in-on-scroll my-4"><em>Disclaimer: Data updated as of June 2025, next update on September 2025</em></p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">References</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">References</h4>
 
                         <p className="fade-in-on-scroll my-4 fw-normal" style={{ fontSize: "1.08rem" }}>
                           ICAR-CRIDA. (2023). <em>Sulphur Use Efficiency Enhancement via SOB Inoculants in Indian Soils</em>. Hyderabad.<br /><br />

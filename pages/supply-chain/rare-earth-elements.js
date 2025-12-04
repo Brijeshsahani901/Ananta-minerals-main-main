@@ -40,10 +40,10 @@ export default function CriticalPathway() {
                     backgroundColor: "#fff",
                   }}
                 >
-                  <h2 className="my-3 ">
+                  <h3 className="my-3 ">
                     Rare Earth Elements Just Got Rarer: China Tightens the Tap
                     on Critical Minerals
-                  </h2>
+                  </h3>
 
                   <p className="my-3">
                     On 9-10 October 2025, the Ministry of Commerce of the
@@ -82,7 +82,7 @@ export default function CriticalPathway() {
                     exports in September, intensifying market anxiety.
                   </p>
 
-                  <h3 className="my-3 ">A recurring pattern?</h3>
+                  <h4 className="my-3 ">A recurring pattern?</h4>
 
                   <p className="my-3">
                     In late September-October 2025, China's trading behaviour
@@ -114,7 +114,7 @@ export default function CriticalPathway() {
                     ways.
                   </p>
 
-                  <h3 className="my-3 ">Why it matters for India</h3>
+                  <h4 className="my-3 ">Why it matters for India</h4>
 
                   <p className="my-3">
                     India's clean‑energy and advanced‑manufacturing sectors
@@ -249,7 +249,7 @@ export default function CriticalPathway() {
                     in Rajasthan.
                   </p>
 
-                  <h3 className="my-3 ">Bottom Line</h3>
+                  <h4 className="my-3 ">Bottom Line</h4>
 
                   <p className="my-3">
                     China's October controls are a structural escalation as they

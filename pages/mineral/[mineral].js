@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { mineralData } from "@/util/mineralData";
+// import { mineralData } from "@/util/mineralData";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -41,12 +41,12 @@ export default function MineralDetails() {
   const { mineral } = router.query;
   const [item, setItem] = useState(null);
 
-  useEffect(() => {
-    if (mineral) {
-      const foundItem = mineralData.find((data) => data.mineral === mineral);
-      setItem(foundItem);
-    }
-  }, [mineral]);
+  // useEffect(() => {
+  //   if (mineral) {
+  //     const foundItem = mineralData.find((data) => data.mineral === mineral);
+  //     setItem(foundItem);
+  //   }
+  // }, [mineral]);
 
   if (!item) {
     return <div>Loading...</div>;

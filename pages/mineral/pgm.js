@@ -70,9 +70,9 @@ export default function PlatinumGroupMetals() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h3 className="fade-in-on-scroll my-4"><strong>Platinum Group Metals (PGMs): Substitution, Supply Resilience, and Strategic Innovation</strong></h3>
+                        <h3 className="fade-in-on-scroll my-4"><>Platinum Group Metals (PGMs): Substitution, Supply Resilience, and Strategic Innovation</></h3>
 
-                        <h4 className="fade-in-on-scroll text-blue my-4"><strong>Alternate Chemistries</strong></h4>
+                        <h4 className="fade-in-on-scroll text-blue my-4"><>Alternate Chemistries</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           A global push to reduce dependence on platinum group metals (PGMs) has gained momentum, particularly in fuel cells, industrial catalysts, and high-performance electronics. Companies like Toyota and Hyundai have pioneered the use of nickel-molybdenum catalysts in fuel cell vehicles, reducing platinum loadings by up to 20% (<em>IBM Yearbook, 2024, Chapter 13, p. 4</em>). Similarly, ruthenium-based resistors have replaced palladium-silver alloys in high-voltage defence applications, demonstrating that substitution is possible when performance thresholds are maintained.
@@ -83,7 +83,7 @@ export default function PlatinumGroupMetals() {
                         </p>
 
                         <div className="fade-in-on-scroll my-4">
-                          <h5 className="my-4"><strong>Table 1: Global Leaders in PGM‑Free Catalyst and Electrode Technologies</strong></h5>
+                          <h4 className="my-4"><>Table 1: Global Leaders in PGM‑Free Catalyst and Electrode Technologies</></h4>
                           <div className="table-responsive my-4">
                             <table className="table table-bordered">
                               <thead style={{ backgroundColor: "#f0f0f0" }}>
@@ -124,7 +124,7 @@ export default function PlatinumGroupMetals() {
                           </div>
                         </div>
 
-                        <h3 className="fade-in-on-scroll my-4 text-blue"><strong>Alternate Technologies</strong></h3>
+                        <h3 className="fade-in-on-scroll my-4 text-blue"><>Alternate Technologies</></h3>
 
                         <p className="fade-in-on-scroll my-4">
                           In the near term, <strong>recycling</strong> offers the most viable route to secure PGM supplies. Urban mining initiatives in Japan and the EU report recovery rates of over 90% for PGMs from auto-catalysts and aerospace scrap (<em>OECD Urban Mining Report, 2023</em>). India should mandate reverse logistics standards in automotive and aerospace sectors to enable collection and processing of end-of-life PGM-bearing components.
@@ -135,7 +135,7 @@ export default function PlatinumGroupMetals() {
                         </p>
 
                         <div className="fade-in-on-scroll my-4">
-                          <h5 my-4><strong>Table 2: Strategic MoUs and R&D Partnerships for India</strong></h5>
+                          <h4 my-4><>Table 2: Strategic MoUs and R&D Partnerships for India</></h4>
                           <div className="table-responsive my-4">
                             <table className="table table-bordered">
                               <thead style={{ backgroundColor: "#f0f0f0" }}>
@@ -176,9 +176,9 @@ export default function PlatinumGroupMetals() {
                           </div>
                         </div>
 
-                        <h5 className="fade-in-on-scroll text-blue my-4">Additional Policy Recommendations</h5>
+                        <h4 className="fade-in-on-scroll text-blue my-4">Additional Policy Recommendations</h4>
 
-                        <h5 className="fade-in-on-scroll fw-normal my-4"><em>Strengthening Supply Chains</em></h5>
+                        <h4 className="fade-in-on-scroll fw-normal my-4"><em>Strengthening Supply Chains</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India's over 95% import dependency on PGMs leaves it vulnerable to geopolitical shocks. In 2023 alone, India imported 11,953 rhodium and 525 iridium shipments, primarily from South Africa and Russia—both of which face chronic production instability (<em>Volza, 2024a; IEA, 2024, p. 201</em>).
@@ -194,7 +194,7 @@ export default function PlatinumGroupMetals() {
                         </ul>
 
                         <div className="fade-in-on-scroll my-4">
-                          <h5 className="my-4"><strong>Table 3: Substitution Possibilities and Emerging Alternatives</strong></h5>
+                          <h4 className="my-4"><>Table 3: Substitution Possibilities and Emerging Alternatives</></h4>
                           <div className="table-responsive my-4">
                             <table className="table table-bordered">
                               <thead style={{ backgroundColor: "#f0f0f0" }}>

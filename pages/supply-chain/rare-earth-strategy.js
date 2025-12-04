@@ -39,9 +39,9 @@ export default function RareEarthStrategy() {
                     backgroundColor: "#fff",
                   }}
                 >
-                  <h2 className="my-3">
+                  <h3 className="my-3">
                     Breaking China's stranglehold over rare earth supplies
-                  </h2>
+                  </h3>
 
                   <p className="my-3">
                     Chinese supplies of rare-earth doped magnets to India have not resumed, 
@@ -60,7 +60,7 @@ export default function RareEarthStrategy() {
                     and develop alternate kinds of motors.
                   </p>
 
-                  <h3 className="my-3">Understanding Rare Earth Metals</h3>
+                  <h4 className="my-3">Understanding Rare Earth Metals</h4>
 
                   <p className="my-3">
                     Rare earth metals refer to a group of 17 chemical elements including 15 lanthanides 
@@ -81,7 +81,7 @@ export default function RareEarthStrategy() {
                     illustrates how vital rare earths are.
                   </p>
 
-                  <h3 className="my-3">Global Distribution and Production</h3>
+                  <h4 className="my-3">Global Distribution and Production</h4>
 
                   <p className="my-3">
                     China has nearly half the world's rare earth deposits. But other countries have 
@@ -99,7 +99,7 @@ export default function RareEarthStrategy() {
                     familiar with, for example, as fridge magnets.
                   </p>
 
-                  <h3 className="my-3">Critical Applications</h3>
+                  <h4 className="my-3">Critical Applications</h4>
 
                   <p className="my-3">
                     Rare earths have many critical uses, besides doping magnetic materials to intensify 
@@ -119,7 +119,7 @@ export default function RareEarthStrategy() {
                     and exploitation of their reserves to Chinese companies.
                   </p>
 
-                  <h3 className="my-3">India's Strategic Imperative</h3>
+                  <h4 className="my-3">India's Strategic Imperative</h4>
 
                   <p className="my-3">
                     Given the strategic importance of rare earths, nations like India and Brazil would 
@@ -142,7 +142,7 @@ export default function RareEarthStrategy() {
                     consensus.
                   </p>
 
-                  <h3 className="my-3">Research and Development Needs</h3>
+                  <h4 className="my-3">Research and Development Needs</h4>
 
                   <p className="my-3">
                     Research projects must be instituted and funded in the relevant departments of multiple 
@@ -153,7 +153,7 @@ export default function RareEarthStrategy() {
                     increasing the allocation to research, and, within research, to this vital area.
                   </p>
 
-                  <h3 className="my-3">Motor Technology Innovation</h3>
+                  <h4 className="my-3">Motor Technology Innovation</h4>
 
                   <p className="my-3">
                     A major use of rare earths in India is in the production of motors. The rotary motion 
@@ -178,7 +178,7 @@ export default function RareEarthStrategy() {
                     efficient motors, big and small, make use of permanent magnets.
                   </p>
 
-                  <h3 className="my-3">Alternative Motor Technologies</h3>
+                  <h4 className="my-3">Alternative Motor Technologies</h4>
 
                   <p className="my-3">
                     It is possible, however, to create efficient motors without permanent magnets, making 

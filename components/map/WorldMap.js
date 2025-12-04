@@ -5,6 +5,7 @@ import {
   ZoomableGroup,
 } from "react-simple-maps";
 import {exportImportRestrictions} from "@/util/mapData";
+import geo from "@/public/maps/topo.json"
 
 export const WorldMap = ({
   selectedCountry,
@@ -14,8 +15,7 @@ export const WorldMap = ({
   position,
   setTooltipContent,
 }) => {
-  const geoUrl =
-    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+  const geoUrl = geo; 
 
   return (
     <div className="position-relative">
@@ -30,19 +30,29 @@ export const WorldMap = ({
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
-                const countryName = geo.properties.name;
+                const countryName = geo.properties.NAME; 
                 const countryData = exportImportRestrictions.find(
                   (c) => c.country === countryName
                 );
+                
+                const isSelectedCountry = selectedCountry && 
+                  countryName === selectedCountry.country;
+
                 const isInitiativeCountry = selectedInitiative
                   ? selectedInitiative.countries.includes(countryName)
                   : false;
-                const isHighlighted =
-                  (selectedCountry &&
-                    countryData &&
-                    countryData.country === selectedCountry.country) ||
-                  isInitiativeCountry;
 
+                let fillColor = "#DDDDDD"; 
+                
+                if (countryData) {
+                  fillColor = "#DDD"; 
+                }
+                
+                if (isSelectedCountry) {
+                  fillColor = "#00997f"; 
+                } else if (isInitiativeCountry) {
+                  fillColor = "#00997f";
+                }
                 return (
                   <Geography
                     key={geo.rsmKey}
@@ -53,32 +63,24 @@ export const WorldMap = ({
                     onMouseLeave={() => {
                       setTooltipContent("");
                     }}
-                    // onClick={() => {
-                    //   if (countryData && !selectedInitiative) {
-                    //     onCountrySelect(countryData);
-                    //     onInitiativeSelect(null);
-                    //   }
-                    // }}
-                    fill={
-                      isHighlighted
-                        ? selectedInitiative
-                          ? "#00997f"
-                          : "#00997f"
-                        : countryData
-                        ? "#DDD"
-                        : "#DDDDDD"
-                    }
+                    onClick={() => {
+                      if (countryData) {
+                        onCountrySelect(countryData);
+                        onInitiativeSelect(null);
+                      }
+                    }}
+                    fill={fillColor}
                     stroke="#FFFFFF"
                     strokeWidth={0.5}
                     style={{
                       default: { outline: "none" },
-                   
+                      hover: {
+                        fill: isSelectedCountry ? "#00997f" : "#6BCB77",
+                        outline: "none",
+                        cursor: countryData ? "pointer" : "default",
+                      },
                       pressed: {
-                        fill: isHighlighted
-                          ? selectedInitiative
-                            ? "#FF6F61"
-                            : "#FFD700"
-                          : "#6BCB77",
+                        fill: isSelectedCountry ? "#00997f" : "#FFD700",
                         outline: "none",
                       },
                     }}

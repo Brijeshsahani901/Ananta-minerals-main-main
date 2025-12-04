@@ -70,21 +70,21 @@ export default function About() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h3 className="fade-in-on-scroll my-4"><strong>Tantalum: Building Supply Security</strong></h3>
+                        <h3 className="fade-in-on-scroll my-4"><>Tantalum: Building Supply Security</></h3>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Alternate Chemistries</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Alternate Chemistries</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Tantalum's unique properties—high melting point, corrosion resistance, and dielectric strength—make it hard to replace. However, niche substitution is possible in some applications. Research at the Indian Institute of Science (IISc) and Armament Research & Development Establishment (ARDE) has demonstrated early-stage viability of replacing tantalum capacitors with niobium oxide capacitors in aerospace-grade electronic systems. While niobium capacitors operate at lower voltages, they can meet specifications for unmanned aerial vehicles (UAVs), radar units, and artillery fire control systems, especially when paired with circuit redesigns for lower power thresholds (IEEE Journal of Advanced Materials, 2023). These alternatives, though not universal, could help reduce demand pressure in specific military-grade electronics.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Alternate Technologies</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Alternate Technologies</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Tantalum's high melting point and corrosion resistance make its recovery complex, but not infeasible. Plasma arc melting technologies—adopted in Japan and Finland—offer a path forward for India to recycle tantalum from capacitor-grade e-waste. State-owned enterprises such as Bharat Heavy Electricals Limited (BHEL) and Bharat Electronics Limited (BEL) could partner with Finland's Critical Materials Recycling Platform to trial low-temperature plasma disassociation for metal recovery. Japan's Hitachi, for instance, demonstrated 85% recovery efficiency of tantalum from multilayer ceramic capacitors in 2022 (Hitachi Materials Innovation Report, 2023). Investment in such technologies aligns with India's evolving e-waste policy and Make in India objectives.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Snapshot of Tantalum</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Snapshot of Tantalum</></h4>
 
                         {/* Table */}
                         <div className="table-responsive fade-in-on-scroll my-4">
@@ -120,7 +120,7 @@ export default function About() {
                           </table>
                         </div>
 
-                        <h4 className="fade-in-on-scroll  my-4 text-blue"><strong>Strengthening Supply Chains</strong></h4>
+                        <h4 className="fade-in-on-scroll  my-4 text-blue"><>Strengthening Supply Chains</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Tantalum's global supply is heavily concentrated in the Democratic Republic of Congo (DRC) and Rwanda, regions with ongoing concerns around illegal mining and conflict financing. To reduce geopolitical risk, India should prioritize sourcing from certified producers. Long-term contracts should be pursued with AMG Brasil (Brazil) and Global Advanced Metals (Australia), both of which are ISO-certified and comply with OECD Due Diligence Guidance on conflict-free mineral sourcing.

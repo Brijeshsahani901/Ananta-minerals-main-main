@@ -16,14 +16,23 @@ import {
   Legend,
 } from "chart.js";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+import ChartDataLabels from "chartjs-plugin-datalabels";
+
+// REGISTER PLUGINS
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+  ChartDataLabels
+);
 
 export default function Infographic520Screenshot() {
   const [mounted, setMounted] = useState(false);
-
   useEffect(() => setMounted(true), []);
 
-  // Top 5 exporting countries - CORRECTED DATA from screenshot
+  // EXPORT DATA
   const exportsData = {
     labels: ["China, Hong Kong SAR", "China", "Singapore", "Malaysia", "USA"],
     datasets: [
@@ -62,30 +71,20 @@ export default function Infographic520Screenshot() {
         anchor: "end",
         align: "right",
         offset: 4,
-        font: {
-          size: 9,
-          weight: "bold"
-        },
-        formatter: (value) => `$${value}B`
-      }
+        font: { size: 9, weight: "bold" },
+        formatter: (value) => `$${value}B`,
+      },
     },
     scales: {
-      x: {
-        display: false,
-        grid: { display: false },
-      },
+      x: { display: false, grid: { display: false } },
       y: {
-        ticks: {
-          color: "#ffffff",
-          font: { size: 10, weight: 600 },
-          padding: 2,
-        },
+        ticks: { color: "#ffffff", font: { size: 10, weight: 600 } },
         grid: { display: false },
       },
     },
   };
 
-  // Top 5 importing countries - CORRECTED DATA from screenshot
+  // IMPORT DATA
   const importsData = {
     labels: [
       "China, Hong Kong SAR",
@@ -130,30 +129,20 @@ export default function Infographic520Screenshot() {
         anchor: "end",
         align: "right",
         offset: 4,
-        font: {
-          size: 9,
-          weight: "bold"
-        },
-        formatter: (value) => `$${value}B`
-      }
+        font: { size: 9, weight: "bold" },
+        formatter: (value) => `$${value}B`,
+      },
     },
     scales: {
-      x: {
-        display: false,
-        grid: { display: false },
-      },
+      x: { display: false, grid: { display: false } },
       y: {
-        ticks: {
-          color: "#ffffff",
-          font: { size: 10, weight: 600 },
-          padding: 2,
-        },
+        ticks: { color: "#ffffff", font: { size: 10, weight: 600 } },
         grid: { display: false },
       },
     },
   };
 
-  // Materials data - CORRECTED FROM SCREENSHOT
+  // MATERIAL TABLE
   const materials = [
     { name: "Silicon & SiC wafers", value: "~US$ 1.5 bn", color: "#ff6b35" },
     {
@@ -180,7 +169,6 @@ export default function Infographic520Screenshot() {
       style={{
         width: "100%",
         minHeight: "520px",
-        height: "520px",
         padding: "clamp(10px, 2vw, 14px)",
         borderRadius: "12px",
         background:
@@ -192,23 +180,7 @@ export default function Infographic520Screenshot() {
         boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
       }}
     >
-      {/* Background Pattern */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: `
-          radial-gradient(circle at 15% 15%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
-          radial-gradient(circle at 85% 85%, rgba(0, 180, 160, 0.08) 0%, transparent 50%)
-        `,
-          zIndex: 0,
-        }}
-      />
-
-      {/* Header */}
+      {/* HEADER */}
       <div
         style={{
           position: "relative",
@@ -248,271 +220,176 @@ export default function Infographic520Screenshot() {
         </p>
       </div>
 
-      {/* Main Grid - Responsive Columns */}
-      <div style={{ display: "flex", gap: "clamp(10px, 2vw, 14px)", height: "calc(100% - 70px)" }}>
-        {/* Left Column */}
-        <div style={{ flex: 2, display: "flex", flexDirection: "column", gap: "clamp(6px, 1.5vw, 8px)" }}>
-          {/* Top Stats Row */}
+      {/* MAIN GRID */}
+      <div
+        style={{
+          display: "flex",
+          gap: "clamp(10px, 2vw, 14px)",
+          height: "calc(100% - 70px)",
+        }}
+      >
+        {/* LEFT SIDE */}
+        <div
+          style={{
+            flex: 2,
+            display: "flex",
+            flexDirection: "column",
+            gap: "clamp(6px, 1.5vw, 10px)",
+          }}
+        >
+          {/* TOP CARDS */}
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
               gap: "clamp(4px, 1vw, 6px)",
-              height: "auto",
-              minHeight: "60px",
             }}
           >
-            {/* China Export Card */}
             <div
               style={{
                 background: "linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%)",
                 borderRadius: "6px",
-                padding: "clamp(6px, 1.5vw, 8px)",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
+                padding: "10px",
                 boxShadow: "0 4px 12px rgba(255, 107, 53, 0.3)",
-                minHeight: "60px",
               }}
             >
-              <div
-                style={{
-                  fontSize: "clamp(7px, 1.5vw, 9px)",
-                  fontWeight: "700",
-                  opacity: 0.9,
-                  lineHeight: "1.1",
-                }}
-              >
-                CHINA'S SEMICONDUCTOR MATERIAL EXPORTS IN 2023
+              <div style={{ fontSize: 9, fontWeight: 700 }}>
+                CHINA'S SEMICONDUCTOR EXPORTS IN 2023
               </div>
-              <div
-                style={{
-                  fontSize: "clamp(14px, 3.5vw, 18px)",
-                  fontWeight: "800",
-                  lineHeight: "1.1",
-                  margin: "clamp(1px, 0.3vw, 2px) 0",
-                }}
-              >
-                $198B
-              </div>
-              <div style={{ fontSize: "clamp(7px, 1.2vw, 8px)", opacity: 0.8 }}>
-                ~ 25% of Global Market Share
+              <div style={{ fontSize: 18, fontWeight: 800 }}>$198B</div>
+              <div style={{ fontSize: 8, opacity: 0.8 }}>
+                ~25% of global market share
               </div>
             </div>
 
-            {/* Global Export Card */}
             <div
               style={{
                 background: "linear-gradient(135deg, #00b4a0 0%, #00c9b1 100%)",
                 borderRadius: "6px",
-                padding: "clamp(6px, 1.5vw, 8px)",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
+                padding: "10px",
                 boxShadow: "0 4px 12px rgba(0, 180, 160, 0.3)",
-                minHeight: "60px",
               }}
             >
-              <div
-                style={{
-                  fontSize: "clamp(7px, 1.5vw, 9px)",
-                  fontWeight: "700",
-                  opacity: 0.9,
-                  lineHeight: "1.1",
-                }}
-              >
+              <div style={{ fontSize: 9, fontWeight: 700 }}>
                 GLOBAL SEMICONDUCTOR MATERIAL EXPORTS IN 2023
               </div>
-              <div
-                style={{
-                  fontSize: "clamp(14px, 3.5vw, 18px)",
-                  fontWeight: "800",
-                  lineHeight: "1.1",
-                  margin: "clamp(1px, 0.3vw, 2px) 0",
-                }}
-              >
-                $843B
-              </div>
-              <div style={{ fontSize: "clamp(7px, 1.2vw, 8px)", opacity: 0.8 }}>
-                India Projected: $110B by 2030
-              </div>
+              <div style={{ fontSize: 18, fontWeight: 800 }}>$843B</div>
             </div>
           </div>
 
-          {/* Charts Row */}
+          {/* CHARTS */}
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
               gap: "clamp(4px, 1vw, 6px)",
-              height: "auto",
-              minHeight: "120px",
             }}
           >
-            {/* Export Chart */}
+            {/* EXPORT CHART */}
             <div
               style={{
                 background: "rgba(255,255,255,0.04)",
-                borderRadius: "6px",
-                padding: "clamp(6px, 1.5vw, 8px)",
+                borderRadius: 6,
+                padding: "10px",
                 border: "1px solid rgba(255,255,255,0.08)",
-                minHeight: "120px",
-                position: "relative",
               }}
             >
               <div
                 style={{
-                  fontSize: "clamp(8px, 1.6vw, 10px)",
-                  fontWeight: "700",
-                  marginBottom: "4px",
+                  fontSize: 10,
+                  fontWeight: 700,
                   color: "#ff6b35",
+                  marginBottom: 4,
                 }}
               >
                 TOP 5 EXPORTING COUNTRIES
               </div>
-              <div style={{ height: "95px", minHeight: "95px" }}>
+              <div style={{ height: 95 }}>
                 {mounted && <Bar data={exportsData} options={exportsOptions} />}
-              </div>
-              {/* Manual value labels */}
-              <div style={{ position: "absolute", right: "8px", top: "20px", display: "flex", flexDirection: "column", gap: "12px", height: "95px", justifyContent: "space-between" }}>
-                {exportsData.datasets[0].data.map((value, index) => (
-                  <div key={index} style={{ fontSize: "9px", fontWeight: "bold", color: "#ffffff", textAlign: "right" }}>
-                    ${value}B
-                  </div>
-                ))}
               </div>
             </div>
 
-            {/* Import Chart */}
+            {/* IMPORT CHART */}
             <div
               style={{
                 background: "rgba(255,255,255,0.04)",
-                borderRadius: "6px",
-                padding: "clamp(6px, 1.5vw, 8px)",
+                borderRadius: 6,
+                padding: "10px",
                 border: "1px solid rgba(255,255,255,0.08)",
-                minHeight: "120px",
-                position: "relative",
               }}
             >
               <div
                 style={{
-                  fontSize: "clamp(8px, 1.6vw, 10px)",
-                  fontWeight: "700",
-                  marginBottom: "4px",
+                  fontSize: 10,
+                  fontWeight: 700,
                   color: "#00b4a0",
+                  marginBottom: 4,
                 }}
               >
                 TOP 5 IMPORTING COUNTRIES
               </div>
-              <div style={{ height: "95px", minHeight: "95px" }}>
+              <div style={{ height: 95 }}>
                 {mounted && <Bar data={importsData} options={importsOptions} />}
-              </div>
-              {/* Manual value labels */}
-              <div style={{ position: "absolute", right: "8px", top: "20px", display: "flex", flexDirection: "column", gap: "12px", height: "95px", justifyContent: "space-between" }}>
-                {importsData.datasets[0].data.map((value, index) => (
-                  <div key={index} style={{ fontSize: "9px", fontWeight: "bold", color: "#ffffff", textAlign: "right" }}>
-                    ${value}B
-                  </div>
-                ))}
               </div>
             </div>
           </div>
 
-          {/* Materials Table */}
+          {/* MATERIAL TABLE */}
           <div
             style={{
               background: "rgba(255,255,255,0.04)",
-              borderRadius: "6px",
-              padding: "clamp(6px, 1.5vw, 8px)",
+              borderRadius: 6,
+              padding: "10px",
               border: "1px solid rgba(255,255,255,0.08)",
               flex: 1,
-              minHeight: "170px",
             }}
           >
-            <div
-              style={{
-                fontSize: "clamp(8px, 1.6vw, 10px)",
-                fontWeight: "700",
-                marginBottom: "4px",
-                color: "#ffffff",
-              }}
-            >
-              PROJECTED INDIA 2030 DEMAND (INDICATIVE)
+            <div style={{ fontSize: 10, fontWeight: 700, marginBottom: 4 }}>
+              Semiconductor Material Fab + Packaging projected demand for India
+              till 2030
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "3px",
-                height: "auto",
-                minHeight: "calc(100% - 20px)",
-                overflow: "hidden",
-              }}
-            >
-              {materials.map((material, index) => (
-                <div
-                  key={index}
-                  style={{
-                    background: "rgba(255,255,255,0.05)",
-                    borderRadius: "3px",
-                    padding: "clamp(4px, 1vw, 6px) clamp(5px, 1.2vw, 6px)",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    borderLeft: `2px solid ${material.color}`,
-                    minHeight: "26px",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "clamp(7px, 1.3vw, 8px)",
-                      fontWeight: "500",
-                      color: "rgba(255,255,255,0.9)",
-                      lineHeight: "1.2",
-                      flex: 1,
-                      paddingRight: "6px",
-                    }}
-                  >
-                    {material.name}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "clamp(8px, 1.5vw, 9px)",
-                      fontWeight: "800",
-                      color: material.color,
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    {material.value}
-                  </div>
+
+            {materials.map((m, i) => (
+              <div
+                key={i}
+                style={{
+                  background: "rgba(255,255,255,0.05)",
+                  borderRadius: 3,
+                  padding: "6px 8px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  borderLeft: `2px solid ${m.color}`,
+                  marginBottom: 4,
+                }}
+              >
+                <div style={{ fontSize: 8 }}>{m.name}</div>
+                <div style={{ fontSize: 9, fontWeight: 800, color: m.color }}>
+                  {m.value}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Right Column */}
-        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "clamp(8px, 1.8vw, 10px)" }}>
-          {/* Project Info Card */}
+        {/* RIGHT COLUMN */}
+        <div
+          style={{ flex: 1, display: "flex", flexDirection: "column", gap: 10 }}
+        >
           <div
             style={{
               background: "rgba(255,255,255,0.04)",
-              borderRadius: "8px",
-              padding: "clamp(10px, 2vw, 12px)",
+              padding: "12px",
+              borderRadius: 8,
               border: "1px solid rgba(255,255,255,0.08)",
               flex: 1,
-              minHeight: "300px",
-              display: "flex",
-              flexDirection: "column",
             }}
           >
             <div
               style={{
-                fontSize: "clamp(10px, 2vw, 12px)",
-                fontWeight: "700",
-                marginBottom: "10px",
-                lineHeight: "1.3",
+                fontSize: 12,
+                fontWeight: 700,
                 color: "#ff6b35",
+                marginBottom: 10,
               }}
             >
               Six plus Semiconductor projects approved by the government till
@@ -521,92 +398,68 @@ export default function Infographic520Screenshot() {
 
             <div
               style={{
-                fontSize: "clamp(11px, 2.2vw, 13px)",
-                color: "rgba(255,255,255,0.9)",
-                marginBottom: "12px",
-                lineHeight: "1.4",
+                fontSize: 13,
                 background: "rgba(255,255,255,0.05)",
-                padding: "10px",
-                borderRadius: "6px",
-                border: "1px solid rgba(255,255,255,0.1)",
+                padding: 10,
+                borderRadius: 6,
+                marginBottom: 10,
               }}
             >
-              India's Semiconductor Market Size is Projected to reach $110 B by 2030
+              India's Semiconductor Market Size is Projected to reach $110 M by
+              2030
             </div>
 
             <div
               style={{
-                fontSize: "clamp(11px, 2.2vw, 13px)",
-                color: "rgba(255,255,255,0.9)",
-                marginBottom: "12px",
-                lineHeight: "1.4",
+                fontSize: 13,
                 background: "rgba(255,255,255,0.05)",
-                padding: "10px",
-                borderRadius: "6px",
-                border: "1px solid rgba(255,255,255,0.1)",
+                padding: 10,
+                borderRadius: 6,
+                marginBottom: 10,
               }}
             >
-              According to Market Research Future estimates India's
-              semiconductor materials market US$ 2.34 bn (2023)
+              According to Market Research Future of the estimates India's
+              semiconductor materials market was US$ 2.34 bn (2023)
             </div>
 
-            {/* Market Demand Question */}
             <div
               style={{
-                background: "rgba(0, 180, 160, 0.12)",
-                borderRadius: "8px",
-                padding: "clamp(10px, 2vw, 12px)",
-                border: "1px solid rgba(0, 180, 160, 0.3)",
-                marginBottom: "10px",
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
+                background: "rgba(0,180,160,0.12)",
+                padding: 12,
+                borderRadius: 8,
+                border: "1px solid rgba(0,180,160,0.3)",
+                marginBottom: 10,
               }}
             >
-              <div
-                style={{
-                  fontSize: "clamp(9px, 1.8vw, 11px)",
-                  fontWeight: "600",
-                  marginBottom: "8px",
-                  color: "rgba(255,255,255,0.9)",
-                  lineHeight: "1.3",
-                }}
-              >
+              <div style={{ fontSize: 11, marginBottom: 8 }}>
                 What volume/value of wafers, gases, chemicals and packaging do
-                you need to support a ~US$ 100 B+ chip market plus those new
+                you need to support a ~US$ 100 B+ chip market plus new
                 fabs/OSATs?
               </div>
               <div
                 style={{
-                  fontSize: "clamp(16px, 3.5vw, 18px)",
-                  fontWeight: "800",
+                  fontSize: 18,
+                  fontWeight: 800,
                   color: "#00b4a0",
                   textAlign: "center",
-                  background: "rgba(0, 180, 160, 0.2)",
-                  padding: "8px",
-                  borderRadius: "6px",
-                  border: "1px solid rgba(0, 180, 160, 0.4)",
                 }}
               >
                 ~ US$ 7 B
               </div>
             </div>
 
-            {/* Additional Info */}
             <div
               style={{
-                fontSize: "clamp(8px, 1.4vw, 9px)",
+                fontSize: 9,
                 color: "rgba(255,255,255,0.6)",
                 textAlign: "center",
-                padding: "8px",
+                padding: 8,
                 background: "rgba(255,255,255,0.04)",
-                borderRadius: "4px",
-                border: "1px solid rgba(255,255,255,0.08)",
+                borderRadius: 4,
               }}
             >
               Materials category includes various production and packaging
-              materials
+              materials.
             </div>
           </div>
         </div>

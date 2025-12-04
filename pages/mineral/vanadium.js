@@ -70,9 +70,9 @@ export default function Vanadium() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h4 className="fade-in-on-scroll"><strong>Vanadium: Strategic Alternatives</strong></h4>
+                        <h3 className="fade-in-on-scroll"><>Vanadium: Strategic Alternatives</></h3>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Alternate Chemistries</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Alternate Chemistries</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           In certain aerospace alloys, niobium and chromium have demonstrated partial substitutability for vanadium. For instance, the Ti-6Al-4V alloy, widely used in aircraft structures, can be reformulated with niobium for non-critical applications subject to lower mechanical stress (DoD Strategic Materials Report, 2023).
@@ -82,14 +82,14 @@ export default function Vanadium() {
                           <a href="https://www.safran-group.com/pressroom/safran-inaugurates-ceramic-matrix-composites-research-center-2018-11-06-0?utm_source=chatgpt.com" className="text-decoration-underline">Safran Ceramics</a>, through its Bordeaux Aeroparc research center, has pioneered the development of ceramic-matrix composites (CMCs) reinforced with silicon carbide (SiC). These composites exhibit superior weight-to-strength ratios and high thermal resilience, making them potential substitutes for vanadium-titanium alloys in turbine hot-section components. <a href="https://www.geaerospace.com/news/press-releases/joint-ventures/nippon-carbon-company-ge-and-safran-establish-silicon-carbide?utm_source=chatgpt.com" className="text-decoration-underline">GE Aerospace</a>, in collaboration with Nippon Carbon, has also established the NGS Advanced Fibers joint venture to scale up SiC continuous-fiber production for next-generation turbine blades—displacing vanadium-containing superalloys in several aerospace platforms.
                         </p>
 
-                        <h4 className="fade-in-on-scroll text-blue my-4"><strong>Alternate Technologies</strong></h4>
+                        <h4 className="fade-in-on-scroll text-blue my-4"><>Alternate Technologies</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Innovations in extractive metallurgy, such as redox flow leaching and ion-exchange extraction, are being piloted in Kazakhstan and Canada to recover vanadium from secondary sources like oil fly ash and bauxite residue (IEA, 2024, p. 223). India's petroleum sector—particularly BPCL and IOCL—could establish pilot-scale recovery facilities to extract vanadium from desulfurisation by-products.
                         </p>
 
                         <div className="fade-in-on-scroll my-4">
-                          <h4 className="my-4 "><strong>Secondary Vanadium Recovery Technologies</strong></h4>
+                          <h4 className="my-4 "><>Secondary Vanadium Recovery Technologies</></h4>
                           <div className="table-responsive my-4">
                             <table className="table table-bordered">
                               <thead style={{ backgroundColor: "#f0f0f0" }}>
@@ -124,7 +124,7 @@ export default function Vanadium() {
                           </div>
                         </div>
 
-                        <h4 className="fade-in-on-scroll text-blue my-4"><strong>Strategic MoUs and Trade Frameworks for India</strong></h4>
+                        <h4 className="fade-in-on-scroll text-blue my-4"><>Strategic MoUs and Trade Frameworks for India</></h4>
 
                         <i className="fade-in-on-scroll  fw-normal my-4">Safran CMC Technology Transfer MoU</i>
                         <ul className="fade-in-on-scroll my-4">
@@ -148,7 +148,7 @@ export default function Vanadium() {
                           India currently relies heavily on imports of aerospace-grade vanadium pentoxide, primarily sourced from South Africa (13%) and Brazil (8%), where producers like Largo Inc. are expanding capacity. Strategic partnerships with these countries could be developed under the Minerals Security Partnership (MSP) or bilateral Government-to-Government (G2G) mechanisms to ensure secure supply of vanadium for aerospace and defence-grade alloys.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4">References</h5>
+                        <h4 className="fade-in-on-scroll my-4">References</h4>
                         <p className="fade-in-on-scroll my-4" style={{ fontSize: "1.08rem" }}>
                           DoD Strategic Materials Report. (2023). <em>United States Department of Defense Annual Review on Strategic and Critical Materials</em>.<br /><br />
                           GE Aerospace. (2024). <em>NGS Advanced Fibers Partnership Briefing</em>.<br /><br />

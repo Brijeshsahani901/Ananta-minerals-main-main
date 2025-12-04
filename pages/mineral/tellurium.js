@@ -70,9 +70,9 @@ export default function Tellurium() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h3 className="fade-in-on-scroll"><strong>Tellurium: Strategic Alternatives</strong></h3>
+                        <h3 className="fade-in-on-scroll">Tellurium: Strategic Alternatives</h3>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Alternative Chemistries</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Alternative Chemistries</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           As the global solar industry begins to pivot away from cadmium telluride (CdTe)--based thin-film technologies, India has an opportunity to fast-track innovation and manufacturing capacity in next-generation photovoltaic chemistries that bypass tellurium altogether.
@@ -128,7 +128,7 @@ export default function Tellurium() {
                           </table>
                         </div>
 
-                        <h4 className="fade-in-on-scroll my-4"><strong>Global Shifts in Technology</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4"><>Global Shifts in Technology</></h4>
 
                         <ul className="fade-in-on-scroll my-4 fw-normal">
                           <li className="my-3"><strong>United States:</strong> First Solar is commercializing Te-lean and alternate thin-film technologies.</li>
@@ -155,7 +155,7 @@ export default function Tellurium() {
                           India's PLI schemes for solar manufacturing, coupled with the Make in India programme, can serve as launchpads for developing thin-film technologies rooted in domestic research and global partnerships.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Strategic Technology Transfer & Co‑Development Agreements</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Strategic Technology Transfer & Co‑Development Agreements</></h4>
 
                         <div className="table-responsive fade-in-on-scroll my-4">
                           <table className="table table-bordered fade-in-on-scroll">
@@ -193,7 +193,7 @@ export default function Tellurium() {
 
                         <h4 className="fade-in-on-scroll my-4 text-blue">Additional Policy Recommendations</h4>
 
-                        <h5 className="fade-in-on-scroll fw-normal my-4"><em>Upgrading Recycling Capabilities</em></h5>
+                        <h4 className="fade-in-on-scroll fw-normal my-4"><em>Upgrading Recycling Capabilities</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India currently lacks dedicated recycling infrastructure for tellurium. Specialized facilities are needed to extract tellurium from end-of-life CdTe solar panels and anode slimes from copper refineries. The Critical Minerals Mission (2025) should explicitly allocate resources toward:
@@ -205,7 +205,7 @@ export default function Tellurium() {
                           <li className="my-3">Offering financial incentives for solar panel recyclers</li>
                         </ul>
 
-                        <h5 className="fade-in-on-scroll fw-normal my-4"><em>Diversifying Supply Chains</em></h5>
+                        <h4 className="fade-in-on-scroll fw-normal my-4"><em>Diversifying Supply Chains</em></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           With over 90% of global tellurium currently sourced from copper refining in China, India's dependence is a critical vulnerability. Strategic trade partnerships with South Korea, Canada, and Chile---countries with tellurium-producing refineries---could help diversify supply sources.
@@ -219,7 +219,7 @@ export default function Tellurium() {
                           <em>Disclaimer: Data updated as of June 2025, next update on September 2025</em>
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>References</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>References</></h4>
 
                         <div className="fade-in-on-scroll my-4" style={{ fontStyle: "italic", fontSize : "1.08rem" }}>
                           <p className="my-3"><em>CSIRO (2024). Next-Gen Solar Research Portfolio.</em></p>

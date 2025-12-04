@@ -1,91 +1,3 @@
-// // util/searchItems.js
-
-// export const authors = [
-//   {
-//     name: "Ayan Barman",
-//     category: "Sectors",
-//     routes: [
-//       { path: "/agriculture", label: "Agriculture", type: "sector" },
-//       { path: "/automobile", label: "Automobile", type: "sector" },
-//       { path: "/renewable-energy", label: "Renewable Energy", type: "sector" },
-//       {
-//         path: "/supply-chain/closing-loop",
-//         label: "Closing the Loop",
-//         type: "article",
-//       },
-//     ],
-//   },
-//   {
-//     name: "Prerna Bounter",
-//     category: "Sectors",
-//     routes: [
-//       {
-//         path: "/supply-chain/critical-pathway",
-//         label: "Critical Pathway",
-//         type: "article",
-//       },
-//       {
-//         path: "/defence-and-aerospace",
-//         label: "Defence & Aerospace",
-//         type: "sector",
-//       },
-//     ],
-//   },
-// ];
-
-// // Extract all articles from authors
-// export const allArticles = authors.flatMap((author) =>
-//   author.routes.map((route) => ({
-//     ...route,
-//     name: route.label,
-//     author: author.name,
-//     category: author.category,
-//     type: "article",
-//   }))
-// );
-
-// // Main function to get all searchable items (accepts menuItems as parameters)
-// export const getAllSearchItems = (alternateTechItems, sectorItems) => {
-//   return [
-//     ...alternateTechItems.map((item) => ({
-//       ...item,
-//       category: "Alternate Tech",
-//       type: "page",
-//     })),
-//     ...sectorItems.map((item) => ({
-//       ...item,
-//       category: "Sectors",
-//       type: "page",
-//     })),
-//     { path: "/about", label: "About", category: "Pages", type: "page" },
-//     {
-//       path: "/supply-chain",
-//       label: "Supply Chains",
-//       category: "Pages",
-//       type: "page",
-//     },
-//     { path: "/whats-new", label: "What's New", category: "Pages", type: "page" },
-//     // Add authors
-//     ...authors.map((author) => ({
-//       name: author.name,
-//       category: author.category,
-//       routes: author.routes,
-//       type: "author",
-//     })),
-//     // Add all articles separately for filtering
-//     ...allArticles,
-//   ];
-// };
-
-// // Export everything as a named export
-// export default {
-//   authors,
-//   allArticles,
-//   getAllSearchItems,
-// };
-
-// util/searchItems.js
-
 export const authors = [
   {
     name: "Ayan Barman",
@@ -112,6 +24,16 @@ export const authors = [
        {
         path: "/supply-chain/asia-playbook",
         label: "From Reserves to Riches: Asia's Critical Minerals Playbook and India's Role",
+        type: "article",
+      },
+         {
+        path: "/supply-chain/mining-royalty-rates",
+        label: "Royalty Reform for Strategic Minerals",
+        type: "article",
+      },
+       {
+        path: "/supply-chain/practical-triangle",
+        label: "A Practical Triangle: What the new Australia-Canada-India Tech Pact means for Critical Minerals",
         type: "article",
       },
     ],

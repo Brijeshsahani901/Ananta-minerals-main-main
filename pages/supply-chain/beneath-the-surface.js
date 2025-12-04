@@ -40,9 +40,9 @@ export default function DeepSeaMinerals() {
                     backgroundColor: "#fff",
                   }}
                 >
-                  <h2 className="my-3">
+                  <h3 className="my-3">
                     Beneath the Surface: India's Ambition in Deep-Sea Minerals
-                  </h2>
+                  </h3>
 
                   <p className="my-3">
                     The global shift from fossil fuels to clean energy has
@@ -56,9 +56,9 @@ export default function DeepSeaMinerals() {
                     <a target="_blank" href="https://theoregongroup.com/investment-insights/deep-sea-mining-is-coming-whether-the-environmental-lobby-like-it-or-not/?utm_source=chatgpt.com"> 2065</a>.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     But What is Deep Sea Mining?
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     Deep sea mining involves the exploration and potential
@@ -159,9 +159,9 @@ export default function DeepSeaMinerals() {
                     Indian Ocean.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     India's Technological Capabilities
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     Under the <a target="_blank" href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&&NoteId=155043&&id=155043&&utm_source=chatgpt.com">Deep Ocean Mission</a> and the{" "}
@@ -192,9 +192,9 @@ export default function DeepSeaMinerals() {
                     hydrophone-based links successfully tested over 5.5 km.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     Global Leaders and India's Position
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     Globally, several nations and companies have demonstrated
@@ -211,9 +211,9 @@ export default function DeepSeaMinerals() {
                     tests already performed.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     India's Next Steps: Policy and Technology Pathway
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     India's roadmap includes commissioning{" "}

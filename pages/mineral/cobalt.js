@@ -70,13 +70,13 @@ export default function About() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h4 className="fade-in-on-scroll">Cobalt Alternatives and Strategic Pathways for India's Battery Future</h4>
+                        <h3 className="fade-in-on-scroll">Cobalt Alternatives and Strategic Pathways for India's Battery Future</h3>
 
                         <p className="fade-in-on-scroll">
                           Cobalt, a critical input in high-performance lithium-ion batteries, faces mounting concerns around supply concentration, ethical sourcing, and cost volatility. In response, research institutions and industry leaders are accelerating the development of cobalt-free cathode technologies.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Global R&D Momentum</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Global R&D Momentum</h4>
 
                         <ul className="fade-in-on-scroll my-4">
                           <li className="my-2">
@@ -97,7 +97,7 @@ export default function About() {
                           In parallel, industry adoption of lithium iron phosphate (LFP) batteries—entirely cobalt-free—has accelerated. Tesla and BYD have already commercialized LFP batteries at scale, citing their lower cost and longer cycle life. In Europe, initiatives like the ReLieVe project aim to recover cobalt from end-of-life batteries and support the circular economy transition.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Policy Pathways for India</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Policy Pathways for India</h4>
 
                         <i className="fade-in-on-scroll my-4">Supporting Domestic Cathode Innovation</i>
 
@@ -144,7 +144,7 @@ export default function About() {
                           India can co-invest in licensed LFP cathode production under a <strong>₹1,000 crore Production-Linked Incentive (PLI) scheme.</strong> This would allow domestic battery players like Exide and Amara Raja to adopt proven Blade-style battery designs and accelerate local LFP deployment. Such a move also aligns with India's energy security and industrial self-reliance goals.
                         </p>
 
-                        <h5 className="fade-in-on-scroll text-blue my-4">Enhancing Supply Security</h5>
+                        <h4 className="fade-in-on-scroll text-blue my-4">Enhancing Supply Security</h4>
 
                         <i className="fade-in-on-scroll my-5">Tapping into Southeast Asia</i>
                         <p className="fade-in-on-scroll my-4">
@@ -193,7 +193,7 @@ export default function About() {
                           Disclaimer: Data updated as of June 2025, next update on September 2025
                         </p>
 
-                        <h6 className="fade-in-on-scroll my-4 text-blue">References</h6>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">References</h4>
                         <ul className="fade-in-on-scroll my-4 fw-normal" style={{ listStyleType: "none", paddingLeft: 0 }}>
                           <li className="my-2">Argonne National Laboratory, <em>Hydro4Crystal Process Brief</em>, 2023.</li>
                           <li className="my-2">Desai, A. (2024). <em>Critical Mineral Supply Chains and China's Strategic Reserves</em>.</li>

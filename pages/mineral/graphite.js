@@ -70,13 +70,13 @@ export default function Graphite() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h4 className="fade-in-on-scroll">Graphite Strategy for India: Diversification, Substitution, and Global Collaboration</h4>
+                        <h3 className="fade-in-on-scroll">Graphite Strategy for India: Diversification, Substitution, and Global Collaboration</h3>
 
                         <p className="fade-in-on-scroll my-4">
                           As demand for graphite surges—especially for lithium-ion battery anodes—the industry is undergoing a technological shift to address supply chain concentration, carbon intensity, and material bottlenecks. Global efforts are now focused on synthetic graphite production, carbon-neutral mining, and advanced purification processes.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4">Global Advances in Graphite Supply</h5>
+                        <h4 className="fade-in-on-scroll my-4">Global Advances in Graphite Supply</h4>
 
                         <ul className="fade-in-on-scroll my-4 fw-normal">
                           <li className="my-3">
@@ -90,7 +90,7 @@ export default function Graphite() {
                           </li>
                         </ul>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Strategic Initiatives for India</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Strategic Initiatives for India</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           To secure graphite access and enhance self-reliance, India should invest in global partnerships and pilot domestic innovations across mining, processing, and advanced materials development.
@@ -167,7 +167,7 @@ export default function Graphite() {
                           Disclaimer: Data updated as of June 2025, next update on September 2025
                         </p>
 
-                        <h6 className="fade-in-on-scroll my-4 text-blue">References</h6>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">References</h4>
                         <ul className="fade-in-on-scroll fw-normal" style={{ listStyleType: "none", paddingLeft: 0 }}>
                           <li className="my-2">Benson, A., & Denamiel, S. (2023). <em>Critical Minerals Trade Flows in North America.</em></li>
                           <li className="my-2">Geological Survey of Norway. <em>Graphite Resource Mapping, 2022.</em></li>

@@ -70,21 +70,21 @@ export default function About() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h4 className="fade-in-on-scroll">Phosphorus: Interventions for Agricultural Resilience</h4>
+                        <h3 className="fade-in-on-scroll">Phosphorus: Interventions for Agricultural Resilience</h3>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Alternate Chemistries</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Alternate Chemistries</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Phosphorus solubilizing bacteria (PSB), such as <em>Bacillus megaterium</em> and <em>Pseudomonas fluorescens</em>, have demonstrated the ability to enhance phosphorus availability from fixed soil pools. These microbial interventions can reduce dependence on conventional phosphorus fertilizers like DAP (di-ammonium phosphate). Field trials in Punjab and Andhra Pradesh under the National Bio-fertilizer Mission have reported yield increases of 15–20% alongside a 30% reduction in DAP application (ICAR-IISS, 2022). To further this innovation, India should invest in commercializing consortium-based biofertilizers that combine PSB with mycorrhizal fungi, enhancing nutrient uptake efficiency and long-term soil health.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Technological Alternatives</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Technological Alternatives</h4>
 
                         <p className="fade-in-on-scroll">
                           India's limited rock phosphate reserves and high import dependence call for aggressive deployment of beneficiation technologies at the domestic level. Existing rock phosphate mines in Madhya Pradesh and Rajasthan could benefit from advanced processing techniques such as flotation and calcination to increase the usable phosphorus content. Simultaneously, phosphorus recovery from non-traditional sources should be explored. Technologies like struvite crystallization have enabled phosphorus recovery from urban sewage sludge and agro-industrial waste streams in countries like Germany and Japan.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Strengthening Supply Chains</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Strengthening Supply Chains</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India imports more than 90% of its phosphate rock, primarily for fertilizer production, rendering the agricultural sector vulnerable to geopolitical shocks and price volatility. To address this, bilateral partnerships must be scaled up. The 2022 Memorandum of Understanding (MoU) with Morocco's OCP Group, which secures the annual supply of 1 million tonnes of phosphate, marks an important step. This agreement should be expanded to include joint ventures for beneficiation and acidulation units within India, allowing for partial value addition and employment generation.
@@ -98,7 +98,7 @@ export default function About() {
                           Disclaimer: Data updated as of June 2025, next update on September 2025
                         </p>
 
-                        <h6 className="fade-in-on-scroll my-4 text-blue">References</h6>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">References</h4>
                         <ul className="fade-in-on-scroll fw-normal" style={{ listStyleType: "none", paddingLeft: 0 }}>
                           <li className="my-2">Food and Agriculture Organization (FAO). (2023). <em>Global assessment of phosphorus recovery technologies: Lessons from Europe and Asia</em>. Rome.</li>
                           <li className="my-2">ICAR-Indian Institute of Soil Science. (2022). <em>Field evaluation of phosphate solubilizing microbes under the National Bio-fertilizer Mission</em>. Indian Council of Agricultural Research.</li>

@@ -40,15 +40,15 @@ export default function CriticalPathway() {
                     backgroundColor: "#fff",
                   }}
                 >
-                  <h2 className="my-3 ">
+                  <h3 className="my-3 ">
                     Magnets, Money, and Momentum: India's Rare-Earth PLI Push
-                  </h2>
+                  </h3>
 
                   <p className="my-3">
                     In October 2025, the Indian Finance Ministry cleared a <a href="https://economictimes.indiatimes.com/industry/indl-goods/svs/metals-mining/magnet-scheme-to-offer-7300-cr-incentives/articleshow/124395414.cms?from=mdr" target="_blank" >Rs. 7,300-7,350 crore</a>  (USD 880-885 million) Production-Linked Incentive (PLI) to establish domestic sintered rare-earth permanent magnet (REPM) capacity for EVs, wind turbines and defence, a direct policy response to heightened supply-chain risk after China's October REE export controls. The scheme will run for 7 years and target several vertically integrated manufacturing units to reach a meaningful tonnage by 2030.
                   </p>
 
-                  <h3 className="my-3 ">Export licences, shipping delays, and a strategic fiscal reply</h3>
+                  <h4 className="my-3 ">Export licences, shipping delays, and a strategic fiscal reply</h4>
 
                   <p className="my-3">
                     On 9 October 2025, China's Ministry of Commerce announced <a href="https://cset.georgetown.edu/publication/mofcom-notice-2025-61/"  target="_black">new export controls </a> on rare-earth elements (REEs) and related technologies. These regulations added five more REEs to China's licensing regime (effective 8 Nov 2025). Foreign-made magnets containing any Chinese-origin REE or produced with Chinese REE tech now require a Beijing export permit. Beijing aims to increase national security and curb illicit mining.
@@ -148,7 +148,7 @@ export default function CriticalPathway() {
                     These figures outline the concentrated exposure India faces for permanent magnets. Over 60-80 percent of certain magnet groups originate from China, leaving Indian OEMs and defence suppliers vulnerable.
                   </p>
 
-                  <h3 className="my-3 ">The PLI Solution: Money and Market Access</h3>
+                  <h4 className="my-3 ">The PLI Solution: Money and Market Access</h4>
 
                   <p className="my-3">
                     The PLI primarily subsidises magnet manufacturing (sintering, assembly, finishing). However, upstream processes such as mining, chemical separation, metallisation and alloying --- remain underdeveloped in India. GSI/NCMM exploration is expanding resources and acreage, yet commercial separation plants and high-purity metallurgy are effectively non-existent today. Without secured feedstock, finished-magnet plants will still rely on imported oxides/metals.
@@ -158,24 +158,24 @@ export default function CriticalPathway() {
                     China's October 2025 export notices (MOFCOM) extend licensing to goods and technologies containing Chinese-origin REEs, creating extra paperwork and potential shipment delays, not outright bans, but clear friction. This intensifies the urgency for the PLI to deliver an alternate supply quickly.
                   </p>
 
-                  <h3 className="my-3 ">From stockpiles to sintering, a phased substitution forecast.</h3>
+                  <h4 className="my-3 ">From stockpiles to sintering, a phased substitution forecast.</h4>
 
-                  <h3 className="my-3 ">Short term (0-18 months):</h3>
+                  <h4 className="my-3 ">Short term (0-18 months):</h4>
                   <p className="my-3">
                     Stockpiling & import fixes should be prioritised. India is already planning strategic stockpiles to counter Chinese restrictions. OEMs will test ferrite or magnet-lite designs and import finished subassemblies where possible; Chinese licensing will create timing risk rather than immediate permanent cutoffs.
                   </p>
 
-                  <h3 className="my-3 ">Medium term (18-48 months):</h3>
+                  <h4 className="my-3 ">Medium term (18-48 months):</h4>
                   <p className="my-3">
                     Factory build-outs would be the next step. Greenfield magnet plants typically require 18-36 months to commission; expect initial magnet lines online in 2-3 years if capex awards, land and clearances move fast. JVs/tech licences with non-Chinese refiners (Lynas/MP Materials) or Japanese/Korean OEMs will be critical to get separation and alloying expertise.
                   </p>
 
-                  <h3 className="my-3 ">Long term (4 plus years to 2030):</h3>
+                  <h4 className="my-3 ">Long term (4 plus years to 2030):</h4>
                   <p className="my-3">
                     Conditional verticalization to be incorporated. If the PLI is coupled with secured raw-material access, i.e. domestic mining ramp-up, KABIL deals, and NCMM output, India could reach target domestic magnet capacity by 2030; full upstream independence ( which includes the separation stage till alloy production) is tentatively a 5-10 year challenge.
                   </p>
 
-                  <h3 className="my-3 ">The PLI is a lifeline, but not a silver bullet.</h3>
+                  <h4 className="my-3 ">The PLI is a lifeline, but not a silver bullet.</h4>
 
                   <p className="my-3">
                     The PLI is necessary and strategically well-timed, but its success hinges on parallel actions, rapid tendering and capex award, secured feedstock (domestic and overseas), tech partnerships, and streamlined clearances. Without those, the PLI will raise domestic magnet output but stop short of true upstream independence before 2030.

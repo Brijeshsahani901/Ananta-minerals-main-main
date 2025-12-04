@@ -70,9 +70,9 @@ export default function RareEarthElement() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h4 className="fade-in-on-scroll">Rare Earth Elements: Supply Diversification and Tech Substitution</h4>
+                        <h3 className="fade-in-on-scroll">Rare Earth Elements: Supply Diversification and Tech Substitution</h3>
 
-                        <h5 className="fade-in-on-scroll my-4 text-blue">Alternate Chemistries</h5>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">Alternate Chemistries</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           The global shift towards rare-earth-free technologies is accelerating, driven by cost pressures, geopolitical risk, and supply chain instability. Automakers such as BMW and Renault are transitioning to ferrite-based and induction motors, significantly reducing dependence on rare earth elements (REEs) in electric vehicles (IEA, 2022). <a href="https://press.zf.com/press/en/releases/release_60480.html" target="_blank" rel="noopener noreferrer"><em>ZF Friedrichshafen</em></a>, a German automotive supplier, has commercialized Inductively Excited Synchronous Motors (I2SMs) that offer performance parity with permanent magnet-based motors without requiring neodymium or dysprosium (ZF, 2023).
@@ -86,7 +86,7 @@ export default function RareEarthElement() {
                           In the United States, <a href="https://www.manufacturingtodayindia.com/general-motors-and-stellantis-invest-in-niron-magnetics-rare-earth-free-ev-magnet-technology#:~:text=General%20Motors%20and%20Stellantis%20invest,is%20currently%20dependent%20on%20China." target="_blank" rel="noopener noreferrer"><em>General Motors (GM) and BorgWarner</em></a> are investing in REE-free and low-REE motor platforms, while Niron Magnetics, backed by GM and Stellantis, is scaling up production of iron-nitride permanent magnets (Niron, 2024). Additionally, Australia's Lynas Rare Earths and university consortia are developing Mn‑Al‑C hybrid magnets under EU-funded SUSMAGPRO projects, which can potentially be licensed to Indian R&D institutions (SUSMAGPRO, 2024).
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4">Key Companies Advancing REE-Free Motor Technologies</h5>
+                        <h4 className="fade-in-on-scroll my-4">Key Companies Advancing REE-Free Motor Technologies</h4>
 
                         {/* Table */}
                         <div className="table-responsive fade-in-on-scroll my-4">
@@ -140,7 +140,7 @@ export default function RareEarthElement() {
                           </table>
                         </div>
 
-                        <h5 className="fade-in-on-scroll my-4">Strategic MoUs and Trade Agreements for India</h5>
+                        <h4 className="fade-in-on-scroll my-4">Strategic MoUs and Trade Agreements for India</h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India can leverage these international advancements to catalyze a domestic shift toward REE alternatives. The existing IREL--Toyota Tsusho joint venture under the India--Japan Clean Energy Partnership provides a template for technology alignment. New Delhi should formalize cooperation with Germany's ZF or Fraunhofer IWU to transfer I2SM designs through a structured ₹500 crore Production-Linked Incentive (PLI) scheme. Similarly, a Memorandum of Cooperation with Niron Magnetics (US) would enable joint manufacturing of REE-free magnets in Indian Special Economic Zones, anchored in the Minerals Security Partnership (MSP) that India joined in June 2023 (US Department of State, 2023).
@@ -154,7 +154,7 @@ export default function RareEarthElement() {
                           These initiatives would not only reduce REE dependency but also catalyze the emergence of a globally competitive EV subcomponent manufacturing ecosystem within India.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4">Additional Supply Chain Recommendations</h5>
+                        <h4 className="fade-in-on-scroll my-4">Additional Supply Chain Recommendations</h4>
 
                         <i className="fade-in-on-scroll my-4">Boosting Domestic Capabilities</i>
 
@@ -190,7 +190,7 @@ export default function RareEarthElement() {
                           Disclaimer: Data updated as of June 2025, next update on September 2025
                         </p>
 
-                        <h6 className="fade-in-on-scroll my-4 text-blue">References</h6>
+                        <h4 className="fade-in-on-scroll my-4 text-blue">References</h4>
                         <ul className="fade-in-on-scroll fw-normal" style={{ listStyleType: "none", paddingLeft: 0 }}>
                           <li className="my-3">AEM. (2025). <em>Advanced Electric Machines and Sterling Gtake Form Strategic Manufacturing Partnership</em>. AEM News Release, May 2025.</li>
                           <li className="my-3">Bekmurzaev, A. (2024). "Kazakhstan Opens Rare Earth Deposits to Global Investment." <em>Steppe Insight Journal</em>, June 2024.</li>

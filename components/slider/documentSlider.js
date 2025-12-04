@@ -77,6 +77,18 @@ const DocumentSlider = () => {
       date: "October 2025",
       category: "Industry Analysis",
     },
+       {
+      id: 10,
+      image: `${basePath}/assets/minerals_images/royalty-rates.jpg`,
+      title:
+        "Royalty Reform for Strategic Minerals: Clearer prices but not a silver bullet",
+      link: "/supply-chain/mining-royalty-rates",
+      content:
+        "On 12 November 2025, the Union Cabinet revised the method of charging royalties on four minerals the government designates as ‘critical’ for the clean-energy transition: graphite, caesium, rubidium, and zirconium.",
+      author: "Ayan Barman",
+      date: "November 2025",
+      category: "Industry Analysis",
+    },
     {
       id: 9,
       image: `${basePath}/assets/minerals_images/deep-sea-minerals.jpg`,
@@ -112,6 +124,19 @@ const DocumentSlider = () => {
       date: "November 2025",
       category: "Industry Analysis",
     },
+     {
+      id: 8,
+      image: `${basePath}/assets/minerals_images/practical-triangle.jpg`,
+      title:
+        "A practical triangle: What the new Australia-Canada-India Tech Pact means for Critical Minerals",
+      link: "/supply-chain/practical-triangle",
+      content:
+        "Last month the governments of India, Canada and Australia launched a formal trilateral called the Australia–Canada–India Technology and Innovation (ACITI) Partnership at the G20 Summit in Johannesburg.",
+      author: "Ayan Barman",
+      date: "December 2025",
+      category: "Industry Analysis",
+    },
+  
   ];
 
   const parseDate = (dateStr) => {

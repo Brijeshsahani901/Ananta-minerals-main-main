@@ -70,7 +70,7 @@ export default function About() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h4 className="fade-in-on-scroll my-4"><strong>Lithium and the Future of Battery Chemistries</strong></h4>
+                        <h3 className="fade-in-on-scroll my-4">Lithium and the Future of Battery Chemistries</h3>
 
                         <p className="fade-in-on-scroll">
                           The global energy transition is driving an urgent search for alternatives to conventional lithium-ion batteries, particularly those dependent on geopolitically sensitive minerals such as cobalt and nickel. Sodium-ion batteries, now in commercial production by China's CATL, present a <a href="https://www.reuters.com/technology/chinese-battery-maker-catl-launches-second-generation-fast-charging-battery-2025-04-21/#:~:text=CATL%20became%20the%20first%20major,in%20EVs%2C%20experts%20have%20said." className="text-decoration-underline">promising substitute</a> owing to sodium's abundance and low cost. Norway's <a href="https://www.morrowbatteries.com/about-us" className="text-decoration-underline">Morrow Batteries</a> and India-UK ventures like LiNa Energy's pilot with Tata Power further highlight growing global interest in this chemistry.
@@ -144,45 +144,45 @@ export default function About() {
                           </table>
                         </div>
 
-                        <h4 className="fade-in-on-scroll text-blue my-4"><strong>Strategic International Collaborations for India</strong></h4>
+                        <h4 className="fade-in-on-scroll text-blue my-4">Strategic International Collaborations for India</h4>
 
                         <p className="fade-in-on-scroll">
                           To future-proof its battery ecosystem and reduce mineral dependence, India should forge deeper partnerships with global innovation leaders. The following strategic frameworks are recommended:
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>UK-India Sodium-BESS Scale-Up MoU</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>UK-India Sodium-BESS Scale-Up MoU</em></h4>
 
                         <p className="fade-in-on-scroll">
                           Building on the existing Tata Power-LiNa Energy pilot, India and the UK could sign a formal MoU to co-fund a megawatt-scale sodium battery plant hosted by BHEL or the National Battery Testing Centre, with support from the UK's Department for Business and Trade under the 2024 energy cooperation framework.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>India-Australia Solid-State Battery Consortium</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>India-Australia Solid-State Battery Consortium</em></h4>
 
                         <p className="fade-in-on-scroll">
                           Under the India-Australia Critical Minerals Research Partnership, India could co-create a Solid-State Innovation Cell at CSIR and IIT Madras, jointly funded with CSIRO, to pilot lithium-sulfur and lithium-air batteries by 2027 using CSIRO's RAFT SPE (solid polymer electrolyte) technology.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>US-India Solid-State MoU</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>US-India Solid-State MoU</em></h4>
 
                         <p className="fade-in-on-scroll">
                           Leveraging India's membership in the Minerals Security Partnership (MSP), a Technology Collaboration Agreement could be negotiated with Solid Power or QuantumScape, establishing a joint pilot facility in an Indian SEZ. This initiative could be supported by a ₹600 crore Production Linked Incentive (PLI) scheme focused on next-generation battery materials.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>Domestic Lithium-Ion Indigenization</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>Domestic Lithium-Ion Indigenization</em></h4>
 
                         <p className="fade-in-on-scroll">
                           India should scale the PureEV-CSIR-CECRI model by facilitating a tri-party MoU between DST, NITI Aayog, and leading OEMs (e.g., Tata Motors) to develop 100 MW of cell and pack capacity, integrating cathode active material production and unified testing infrastructure.
                         </p>
 
-                        <h4 className="fade-in-on-scroll text-blue my-4"><strong>Policy Recommendations</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4">Policy Recommendations</h4>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>Diversifying Strategic Partnerships</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>Diversifying Strategic Partnerships</em></h4>
 
                         <p className="fade-in-on-scroll">
                           India must deepen its relationships with lithium-rich nations such as Australia, Argentina, and Bolivia. Existing MoUs—such as those with Argentina and Chile—should evolve into binding supply contracts involving Indian capital investment or technical cooperation in mining and processing. India should also utilize forums such as the Quad and BRICS to enhance its negotiation capacity and access to upstream lithium resources.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>Scaling Battery Recycling</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>Scaling Battery Recycling</em></h4>
 
                         <p className="fade-in-on-scroll">
                           With global attention on battery circularity, India must expedite lithium recycling infrastructure development. This includes:
@@ -198,7 +198,7 @@ export default function About() {
                           In 2023, over 90 companies in North America and Europe were actively recycling or planning to recycle lithium batteries—often through partnerships between automakers and recyclers to ensure a steady supply of battery-grade materials (S&P Global, 2023, p. 36). India must build a comparable ecosystem.
                         </p>
 
-                        <h5 className="fade-in-on-scroll my-4"><em>Battery Tech and Patent Collaboration with Japan</em></h5>
+                        <h4 className="fade-in-on-scroll my-4"><em>Battery Tech and Patent Collaboration with Japan</em></h4>
 
                         <p className="fade-in-on-scroll">
                           Japan accounted for 41% of global lithium-ion battery patents between 2014-2018 (Guvvadi, 2024), despite limited domestic EV uptake. This gap offers a strategic opening for India to collaborate with Japan to:
@@ -216,7 +216,7 @@ export default function About() {
 
                         <p className="fade-in-on-scroll"><em>Disclaimer: Data updated as of June 2025, next update on September 2025</em></p>
 
-                        <h5 className="fade-in-on-scroll text-blue my-4">References</h5>
+                        <h4 className="fade-in-on-scroll text-blue my-4">References</h4>
 
                         <p className="fade-in-on-scroll" >
                           Argonne National Laboratory. (2023). <em>Potassium-Ion Research Update.</em><br /><br />

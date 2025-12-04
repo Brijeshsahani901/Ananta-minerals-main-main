@@ -40,10 +40,10 @@ export default function ClosingLoop() {
                     backgroundColor: "#fff",
                   }}
                 >
-                  <h2 className="my-3">
+                  <h3 className="my-3">
                     Closing the Loop: Strengthening India's Battery Recycling
                     Supply Chains
-                  </h2>
+                  </h3>
 
                   <p className="my-3">
                     The robustness and resilience of India's clean energy supply
@@ -74,9 +74,9 @@ export default function ClosingLoop() {
                     and price volatility.
                   </p>
 
-                  <h3 className="my-3">
+                  <h4 className="my-3">
                     Domestic Policies and Industry Efforts
-                  </h3>
+                  </h4>
 
                   <p className="my-3">
                     India's&nbsp;
@@ -217,7 +217,7 @@ export default function ClosingLoop() {
                     offtake for recycled feedstock.
                   </p>
 
-                  <h3 className="my-3 ">Global Comparison</h3>
+                  <h4 className="my-3 ">Global Comparison</h4>
 
                   <p className="my-3">
                     Leading recyclers internationally operate at a much larger
@@ -297,7 +297,7 @@ export default function ClosingLoop() {
                     ).
                   </p>
 
-                  <h3 className="my-3 ">Strategic Direction</h3>
+                  <h4 className="my-3 ">Strategic Direction</h4>
 
                   <p className="my-3">
                     To strengthen India's battery recycling supply chain, a

@@ -70,9 +70,9 @@ export default function Niobium() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h2 className="fade-in-on-scroll"><strong>Niobium</strong></h2>
+                        <h2 className="fade-in-on-scroll"><>Niobium</></h2>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Alternate Chemistries</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Alternate Chemistries</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           While niobium is considered largely irreplaceable in high-performance aerospace and nuclear applications, substitution is viable in several non-critical systems. In such use-cases, titanium--vanadium--aluminium composites have demonstrated the potential to reduce niobium requirement by up to 40%, particularly in aircraft structures and secondary propulsion systems (<em>Airbus Materials Substitution Study, 2022</em>). These alloys, while not matching the extreme high-temperature resilience of niobium, are sufficient for components such as satellite casings, support frames, and low-thrust engines.
@@ -82,7 +82,7 @@ export default function Niobium() {
                           India's private aerospace ecosystem---led by Tata Advanced Systems Ltd. (TASL) and Larsen & Toubro Defence---can be incentivised to develop and qualify such niobium-free or niobium-light variants. A targeted policy instrument like a Defence Mineral Substitution Scheme (DMSS) under the Ministry of Defence's Innovation for Defence Excellence (iDEX) framework could catalyse R&D, prototype development, and eventual production scaling for these alternate chemistries.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Alternate Technologies</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Alternate Technologies</></h4>
 
                         <p className="fade-in-on-scroll">
                           In structural and high-strength steel sectors, niobium microalloying improves both strength and weldability without increasing carbon content. Brazilian firm CBMM, the global niobium leader, has pioneered thermomechanical processing (TMP) to incorporate small amounts of niobium into steels used in naval, pipeline, and civil engineering applications. According to CBMM's technical data, such steels offer 20--30% higher yield strength at lower mass density, enabling lightweight yet robust materials for mobility platforms (<em>CBMM Technical Whitepaper, 2023</em>).
@@ -92,7 +92,7 @@ export default function Niobium() {
                           India could replicate this success by establishing a dedicated TMP demonstration unit. This could be jointly run by Steel Authority of India Ltd. (SAIL) and Mishra Dhatu Nigam Ltd. (MIDHANI), focused on producing niobium-bearing steels for strategic sectors such as marine vessels, armoured vehicles, and next-generation fighter jets. Inclusion of DRDO and the Indian Navy in an advisory capacity would ensure that application-readiness is achieved for national defence use-cases.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Strengthening Supply Chains</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Strengthening Supply Chains</></h4>
 
                         <p className="fade-in-on-scroll">
                           Niobium is primarily used in superalloys for rocket nozzles, jet turbine blades, and superconducting magnets. However, India has no known commercial reserves of niobium and is entirely dependent on imports. Over 85% of the global niobium supply comes from Companhia Brasileira de Metalurgia e Mineração (CBMM) in Araxá, Brazil---making it one of the most monopolised mineral markets globally (<em>USGS, 2024, p. 174</em>).
@@ -106,7 +106,7 @@ export default function Niobium() {
                           In parallel, India should actively seek exploration partnerships in Africa, particularly Rwanda and the Democratic Republic of Congo, which host lesser-exploited niobium reserves. Bilateral pacts under India's concessional lines of credit framework, or via platforms such as the India--Africa Forum Summit, could offer Indian firms preferential access to new niobium assets in exchange for infrastructure and processing investment.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Policy Recommendations</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Policy Recommendations</></h4>
 
                         <ul className="fade-in-on-scroll fw-normal">
                           <li className="my-3"><strong>Launch a Defence Mineral Substitution Scheme (DMSS):</strong> Focus on alternate chemistries for non-critical niobium applications through Indian aerospace OEMs and DRDO labs.</li>
@@ -120,7 +120,7 @@ export default function Niobium() {
                           <em>Disclaimer: Data updated as of June 2025, next update on September 2025</em>
                         </p>
 
-                        <h5 className="fade-in-on-scroll mt-4 text-blue"><strong>References</strong></h5>
+                        <h4 className="fade-in-on-scroll mt-4 text-blue"><>References</></h4>
 
                         <div className="fade-in-on-scroll fw-normal">
                           <p className="my-2 fw-normal"><em>Airbus. Materials Substitution Study: Strategic Alloys and Alternatives, 2022.</em></p>

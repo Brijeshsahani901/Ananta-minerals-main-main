@@ -70,15 +70,15 @@ export default function Potash() {
                           backgroundColor: "#fff",
                         }}
                       >
-                        <h3 className="fade-in-on-scroll"><strong>Potash: Strategic Alternatives</strong></h3>
+                        <h3 className="fade-in-on-scroll"><>Potash: Strategic Alternatives</></h3>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Alternate Chemistries</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Alternate Chemistries</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           Potassium-mobilizing biofertilizers (KMBs), particularly strains of <em>Frateuria aurantia</em>, have shown promise in reducing potash dependence in Indian agriculture. Field trials conducted in maize and sugarcane farms across Tamil Nadu and Maharashtra demonstrated a 25% improvement in potassium uptake and overall plant growth (ICAR AICRP, 2023). Wider deployment of KMBs through Krishi Vigyan Kendras (KVKs) and soil health card schemes can enable demand-side substitution in low to medium potassium index regions.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Technological Alternatives</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Technological Alternatives</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India lacks commercially viable domestic reserves of potash, but alternate sources exist. Extraction from seawater brine and lake residues via solar evaporation---successfully deployed in China's Qinghai Lake region---offers a scalable low-carbon pathway. Gujarat's Little Rann and coastal Tamil Nadu provide suitable conditions to pilot such technologies.
@@ -88,7 +88,7 @@ export default function Potash() {
                           Additionally, domestic fertilizer complexes could adopt fluidized bed reactors for producing sulphate of potash (SOP) from imported polyhalite or kainite. This would enable India to diversify away from muriate of potash (MOP), which constitutes over 95% of current imports, and meet the rising demand for chloride-sensitive crops like tobacco, potato, and horticultural produce.
                         </p>
 
-                        <h4 className="fade-in-on-scroll my-4 text-blue"><strong>Strengthening Supply Chains</strong></h4>
+                        <h4 className="fade-in-on-scroll my-4 text-blue"><>Strengthening Supply Chains</></h4>
 
                         <p className="fade-in-on-scroll my-4">
                           India imports nearly 100% of its potash requirements, largely from Canada, Russia, and Belarus. This triad controls over 60% of global production, making India vulnerable to geopolitical disruptions and price shocks. To reduce this dependency, India should actively diversify its supply base.
