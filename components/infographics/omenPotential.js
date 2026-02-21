@@ -7,13 +7,12 @@ const IndiaOmanMineralInfographic = () => {
       className="p-1" 
       style={{ 
         maxWidth: '100%', 
-        minHeight: '520px',
+        minHeight: '515px',
         backgroundColor: '#0b1120',
         fontFamily: "'Inter', 'Segoe UI', sans-serif",
         overflow: 'hidden',
         borderRadius: '10px',
         boxShadow: '0 10px 30px rgba(0, 0, 0, 0.4)',
-        boxSizing: "border-box"
       }}
     >
       {/* Header */}
@@ -261,106 +260,6 @@ const IndiaOmanMineralInfographic = () => {
         </Col>
       </Row>
 
-      {/* Responsive Styles */}
-      <style jsx="true">{`
-        /* Desktop: Fixed 530px */
-        @media (min-width: 992px) {
-          .container {
-            minHeight: 520px !important;
-            boxSizing: "border-box" !important;
-          }
-        }
-        
-        /* Tablet */
-        @media (max-width: 991px) and (min-width: 768px) {
-          .container {
-            height: auto !important;
-            min-height: 530px !important;
-          }
-          
-          .row {
-            height: auto !important;
-          }
-          
-          .col-md-4, .col-md-5, .col-md-3 {
-            height: auto !important;
-            min-height: 280px;
-            margin-bottom: 15px;
-          }
-        }
-        
-        /* Mobile */
-        @media (max-width: 767px) {
-          .container {
-            height: auto !important;
-            min-height: auto !important;
-            padding: 12px !important;
-          }
-          
-          .row {
-            height: auto !important;
-            flex-direction: column;
-          }
-          
-          .col-md-4, .col-md-5, .col-md-3 {
-            height: auto !important;
-            width: 100% !important;
-            margin-bottom: 12px;
-            min-height: 250px;
-          }
-          
-          div[style*="gridTemplateColumns"] {
-            grid-template-columns: repeat(3, 1fr) !important;
-          }
-          
-          h1 {
-            font-size: 1.3rem !important;
-          }
-          
-          h2 {
-            font-size: 1rem !important;
-          }
-          
-          p {
-            font-size: 0.8rem !important;
-          }
-          
-          div[style*="60,000 TONNES"] {
-            font-size: 1.1rem !important;
-            padding: 12px !important;
-          }
-          
-          div[style*="ANTIMONY"] {
-            font-size: 0.95rem !important;
-          }
-        }
-        
-        /* Small Mobile */
-        @media (max-width: 480px) {
-          .container {
-            padding: 10px !important;
-          }
-          
-          div[style*="gridTemplateColumns"] {
-            grid-template-columns: repeat(2, 1fr) !important;
-            gap: 6px !important;
-          }
-          
-          .col-md-4, .col-md-5, .col-md-3 {
-            min-height: 220px;
-            padding-left: 10px !important;
-            padding-right: 10px !important;
-          }
-          
-          h1 {
-            font-size: 1.2rem !important;
-          }
-          
-          div[style*="60,000 TONNES"] {
-            font-size: 1rem !important;
-          }
-        }
-      `}</style>
     </Container>
   );
 };

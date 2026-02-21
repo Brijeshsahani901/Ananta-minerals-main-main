@@ -817,4 +817,160 @@ export const whatsnew = [
     date: "5 February, 2026",
     img: "",
   },
+    {
+    id: 66,
+    title:
+      "India Invited to Pax Silica Alliance",
+    description:
+      "A top US official expressed excitement in inviting India to join 'Pax Silica,' a US-led initiative to counter China's dominance in silica and critical minerals supply chains. The invitation aligns with Trump's multilateral push for secure mineral sourcing amid geopolitical tensions. This potential partnership could boost India's role in global tech and battery supply chains through collaborative extraction and processing.",
+    downloadUrl: "#",
+    path: "https://www.state.gov/releases/office-of-the-spokesperson/2026/02/2026-critical-minerals-ministerial",
+    author: "U.S. Department of State",
+    date: "4 February, 2026",
+    img: "",
+  },
+    {
+    id: 67,
+    title:
+      "US Eyes NZ Critical Mineral Extraction",
+    description:
+      "US officials are in active talks with New Zealand for critical mineral extraction and midstream processing on NZ soil, following a Washington DC ministerial attended by 55 nations including NZ. Under Secretary Jacob Helberg highlighted evaluating economical projects based on mineral types, extraction ease, and purity, as part of Trump's strategy to diversify supply from China. NZ Resources Minister Shane Jones emphasized developing vanadium and mineral sands while addressing fiscal, iwi consultations, and environmental concerns; critics like Greenpeace warn of ecological and indigenous rights risks. The US-NZ framework aims for economic resilience via new supply chains and investments.",
+    downloadUrl: "#",
+    path: "https://www.1news.co.nz/2026/02/07/us-discussing-critical-mineral-extraction-on-new-zealand-soil/",
+    author: "1News",
+    date: "7 February, 2026",
+    img: "",
+  },
+    {
+    id: 68,
+    title:
+      "India Negotiates Multiple Mineral Pacts",
+    description:
+      "India is holding talks for critical minerals deals with Brazil, Canada, France, and the Netherlands to secure supply chains for batteries and tech, per Reuters. Unable to fetch full content, these negotiations reflect India's push for diversification amid China's reliance, focusing on exploration, mining, and processing collaborations. This multilateral approach supports national mineral security and green energy goals under recent policy reforms.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/india/india-talks-over-critical-minerals-deals-with-brazil-canada-france-netherlands-2026-02-10/",
+    author: "Reuters",
+    date: "10 February, 2026",
+    img: "",
+  },
+   {
+    id: 69,
+    title:
+      "US Shifts to Multilateral Minerals",
+    description:
+      "The US is pivoting to multilateral partnerships for critical mineral security, signing deals with 11 nations and negotiating with 17 more post-ministerial, counters China's market control, Reuters reports. Unable to retrieve details, the strategy includes billions in investments, stockpiles, and resilient supply chains for AI, batteries, and robotics. Trump's administration prioritizes allied extraction and processing to transform global markets.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/markets/commodities/us-turns-multilateral-search-critical-mineral-security-2026-02-11/",
+    author: "Reuters",
+    date: "11 February, 2026",
+    img: "",
+  },
+   {
+    id: 70,
+    title:
+      "Mines Ministry's Export License Auction Launch",
+    description:
+      "India's Ministry of Mines launched the 2nd Tranche of Exploration Licence (EL) auctions on February 12, 2026, in New Delhi for critical and deep-seated minerals, as per PIB release. The event, led by Union Minister G. Kishan Reddy, unveiled GSI's AI/ML-powered digital portal integrated with NGDR for enhanced data transparency. Building on the 1st Tranche's 13 blocks (REE, zinc, diamond, etc.), it includes roadshows, e-auctions via MSTC, NMET reimbursements, and stakeholder sessions to boost exploration reforms and mineral self-reliance.",
+    downloadUrl: "#",
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2226365&reg=3&lang=2",
+    author: "PIB",
+    date: "11 February, 2026",
+    img: "",
+  },
+  {
+    id: 71,
+    title:
+      "India Joins US-Led PAX Silica Coalition",
+    description:
+      "India has formally signed an agreement to join the US-led PAX Silica coalition, a strategic partnership aimed at securing global supply chains for high-purity silica, essential for semiconductors, solar panels, and advanced batteries. This initiative counters China's overwhelming dominance, which controls over 90% of silica refining capacity, amid rising geopolitical tensions and tech decoupling efforts. The coalition, involving key players like the US, Australia, and Canada, focuses on collaborative mining, processing upgrades, and R&D to ensure resilient supplies. For India, this membership is transformative. It directly supports the India Semiconductor Mission, which targets $100 billion in production by 2030, by providing diversified silica imports critical for chip fabrication plants in Gujarat and Assam. Reduced dependency on China mitigates supply disruptions, stabilizes costs for domestic solar manufacturing under PLI schemes, and enhances national security for defense electronics. Furthermore, it opens avenues for technology transfers and joint ventures, boosting India's role in friend-shoring networks. As India ramps up rare earth explorations in domestic deposits, PAX Silica integration accelerates self-reliance, positioning the country as a pivotal hub in the mineral-tech ecosystem amid global green transitions.",
+    downloadUrl: "#",
+    path: "https://www.thehindu.com/sci-tech/technology/india-signs-agreement-to-join-us-led-coalition-pax-silica/article70654836.ece",
+    author: "The Hindu",
+    date: "20 February, 2026",
+    img: "",
+  },
+  {
+    id: 72,
+    title:
+      "US-Uzbekistan Critical Minerals Partnership",
+    description:
+      "The United States and Uzbekistan have inked a comprehensive pact on critical minerals, targeting the Central Asian nation's vast reserves of rare earth elements, copper, uranium, and gold to bolster Western supply chains. This deal emphasizes joint exploration, sustainable mining practices, infrastructure development, and downstream processing to diminish China's monopoly, which supplies 80-90% of global rare earths. Uzbekistan's untapped deposits, estimated at billions in value, gain US investment for extraction technologies and market access. For India, this development carries mixed implications. As a major importer of rare earths for EVs, renewables, and defense, India faces heightened competition for Central Asian resources, urging accelerated diplomacy via the India-Central Asia Summit framework. It prompts domestic push in mineral-rich regions like Ladakh and Arunachal Pradesh, aligning with the National Critical Minerals Mission launched in 2024. Indirectly, diversified global supplies stabilize prices, benefiting India's battery ecosystem under FAME-III. However, exclusion from such bilateral pacts risks supply squeezes, compelling India to forge similar MoUs with Kazakhstan and Tajikistan, enhancing geopolitical leverage and reducing vulnerabilities in the Quad-plus minerals security architecture.",
+    downloadUrl: "#",
+    path: "https://www.thehindu.com/news/international/us-and-uzbekistan-sign-critical-minerals-pact/article70649445.ece",
+    author: "The Hindu",
+    date: "19 February, 2026",
+    img: "",
+  },
+  {
+    id: 73,
+    title:
+      "US Critical Minerals Price Floor Mechanism",
+    description:
+      "US agencies, including the Department of Energy and Commerce, have pioneered a critical minerals price floor system to shield domestic producers from China's aggressive dumping tactics. This mechanism establishes minimum viable prices for key minerals like lithium, cobalt, nickel, and graphite, subsidized through federal incentives to foster long-term mining viability. By countering Beijing's state-backed overproduction, which crashed global prices by 70% in recent years, it aims to revive Western projects stalled by unprofitability. Implementation involves dynamic modeling tied to production costs and ESG standards. India stands to gain significantly from this stabilization. As the world's largest refiner of some minerals yet import-dependent, steadier pricing aids affordable sourcing for its burgeoning EV sector, projected to need 30 times more lithium by 2030. It supports the Critical Minerals Mission by encouraging aggressive domestic auctions in Chhattisgarh and Odisha, while recycling mandates gain traction. However, if excluded from aligned pricing pacts, India risks cost escalations, prompting calls for WTO-compliant countermeasures and deeper AUSTRALIA-India ties. Overall, it catalyzes India's pivot to value-added processing, fortifying supply chain resilience amid US-led de-risking from China.",
+    downloadUrl: "#",
+    path: "https://www.businesstimes.com.sg/companies-markets/energy-commodities/us-agencies-have-developed-critical-minerals-price-floor-system",
+    author: "The Business Times",
+    date: "18 February, 2026",
+    img: "",
+  },
+  {
+    id: 74,
+    title:
+      "India-France Critical Minerals Declaration",
+    description:
+      "India and France have unveiled a Joint Declaration of Intent for critical minerals cooperation, marking a milestone in bilateral ties under the Horizon 2047 roadmap. The pact spans geological mapping, joint exploration, recycling technologies, and supply chain diversification for lithium, rare earths, cobalt, and graphite, leveraging France's expertise via Orano and Eramet. It includes R&D hubs, skill development, and investment in processing facilities. This aligns with India's push for 50 critical minerals security. Direct benefits for India are profound: it accelerates the Critical Minerals Mission by securing European tech transfers for domestic refining, vital for PLI schemes in batteries and solar. Reduced China reliance—currently 60% of imports—enhances EV adoption under FAME, with France aiding lithium projects in Argentina via third-country pacts. It fosters joint ventures, potentially unlocking $5-10 billion investments, and strengthens defense interoperability through shared rare earths for avionics. Environmentally, emphasis on green mining supports India's net-zero goals. Amid US-China frictions, this EU anchor diversifies India's alliances, boosting negotiating power in global forums like Minerals Security Partnership, and positions India as a processing powerhouse.",
+    downloadUrl: "#",
+    path: "https://aninews.in/news/world/asia/india-france-announce-joint-declaration-of-intent-for-cooperation-in-critical-minerals20260218050746/",
+    author: "ANI",
+    date: "18 February, 2026",
+    img: "",
+  },
+  {
+    id: 75,
+    title:
+      "US-Japan Critical Minerals and Energy Pact",
+    description:
+      "The US and Japan have sealed a landmark critical minerals agreement, bundled with oil and gas collaborations, to fortify allied supply chains against China's dominance. Focusing on rare earths, lithium, and nickel, it promotes co-investment in third-country mines (e.g., Australia, Canada), recycling innovations, and stockpiling strategies. Japan contributes processing prowess, while the US offers financing via DFC. This expands the 2023 framework amid escalating tariffs. For India, it signals opportunities and cautions. Diversified global flows ease import pressures for India's electronics and defense sectors, reliant on 95% Japanese rare earth magnets currently. It indirectly stabilizes prices, aiding the semiconductor push and renewable targets under ISA. However, deepening US-Japan exclusivity heightens exclusion risks from premium chains, compelling India to amplify Quad minerals dialogues and bilateral pacts with Japan via the 2024 supply chain MoU. Domestic auctions for beach sand minerals gain urgency, aligning with Atmanirbhar Bharat. Positively, it inspires India-Japan-Australia tripartite ventures in Africa, enhancing India's green tech ambitions and geopolitical heft in Indo-Pacific resource security.",
+    downloadUrl: "#",
+    path: "https://www.theguardian.com/business/2026/feb/18/us-japan-critical-minerals-agreement-oil-gas-projects-deal",
+    author: "The Guardian",
+    date: "18 February, 2026",
+    img: "",
+  },
+   {
+    id: 76,
+    title:
+      "6. India-Chile FTA Critical Minerals Extension to Peru",
+    description:
+      "India's Free Trade Agreement with Chile features a groundbreaking critical minerals chapter, poised for extension to Peru, creating a South American powerhouse for lithium, copper, and molybdenum supplies. Negotiations, led by Commerce Secretary Rajesh Agrawal, position it as a model for CEPA expansions, offering preferential tariffs, investment protections, and tech cooperation. Chile and Peru hold 60% of global lithium reserves. This profoundly impacts India. It secures long-term, cost-effective access for EV batteries and renewables, slashing China-dependent imports by 40-50%. Under the Critical Minerals Mission, it catalyzes refining hubs in Gujarat, supporting PLI outlays of ₹18,100 crore. Joint ventures unlock Andean exploration, while zero-duty access boosts exports of processed minerals. Economically, it adds $2-3 billion in trade annually, fortifying energy security amid global shortages. Geopolitically, it counters China's Latin America inroads via Belt and Road. For India's steel and electronics industries, stable copper flows mitigate inflation risks. This trilateral framework enhances India's LATAM diplomacy, fostering sustainable mining standards and positioning the nation as a bridge between South America and Asia in the critical minerals race.",
+    downloadUrl: "#",
+    path: "https://www.moneycontrol.com/news/business/economy/critical-minerals-chapter-in-india-chile-fta-may-be-extended-to-peru-13830892.html",
+    author: "Money Control",
+    date: "16 February, 2026",
+    img: "",
+  },
+   {
+    id: 77,
+    title:
+      "Canada's Critical Minerals Supply Chain Blueprint",
+    description:
+      "Canada is executing a strategic pivot to critical minerals, branding them as 'strategic materials' in a comprehensive blueprint for supply chain dominance. Leveraging vast deposits of nickel, lithium, cobalt, and rare earths in Nunavut and Quebec, it outlines mining ramps, refining incentives, indigenous partnerships, and alliances via CUSMA. Federal investments hit CAD 4 billion for processing hubs. For India, this northern diversification is invaluable. Under the expanded CEPA, preferential access secures inputs for EVs and aviation, cutting Asia risks where China dominates 85% processing. It stabilizes costs for Tata and Mahindra's battery lines, aligning with PLI targets. Joint ventures, like with Ontario's Ring of Fire, open CAD 10 billion opportunities, transferring clean tech for India's Arctic Circle interests. Geopolitically, it fortifies Quad-adjacent resilience against disruptions. Domestic implications spur beach sand and Himalayan explorations, with Canadian expertise aiding ESG compliance. As global demand triples by 2040, Canada's model inspires India's Critical Minerals Mission auctions, fostering hubs in Tamil Nadu. This pivot elevates India's role in ethical chains, enhancing energy security and export competitiveness in a fragmented market.",
+    downloadUrl: "#",
+    path: "https://rareearthexchanges.com/news/canadas-critical-minerals-pivot34-strategic-materials-and-a-blueprint-for-supply-chain-power/",
+    author: "The Guardian",
+    date: "18 February, 2026",
+    img: "",
+  },
+   {
+    id: 78,
+    title:
+      "8. Attero's Massive Rare Earth Corridor Investment",
+    description:
+      "Attero Recycling has committed ₹7,000 crore over five years to India's Rare Earth Corridor, a game-changing initiative for e-waste recycling and advanced processing of neodymium, dysprosium, praseodymium, and other heavy rare earths vital for EV motors, wind turbines, and electronics. Partnering with government auctions and NITI Aayog, it targets 90% import substitution from China, processing 4 million tonnes annually. Facilities in Uttar Pradesh and Telangana pioneer urban mining tech. For India, this private powerhouse revolutionizes the sector. It slashes 95% dependency, fueling PLI for magnets worth ₹50,000 crore by 2030, and supports 500 GWh battery capacity. Job creation exceeds 10,000 in high-tech roles, aligning with Atmanirbhar Bharat. Environmentally, recycling cuts mining scars, advancing circular economy under the Critical Minerals Mission. Economically, it generates ₹20,000 crore exports, bolstering forex amid global shortages. Synergies with DRDO enhance defense magnets for missiles and radars. As Beijing restricts exports, Attero's scale positions India as the second-largest processor, attracting FDI from Japan and US. This corridor cements self-reliance, powering green growth and global competitiveness in renewables and semiconductors.",
+    downloadUrl: "#",
+    path: "https://www.business-standard.com/companies/news/attero-to-invest-rs-7-000-crore-in-rare-earth-corridor-126021301517_1.html",
+    author: "The Business Standard",
+    date: "13 February, 2026",
+    img: "",
+  },
 ];

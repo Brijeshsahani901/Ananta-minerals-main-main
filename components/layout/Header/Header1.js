@@ -20,7 +20,7 @@ const Header1 = ({
     <>
       <header>
         <div className="header__top">
-          <div className="container">
+          {/* <div className="container"> */}
             <div className="row align-items-center">
               <div className="col-12 d-flex justify-content-center">
                 <div className="header__top-logo logo text-lg-left">
@@ -40,7 +40,7 @@ const Header1 = ({
                   />
                 </div>
               </div>
-            </div>
+            {/* </div> */}
           </div>
         </div>
         <div

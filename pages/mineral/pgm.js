@@ -1,10 +1,7 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function PlatinumGroupMetals() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";

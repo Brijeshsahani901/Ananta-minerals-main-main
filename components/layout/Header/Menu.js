@@ -114,30 +114,27 @@ export default function Menu({
               if (result.type === "author") {
                 return `
                 <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; font-family: 'Inter', sans-serif;">
-                  <h4 style="margin: 0 0 5px 0; color: #1FA3F3; font-family: 'Inter', sans-serif;">${
-                    result.name
+                  <h4 style="margin: 0 0 5px 0; color: #1FA3F3; font-family: 'Inter', sans-serif;">${result.name
                   }</h4>
-                  <div style="font-size: 0.9em; color: #777; margin-bottom: 10px; font-family: 'Inter', sans-serif;">Author • ${
-                    result.category
+                  <div style="font-size: 0.9em; color: #777; margin-bottom: 10px; font-family: 'Inter', sans-serif;">Author • ${result.category
                   }</div>
                   <div style="font-size: 0.9em; font-family: 'Inter', sans-serif;">
                     <strong>Articles:</strong>
                     <ul style="padding-left: 20px; margin: 5px 0 0 0; font-family: 'Inter', sans-serif;">
                       ${result.routes
-                        .map(
-                          (route) => `
+                    .map(
+                      (route) => `
                         <li style="margin-bottom: 5px; font-family: 'Inter', sans-serif;">
                           <a href="${basePath + route.path}" 
-                             onclick="event.preventDefault(); window.location.href='${
-                               basePath + route.path
-                             }'"
+                             onclick="event.preventDefault(); window.location.href='${basePath + route.path
+                        }'"
                              style="color: #4CAF50; text-decoration: none; cursor: pointer; font-family: 'Inter', sans-serif;">
                             ${route.label}
                           </a>
                         </li>
                       `
-                        )
-                        .join("")}
+                    )
+                    .join("")}
                     </ul>
                   </div>
                 </div>
@@ -153,11 +150,10 @@ export default function Menu({
                 <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; font-family: 'Inter', sans-serif;">
                   <a href="${linkHref}" 
                      target="${linkTarget}"
-                     onclick="${
-                       isExternal
-                         ? ""
-                         : `event.preventDefault(); window.location.href='${linkHref}'`
-                     }"
+                     onclick="${isExternal
+                    ? ""
+                    : `event.preventDefault(); window.location.href='${linkHref}'`
+                  }"
                      style="color: #1FA3F3; text-decoration: none; cursor: pointer; font-family: 'Inter', sans-serif;">
                     ${result.label}
                   </a>
@@ -165,14 +161,13 @@ export default function Menu({
                     ${result.category} • ${result.author} • ${result.date || ""}
                     ${isExternal ? " • External Link" : ""}
                   </div>
-                  ${
-                    result.content
-                      ? `
+                  ${result.content
+                    ? `
                   <div style="font-size: 0.85em; color: #555; margin-top: 5px; font-family: 'Inter', sans-serif;">
                     ${result.content.substring(0, 100)}...
                   </div>
                   `
-                      : ""
+                    : ""
                   }
                 </div>
               `;
@@ -180,14 +175,12 @@ export default function Menu({
                 return `
                 <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; font-family: 'Inter', sans-serif;">
                   <a href="${basePath + result.path}" 
-                     onclick="event.preventDefault(); window.location.href='${
-                       basePath + result.path
-                     }'"
+                     onclick="event.preventDefault(); window.location.href='${basePath + result.path
+                  }'"
                      style="color: #1FA3F3; text-decoration: none; cursor: pointer; font-family: 'Inter', sans-serif;">
                     ${result.label}
                   </a>
-                  <div style="font-size: 0.9em; color: #777; font-family: 'Inter', sans-serif;">${
-                    result.type
+                  <div style="font-size: 0.9em; color: #777; font-family: 'Inter', sans-serif;">${result.type
                   } • ${result.category}</div>
                 </div>
               `;
@@ -245,7 +238,50 @@ export default function Menu({
   return (
     <>
       <div className="tgmenu__wrap">
-        <nav className="tgmenu__nav">
+        <nav className="tgmenu__nav" style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "100%",
+  }}
+>
+          <motion.div
+  initial={{ opacity: 0, x: -20 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.4 }}
+  style={{
+    marginRight: "20px",
+    display: "flex",
+    alignItems: "center",
+  }}
+>
+  <Link href="/active-projects">
+    <button
+      style={{
+        background: "linear-gradient(135deg, #1FA3F3, #0d6efd)",
+        border: "none",
+        color: "#fff",
+        padding: "8px 18px",
+        borderRadius: "999px",
+        fontSize: "14px",
+        fontWeight: 500,
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        fontFamily: "'Inter', sans-serif",
+        boxShadow: "0 4px 12px rgba(31,163,243,0.4)",
+      }}
+      onMouseEnter={(e) =>
+        (e.target.style.boxShadow = "0 6px 18px rgba(31,163,243,0.6)")
+      }
+      onMouseLeave={(e) =>
+        (e.target.style.boxShadow = "0 4px 12px rgba(31,163,243,0.4)")
+      }
+    >
+      Active Projects
+    </button>
+  </Link>
+</motion.div>
+
           {logoAlt && (
             <motion.div
               className="d-flex gap-4 align-items-center"
@@ -293,6 +329,7 @@ export default function Menu({
                 },
               }}
             >
+
               {router.pathname !== "/" && (
                 <motion.li
                   key="back-button"
@@ -332,7 +369,10 @@ export default function Menu({
                 </motion.li>
               )}
               {/* Sectors Menu */}
-              <motion.li
+
+
+
+              {/* <motion.li
                 onMouseEnter={() => setIsSubMenuOpen(true)}
                 onMouseLeave={() => setIsSubMenuOpen(false)}
               >
@@ -429,9 +469,9 @@ export default function Menu({
                     </motion.ul>
                   )}
                 </AnimatePresence>
-              </motion.li>
+              </motion.li> */}
               {/* Supply Chains */}
-              <motion.li
+              {/* <motion.li
                 variants={{
                   hidden: { opacity: 0, y: -20 },
                   visible: {
@@ -472,7 +512,7 @@ export default function Menu({
                     />
                   )}
                 </Link>
-              </motion.li>
+              </motion.li> */}
               {/* Alternate Tech */}
               <motion.li
                 onMouseEnter={() => setIsSubMenuOpen(true)}
@@ -485,7 +525,6 @@ export default function Menu({
                       fontFamily: "'Inter', sans-serif",
                     }}
                   >
-                    {" "}
                     Alternate Tech
                   </span>
                   {router.pathname === "/alternate-tech" && (
@@ -660,10 +699,10 @@ export default function Menu({
                   )}
                 </Link>
               </motion.li>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               {/* Search */}
-              <motion.li
+              {/* <motion.li
                 className="menu-search"
+                 style={{ marginLeft: "auto" }}
                 variants={{
                   hidden: { opacity: 0, y: -20 },
                   visible: {
@@ -933,8 +972,275 @@ export default function Menu({
                     )}
                   </AnimatePresence>
                 </div>
-              </motion.li>
+              </motion.li> */}
             </motion.ul>
+          </div>
+         <div
+  className="search-container d-none d-lg-block"
+  style={{
+    position: "relative",
+    fontFamily: "'Inter', sans-serif",
+    marginBottom: "10px"
+  }}
+>
+
+            <form onSubmit={handleSearch}>
+              <div className="input-group">
+                <>
+                  <style>
+                    {`
+      .search-input::placeholder {
+        font-size: 15px;
+      }
+    `}
+                  </style>
+
+                  <input
+                    type="text"
+                    className="form-control search-input"
+                    placeholder="Search"
+                    aria-label="Search"
+                    value={searchQuery}
+                    onChange={(e) => {
+                      setSearchQuery(e.target.value);
+                      setShowResults(true);
+                    }}
+                    onFocus={() => setShowResults(true)}
+                  />
+                </>
+
+                <div className="">
+                  <button
+                    className="btn"
+                    style={{
+                      backgroundColor: "#F5EFEB",
+                      color: "#2F4156",
+                      fontFamily: "'Inter', sans-serif",
+                    }}
+                    type="submit"
+                  >
+                    <i className="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <AnimatePresence>
+              {showResults && searchResults.length > 0 && (
+                <motion.div
+                  className="search-results"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    left: 0,
+                    right: 0,
+                    backgroundColor: "#000",
+                    borderRadius: "4px",
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                    zIndex: 1000,
+                    maxHeight: "400px",
+                    overflowY: "auto",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    fontFamily: "'Inter', sans-serif",
+                  }}
+                >
+                  {filteredResults.map((result) => (
+                    <div
+                      key={
+                        result.type === "author"
+                          ? result.name
+                          : result.path + result.label
+                      }
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
+                      {result.type === "author" ? (
+                        <div
+                          style={{
+                            padding: "10px 15px",
+                            fontFamily: "'Inter', sans-serif",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                              marginBottom: "8px",
+                            }}
+                          >
+                            <div
+                              style={{
+                                fontWeight: 600,
+                                color: "#fff",
+                                fontFamily: "'Inter', sans-serif",
+                              }}
+                            >
+                              {result.name}
+                            </div>
+                            <div
+                              style={{
+                                fontSize: "0.7rem",
+                                color: "rgba(255,255,255,0.5)",
+                                textTransform: "uppercase",
+                                fontFamily: "'Inter', sans-serif",
+                              }}
+                            >
+                              Author
+                            </div>
+                          </div>
+                          <div style={{ marginTop: "10px" }}>
+                            <div
+                              style={{
+                                fontSize: "0.8rem",
+                                color: "rgba(255,255,255,0.6)",
+                                marginBottom: "5px",
+                                fontFamily: "'Inter', sans-serif",
+                              }}
+                            >
+                              Articles:
+                            </div>
+                            {result.routes.map((route, i) => (
+                              <motion.div
+                                key={route.path}
+                                whileHover={{
+                                  backgroundColor:
+                                    "rgba(255,255,255,0.1)",
+                                }}
+                                style={{
+                                  padding: "8px 10px",
+                                  cursor: "pointer",
+                                  borderRadius: "4px",
+                                  marginBottom: "4px",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  fontFamily: "'Inter', sans-serif",
+                                }}
+                                onClick={() => {
+                                  router.push(route.path);
+                                  setSearchQuery("");
+                                  setShowResults(false);
+                                }}
+                              >
+                                <i
+                                  className="fas fa-file-alt"
+                                  style={{
+                                    marginRight: "8px",
+                                    color: "rgba(255,255,255,0.5)",
+                                    fontSize: "0.8rem",
+                                  }}
+                                />
+                                <span
+                                  style={{
+                                    color: "#1FA3F3",
+                                    fontFamily: "'Inter', sans-serif",
+                                  }}
+                                >
+                                  {route.label}
+                                </span>
+                              </motion.div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : result.type === "article" ? (
+                        <div key={`article-${result.path}`}>
+                          <motion.div
+                            whileHover={{
+                              backgroundColor: "rgba(255,255,255,0.1)",
+                            }}
+                            style={{
+                              padding: "8px 10px",
+                              cursor: "pointer",
+                              marginBottom: "4px",
+                              display: "flex",
+                              alignItems: "center",
+                              color: "white",
+                              fontFamily: "'Inter', sans-serif",
+                            }}
+                            onClick={() => handleResultClick(result)}
+                          >
+                            <i
+                              className={`fas ${result.isExternal
+                                  ? "fa-external-link-alt"
+                                  : "fa-file-alt"
+                                }`}
+                              style={{
+                                marginRight: "8px",
+                                color: "rgba(255,255,255,0.5)",
+                                fontSize: "0.8rem",
+                              }}
+                            />
+                            <div>
+                              <div
+                                style={{
+                                  color: "#1FA3F3",
+                                  fontFamily: "'Inter', sans-serif",
+                                }}
+                              >
+                                {result.label}
+                              </div>
+                              <div
+                                style={{
+                                  fontSize: "0.7rem",
+                                  color: "rgba(255,255,255,0.6)",
+                                  fontFamily: "'Inter', sans-serif",
+                                }}
+                              >
+                                {result.author} • {result.category}
+                                {result.isExternal && " • External"}
+                              </div>
+                            </div>
+                          </motion.div>
+                        </div>
+                      ) : (
+                        <motion.div
+                          whileHover={{
+                            backgroundColor: "rgba(255,255,255,0.1)",
+                          }}
+                          style={{
+                            padding: "10px 15px",
+                            cursor: "pointer",
+                            borderBottom:
+                              "1px solid rgba(255,255,255,0.05)",
+                            fontFamily: "'Inter', sans-serif",
+                          }}
+                          onClick={() => handleResultClick(result)}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                            }}
+                          >
+                            <div
+                              style={{
+                                fontWeight: 500,
+                                color: "#fff",
+                                fontFamily: "'Inter', sans-serif",
+                              }}
+                            >
+                              {result.label}
+                            </div>
+                            <div
+                              style={{
+                                fontSize: "0.7rem",
+                                color: "rgba(255,255,255,0.5)",
+                                textTransform: "uppercase",
+                                fontFamily: "'Inter', sans-serif",
+                              }}
+                            >
+                              Page
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </div>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </nav>
 
@@ -943,7 +1249,7 @@ export default function Menu({
           className="mobile-nav-toggler d-xl-none  d-lg-none"
           style={{
             display: "flex",
-            justifyContent: pathname == "/" ?  "end" : "space-between",
+            justifyContent: pathname == "/" ? "end" : "space-between",
             width: "80%",
             alignItems: "center",
             fontFamily: "'Inter', sans-serif",
@@ -963,7 +1269,6 @@ export default function Menu({
               whileTap={{ scale: 0.95 }}
               onClick={() => router.back()}
               style={{
-                marginLeft: "-80px",
                 borderRadius: "999px",
                 cursor: "pointer",
                 color: "#F5EFEB",
@@ -1091,8 +1396,8 @@ export default function Menu({
           top: 100%;
           left: 0;
           background: ${white
-            ? "rgba(255,255,255,0.95)"
-            : "rgba(17,17,17,0.95)"};
+          ? "rgba(255,255,255,0.95)"
+          : "rgba(17,17,17,0.95)"};
           min-width: 200px;
           padding: 0rem;
           border-radius: 8px;

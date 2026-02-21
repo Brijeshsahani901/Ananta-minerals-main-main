@@ -10,6 +10,50 @@ const DocumentSlider = () => {
   const [showRightArrow, setShowRightArrow] = useState(true);
 
   const slides = [
+     {
+      id: "agriculture",
+      image: `${basePath}/assets/sectors_images/agriculture.jpg`,
+      title: "Mineral Security in India's Agriculture Sector",
+      link: "/agriculture",
+      content:
+        "India's agricultural sector—on which over 60% of the population depends directly or indirectly— relies heavily on the uninterrupted supply of mineral-based fertilizers.",
+      author: "Prerna Bountra",
+      date: "July 2025",
+      category: "Research Report",
+    },
+     {
+      id: "automobile",
+      image: `${basePath}/assets/sectors_images/automobile.jpg`,
+      title: "Automobile Industry and Battery Applications",
+      link: "/automobile",
+      content:
+        "The rapid shift toward electric vehicles (EVs) and next-generation battery technologies has made the automotive sector highly dependent on a secure, affordable supply of critical minerals—especially lithium, nickel, cobalt, graphite, and rare earth elements (REEs).",
+      author: "Ayan Barman",
+      date: "July 2025",
+      category: "Research Report",
+    },
+     {
+      id: "defence-and-aerospace",
+      image: `${basePath}/assets/sectors_images/defence.jpg`,
+      title: "Mineral Security in India's Defence and Aerospace Supply Chain",
+      link: "/defence-and-aerospace",
+      content:
+        "The defence and aerospace sectors represent the technological apex of India's industrial ambitions, underpinning national security, regional power projection, and strategic autonomy.",
+      author: "Prerna Bountra",
+      date: "July 2025",
+      category: "Research Report",
+    },
+     {
+      id: "renewable-energy",
+      image: `${basePath}/assets/sectors_images/renewable.jpg`,
+      title: "Critical Minerals for India's Renewable Energy Transition",
+      link: "/renewable-energy",
+      content:
+        "The renewable energy sector is increasingly vulnerable to supply, pricing, and processing challenges concerning key transition minerals—copper, platinum group metals (PGMs), and tellurium.",
+      author: "Ayan Barman",
+      date: "July 2025",
+      category: "Research Report",
+    },
     {
       id: 1,
       image: `${basePath}/assets/minerals_images/battery.jpg`,
@@ -220,18 +264,42 @@ const DocumentSlider = () => {
       date: "January 2026",
       category: "Industry Analysis",
     },
-    //  {
-    //   id: 19,
-    //   image: `${basePath}/assets/minerals_images/venezeula.jpg`,
-    //   title: "Union Budget Positions India in the Global Supply Chain with Rare Earth Corridor",
-    //   link: "/supply-chain/union-budget",
-    //   content:
-    //     "In the Union Budget for the financial year 2026–2027, the Government of India has articulated a clear strategy aimed at integrating the country more deeply into global supply and value chains for critical minerals,",
-    //   author: "Aditya Pareek",
-    //   date: "February 2026",
-    //   category: "Industry Analysis",
-    // },
+      {
+      id: "latin",
+      image: `${basePath}/assets/minerals_images/india-latin.jpg`,
+      title: "India-Latin America Critical Minerals Agreement",
+      link: "/supply-chain/india-latin",
+      content:
+        "India’s search for critical minerals is entering a more assertive diplomatic phase, and Latin America is becoming central to that effort. As the global energy transition to greener sources accelerates, minerals such as lithium, copper, cobalt and rare earth elements have shifted from being niche commodities to strategic assets.",
+      author: "Aditya Pareek",
+      date: "February 2026",
+      category: "Industry Analysis",
+    },
+      {
+      id: 20,
+      image: `${basePath}/assets/minerals_images/jaishankar.jpg`,
+      title: "Jaishankar in Washington: Critical Minerals and the Hard Geometry of Supply Chains",
+      link: "/supply-chain/jaishankar",
+      content:
+        "External Affairs Minister S. Jaishankar’s latest visit to Washington comes at a structural inflection point in global economic geopolitics.",
+      author: "Mithilesh Phadke",
+      date: "February 2026",
+      category: "Industry Analysis",
+    },
+     {
+      id: 19,
+      image: `${basePath}/assets/minerals_images/budget2026.jpeg`,
+      title: "Union Budget Positions India in the Global Supply Chain with Rare Earth Corridor",
+      link: "/supply-chain/union-budget",
+      content:
+        "In the Union Budget for the financial year 2026–2027, the Government of India has articulated a clear strategy aimed at integrating the country more deeply into global supply and value chains for critical minerals,",
+      author: "Aditya Pareek",
+      date: "February 2026",
+      category: "Industry Analysis",
+    },
+   
   ];
+  
 
   const parseDate = (dateStr) => {
     const clean = dateStr
@@ -291,7 +359,7 @@ const DocumentSlider = () => {
   }, [updateArrowVisibility]);
 
   return (
-    <div className="document-slider-wrapper">
+    <div className="document-slider-wrapper"  > 
       <style>{`
         .document-slider-wrapper {
           position: relative;
@@ -348,11 +416,12 @@ const DocumentSlider = () => {
           flex-direction: column;
           gap: 0.5rem;
           flex-grow: 1;
+          background-color:currentColor;
         }
 
-        .doc-title { font-size: 1.05rem; font-weight: 600; color: #0f1724; margin:0 0 4px 0; }
-        .doc-excerpt { font-size: 0.98rem; line-height:1.5; color:#4b5563; flex-grow:1; margin:0; }
-        .doc-meta { display:flex; align-items:center; gap:0.6rem; color:#6b7280; font-size:0.9rem; margin-top:0.35rem; }
+        .doc-title { font-size: 1.05rem; font-weight: 600; color: #0f1724; margin:0 0 4px 0; color:white; }
+        .doc-excerpt { font-size: 0.98rem; line-height:1.5; color:#4b5563; flex-grow:1; margin:0; color:white;}
+        .doc-meta { display:flex; align-items:center; gap:0.6rem; color:#6b7280; font-size:0.9rem; margin-top:0.35rem; color:white; }
 
         .nav-arrow {
           position: absolute;

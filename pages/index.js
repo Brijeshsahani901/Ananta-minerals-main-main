@@ -65,17 +65,32 @@ export default function Home1() {
       <Layout headerStyle={1}>
         <section className="tgbanner__area" style={fadeInStyle}>
           <div className="px-2">
-            <div className="row px-md-5">
+            {/* <div className="row px-md-5">
               <div className="col-12 col-lg-8 mb-4">
                 <div style={fadeInStyle}>
                   <TechnologySlider />
                 </div>
               </div>
 
-              {/* Right: What's New section */}
-            <WhatsNewSection />
+              <WhatsNewSection />
 
-            </div>
+            </div> */}
+            <div
+  className="px-2 pt-4"
+ 
+>
+  <div className="row px-md-5">
+    <div className="col-12 col-lg-8 mb-4">
+      <div style={fadeInStyle}>
+        <TechnologySlider />
+      </div>
+    </div>
+
+    {/* Right: What's New section */}
+    <WhatsNewSection />
+  </div>
+</div>
+
           </div>
 
           {/* Divider */}
@@ -83,26 +98,39 @@ export default function Home1() {
             style={{
               border: "none",
               borderTop: `${borderThickness} solid #e0e0e0`,
-              margin: "30px 0",
+              margin: "5px 0",
               width: "100%",
             }}
           />
 
           {/* Document Slider */}
-          <div className="mb-3 pb-3 px-md-5">
-            <h3
-              style={{
-                marginLeft: "14px",
-                marginBottom: "16px",
-                color: "#2F4156",
-                fontWeight: "600",
-                fontSize: "20px",
-              }}
-            >
-              Latest Uploads
-            </h3>
-            <DocumentSlider />
-          </div>
+       <div
+  className="mb-3 pb-3 px-md-3"
+  style={{
+    backgroundImage:
+      "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/img/stock-photo.jpeg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    padding: "2rem 1rem",
+    borderRadius: "5px",
+  }}
+>
+  <h3
+    style={{
+      marginLeft: "14px",
+      marginBottom: "16px",
+      fontWeight: "600",
+      fontSize: "20px",
+      color: "white",
+    }}
+  >
+    Latest Uploads
+  </h3>
+
+  <DocumentSlider />
+</div>
+
 
           <hr
             style={{
@@ -114,30 +142,27 @@ export default function Home1() {
           />
 
           {/* Map Section */}
-          <section
-            className="trending-post-area section__hover-line"
-            style={{
-              paddingBottom: "16px",
-              paddingTop: isMobile ? "16px" : "0",
-              ...fadeInStyle,
-            }}
-          >
-            <div className="px-md-5 px-2">
-              <Map />
-            </div>
-          </section>
-
-          <hr
+       <section
+  style={{
+    paddingBottom: "16px",
+    paddingTop: isMobile ? "16px" : "0",
+  }}
+>
+  <div className="px-md-5 px-2">
+    <Map />
+  </div>
+</section>
+          {/* <hr
             style={{
               border: "none",
               borderTop: `${borderThickness} solid #e0e0e0`,
               margin: "30px 0",
               width: "100%",
             }}
-          />
+          /> */}
 
           {/* Sectors in Focus */}
-          <section
+          {/* <section
             style={{
               paddingBottom: "20px",
               paddingTop: isMobile ? "16px" : "0",
@@ -160,7 +185,7 @@ export default function Home1() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
         </section>
       </Layout>
     </div>

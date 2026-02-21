@@ -8,7 +8,7 @@ export default function AsiaMineralInfographic() {
   const [activeCard, setActiveCard] = useState(null);
 
   const page = {
-    padding: "20px 30px",
+    padding: "10px 30px",
     minHeight: "530px",
     borderRadius: 10,
     overflow: "hidden",

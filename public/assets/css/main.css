@@ -608,9 +608,9 @@ input[type=color] {
 .btn:hover {
   color: var(--tg-common-color-white);
 }
-.btn:hover::before {
+/* .btn:hover::before {
   top: -40%;
-}
+} */
 
 .border-btn {
   border: 2px solid #e9e9e9;

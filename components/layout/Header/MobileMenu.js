@@ -721,7 +721,7 @@ const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
 
           <div className="tgmobile__menu-outer">
             <ul className="navigation">
-              <li
+              {/* <li
                 className="menu-item-has-children"
                 onClick={() => handleToggle(2)}
               >
@@ -743,13 +743,13 @@ const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
                 >
                   <span className="plus-line" />
                 </div>
-              </li>
+              </li> */}
 
-              <li>
+              {/* <li>
                 <Link href="/supply-chain" onClick={handleMobileMenuClose}>
                   Supply Chain
                 </Link>
-              </li>
+              </li> */}
 
               <li
                 className="menu-item-has-children"

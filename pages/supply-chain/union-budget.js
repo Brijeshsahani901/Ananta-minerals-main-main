@@ -15,13 +15,13 @@ export default function IndiasProspective() {
         {/* Full-width image */}
         <div style={{ width: "100%", background: "#f5f5f5", margin: "0px 0" }}>
           <img
-            src={`${basePath}/assets/minerals_images/pax.jpg`}
+            src={`${basePath}/assets/minerals_images/budget2026.jpeg`}
             alt="Union Budget positions India in the global supply chain with Rare Earths Corridors"
             style={{
               width: "100%",
               height: "60vh",
               display: "block",
-              objectFit: "cover",
+              objectFit: "fill",
             }}
           />
         </div>

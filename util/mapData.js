@@ -55,8 +55,94 @@ export const exportImportRestrictions = [
   },
 ];
 
+// export const multilateralInitiatives = [
+//   {
+//     name: "Mineral Security Partnership",
+//     countries: [
+//       "Australia",
+//       "Canada",
+//       "Estonia",
+//       "Finland",
+//       "France",
+//       "Germany",
+//       "India",
+//       "Italy",
+//       "Japan",
+//       "Norway",
+//       "Republic of Korea",
+//       "Sweden",
+//       "United Kingdom",
+//       "United States of America",
+//     ],
+//     importance:
+//       "The Minerals Security Partnership (MSP) is a U.S.-led plurilateral initiative of like-minded countries and the European Commission that coordinates diplomacy, finance and project support to build diversified, responsible supply chains for critical minerals. India formally joined the MSP in June 2023, signalling its willingness to cooperate with other advanced economies on securing upstream supplies and attracting projects and investment that meet high ESG standards. The partnership helps reduce strategic dependence on single suppliers, opens access to technical cooperation and finance for domestic and overseas projects, and links Indian policy and industry into a network designed to scale alternative, sustainable sources of battery- and clean-energy metals essential for India’s energy transition and industrial plans.",
+//   },
+//   {
+//     name: "Indo-Pacific Economic Framework",
+//     countries: [
+//       "United States of America",
+//       "Australia",
+//       "Brunei Darussalam",
+//       "Fiji",
+//       "India",
+//       "Indonesia",
+//       "Japan",
+//       "Republic of Korea",
+//       "Malaysia",
+//       "New Zealand",
+//       "Philippines",
+//       "Singapore",
+//       "Thailand",
+//       "Viet Nam",
+//     ],
+//     importance:
+//       "The Indo-Pacific Economic Framework for Prosperity (IPEF) is a U.S.-led 14-partner plurilateral initiative organised around four pillars — Trade, Supply Chains, Clean Economy and Fair Economy — that seeks to deepen economic cooperation across the Indo-Pacific without a conventional free-trade agreement. For critical minerals specifically, IPEF matters because its Supply-Chain pillar explicitly identifies batteries, chips and chemicals (which depend on critical minerals) as priority sectors and creates mechanisms (the Supply Chain Council, data-sharing, regulatory best practices and catalytic finance tools) to coordinate diversification, resilience and investment — helping India reduce strategic dependence, attract upstream processing and scale recycling/urban-mining solutions. India is an active participant in the IPEF’s Pillars II–IV and in November 2023 signed the IPEF Supply-Chain (Resilience) Agreement — which entered into force in February 2024 — and now sits in leadership of the Supply Chain Council (India as Vice-Chair), giving it a formal seat at the table for setting rules and projects that touch on critical sectors.",
+//   },
+//   {
+//     name: "Quad Critical Minerals Initiative",
+//     countries: ["United States of America", "Australia", "India", "Japan"],
+//     importance:
+//       "The Quad Critical Minerals Initiative is a plurilateral effort by the four Quad countries (Australia, India, Japan and the United States) launched in July 2025 to coordinate practical cooperation — from joint project development and financing to recycling, responsible sourcing, and regulatory/technical alignment — aimed at securing and diversifying supply chains for critical minerals. India, as a Quad member, is a co-participant in the Initiative and engages through diplomatic and technical channels to align Quad activities with its domestic Critical Minerals Mission and overseas sourcing priorities. The Initiative matters because it creates a trusted, action-oriented platform to reduce strategic dependence on single suppliers, accelerate investment in alternative upstream and value-addition projects, and scale recycling and ESG-compliant supply chains that are essential for India’s energy transition and industrial ambitions.",
+//   },
+//  {
+//     name: "Australia–Canada–India Trilateral Technology Partnership",
+//     countries: ["Australia", "Canada", "India"],
+//     importance: `
+// **The governments of India, Canada and Australia launched the Australia–Canada–India Technology and Innovation (ACITI) Partnership at the G20 Summit in Johannesburg.** At its core, ACITI is a pragmatic cooperation framework rather than a formal treaty. It focuses on intensifying cooperation on **critical and emerging technologies, strengthening green energy innovation, and enhancing the resilience of supply chains for strategic minerals.** The declaration stresses pooling technological strengths, coordinating on research and development, and moving faster from laboratory research into deployable industrial projects.
+
+// **Why this partnership is strategically important for India:**
+
+// • **Mine-to-Factory Integration:**  
+// Australia contributes large-scale mineral resources, Canada brings advanced processing expertise, and India provides manufacturing scale and market demand. Together, this shortens the full critical-mineral value chain from mine to factory.
+
+// • **Reduce Single-Source Risk:**  
+// Provides alternative, trusted suppliers for graphite, lithium, rare earths and other strategic inputs, lowering overdependence on any single country.
+
+// • **Faster Technology Transfer:**  
+// Joint R&D and pilot projects push battery chemistry, recycling and refining technologies from research labs directly into Indian industrial plants.
+
+// • **Build Domestic Processing Capacity:**  
+// Coordinated investments and long-term offtake arrangements make Indian refineries, precursor plants and recycling facilities financially viable.
+
+// • **Unlock Finance and Offtake:**  
+// Aligned government signals and trilateral commercial structures reduce investor uncertainty and attract long-term private capital.
+
+// • **Create Jobs and Value-Addition:**  
+// Drives downstream manufacturing inside India instead of limiting the economy to raw-material exports.
+
+// • **Standards, Regulation and ESG Alignment:**  
+// Facilitates shared best practices in environmental control, permitting and responsible sourcing.
+
+// • **Strengthen Strategic Autonomy:**  
+// More resilient and diversified supply chains expand India’s geopolitical policy space and bargaining power.
+// `,
+//   },
+
+// ];
+
+
 export const multilateralInitiatives = [
-  {
+    {
     name: "Mineral Security Partnership",
     countries: [
       "Australia",
@@ -138,4 +224,49 @@ More resilient and diversified supply chains expand India’s geopolitical polic
 `,
   },
 
+
+  // ✅ NEW ADDITION — PAX SILICA
+  {
+    name: "Pax Silica",
+    countries: [
+      "United States of America",
+      "Japan",
+      "Netherlands",
+      "Taiwan",
+      "South Korea",
+      "Germany",
+      "France",
+      "India",
+      "United Kingdom"
+    ],
+    importance: `
+Pax Silica describes the emerging U.S.-led semiconductor order in which advanced chip-producing democracies coordinate industrial policy, export controls, and supply chains. It reflects efforts to secure critical technologies, reduce reliance on China, and concentrate leading-edge semiconductor design and manufacturing within trusted allied nations for economic and national security
+
+Why Pax Silica is globally important:
+Pax Silica is important because semiconductors underpin economic power, military capability, and technological leadership.
+Advanced chips power AI systems, defense platforms, critical infrastructure, telecommunications, and modern manufacturing. By coordinating production, export controls, and supply chains among trusted allies, Pax Silica reduces vulnerability to geopolitical shocks, prevents strategic adversaries from accessing cutting-edge technology, and strengthens collective economic resilience.
+It also reshapes global power dynamics. Control over advanced semiconductor design, fabrication, and equipment determines who leads in artificial intelligence, quantum computing, and advanced weapons systems. In this sense, Pax Silica is not just about trade—it is about technological sovereignty and long-term geopolitical influence.
+United States  
+• Chip design leadership (NVIDIA, AMD, Qualcomm)  
+• Advanced manufacturing push (Intel, TSMC Arizona, CHIPS Act)  
+• Architect of export controls  
+Japan  
+• Critical Semiconductor materials (photoresists, silicon wafers)  
+• Equipment firms (Tokyo Electron)  
+• Rapidus advanced logic initiative  
+Netherlands  
+• Home to ASML, the world’s only EUV lithography machine supplier 
+South Korea  
+• Memory chip dominance (Samsung, SK Hynix)  
+• Major DRAM & NAND production  
+Taiwan  
+• Advanced foundry dominance (TSMC)  
+• Manufactures >90% of leading-edge chips (<7nm historically) 
+Extended / Strategic Partners Often Linked 
+• Germany (growing EU semiconductor manufacturing hub)  
+• France (STMicroelectronics; EU semiconductor push) 
+• India (emerging semiconductor manufacturing and design partner under iCET) 
+•United Kingdom (chip design strength – ARM architecture)
+`
+  }
 ];

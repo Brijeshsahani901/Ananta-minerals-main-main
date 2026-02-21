@@ -19,7 +19,7 @@ export default function MalaysianMineralInfographic() {
   return (
     <>
       <div
-        className="d-flex align-items-center justify-content-center py-2"
+        className="d-flex align-items-center justify-content-center py-1"
         style={{
              borderRadius: "10px", 
           background:
