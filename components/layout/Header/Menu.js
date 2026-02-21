@@ -641,7 +641,6 @@ export default function Menu({
                       fontFamily: "'Inter', sans-serif",
                     }}
                   >
-                    {" "}
                     About
                   </span>
                   {router.pathname === "/about" && (

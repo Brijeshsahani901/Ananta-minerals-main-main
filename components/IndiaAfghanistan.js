@@ -7,9 +7,9 @@ export default function IndiaAfghanistanCollab() {
     <div
       className="w-100 d-flex flex-column justify-content-between"
       style={{
-        minHeight: "520px",
+        minHeight: "530px",
         background: "linear-gradient(135deg, #0c2461 0%, #1e3799 50%, #4a69bd 100%)",
-        borderRadius: "16px",
+        borderRadius: "10px",
         padding: "28px",
         color: "#ffffff",
         boxShadow:

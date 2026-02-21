@@ -1,179 +1,201 @@
+
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+
+/* ===== IMPORT SLIDES ===== */
 import RareEarthInfographic from "../RareEarthInfographic";
 import IndiaAfghanistan from "../IndiaAfghanistan";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import IndiaAndMongolia from "../infographics/indiaAndMongolia";
 import MalaysianMineralInfographic from "../infographics/indiaMalaysiaCriticalMinerals";
 import ChinaAdvantage from "../infographics/chinaAdvantage";
 import InvestInMalasiya from "../infographics/investInMalasiya";
 import Infographic520Screenshot from "../infographics/semiconductorLandscape";
 import SyntheticGraphite from "../infographics/syntheticGraphite";
+import Aluminium from "../infographics/Aluminium";
+import CriticalMineralMission from "../infographics/criticalMineralMission";
+import IndiaOmanMineralInfographic from "../infographics/omenPotential";
+import Venezuela from "../infographics/venezuela";
+import GreenlandStrategy from "../infographics/GreenlandStrategy";
+import MineralsSnapshot from "../infographics/MineralSnapshot";
+import SilverCriticalMineral from "../infographics/Silver";
+import IndiaUSFTA from "../infographics/IndiaUSFTA";
+
 export default function TechnologySlider() {
-  const totalSlides = 7;
+  const slides = [
+    <IndiaUSFTA/>,
+    <SilverCriticalMineral />,
+    <MineralsSnapshot />,
+    <GreenlandStrategy />,
+    <Venezuela />,
+    <IndiaOmanMineralInfographic />,
+    <CriticalMineralMission />,
+    <Aluminium />,
+    <SyntheticGraphite />,
+    <Infographic520Screenshot />,
+    <InvestInMalasiya />,
+    <ChinaAdvantage />,
+    <MalaysianMineralInfographic />,
+    <IndiaAndMongolia />,
+    <IndiaAfghanistan />,
+    <RareEarthInfographic />,
+  ];
+
+  const total = slides.length;
+
   const [index, setIndex] = useState(0);
-  const [prevClicked, setPrevClicked] = useState(false);
-  const [nextClicked, setNextClicked] = useState(false);
+  const [prevIndex, setPrevIndex] = useState(null);
+  const [direction, setDirection] = useState("right");
 
-  const handleSelect = (selectedIndex) => setIndex(selectedIndex);
-
+  /* ===== NAVIGATION ===== */
   const nextSlide = () => {
-    setNextClicked(true);
-    setTimeout(() => setNextClicked(false), 150);
-    setIndex((prevIndex) => (prevIndex + 1) % totalSlides);
+    setPrevIndex(index);
+    setDirection("right");
+    setIndex((prev) => (prev + 1) % total);
   };
 
   const prevSlide = () => {
-    setPrevClicked(true);
-    setTimeout(() => setPrevClicked(false), 150);
-    setIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
-  };
-
-  // White on last 2 slides (index 4 and 5), dark otherwise
-  const isWhiteSlide = index < 7;
-  const arrowColor = isWhiteSlide ? "#fff" : "#333";
-
-  const buttonBaseStyle = {
-    position: "absolute",
-    zIndex: 20,
-    cursor: "pointer",
-    backgroundColor: "transparent",
-    padding: "8px 12px",
-    borderRadius: "4px",
-    transition: "transform 0.1s ease, opacity 0.2s ease",
-    userSelect: "none",
-    opacity: 0.9,
-    ...(prevClicked || nextClicked ? { transform: "scale(0.92)" } : {}),
+    setPrevIndex(index);
+    setDirection("left");
+    setIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
   };
 
   return (
-    <div style={{ position: "relative" }}>
-      {/* Desktop View - Buttons at Top */}
-      <div className="d-none d-md-block">
-        <div
-          onClick={prevSlide}
-          style={{
-            ...buttonBaseStyle,
-            top: "10px",
-            left: "10px",
-          }}
-        >
-          <FiChevronLeft size={30} color={arrowColor} />
-        </div>
-        <div
-          onClick={nextSlide}
-          style={{
-            ...buttonBaseStyle,
-            top: "10px",
-            right: "10px",
-          }}
-        >
-          <FiChevronRight size={30} color={arrowColor} />
-        </div>
-      </div>
+    <div style={{ position: "relative", overflow: "hidden" }}>
+      {/* ARROWS */}
+  {/* ARROWS */}
+<div className="slider-arrows">
+  <div onClick={prevSlide} className="arrow arrow-left">
+    <FiChevronLeft size={30} color="#fff" />
+  </div>
 
-      {/* Mobile View - Buttons at Bottom */}
-      <div className="d-md-none">
-        <div
-          onClick={prevSlide}
-          style={{
-            ...buttonBaseStyle,
-            bottom: "10px",
-            left: "10px",
-          }}
-        >
-          <FiChevronLeft size={28} color={arrowColor} />
-        </div>
-        <div
-          onClick={nextSlide}
-          style={{
-            ...buttonBaseStyle,
-            bottom: "10px",
-            right: "10px",
-          }}
-        >
-          <FiChevronRight size={28} color={arrowColor} />
-        </div>
-      </div>
+  <div onClick={nextSlide} className="arrow arrow-right">
+    <FiChevronRight size={30} color="#fff" />
+  </div>
+</div>
 
-      <Carousel
-        activeIndex={index}
-        onSelect={handleSelect}
-        interval={null}
-        controls={false}
-        indicators
-        touch={false} // Disable swipe gestures
-      >
 
-            <Carousel.Item>
-          <div className="d-block w-100">
-            <SyntheticGraphite />
-          </div>
-        </Carousel.Item>
+      {/* CAROUSEL SHELL */}
+      <Carousel activeIndex={0} controls={false} indicators interval={null} slide={false}>
         <Carousel.Item>
-          <div className="d-block w-100">
-            <Infographic520Screenshot />
-          </div>
-        </Carousel.Item>
+          <div style={{ position: "relative", width: "100%", height: "100%" }}>
+            {/* OLD SLIDE (EXIT) */}
+            {prevIndex !== null && (
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  animation:
+                    direction === "right"
+                      ? "slideOutLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1)"
+                      : "slideOutRight 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
+                  willChange: "transform",
+                }}
+              >
+                {slides[prevIndex]}
+              </div>
+            )}
 
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <InvestInMalasiya />
+            {/* NEW SLIDE (ENTER) */}
+            <div
+              key={index}
+              style={{
+                position: "relative",
+                animation:
+                  direction === "right"
+                    ? "slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1)"
+                    : "slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
+                willChange: "transform",
+              }}
+            >
+              {slides[index]}
+            </div>
           </div>
         </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <ChinaAdvantage />
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <MalaysianMineralInfographic />
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <IndiaAndMongolia />
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <IndiaAfghanistan />
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <RareEarthInfographic />
-          </div>
-        </Carousel.Item>
-
-        {/* <Carousel.Item>
-          <div className="d-block w-100">
-            <SolarPV />
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <SupplyChainSteps />
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <AlternateTechSodiumIon />
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="d-block w-100">
-            <MilitaryDronesAssembly />
-          </div>
-        </Carousel.Item> */}
       </Carousel>
+
+      {/* KEYFRAMES */}
+<style>
+{`
+  /* ===== DESKTOP DEFAULT ===== */
+  .slider-arrows {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  .arrow {
+    position: absolute;
+    cursor: pointer;
+    pointer-events: all;
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+
+  /* ===== MOBILE VIEW ===== */
+  @media (max-width: 768px) {
+    .slider-arrows {
+      top: auto;
+      bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .arrow {
+      position: relative;
+    }
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+
+  @keyframes slideOutLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-35%); opacity: 0; }
+  }
+
+  @keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+
+  @keyframes slideOutRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(35%); opacity: 0; }
+  }
+`}
+</style>
+
     </div>
   );
 }
+
+/* ARROW STYLES */
+const arrowLeft = {
+  position: "absolute",
+  top: 10,
+  left: 10,
+  zIndex: 20,
+  cursor: "pointer",
+};
+
+const arrowRight = {
+  position: "absolute",
+  top: 10,
+  right: 10,
+  zIndex: 20,
+  cursor: "pointer",
+};

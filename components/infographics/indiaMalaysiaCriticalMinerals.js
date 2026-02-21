@@ -21,11 +21,11 @@ export default function MalaysianMineralInfographic() {
       <div
         className="d-flex align-items-center justify-content-center py-2"
         style={{
-             borderRadius: "12px", 
+             borderRadius: "10px", 
           background:
             "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)",
           fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-          minHeight: "520px",
+          minHeight: "530px",
           position: "relative",
           overflow: "hidden",
         }}

@@ -7,9 +7,9 @@ export default function IndiaMongoliaMoUInfographic() {
       style={{
         fontFamily: "'Inter', 'Poppins', sans-serif",
         background: "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)",
-        minHeight: "520px",
+        minHeight: "530px",
         padding: "25px 20px",
-        borderRadius: "12px", 
+        borderRadius: "10px", 
         position: "relative",
         boxShadow: "0 10px 25px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.08)",
         overflow: "hidden",

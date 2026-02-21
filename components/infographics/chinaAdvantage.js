@@ -536,9 +536,9 @@ export default function Infographic520() {
     <div
       style={{
         width: "100%",
-        minHeight: "520px",
+        minHeight: "530px",
         padding: 16,
-        borderRadius: 24,
+        borderRadius: 10,
         background: "linear-gradient(135deg,#080715,#14122f 40%,#221a50 95%)",
         position: "relative",
         overflow: "hidden",

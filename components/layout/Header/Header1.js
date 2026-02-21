@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 import Sidebar from "./Sidebar";
 import { useRouter } from "next/router";
+import CriticalMineralsMarquee from "@/components/CriticalMineralsMarquee";
 
 const Header1 = ({
   scroll,
@@ -25,7 +26,7 @@ const Header1 = ({
                 <div className="header__top-logo logo text-lg-left">
                   <img
                     src={`${basePath}/assets/ananta-logo-transparent.png`}
-                    onClick={() => router.push("/")} // Wrap in arrow function
+                    onClick={() => router.push("/")} 
                     alt="Logo"
                     style={{
                       height: "50px",
@@ -34,7 +35,7 @@ const Header1 = ({
                       objectPosition: "center",
                       transition: "transform 0.3s ease",
                       scale: "1.6",
-                      cursor: "pointer", // Add pointer cursor to indicate clickable
+                      cursor: "pointer", 
                     }}
                   />
                 </div>

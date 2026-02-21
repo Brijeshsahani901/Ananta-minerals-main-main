@@ -77,7 +77,7 @@ const DocumentSlider = () => {
       date: "October 2025",
       category: "Industry Analysis",
     },
-       {
+    {
       id: 10,
       image: `${basePath}/assets/minerals_images/royalty-rates.jpg`,
       title:
@@ -98,6 +98,18 @@ const DocumentSlider = () => {
         "The global shift from fossil fuels to clean energy has sharply increased the demand for critical minerals.",
       author: "Mithilesh Phadke",
       date: "November 2025",
+      category: "Industry Analysis",
+    },
+    {
+      id: 14,
+      image: `${basePath}/assets/minerals_images/pax.jpg`,
+      title:
+        "India's prospective role in Pax Silica's evolution and US micro-refinery strategy",
+      link: "/supply-chain/indias-prospective",
+      content:
+        "Two recent developments in the US’s quest to derisk its defence critical minerals inputs from China have direct implications for India.",
+      author: "Aditya Pareek",
+      date: "December 2025",
       category: "Industry Analysis",
     },
     {
@@ -124,8 +136,31 @@ const DocumentSlider = () => {
       date: "November 2025",
       category: "Industry Analysis",
     },
-     {
-      id: 8,
+    {
+      id: 12,
+      image: `${basePath}/assets/minerals_images/midstream.jpg`,
+      title:
+        "The Midstream Gap: India’s Strategic Vulnerability in Critical Mineral Processing and Refining",
+      link: "/supply-chain/midstream-gap",
+      content:
+        "The supply chain for critical minerals generally involves exploration, mining (extraction), processing, refining, and then manufacturing into end products.",
+      author: "Mithilesh Phadke",
+      date: "December 2025",
+      category: "Industry Analysis",
+    },
+    {
+      id: 10,
+      image: `${basePath}/assets/minerals_images/karnatak.jpg`,
+      title: "Karnataka bets on MiniMines for processing complex",
+      link: "/supply-chain/karnatak",
+      content:
+        "On November 28 2025, Karnataka signed a memorandum of understanding with Bengaluru based startup MiniMines Cleantech Solutions",
+      author: "Aditya Pareek",
+      date: "December 2025",
+      category: "Industry Analysis",
+    },
+    {
+      id: 11,
       image: `${basePath}/assets/minerals_images/practical-triangle.jpg`,
       title:
         "A practical triangle: What the new Australia-Canada-India Tech Pact means for Critical Minerals",
@@ -136,7 +171,66 @@ const DocumentSlider = () => {
       date: "December 2025",
       category: "Industry Analysis",
     },
-  
+
+       {
+      id: 18,
+      image: `${basePath}/assets/minerals_images/indai-europe.png`,
+      title:
+        "The Mother of All Deals and Critical Minerals",
+      link: "/supply-chain/mother-of-all-deals",
+      content:
+        "Global critical-raw-materials (CRM) supply chains today are thin, concentrated and geopolitically charged. China dominates processing and refining for many battery and rare- earth inputs, leaving miners and manufacturers outside China exposed to single-point chokepoints, export controls and price spikes.",
+      author: "Ayan Barman",
+      date: "January 2026",
+      category: "Industry Analysis",
+    },
+    {
+      id: 17,
+      image: `${basePath}/assets/minerals_images/secure.jpg`,
+      title:
+        "Securing the Future : How India and Europe Can Co-Create Resilient Critical Mineral Supply Chains",
+      link: "/supply-chain/securing-the-future",
+      content:
+        "As India and the European Union (EU) edge closer to new trade and investment agreements, including a long-awaited free trade pact and investment protection deal, there is growing recognition that critical minerals must form a pillar of their economic partnership",
+      author: "Mithilesh Phadke",
+      date: "January 2026",
+      category: "Industry Analysis",
+    },
+
+    {
+      id: 16,
+      image: `${basePath}/assets/minerals_images/greenlandGambit.jpg`,
+      title:
+        "The Greenland Gambit: Strategic Minerals and Washington’s Return to the Arctic",
+      link: "/supply-chain/greenland-gambit",
+      content:
+        "The United States’ interest in Greenland is long-standing and well-documented. In 1946, Secretary of State James F.",
+      author: "Ayan Barman",
+      date: "January 2026",
+      category: "Industry Analysis",
+    },
+    {
+      id: 15,
+      image: `${basePath}/assets/minerals_images/venezeula.jpg`,
+      title: "The Future of Venezuelan Critical Minerals",
+      link: "/supply-chain/future-of-venezuela",
+      content:
+        "The US strikes on Venezuela in early January 2026, coined as 'Operation Absolute Resolve,' and the subsequent US assertion of control over Venezuelan oil flows, have abruptly changed the risk calculus in Caracas.",
+      author: "Ayan Barman",
+      date: "January 2026",
+      category: "Industry Analysis",
+    },
+    //  {
+    //   id: 19,
+    //   image: `${basePath}/assets/minerals_images/venezeula.jpg`,
+    //   title: "Union Budget Positions India in the Global Supply Chain with Rare Earth Corridor",
+    //   link: "/supply-chain/union-budget",
+    //   content:
+    //     "In the Union Budget for the financial year 2026–2027, the Government of India has articulated a clear strategy aimed at integrating the country more deeply into global supply and value chains for critical minerals,",
+    //   author: "Aditya Pareek",
+    //   date: "February 2026",
+    //   category: "Industry Analysis",
+    // },
   ];
 
   const parseDate = (dateStr) => {
@@ -147,7 +241,7 @@ const DocumentSlider = () => {
   };
 
   const sortedSlides = [...slides].sort(
-    (a, b) => parseDate(b.date) - parseDate(a.date)
+    (a, b) => parseDate(b.date) - parseDate(a.date),
   );
 
   const updateArrowVisibility = useCallback(() => {
@@ -187,7 +281,7 @@ const DocumentSlider = () => {
       };
       requestAnimationFrame(raf);
     },
-    [updateArrowVisibility]
+    [updateArrowVisibility],
   );
 
   useEffect(() => {

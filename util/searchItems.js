@@ -36,6 +36,21 @@ export const authors = [
         label: "A Practical Triangle: What the new Australia-Canada-India Tech Pact means for Critical Minerals",
         type: "article",
       },
+      {
+        path: "/supply-chain/future-of-venezuela",
+        label: "The Future of Venezuelan Critical Minerals",
+        type: "article",
+      },
+      {
+        path: "/supply-chain/greenland-gambit",
+        label: "The United States’ interest in Greenland is long-standing and well-documented. In 1946, Secretary of State James F.",
+        type: "article",
+      },
+       {
+        path: "/supply-chain/mother-of-all-deals",
+        label: "The Mother of All Deals and Critical Minerals",
+        type: "article",
+      },
     ],
   },
   {
@@ -96,11 +111,36 @@ export const authors = [
         label: "Beneath the Surface: India's Ambition in Deep-Sea Minerals.",
         type: "article",
       },
+
+ {
+        path: "/supply-chain/securing-the-future",
+        label: "Securing the Future: How India and Europe Can Co-Create Resilient Critical Mineral Supply Chains",
+        type: "article",
+      },    ],
+  },
+   {
+    name: "Aditya Pareek",
+    category: "Industry Analysis",
+    routes: [
+      {
+        path: "/supply-chain/karnatak",
+        label: "Karnataka bets on MiniMines for processing complex",
+        type: "article",
+      },
+      {
+        path: "/supply-chain/indias-prospective",
+        label: "India's prospective role in Pax Silica's evolution and US micro-refinery strategy",
+        type: "article",
+      },
+         {
+        path: "/supply-chain/union-budget/",
+        label: "Union Budget positions India in the global supply chain with Rare Earths Corridors",
+        type: "article",
+      },
     ],
   },
 ];
 
-// Slides data
 export const slides = [
   {
     id: 1,
@@ -186,7 +226,6 @@ export const slides = [
     },
 ];
 
-// Mineral posts data
 export const mineralPosts = [
   {
     id: 1,
@@ -400,7 +439,6 @@ export const mineralPosts = [
     },
 ];
 
-// Extract all articles from authors
 export const allArticles = authors.flatMap((author) =>
   author.routes.map((route) => ({
     ...route,
@@ -411,7 +449,6 @@ export const allArticles = authors.flatMap((author) =>
   }))
 );
 
-// Extract articles from slides
 export const slideArticles = slides.map(slide => ({
   path: slide.link,
   label: slide.title,
@@ -423,7 +460,6 @@ export const slideArticles = slides.map(slide => ({
   date: slide.date,
 }));
 
-// Extract articles from mineral posts
 export const postArticles = mineralPosts.map(post => ({
   path: post.path,
   label: post.title,
@@ -435,17 +471,14 @@ export const postArticles = mineralPosts.map(post => ({
   isExternal: true, // Mark external links
 }));
 
-// Combine all articles
 export const combinedArticles = [
   ...allArticles,
   ...slideArticles,
   ...postArticles
 ];
 
-// Main function to get all searchable items
 export const getAllSearchItems = (alternateTechItems, sectorItems) => {
   return [
-    // Pages from menu items
     ...alternateTechItems.map((item) => ({
       ...item,
       category: "Alternate Tech",
@@ -475,7 +508,6 @@ export const getAllSearchItems = (alternateTechItems, sectorItems) => {
   ];
 };
 
-// Export utility functions
 export const searchItems = {
   authors,
   slides,

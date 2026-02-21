@@ -9,8 +9,8 @@ export default function AsiaMineralInfographic() {
 
   const page = {
     padding: "20px 30px",
-    minHeight: "520px",
-    borderRadius: 24,
+    minHeight: "530px",
+    borderRadius: 10,
     overflow: "hidden",
     position: "relative",
     background: "linear-gradient(180deg, #0b1814 0%, #0f211c 50%, #0b1814 100%)",

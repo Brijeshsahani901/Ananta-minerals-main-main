@@ -168,9 +168,9 @@ export default function Infographic520Screenshot() {
     <div
       style={{
         width: "100%",
-        minHeight: "520px",
+        minHeight: "530px",
         padding: "clamp(10px, 2vw, 14px)",
-        borderRadius: "12px",
+        borderRadius: "10px",
         background:
           "linear-gradient(135deg, #0a1429 0%, #131f3a 50%, #1a2848 100%)",
         color: "#ffffff",

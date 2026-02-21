@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import {useRef } from "react";
+import { useRef } from "react";
 import { whatsnew } from "@/util/mineralData";
 
 export default function WhatsNew() {
@@ -8,7 +8,7 @@ export default function WhatsNew() {
   const sortedWhatsnew = [...whatsnew].sort((a, b) => {
     const dateA = new Date(a.date.replace(/(\d+)(st|nd|rd|th)/, "$1"));
     const dateB = new Date(b.date.replace(/(\d+)(st|nd|rd|th)/, "$1"));
-    return dateB - dateA; 
+    return dateB - dateA;
   });
 
   return (
@@ -159,9 +159,10 @@ export default function WhatsNew() {
                                       color: "#333",
                                       lineHeight: "1.6",
                                     }}
-                                  >
-                                    {item.description}
-                                  </p>
+                                    dangerouslySetInnerHTML={{
+                                      __html: item.description,
+                                    }}
+                                  ></p>
                                 )}
                               </div>
                             </div>
@@ -179,7 +180,7 @@ export default function WhatsNew() {
                             style={{ textDecoration: "none" }}
                           >
                             <div
-                              id={`post-${item.id}`} 
+                              id={`post-${item.id}`}
                               className="post-entry d-flex mb-5 shadow-sm"
                               style={{
                                 position: "relative",
@@ -270,9 +271,10 @@ export default function WhatsNew() {
                                       color: "#333",
                                       lineHeight: "1.6",
                                     }}
-                                  >
-                                    {item.description}
-                                  </p>
+                                    dangerouslySetInnerHTML={{
+                                      __html: item.description,
+                                    }}
+                                  ></p>
                                 )}
                               </div>
                             </div>

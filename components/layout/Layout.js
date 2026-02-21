@@ -13,8 +13,9 @@ import Header6 from './Header/Header6'
 import Header7 from './Header/Header7'
 import PageHead from './PageHead'
 import FloatingParticles from '../floatingParticle'
+import CriticalMineralsMarquee from '../CriticalMineralsMarquee'
 
-const Layout = ({ headerStyle, footerStyle, children, breadcrumbCategory, breadcrumbPostTitle, footerClass, headTitle,logoWhite }) => {
+const Layout = ({ headerStyle, footerStyle, children, breadcrumbCategory, breadcrumbPostTitle, footerClass, headTitle, logoWhite }) => {
     const handleMobileMenuOpen = () => {
         document.body.classList.add("mobile-menu-visible")
     }
@@ -45,12 +46,15 @@ const Layout = ({ headerStyle, footerStyle, children, breadcrumbCategory, breadc
         })
     })
 
+    console.log(headerStyle)
+
     return (
         <>
             <PageHead headTitle={headTitle} />
             {/* <FloatingParticles/> */}
 
             {!headerStyle &&
+
                 <Header1
                     handleMobileMenuOpen={handleMobileMenuOpen}
                     handleMobileMenuClose={handleMobileMenuClose}
@@ -60,16 +64,23 @@ const Layout = ({ headerStyle, footerStyle, children, breadcrumbCategory, breadc
                     handleSidebarOpen={handleSidebarOpen}
                     handleSidebarClose={handleSidebarClose}
                 />
+
             }
-            {headerStyle == 1 ? <Header1
-                handleMobileMenuOpen={handleMobileMenuOpen}
-                handleMobileMenuClose={handleMobileMenuClose}
-                scroll={scroll}
-                langToggle={langToggle}
-                handleLangToggle={handleLangToggle}
-                handleSidebarOpen={handleSidebarOpen}
-                handleSidebarClose={handleSidebarClose}
-            /> : null}
+            {headerStyle == 1 ?
+                <>
+                    <Header1
+                        handleMobileMenuOpen={handleMobileMenuOpen}
+                        handleMobileMenuClose={handleMobileMenuClose}
+                        scroll={scroll}
+                        langToggle={langToggle}
+                        handleLangToggle={handleLangToggle}
+                        handleSidebarOpen={handleSidebarOpen}
+                        handleSidebarClose={handleSidebarClose}
+                    />
+
+                    <CriticalMineralsMarquee />
+
+                </> : null}
             {headerStyle == 2 ? <Header2
                 handleMobileMenuOpen={handleMobileMenuOpen}
                 handleMobileMenuClose={handleMobileMenuClose}
@@ -125,28 +136,28 @@ const Layout = ({ headerStyle, footerStyle, children, breadcrumbCategory, breadc
                 handleSidebarClose={handleSidebarClose}
             /> : null}
 
-         <main
-        className="main"
-        style={{
-        //   backgroundImage: 'url("https://www.transparenttextures.com/patterns/cutcube.png")',
-          backgroundRepeat: 'repeat',
-          backgroundSize: 'auto',
-          backgroundAttachment: 'fixed',
-        //   backgroundColor: '#b0babf'
-        }}
-      > 
-        {/* {breadcrumbCategory && (
+            <main
+                className="main"
+                style={{
+                    //   backgroundImage: 'url("https://www.transparenttextures.com/patterns/cutcube.png")',
+                    backgroundRepeat: 'repeat',
+                    backgroundSize: 'auto',
+                    backgroundAttachment: 'fixed',
+                    //   backgroundColor: '#b0babf'
+                }}
+            >
+                {/* {breadcrumbCategory && (
           <Breadcrumb breadcrumbCategory={breadcrumbCategory} breadcrumbPostTitle={breadcrumbPostTitle} />
         )} */}
 
-        <div style={{margin : "0vh 0px" }}>{children}</div>
-      </main>
+                <div style={{ margin: "0vh 0px" }}>{children}</div>
+            </main>
 
 
             {!footerStyle && < Footer1 />}
             {footerStyle == 1 ? < Footer1 /> : null}
             {footerStyle == 2 ? < Footer2 footerClass={footerClass} /> : null}
-            {footerStyle == 3 ? < Footer3 footerClass={footerClass} logoWhite ={logoWhite} /> : null}
+            {footerStyle == 3 ? < Footer3 footerClass={footerClass} logoWhite={logoWhite} /> : null}
 
             <BackToTop />
         </>
