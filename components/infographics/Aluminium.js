@@ -3,6 +3,12 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FiFlag, FiGlobe } from "react-icons/fi";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function AluminiumInfographic() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -16,7 +22,6 @@ export default function AluminiumInfographic() {
     position: "relative",
     overflow: "hidden",
     boxShadow: "0 15px 50px rgba(0, 0, 0, 0.7)",
-    fontFamily: "'Inter', sans-serif",
     margin: "0 auto",
   };
 
@@ -318,9 +323,9 @@ export default function AluminiumInfographic() {
   };
 
   return (
-    <div style={containerStyle}>
+    <div className={montserrat.className} style={containerStyle}>
       <div style={headerStyle}>
-        <h2 style={titleStyle}>Aluminium: The Metal That Moves the World</h2>
+        <h2 className={montserrat.className} style={titleStyle}>Aluminium: The Metal That Moves the World</h2>
       </div>
 
       <div style={applyResponsiveStyles()}>

@@ -51,7 +51,17 @@ export const authors = [
         label: "The Mother of All Deals and Critical Minerals",
         type: "article",
       },
-    ],
+       {
+        path: "/supply-chain/strait-of-hourmous",
+        label: "Strait Flush: Pentagon's Rush and India's ICET Mineral Play",
+        type: "article",
+      },
+         {
+        path: "/supply-chain/helium",
+        label: "The Iran Crisis and West Asian escalation have triggered an unlikely but critical supply shock: helium.",
+        type: "article",
+      }   
+    ]
   },
   {
     name: "Prerna Bounter",
@@ -135,6 +145,11 @@ export const authors = [
          {
         path: "/supply-chain/union-budget/",
         label: "Union Budget positions India in the global supply chain with Rare Earths Corridors",
+        type: "article",
+      },
+        {
+        path: "/supply-chain/resource-nationalism/",
+        label: "Resource nationalism's grip on global critical minerals supply chains",
         type: "article",
       },
     ],

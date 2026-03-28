@@ -563,15 +563,21 @@
 
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 
 export default function SilverCriticalMineral() {
   return (
     <div 
-      className="container-fluid p-0 m-0" 
+      className={montserrat.className} 
       style={{
         backgroundColor: "#000",
         color: "#fff",
-        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
         minHeight: "530px",
         overflow: "hidden",
         borderRadius: "10px",
@@ -579,7 +585,7 @@ export default function SilverCriticalMineral() {
     >
       {/* Header Section */}
       <div className="row p-0 m-0">
-        <div className="col-12 p-3">
+        <div className="col-12 p-2">
           <div className="text-center mb-3">
             <div className="d-flex align-items-center justify-content-center gap-2 mb-2">
               <div 
@@ -591,6 +597,7 @@ export default function SilverCriticalMineral() {
                 }}
               ></div>
               <h1
+              className={montserrat.className} 
                 style={{
                   fontSize: "20px",
                   fontWeight: "800",
@@ -660,6 +667,7 @@ export default function SilverCriticalMineral() {
                 }}
               ></div>
               <h3
+              className={montserrat.className} 
                 style={{
                   fontSize: "14px",
                   fontWeight: "700",
@@ -688,6 +696,7 @@ export default function SilverCriticalMineral() {
             </div>
 
             <p
+            className={montserrat.className} 
               style={{
                 fontSize: "12.5px",
                 lineHeight: "1.45",
@@ -729,6 +738,7 @@ export default function SilverCriticalMineral() {
                 }}
               ></div>
               <h3
+              className={montserrat.className} 
                 style={{
                   fontSize: "14px",
                   fontWeight: "700",
@@ -889,6 +899,7 @@ export default function SilverCriticalMineral() {
             </div>
 
             <div
+            className={montserrat.className} 
               style={{
                 fontSize: "10px",
                 color: "#a3a3a3",
@@ -934,6 +945,7 @@ export default function SilverCriticalMineral() {
                   margin: "0",
                   color: "#a855f7",
                 }}
+                className={montserrat.className} 
               >
                 India's Position
               </h3>
@@ -979,7 +991,7 @@ export default function SilverCriticalMineral() {
       {/* Desktop Layout: 3 Columns Side by Side */}
       <div className="row p-0 m-0 d-none d-md-flex" style={{ minHeight: "400px" }}>
         {/* Left Column */}
-        <div className="col-md-4 p-2 h-100">
+        <div className="col-md-4 p-1 h-100">
           <div
             style={{
               backgroundColor: "rgba(20, 20, 20, 0.9)",
@@ -1002,6 +1014,7 @@ export default function SilverCriticalMineral() {
                 }}
               ></div>
               <h3
+              className={montserrat.className} 
                 style={{
                   fontSize: "14px",
                   fontWeight: "700",
@@ -1038,6 +1051,7 @@ export default function SilverCriticalMineral() {
                   margin: "0",
                   textAlign: "justify",
                 }}
+                className={montserrat.className} 
               >
                 Spot price hit an all-time high in January 2026, now around USD
                 75-85/oz. In India, Rs. 349.90/gram (Feb 2, 2026), down Rs.
@@ -1063,6 +1077,7 @@ export default function SilverCriticalMineral() {
               border: "1px solid rgba(59, 130, 246, 0.1)",
               boxShadow: "0 3px 8px rgba(0, 0, 0, 0.3)",
             }}
+            className={montserrat.className} 
           >
             <div className="d-flex align-items-center gap-2 mb-2">
               <div
@@ -1074,6 +1089,7 @@ export default function SilverCriticalMineral() {
                 }}
               ></div>
               <h3
+              className={montserrat.className} 
                 style={{
                   fontSize: "14px",
                   fontWeight: "700",
@@ -1107,6 +1123,7 @@ export default function SilverCriticalMineral() {
                   Production (2024)
                 </span>
                 <div
+                className={montserrat.className} 
                   style={{
                     fontSize: "9px",
                     fontStyle: "italic",
@@ -1131,6 +1148,7 @@ export default function SilverCriticalMineral() {
                 ].map((item, index) => (
                   <div key={index} className="col-4 mb-2">
                     <div
+                    className={montserrat.className} 
                       style={{
                         padding: "3px 4px",
                         backgroundColor: "rgba(255,255,255,0.03)",
@@ -1169,10 +1187,11 @@ export default function SilverCriticalMineral() {
 
             <div className="mb-3">
               <div className="d-flex justify-content-between align-items-center mb-1">
-                <span style={{ fontSize: "12px", fontWeight: "700", color: "#3b82f6" }}>
+                <span className={montserrat.className}  style={{ fontSize: "12px", fontWeight: "700", color: "#3b82f6" }}>
                   Reserves (2024)
                 </span>
                 <div
+                className={montserrat.className} 
                   style={{
                     fontSize: "9px",
                     fontStyle: "italic",
@@ -1235,6 +1254,7 @@ export default function SilverCriticalMineral() {
 
             <div className="mt-auto">
               <div
+              className={montserrat.className} 
                 style={{
                   fontSize: "10px",
                   color: "#a3a3a3",
@@ -1276,6 +1296,7 @@ export default function SilverCriticalMineral() {
                 }}
               ></div>
               <h3
+              className={montserrat.className} 
                 style={{
                   fontSize: "14px",
                   fontWeight: "700",
@@ -1305,6 +1326,7 @@ export default function SilverCriticalMineral() {
 
             <div className="flex-grow-1 d-flex align-items-center">
               <p
+              className={montserrat.className} 
                 style={{
                   fontSize: "12.5px",
                   lineHeight: "1.45",

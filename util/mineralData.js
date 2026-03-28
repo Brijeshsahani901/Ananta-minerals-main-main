@@ -940,7 +940,7 @@ export const whatsnew = [
    {
     id: 76,
     title:
-      "6. India-Chile FTA Critical Minerals Extension to Peru",
+      "India-Chile FTA Critical Minerals Extension to Peru",
     description:
       "India's Free Trade Agreement with Chile features a groundbreaking critical minerals chapter, poised for extension to Peru, creating a South American powerhouse for lithium, copper, and molybdenum supplies. Negotiations, led by Commerce Secretary Rajesh Agrawal, position it as a model for CEPA expansions, offering preferential tariffs, investment protections, and tech cooperation. Chile and Peru hold 60% of global lithium reserves. This profoundly impacts India. It secures long-term, cost-effective access for EV batteries and renewables, slashing China-dependent imports by 40-50%. Under the Critical Minerals Mission, it catalyzes refining hubs in Gujarat, supporting PLI outlays of ₹18,100 crore. Joint ventures unlock Andean exploration, while zero-duty access boosts exports of processed minerals. Economically, it adds $2-3 billion in trade annually, fortifying energy security amid global shortages. Geopolitically, it counters China's Latin America inroads via Belt and Road. For India's steel and electronics industries, stable copper flows mitigate inflation risks. This trilateral framework enhances India's LATAM diplomacy, fostering sustainable mining standards and positioning the nation as a bridge between South America and Asia in the critical minerals race.",
     downloadUrl: "#",
@@ -964,13 +964,252 @@ export const whatsnew = [
    {
     id: 78,
     title:
-      "8. Attero's Massive Rare Earth Corridor Investment",
+      "Attero's Massive Rare Earth Corridor Investment",
     description:
       "Attero Recycling has committed ₹7,000 crore over five years to India's Rare Earth Corridor, a game-changing initiative for e-waste recycling and advanced processing of neodymium, dysprosium, praseodymium, and other heavy rare earths vital for EV motors, wind turbines, and electronics. Partnering with government auctions and NITI Aayog, it targets 90% import substitution from China, processing 4 million tonnes annually. Facilities in Uttar Pradesh and Telangana pioneer urban mining tech. For India, this private powerhouse revolutionizes the sector. It slashes 95% dependency, fueling PLI for magnets worth ₹50,000 crore by 2030, and supports 500 GWh battery capacity. Job creation exceeds 10,000 in high-tech roles, aligning with Atmanirbhar Bharat. Environmentally, recycling cuts mining scars, advancing circular economy under the Critical Minerals Mission. Economically, it generates ₹20,000 crore exports, bolstering forex amid global shortages. Synergies with DRDO enhance defense magnets for missiles and radars. As Beijing restricts exports, Attero's scale positions India as the second-largest processor, attracting FDI from Japan and US. This corridor cements self-reliance, powering green growth and global competitiveness in renewables and semiconductors.",
     downloadUrl: "#",
     path: "https://www.business-standard.com/companies/news/attero-to-invest-rs-7-000-crore-in-rare-earth-corridor-126021301517_1.html",
     author: "The Business Standard",
     date: "13 February, 2026",
+    img: "",
+  },
+    {
+    id: 79,
+    title:
+      "Self-Reliance in Critical Minerals Emphasised by NITI Aayog PanelDate",
+    description:
+      "A NITI Aayog National Mineral Mission panel highlighted the need for India to strengthen self-reliance in critical minerals through collaboration between government and private mining companies. It urged full utilisation of domestic resources and international cooperation, noting potential partnerships — including an invitation from Brazilian lithium firm CBL to explore joint operations.",
+    downloadUrl: "#",
+    path: "https://timesofindia.indiatimes.com/city/hyderabad/self-reliance-in-critical-minerals-key-niti-panel/articleshow/128824844.cms",
+    author: "Times of India",
+    date: "Feb 27, 2026",
+    img: "",
+  },
+    {
+    id: 80,
+    title:
+      "Rare Earth Supply Pressures Hit Aerospace Sector",
+    description:
+      "Heavy rare earth elements like yttrium and scandium are facing shortages affecting aerospace and semiconductor industries due to China’s export restrictions. Western firms such as MP Materials and Rio Tinto are advancing projects to boost non-Chinese supplies — a development with implications for India’s rare earth sourcing strategies.",
+    downloadUrl: "#",
+    path: "https://www.investors.com/news/five-rare-earth-stocks-to-watch-as-shortages-hit-aerospace/",
+    author: " Investors.com (I-Investor’s Business Daily)",
+    date: "Feb 26, 2026",
+    img: "",
+  },
+    {
+    id: 81,
+    title:
+      "UK Opens First Commercial Lithium Plant Amid Global Supply Push",
+    description:
+      "The UK inaugurated its first commercial lithium production facility in Cornwall to reduce reliance on Chinese supply chains. Although not an Indian development, it marks global capacity expansion in critical mineral processing that could affect India’s sourcing calculations.",
+    downloadUrl: "#",
+    path: "https://www.ft.com/content/0df5dee8-6d4b-41e1-b2a0-929e1023c5f8",
+    author: "Financial Times",
+    date: "26 February, 2026",
+    img: "",
+  },
+    {
+    id: 82,
+    title:
+      "Odisha’s Critical Minerals Sector Poised to Reach $18–20 Billion by 2032",
+    description:
+      "Odisha state is rapidly scaling up mining of critical minerals including lithium (recent discoveries in Nayagarh), graphite, vanadium and cobalt. The state plans to strengthen value addition, supply chains and processing infrastructure, positioning itself as a major domestic hub for critical minerals crucial to EVs and renewables.",
+    downloadUrl: "#",
+    path: "https://www.constructionweekonline.in/business/odisha-minerals",
+    author: "ConstructionWeekOnline",
+    date: "Feb 27, 2026",
+    img: "",
+  },
+    {
+    id: 83 ,
+    title:
+      "Brazil and India Agree to Expand Cooperation on Rare Earths and Critical Minerals",
+    description:
+      "India and Brazil signed a strategic cooperation agreement focused on rare earths and critical minerals, covering reciprocal investment, exploration and mining. With Brazil holding substantial rare earth reserves, this partnership offers India a diversified source of key minerals beyond traditional suppliers.",
+    downloadUrl: "#",
+    path: "https://apnews.com/article/f9298c4050f8402e12c81401a6e88f20",
+    author: "AP News",
+    date: "Feb 21, 2026",
+    img: "",
+  },
+    {
+    id: 84 ,
+    title:
+      "Japan-France-Canada Rare Earth Alliance",
+    description:
+      "Japan, France, and Canada are exploring alternatives to the US-led trade bloc for rare earth supplies, aiming to diversify sources beyond China amid geopolitical tensions. This initiative seeks stable, non-China dependent supply chains for these critical minerals essential for electronics, renewables, and defense. Discussions focus on collaborative mining, processing, and trade frameworks to ensure resilience. For India, this creates partnership opportunities in its rare earth reserves and processing capabilities, potentially boosting exports and reducing China's market dominance, aligning with the National Critical Minerals Mission.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/asia-pacific/japan-france-canada-work-alternatives-us-led-trade-bloc-rare-earth-supplies-2026-03-06/",
+    author: "Reuters",
+    date: "7 March, 2026",
+    img: "",
+  },
+    {
+    id: 85 ,
+    title:
+      "TDB Backs Battery Recycling Tech",
+    description:
+      "The Technology Development Board (TDB) under DST has funded MiniMines Cleantech Solutions Pvt. Ltd. for commercialising sustainable recycling of lithium-ion batteries, extracting lithium, cobalt, nickel, and manganese via proprietary Hybrid Hydrometallurgy™. This zero-discharge process achieves 99% recovery rates, promoting urban mining and the circular economy. It directly strengthens India's self-reliance in critical minerals, cuts import dependence for clean energy tech, and supports Aatmanirbhar Bharat by scaling domestic production of battery-grade materials.",
+    downloadUrl: "#",
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2235968&reg=3&lang=2",
+    author: "PIB",
+    date: "6 March, 2026",
+    img: "",
+  },
+    {
+    id: 86 ,
+    title:
+      "UN Critical Minerals Demand Surge",
+    description:
+      "UN forecasts predict critical minerals demand tripling by 2030 and quadrupling by 2040, with 2023 trade hitting $2.5 trillion (10% of global trade), driven by digital economy and energy transition needs for lithium, cobalt, nickel, and rare earths. US pushes ally-led blocs against China dominance; China calls for cooperation and green mining. India faces supply risks for its EV and renewable goals but gains from global diversification efforts, leveraging domestic reserves and recycling initiatives like MiniMines to secure supplies.",
+    downloadUrl: "#",
+    path: "https://fortune.com/2026/03/06/united-nations-forecast-outlook-critical-minerals-cobalt-lithium-rare-earth/",
+    author: "Fortune",
+    date: "6 March, 2026",
+    img: "",
+  },
+    {
+    id: 87,
+    title:
+      "US Boosts 13 Critical Minerals Supply",
+    description:
+      "The US Defense Industrial Base Consortium invites proposals to expand domestic production of 13 minerals—arsenic, samarium, bismuth, tungsten, gadolinium, vanadium, germanium, ytterbium, graphite, yttrium, hafnium, zirconium, nickel—for defense amid Iran tensions. Projects cover sourcing, processing, and recycling; tungsten prices surged 9.52% to $1,890-1,998/mtu due to security concerns. For India, this intensifies global competition but opens collaboration avenues under US-India iCET, aiding mutual diversification from China.",
+    downloadUrl: "#",
+    path: "https://www.fastmarkets.com/insights/us-invites-proposals-to-boost-supply-of-tungsten-and-12-other-critical-minerals/",
+    author: "Fastmarkets",
+    date: "5 March, 2026",
+    img: "",
+  },
+   {
+    id: 88,
+    title:
+      "Pentagon's Pre-Iran Strike Mineral Push",
+    description:
+      "The Pentagon sought new supplies of 13 critical minerals just before US-Israel strikes on Iran, highlighting urgent defence needs amid escalating Middle East tensions. This underscores supply chain vulnerabilities. India benefits from heightened global urgency, positioning its minerals diplomacy (e.g., with Australia, Canada) to attract investments and secure stable supplies for defence and tech sectors.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/us/pentagon-sought-fresh-supply-13-critical-minerals-day-before-iran-attack-2026-03-04/",
+    author: "Reuters",
+    date: "4 March, 2026",
+    img: "",
+  },
+   {
+    id: 89,
+    title:
+      "India-Canada Critical Minerals MOU",
+    description:
+      "India and Canada signed an MoU on critical minerals cooperation, alongside pacts on renewables and culture, fostering joint exploration, processing, and supply chains. This directly enhances India's access to Canadian nickel, cobalt, and lithium, reducing China reliance, bolstering domestic manufacturing under PLI schemes for EVs and renewables.",
+    downloadUrl: "#",
+    path: "https://www.moneycontrol.com/news/business/india-canada-sign-mou-on-critical-minerals-pacts-inked-on-renewables-culture-13848010.html",
+    author: "Moneycontrol",
+    date: "2 March, 2026",
+    img: "",
+  },
+   {
+    id: 90,
+    title:
+      "Private Sector's Role in Critical Minerals",
+    description:
+      "Experts at a Chintan Research Foundation roundtable emphasized the private sector's pivotal role in addressing India's critical minerals needs amid global supply chain vulnerabilities. Sandeep Kadam, Joint Secretary, Ministry of Mines, highlighted the National Critical Mineral Mission's comprehensive approach, covering exploration to recycling, with 46 blocks auctioned and KABIL securing overseas assets. Ranjan Mathai, former Foreign Secretary, stressed policy reforms, easier licensing, and centre-state coordination to leverage India's geological potential, linking minerals to national security. Industry leaders like Rahul Kanuganti advocated for a full ecosystem, including junior miners, while Shivang Singh pushed recycling from urban waste. Concerns over China's dominance and potential export controls from Indonesia and Zambia were raised, urging diversification and domestic production. Recent Budget announcements include rare earth corridors in Odisha, Kerala, Andhra Pradesh, and Tamil Nadu.",
+    downloadUrl: "#",
+    path: "https://www.tribuneindia.com/news/business/experts-discuss-private-sectors-key-role-in-meeting-indias-critical-minerals-needs/",
+    author: "The Tribune",
+    date: "7 March, 2026",
+    img: "",
+  },
+   {
+    id: 91,
+    title:
+      "GSI-NMEDT Exploration in Odisha",
+    description:
+      "The Geological Survey of India (GSI) conducted 36 mineral exploration projects in Odisha from 2021-22 to 2024-25, including 14 on rare earth elements and rare metals (REE-RM), with 15 more initiated for 2025-26, three targeting REE-RM. The National Mineral Exploration and Development Trust (NMEDT) sanctioned 29 critical mineral projects, including three for REE. Minister Satish Chandra Dubey informed Rajya Sabha of seven critical mineral blocks auctioned in Odisha post-MMDR Act 2023 amendments, out of 46 nationally. Infrastructure includes IREL's rare earth processing plant at Chhatrapur, Ganjam, and five graphite beneficiation plants in Balangir, Koraput, and Rayagada. These efforts boost domestic exploration and processing of strategic minerals essential for energy transition and technology.",
+    downloadUrl: "#",
+    path: "https://energy.economictimes.indiatimes.com/news/coal/gsi-and-nmedt-boost-rare-earth-critical-mineral-exploration-in-odisha/129390034",
+    author: "ET Energy World",
+    date: "10 March, 2026",
+    img: "",
+  },
+   {
+    id: 92,
+    title:
+      "Beach Sand Minerals Resources Explained",
+    description:
+      "Atomic Minerals Directorate (AMD) under DAE has mapped 1,309 million tonnes of beach sand heavy minerals (BSM) across coastal states, led by Andhra Pradesh (360 Mt), Tamil Nadu (331 Mt), Odisha (351 Mt), and Kerala (243 Mt), containing ilmenite, rutile, monazite, zircon, and others. Union Budget 2026 announced Rare Earth Corridors in Odisha, Kerala, Andhra Pradesh, and Tamil Nadu for mining, processing, and RE magnet manufacturing, aiming to build a competitive ecosystem for NdPr, Samarium oxides, titanium, and zirconium. Monazite extraction faces challenges like radioactivity, regulations, and 4-5 year timelines for clearances. AMD continues exploration in coastal Andhra Pradesh, Odisha, Tamil Nadu, and hard rock areas in Rajasthan, Gujarat, Tamil Nadu, and Telangana to augment REE-thorium resources.",
+    downloadUrl: "#",
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2238308&reg=3&lang=2",
+    author: "PIB",
+    date: "11 March, 2026",
+    img: "",
+  },
+   {
+    id: 93,
+    title:
+      "US-Brazil Critical Minerals Amid Tensions",
+    description:
+      "The United States hosted a critical minerals event with Brazil on March 18, 2026, despite ongoing diplomatic strains between the two nations. The gathering aimed to discuss supply chain resilience and cooperation on minerals essential for clean energy and defense technologies, even as tensions persist over trade and environmental policies. Participants highlighted potential joint ventures, though no firm agreements were announced, reflecting cautious optimism amid bilateral challenges. Outcomes may influence future US-Brazil resource partnerships.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/americas/us-hosts-critical-minerals-event-brazil-amid-diplomatic-strains-2026-03-18/",
+    author: "Reuters",
+    date: "18 March, 2026",
+    img: "",
+  },
+   {
+    id: 94,
+    title:
+      "GSI's Central India Mineral Hunt",
+    description:
+      "India's Geological Survey of India (GSI) is exploring 54 blocks in Maharashtra, Madhya Pradesh, and Chhattisgarh for critical minerals like graphite, lithium, nickel, copper, and rare earth elements. Out of 426 national blocks under GSI exploration, over 220 target critical minerals, with central region findings expected by September 2026 for potential auctions by the Ministry of Mines. Blocks are categorized as G2-G4; G2 allows direct mining licenses, while others require composite licenses involving further prospecting. This boosts domestic production amid global supply concerns. Maharashtra's coastal and eastern areas show promise.",
+    downloadUrl: "#",
+    path: "https://energy.economictimes.indiatimes.com/news/coal/gsi-hunts-for-critical-minerals-rare-earth-elements-in-central-region-blocks/129635895",
+    author: "ET Energy World",
+    date: "17 March, 2026",
+    img: "",
+  },
+   {
+    id: 95,
+    title:
+      "Japan-US Critical Minerals Pact",
+    description:
+      "Japan and the US are set to agree on joint development of rare earths, lithium, and copper at a March 19, 2026, summit in Washington between PM Sanae Takaichi and President Donald Trump. Japanese firms Mitsubishi Materials and Mitsui & Co. will participate in projects like a rare earth refinery in Indiana and a lithium mine in North Carolina. The deal secures supply chains for defense, semiconductors, and renewables, countering dependencies. It advances bilateral efforts for resilient critical mineral supplies.",
+    downloadUrl: "#",
+    path: "https://www.mining.com/web/us-japan-to-focus-rare-earths-cooperation-on-select-group-of-minerals-at-first/",
+    author: "Mining.com",
+    date: "19 March, 2026",
+    img: "",
+  },
+  {
+    id: 96,
+    title:
+      "Camimex Urges USMCA Minerals Focus",
+    description:
+      "Mexico's Mining Chamber (Camimex) advocates including mining and critical minerals in the USMCA review, underway since March 2026, to bolster North American supply chains. President Pedro Rivero noted the absence of a mining section in the current pact and shared proposals with Mexico's Economy Ministry, aligning with US-Canada interests. Mexico aims to leverage strengths such as silver while addressing gaps, including reliance on bauxite imports for aluminium. Investor concerns over security, legal frameworks, and water reforms persist, especially for new projects.",
+    downloadUrl: "#",
+    path: "https://www.alcircle.com/news/camimex-pushes-for-critical-minerals-in-usmca-review-amid-supply-chain-and-investment-concerns-117666",
+    author: "AL Circle",
+    date: "17 March, 2026",
+    img: "",
+  }, {
+    id: 96,
+    title:
+      "China-Vietnam Minerals Cooperation",
+    description:
+      "China's Foreign Minister Wang Yi urged Vietnam to enhance cooperation in critical minerals, alongside agriculture, electricity, finance, and tech innovation, during a March 17, 2026, Hanoi meeting with Deputy PM Bui Thanh Son. The call emphasizes railway connectivity and joint efforts to secure mineral supplies vital for global tech and energy transitions. This reflects growing bilateral ties amid regional supply chain diversification.",
+    downloadUrl: "#",
+    path: "https://www.mining.com/web/china-vietnam-should-boost-cooperation-in-critical-minerals-foreign-minister-says/",
+    author: "Mining.com",
+    date: "17 March, 2026",
+    img: "",
+  },
+   {
+    id: 96,
+    title:
+      "Orion's $2.2B Mining Fund Launch",
+    description:
+      "Orion Resource Partners raised $2.2 billion for a mining fund amid intensifying global competition for critical minerals as of March 16, 2026. The capital targets investments in projects essential for batteries, renewables, and tech supply chains. This bolsters financing for exploration and development in a heating market race.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/business/energy/orion-raises-22-billion-mining-fund-race-critical-minerals-heats-up-2026-03-16/",
+    author: "Reuters",
+    date: "16 March, 2026",
     img: "",
   },
 ];

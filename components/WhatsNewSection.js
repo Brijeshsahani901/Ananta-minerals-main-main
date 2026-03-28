@@ -96,8 +96,8 @@ export default function WhatsNewSection() {
       ref={whatsNewRef}
       className="col-12 col-lg-4 px-3"
       style={{
-        height: "520px",
-        maxHeight: isMobile ? "none" : "520px",
+        height: "535px",
+        maxHeight: isMobile ? "none" : "535px",
         overflowY: "scroll",
         overflowX: "hidden",
         borderRadius: "6px",

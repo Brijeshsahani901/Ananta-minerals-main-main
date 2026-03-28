@@ -1,22 +1,30 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const IndiaOmanMineralInfographic = () => {
   return (
     <Container 
-      className="p-1" 
+      className={montserrat.className} 
+    
       style={{ 
+        padding: "4px",
         maxWidth: '100%', 
         minHeight: '515px',
         backgroundColor: '#0b1120',
-        fontFamily: "'Inter', 'Segoe UI', sans-serif",
+    
         overflow: 'hidden',
         borderRadius: '10px',
         boxShadow: '0 10px 30px rgba(0, 0, 0, 0.4)',
       }}
     >
       {/* Header */}
-      <div style={{
+      <div   className={montserrat.className}  style={{
         background: 'linear-gradient(90deg, #1e3a8a 0%, #5b21b6 100%)',
         padding: '8px 16px',
         borderRadius: '10px',
@@ -24,7 +32,7 @@ const IndiaOmanMineralInfographic = () => {
         marginBottom: '10px',
         border: '1px solid rgba(255, 255, 255, 0.15)'
       }}>
-        <h1 style={{ 
+        <h1   className={montserrat.className}  style={{ 
           fontSize: '1.5rem', 
           fontWeight: '900', 
           color: '#ffffff',
@@ -33,7 +41,7 @@ const IndiaOmanMineralInfographic = () => {
         }}>
           INDIA - OMAN POTENTIAL
         </h1>
-        <h2 style={{ 
+        <h2   className={montserrat.className}  style={{ 
           fontSize: '1.1rem', 
           fontWeight: '700', 
           color: '#fcd34d',
@@ -44,9 +52,9 @@ const IndiaOmanMineralInfographic = () => {
         </h2>
       </div>
 
-      <Row style={{ minHeight: 'calc(530px - 80px)' }} className="g-2">
+      <Row  style={{ minHeight: 'calc(530px - 80px)' }} className="g-2">
         {/* Left Column */}
-        <Col md={4} style={{ height: '100%' }}>
+        <Col md={4}   className={montserrat.className}  style={{ height: '100%' }}>
           <div style={{
             background: '#1e293b',
             borderRadius: '10px',
@@ -57,7 +65,7 @@ const IndiaOmanMineralInfographic = () => {
             flexDirection: 'column'
           }}>
             {/* Mineral Grid */}
-            <div style={{ 
+            <div   className={montserrat.className}  style={{ 
               display: 'grid', 
               gridTemplateColumns: 'repeat(2, 1fr)', 
               gap: '8px',
@@ -73,6 +81,7 @@ const IndiaOmanMineralInfographic = () => {
                 { name: 'PHOSPHATE', color: '#ec4899' }
               ].map((mineral, index) => (
                 <div 
+                  className={montserrat.className} 
                   key={index}
                   style={{
                     backgroundColor: `${mineral.color}20`,
@@ -95,14 +104,14 @@ const IndiaOmanMineralInfographic = () => {
             </div>
             
             {/* Paragraph 1 */}
-            <div style={{
+            <div  className={montserrat.className}  style={{
               background: 'rgba(30, 64, 175, 0.2)',
               padding: '12px',
               borderRadius: '8px',
               border: '1px solid rgba(59, 130, 246, 0.3)',
               marginTop: 'auto'
             }}>
-              <p style={{ 
+              <p   className={montserrat.className} style={{ 
                 fontSize: '0.85rem', 
                 lineHeight: '1.35', 
                 color: '#e2e8f0',
@@ -110,7 +119,7 @@ const IndiaOmanMineralInfographic = () => {
               }}>
                 <span style={{ color: '#93c5fd', fontWeight: '700' }}>Mineral Development Oman</span> is offering exploration investment opportunities across its <span style={{ color: '#fbbf24', fontWeight: '700' }}>14 mining concession areas</span>, spanning
               </p>
-              <div style={{
+              <div   className={montserrat.className} style={{
                 background: 'linear-gradient(90deg, #d97706 0%, #fbbf24 100%)',
                 color: '#1e293b',
                 padding: '10px',
@@ -126,7 +135,7 @@ const IndiaOmanMineralInfographic = () => {
         </Col>
 
         {/* Middle Column */}
-        <Col md={5} style={{ height: '100%' }}>
+        <Col  className={montserrat.className}  md={5} style={{ height: '100%' }}>
           <div style={{
             background: '#1e293b',
             borderRadius: '10px',
@@ -138,13 +147,13 @@ const IndiaOmanMineralInfographic = () => {
             gap: '12px'
           }}>
             {/* Paragraph 2 */}
-            <div style={{
+            <div   className={montserrat.className} style={{
               background: 'rgba(5, 150, 105, 0.15)',
               padding: '14px',
               borderRadius: '8px',
               border: '1px solid rgba(16, 185, 129, 0.3)'
             }}>
-              <div style={{
+              <div  className={montserrat.className}  style={{
                 color: '#34d399',
                 fontSize: '0.95rem',
                 fontWeight: '800',
@@ -152,7 +161,7 @@ const IndiaOmanMineralInfographic = () => {
               }}>
                 CEPA AGREEMENT
               </div>
-              <p style={{ 
+              <p   className={montserrat.className}  style={{ 
                 fontSize: '0.85rem', 
                 lineHeight: '1.35', 
                 color: '#d1d5db',
@@ -163,13 +172,13 @@ const IndiaOmanMineralInfographic = () => {
             </div>
             
             {/* Paragraph 3 */}
-            <div style={{
+            <div   className={montserrat.className} style={{
               background: 'rgba(245, 158, 11, 0.15)',
               padding: '14px',
               borderRadius: '8px',
               border: '1px solid rgba(245, 158, 11, 0.3)'
             }}>
-              <div style={{
+              <div  className={montserrat.className}  style={{
                 color: '#fbbf24',
                 fontSize: '0.95rem',
                 fontWeight: '800',
@@ -177,7 +186,7 @@ const IndiaOmanMineralInfographic = () => {
               }}>
                 INDIA'S STRATEGY
               </div>
-              <p style={{ 
+              <p   className={montserrat.className} style={{ 
                 fontSize: '0.85rem', 
                 lineHeight: '1.35', 
                 color: '#d1d5db',
@@ -190,7 +199,7 @@ const IndiaOmanMineralInfographic = () => {
         </Col>
 
         {/* Right Column */}
-        <Col md={3} style={{ height: '100%' }}>
+        <Col  className={montserrat.className}  md={3} style={{ height: '100%' }}>
           <div style={{
             background: '#1e293b',
             borderRadius: '10px',
@@ -209,14 +218,14 @@ const IndiaOmanMineralInfographic = () => {
               textAlign: 'center',
               marginBottom: '12px'
             }}>
-              <div style={{ 
+              <div  className={montserrat.className}  style={{ 
                 fontSize: '1.3rem', 
                 fontWeight: '900',
                 marginBottom: '4px'
               }}>
                 60,000 TONNES
               </div>
-              <div style={{ 
+              <div  className={montserrat.className}  style={{ 
                 fontSize: '1.1rem', 
                 fontWeight: '800',
                 color: '#fbbf24'
@@ -226,7 +235,7 @@ const IndiaOmanMineralInfographic = () => {
             </div>
             
             {/* Paragraphs 4 & 5 */}
-            <div style={{
+            <div   className={montserrat.className}   style={{
               background: 'rgba(109, 40, 217, 0.15)',
               padding: '12px',
               borderRadius: '8px',
@@ -237,7 +246,7 @@ const IndiaOmanMineralInfographic = () => {
               justifyContent: 'space-between'
             }}>
               <div>
-                <p style={{ 
+                <p  className={montserrat.className}  style={{ 
                   fontSize: '0.85rem', 
                   lineHeight: '1.35', 
                   color: '#e2e8f0',
@@ -246,7 +255,7 @@ const IndiaOmanMineralInfographic = () => {
                   <span style={{ color: '#c4b5fd', fontWeight: '700' }}>SPMP</span> and <span style={{ color: '#c4b5fd', fontWeight: '700' }}>Oman Investment Authority</span> are seeking a foreign investor in the antimony smelter and refinery in <span style={{ color: '#fbbf24', fontWeight: '700' }}>Sohar Port</span>.
                 </p>
                 
-                <p style={{ 
+                <p  className={montserrat.className}  style={{ 
                   fontSize: '0.85rem', 
                   lineHeight: '1.35', 
                   color: '#e2e8f0',

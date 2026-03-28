@@ -1,6 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaBatteryFull, FaGlobeAsia, FaBolt } from "react-icons/fa";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function IndiaAfghanistanCollab() {
   return (
@@ -20,6 +26,7 @@ export default function IndiaAfghanistanCollab() {
     >
       {/* Animated Gradient Glow Background */}
       <div
+
         style={{
           position: "absolute",
           top: "-120px",
@@ -49,8 +56,9 @@ export default function IndiaAfghanistanCollab() {
       ></div>
 
       {/* HEADER */}
-      <div style={{ position: "relative", zIndex: 2 }}>
+      <div   className={montserrat.className} style={{ position: "relative", zIndex: 2 }}>
         <h3
+         className={montserrat.className}
           style={{
             textAlign: "center",
             fontWeight: "700",
@@ -85,6 +93,7 @@ export default function IndiaAfghanistanCollab() {
         }}
       >
         <div
+         className={montserrat.className}
           style={{
             flex: 1,
             paddingRight: "18px",
@@ -93,6 +102,7 @@ export default function IndiaAfghanistanCollab() {
           }}
         >
           <div
+           className={montserrat.className}
             style={{
               fontSize: "13px",
               color: "#48dbfb",
@@ -114,6 +124,7 @@ export default function IndiaAfghanistanCollab() {
 
         {/* Circle Indicator */}
         <div
+         className={montserrat.className}
           style={{
             background:
               "linear-gradient(135deg, #48dbfb, #0abde3 80%, #1dd1a1)",
@@ -140,6 +151,7 @@ export default function IndiaAfghanistanCollab() {
 
       {/* Bottom Card - India */}
       <div
+
         className="d-flex align-items-center justify-content-between flex-wrap"
         style={{
           background:
@@ -156,6 +168,7 @@ export default function IndiaAfghanistanCollab() {
       >
         {/* Circle Indicator */}
         <div
+         className={montserrat.className}
           style={{
             background:
               "linear-gradient(135deg, #ff9ff3, #f368e0 80%, #e84393)",
@@ -180,6 +193,7 @@ export default function IndiaAfghanistanCollab() {
         </div>
 
         <div
+         className={montserrat.className}
           style={{
             flex: 1,
             paddingLeft: "18px",
@@ -210,6 +224,7 @@ export default function IndiaAfghanistanCollab() {
 
       {/* FOOTER */}
       <div
+       className={montserrat.className}
         style={{
           textAlign: "center",
           marginTop: "8px",

@@ -1,10 +1,17 @@
 import * as React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 
 export default function RareEarthInfographic() {
   return (
-    <div className="container-fluid p-0">
-      <div style={{
+    <div  className="container-fluid p-0">
+      <div       className={montserrat.className}  style={{
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         margin: "0 auto",
         padding: "25px",
@@ -47,7 +54,7 @@ export default function RareEarthInfographic() {
 
         {/* Header */}
         <div className="text-center position-relative" style={{ zIndex: 1 }}>
-          <h1 style={{ 
+          <h1       className={montserrat.className}  style={{ 
             fontSize: "1.8rem", 
             fontWeight: "bold", 
             margin: 0,
@@ -55,7 +62,7 @@ export default function RareEarthInfographic() {
           }}>
             China's Rare Earths Restrictions
           </h1>
-          <div style={{ 
+          <div      className={montserrat.className}  style={{ 
             fontStyle: "italic", 
             marginTop: "6px", 
             fontSize: "1rem",
@@ -72,7 +79,7 @@ export default function RareEarthInfographic() {
         </div>
 
         {/* Middle Section */}
-        <div className="row align-items-center position-relative" style={{ zIndex: 1, marginTop: "10px" }}>
+        <div  className="row align-items-center position-relative" style={{ zIndex: 1, marginTop: "10px" }}>
           {/* Big Number */}
           <div className="col-md-3 text-center">
             <div style={{ 
@@ -86,7 +93,7 @@ export default function RareEarthInfographic() {
             }}>
               12
             </div>
-            <div style={{
+            <div       className={montserrat.className} style={{
               fontSize: "0.9rem",
               color: "#b0e0e6",
               marginTop: "5px"
@@ -97,7 +104,7 @@ export default function RareEarthInfographic() {
 
           {/* Explanation Text */}
           <div className="col-md-9">
-            <div style={{ 
+            <div       className={montserrat.className} style={{ 
               fontSize: "1.1rem", 
               lineHeight: "1.5",
               padding: "15px",
@@ -134,7 +141,7 @@ export default function RareEarthInfographic() {
             border: "1px solid rgba(255,255,255,0.2)",
             boxShadow: "0 4px 12px rgba(0,0,0,0.2)"
           }}>
-            <div style={{ flex: "1 1 60%", minWidth: "200px" }}>
+            <div       className={montserrat.className}  style={{ flex: "1 1 60%", minWidth: "200px" }}>
               Foreign products containing Chinese-origin rare earths
               (more than 0.1 percent) require a Chinese export licence for shipment.
             </div>
@@ -155,7 +162,7 @@ export default function RareEarthInfographic() {
         </div>
 
         {/* Footer */}
-        <div className="text-center position-relative" style={{ 
+        <div className="text-center position-relative"  style={{ 
           zIndex: 1, 
           fontSize: "0.8rem", 
           color: "#b0e0e6",

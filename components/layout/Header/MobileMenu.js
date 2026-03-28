@@ -750,6 +750,41 @@ const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
                   Supply Chain
                 </Link>
               </li> */}
+              <motion.div
+  initial={{ opacity: 0, x: -20 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.4 }}
+  style={{
+    marginRight: "20px",
+    alignItems: "center",
+  }}
+>
+  <Link  href="/active-projects">
+    <button
+    className="mx-3 my-3"
+      style={{
+        background: "linear-gradient(135deg, #1FA3F3, #0d6efd)",
+        border: "none",
+        color: "#fff",
+        padding: "8px 18px",
+        borderRadius: "999px",
+        fontSize: "14px",
+        fontWeight: 500,
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        boxShadow: "0 4px 12px rgba(31,163,243,0.4)",
+
+      }}
+    >
+      Active Projects
+    </button>
+  </Link>
+</motion.div>
+  <li>
+                <Link href="/strategic-dialogues" onClick={handleMobileMenuClose}>
+                  Strategic Dialogues
+                </Link>
+              </li>
 
               <li
                 className="menu-item-has-children"

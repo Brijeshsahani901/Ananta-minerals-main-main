@@ -1,10 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function IndiaUSFTA() {
   return (
-    <section style={styles.wrapper}>
+    <section className={montserrat.className} style={styles.wrapper}>
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -72,7 +78,7 @@ const styles = {
     background: "linear-gradient(145deg, #092140 0%, #0b1e35 100%)",
     // padding: "10px",
     borderRadius: "10px",
-    fontFamily: "Inter, 'Inter UI', -apple-system, BlinkMacSystemFont, sans-serif",
+    fontFamily: "montserrat, 'Inter UI', -apple-system, BlinkMacSystemFont, sans-serif",
     boxShadow: "0 20px 28px -8px rgba(0,0,0,0.45)",
     minHeight:"530px",
     boxSizing : "border-box"
@@ -124,6 +130,7 @@ const styles = {
   },
 
   sectionText: {
+      fontFamily: "inherit",
     fontSize: "0.9rem",
     lineHeight: "1.45",
     marginBottom: "6px",

@@ -2,6 +2,12 @@
 
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function GreenlandInfographic() {
   const data = [
@@ -44,12 +50,12 @@ export default function GreenlandInfographic() {
   ];
 
   return (
-    <section style={styles.page}>
-      <h1 style={styles.title}>
+    <section style={styles.page}    className={montserrat.className} >
+      <h1  className={montserrat.className} style={styles.title}>
         Why is Greenland strategically important?
       </h1>
 
-      <p style={styles.subtitle}>
+      <p className={montserrat.className}  style={styles.subtitle}>
         Vast mineral resources critical for clean energy transition and EU supply security
       </p>
 
@@ -57,14 +63,15 @@ export default function GreenlandInfographic() {
         <div className="row g-4">
           {data.map((item, i) => (
             <div key={i} className="col-12 col-md-6 col-lg-3">
-              <div style={{ ...styles.card, borderColor: item.color }}>
+              <div className={montserrat.className}  style={{ ...styles.card, borderColor: item.color }}>
                 {/* Top badge */}
-                <span style={{ ...styles.badge, background: item.color }}>
+                <span className={montserrat.className}  style={{ ...styles.badge, background: item.color }}>
                   {item.project}
                 </span>
 
                 {/* Icon */}
                 <div
+                className={montserrat.className} 
                   style={{
                     ...styles.icon,
                     background: item.color,
@@ -73,11 +80,12 @@ export default function GreenlandInfographic() {
                   {item.icon}
                 </div>
 
-                <h3 style={styles.cardTitle}>{item.title}</h3>
+                <h3   className={montserrat.className}   style={styles.cardTitle}>{item.title}</h3>
 
                 <div style={styles.stats}>
                   {item.stats.map((s, idx) => (
                     <span
+                    className={montserrat.className} 
                       key={idx}
                       style={{
                         ...styles.statChip,
@@ -89,15 +97,15 @@ export default function GreenlandInfographic() {
                   ))}
                 </div>
 
-                <p style={styles.desc}>{item.desc}</p>
+                <p  className={montserrat.className} style={styles.desc}>{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div style={styles.footer}>
-        <strong style={{ color: "#38bdf8" }}>Strategic Importance:</strong>{" "}
+      <div className={montserrat.className}  style={styles.footer}>
+        <strong className={montserrat.className}  style={{ color: "#38bdf8" }}>Strategic Importance:</strong>{" "}
         Greenland provides Europe an alternative, secure source of critical minerals.
       </div>
     </section>
@@ -110,7 +118,6 @@ const styles = {
     background:
       "linear-gradient(180deg, #0b1814 0%, #0f211c 50%, #0b1814 100%)",
     minHeight: "530px",
-    fontFamily: "Inter, Segoe UI, sans-serif",
     color: "#e5e7eb",
     borderRadius : "10px"
   },

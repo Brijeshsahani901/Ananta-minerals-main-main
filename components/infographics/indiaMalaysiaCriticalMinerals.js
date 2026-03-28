@@ -8,7 +8,12 @@ import {
   Battery,
   DollarSign,
 } from "react-feather";
+import { Montserrat } from "next/font/google";
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 export default function MalaysianMineralInfographic() {
   const maxValue = 7000; 
   const graphData = [
@@ -19,7 +24,7 @@ export default function MalaysianMineralInfographic() {
   return (
     <>
       <div
-        className="d-flex align-items-center justify-content-center py-1"
+  className={`${montserrat.className} d-flex align-items-center justify-content-center py-1`}
         style={{
              borderRadius: "10px", 
           background:
@@ -82,38 +87,40 @@ export default function MalaysianMineralInfographic() {
           }}
         />
 
-        <div
-          className="container position-relative z-10"
-          style={{ maxWidth: "1200px" }}
-        >
-          <div className="text-center mb-4">
-            <h2
-              className="fw-bold mb-2"
-              style={{
-                fontSize: "2rem",
-                background:
-                  "linear-gradient(90deg, #60a5fa 0%, #34d399 50%, #fbbf24 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                textShadow: "0 4px 20px rgba(96, 165, 250, 0.3)",
-                lineHeight: "1.1",
-              }}
-            >
-              Untapped Potential for India
-            </h2>
-            <p
-              className="fw-light mx-auto"
-              style={{
-                color: "#cbd5e1",
-                fontSize: "0.8rem",
-                opacity: "0.9",
-                maxWidth: "500px",
-                lineHeight: "1.4",
-              }}
-            >
-              Investment in Malaysian Critical Mineral Ecosystem
-            </p>
-          </div>
+     <div
+  className={`${montserrat.className} container position-relative z-10`}
+>
+    <div className="text-center mb-4">
+  <h2
+    className={`${montserrat.className} fw-bold mb-2`}
+    style={{
+      fontSize: "2rem",
+      background:
+        "linear-gradient(90deg, #60a5fa 0%, #34d399 50%, #fbbf24 100%)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      textShadow: "0 4px 20px rgba(96, 165, 250, 0.3)",
+      lineHeight: "1.1",
+      fontWeight: 700,
+    }}
+  >
+    Untapped Potential for India
+  </h2>
+
+  <p
+    className={`${montserrat.className} fw-light mx-auto`}
+    style={{
+      color: "#cbd5e1",
+      fontSize: "0.85rem",
+      opacity: "0.9",
+      maxWidth: "500px",
+      lineHeight: "1.4",
+      fontWeight: 400,
+    }}
+  >
+    Investment in Malaysian Critical Mineral Ecosystem
+  </p>
+</div>
 
           {/* Main Content Container */}
           <div className="row align-items-center g-3">
@@ -367,7 +374,6 @@ export default function MalaysianMineralInfographic() {
       </div>
 
       <style jsx>{`
-        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
         @keyframes pulse {
           0% {
@@ -437,7 +443,7 @@ export default function MalaysianMineralInfographic() {
 function InfoCard({ icon, title, amount, text, gradient, delay }) {
   return (
     <Card
-      className="border-0 shadow-lg h-100"
+      className={`${montserrat.className} border-0 shadow-lg h-100`}
       style={{
         borderRadius: "16px",
         background: gradient,
@@ -459,33 +465,20 @@ function InfoCard({ icon, title, amount, text, gradient, delay }) {
         e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.25)";
       }}
     >
-      {/* Subtle Overlay Shine */}
+      {/* Overlay */}
       <div
         style={{
           position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
+          inset: 0,
           background:
             "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%)",
           pointerEvents: "none",
         }}
       />
 
-      {/* Top Accent Line */}
-      {/* <div
-        style={{
-          height: "3px",
-          background:
-            "linear-gradient(90deg, rgba(255,255,255,0.6) 0%, transparent 100%)",
-        }}
-      /> */}
-
       <Card.Body className="p-2 d-flex flex-column">
-        {/* Title and Icon in same row */}
+        {/* Title + Icon */}
         <div className="d-flex align-items-center justify-content-between mb-3">
-          {/* Title */}
           <h6
             className="fw-semibold mb-0"
             style={{
@@ -498,7 +491,6 @@ function InfoCard({ icon, title, amount, text, gradient, delay }) {
             {title}
           </h6>
 
-          {/* Icon Bubble */}
           <div
             className="rounded-circle d-flex align-items-center justify-content-center"
             style={{
@@ -522,7 +514,6 @@ function InfoCard({ icon, title, amount, text, gradient, delay }) {
             style={{
               fontSize: "1.3rem",
               textShadow: "0 2px 10px rgba(0,0,0,0.5)",
-              fontFamily: "'Inter', sans-serif",
             }}
           >
             {amount}
@@ -536,7 +527,6 @@ function InfoCard({ icon, title, amount, text, gradient, delay }) {
             lineHeight: "1.5",
             opacity: "0.9",
             fontSize: "0.72rem",
-            fontFamily: "'Inter', sans-serif",
             fontWeight: "400",
           }}
         >

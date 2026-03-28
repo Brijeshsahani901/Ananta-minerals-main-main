@@ -1,5 +1,5 @@
-/* Import Inter font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Import Lato font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -13,12 +13,13 @@ html {
 }
 
 :root {
-  --tg-body-font-family: 'Inter', sans-serif;
-  --tg-heading-font-family: 'Inter', sans-serif;
+  --tg-body-font-family: 'Lato', sans-serif;
+  --tg-heading-font-family: 'Lato', sans-serif;
   --tg-icon-font-family: "Font Awesome 5 Pro";
   --tg-body-font-size: 18px;
   --tg-body-line-height: 1.5;
   --tg-heading-line-height: 1.4;
+
   --tg-common-color-blue: #0d6efd;
   --tg-common-color-indigo: #6610f2;
   --tg-common-color-purple: #6f42c1;
@@ -32,19 +33,22 @@ html {
   --tg-common-color-white: #fff;
   --tg-common-color-gray: #fff;
   --tg-common-color-black: #000;
+
   --tg-body-color: #0f0f0f;
   --tg-heading-color: #111111;
- --tg-theme-primary: #2084ef;
 
+  --tg-theme-primary: #2084ef;
   --tg-theme-secondary: #111111;
+
   --tg-border-1: #e8e8e8;
   --tg-border-2: #2c2c2c;
+
   --tg-fw-extra-bold: 900;
-  --tg-fw-bold: 500;
+  --tg-fw-bold: 700;
   --tg-fw-semi-bold: 600;
   --tg-fw-medium: 500;
   --tg-fw-regular: 400;
-  --tg-fw-light: 400;
+  --tg-fw-light: 300;
 }
 
 /*=============================

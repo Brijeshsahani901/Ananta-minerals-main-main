@@ -1,9 +1,16 @@
 import * as React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function IndiaMongoliaMoUInfographic() {
   return (
     <div
+        className={montserrat.className}
       style={{
         fontFamily: "'Inter', 'Poppins', sans-serif",
         background: "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)",
@@ -41,8 +48,10 @@ export default function IndiaMongoliaMoUInfographic() {
       ></div>
 
       {/* HEADER */}
-      <div className="text-center mb-4">
+      <div 
+       className="text-center mb-4">
         <h2
+            className={montserrat.className}
           style={{
             fontWeight: "700",
             fontSize: "1.4rem",
@@ -55,6 +64,7 @@ export default function IndiaMongoliaMoUInfographic() {
           India and Mongolia sign MoU on Cooperation
         </h2>
         <div
+            className={montserrat.className}
           style={{
             fontWeight: "600",
             fontSize: "1.1rem",
@@ -81,6 +91,7 @@ export default function IndiaMongoliaMoUInfographic() {
         {/* LEFT CONTENT - Joint Surveys */}
         <div className="col-md-4 text-center">
           <div
+              className={montserrat.className}
             style={{
               width: "90px",
               height: "90px",
@@ -107,6 +118,7 @@ export default function IndiaMongoliaMoUInfographic() {
           </div>
 
           <div
+              className={montserrat.className}
             style={{
               background: "rgba(30, 41, 59, 0.8)",
               borderRadius: "10px",
@@ -123,7 +135,7 @@ export default function IndiaMongoliaMoUInfographic() {
               justifyContent: "center",
             }}
           >
-            <div style={{ fontWeight: "700", color: "#60a5fa", marginBottom: "8px", fontSize: "0.9rem" }}>
+            <div     className={montserrat.className} style={{ fontWeight: "700", color: "#60a5fa", marginBottom: "8px", fontSize: "0.9rem" }}>
               Joint Geological Surveys
             </div>
             India’s GSI can partner with Mongolia’s National Geological Survey to run joint hyperspectral, aero-geophysics, and ground geochem surveys, build 3D deposit models, and advance top targets into JORC/NI 43-101–ready drill programs.
@@ -162,6 +174,7 @@ export default function IndiaMongoliaMoUInfographic() {
             }}
           >
             <div
+                className={montserrat.className}
               style={{
                 color: "#fff",
                 fontWeight: "bold",
@@ -178,6 +191,7 @@ export default function IndiaMongoliaMoUInfographic() {
           </div>
 
           <div
+              className={montserrat.className}
             style={{
               background: "rgba(30, 41, 59, 0.8)",
               borderRadius: "10px",
@@ -194,7 +208,7 @@ export default function IndiaMongoliaMoUInfographic() {
               justifyContent: "center",
             }}
           >
-            <div style={{ fontWeight: "700", color: "#a855f7", marginBottom: "8px", fontSize: "0.9rem" }}>
+            <div     className={montserrat.className} style={{ fontWeight: "700", color: "#a855f7", marginBottom: "8px", fontSize: "0.9rem" }}>
               Government-to-Government
             </div>
             India and Mongolia can form a G2G REE partnership that diversifies India’s supply and helps Mongolia move from reserves to production.
@@ -218,6 +232,7 @@ export default function IndiaMongoliaMoUInfographic() {
             }}
           >
             <div
+                className={montserrat.className}
               style={{
                 color: "#fff",
                 fontWeight: "bold",
@@ -234,6 +249,7 @@ export default function IndiaMongoliaMoUInfographic() {
           </div>
 
           <div
+              className={montserrat.className}
             style={{
               background: "rgba(30, 41, 59, 0.8)",
               borderRadius: "10px",
@@ -250,7 +266,7 @@ export default function IndiaMongoliaMoUInfographic() {
               justifyContent: "center",
             }}
           >
-            <div style={{ fontWeight: "700", color: "#34d399", marginBottom: "8px", fontSize: "0.9rem" }}>
+            <div    className={montserrat.className} style={{ fontWeight: "700", color: "#34d399", marginBottom: "8px", fontSize: "0.9rem" }}>
               Rare Earth Resources
             </div>
            Mongolia has ~3.6 Mt REO (mainly LREEs) in seven deposits. With IREL’s more than 99% purity La, Ce, and NdPr, an IREL–Mongolia tie-up can turn ore into oxides for ceramics, alloys, batteries, and magnets.

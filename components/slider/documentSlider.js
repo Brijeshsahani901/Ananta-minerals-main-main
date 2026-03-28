@@ -10,7 +10,7 @@ const DocumentSlider = () => {
   const [showRightArrow, setShowRightArrow] = useState(true);
 
   const slides = [
-     {
+    {
       id: "agriculture",
       image: `${basePath}/assets/sectors_images/agriculture.jpg`,
       title: "Mineral Security in India's Agriculture Sector",
@@ -21,7 +21,7 @@ const DocumentSlider = () => {
       date: "July 2025",
       category: "Research Report",
     },
-     {
+    {
       id: "automobile",
       image: `${basePath}/assets/sectors_images/automobile.jpg`,
       title: "Automobile Industry and Battery Applications",
@@ -32,7 +32,7 @@ const DocumentSlider = () => {
       date: "July 2025",
       category: "Research Report",
     },
-     {
+    {
       id: "defence-and-aerospace",
       image: `${basePath}/assets/sectors_images/defence.jpg`,
       title: "Mineral Security in India's Defence and Aerospace Supply Chain",
@@ -43,7 +43,7 @@ const DocumentSlider = () => {
       date: "July 2025",
       category: "Research Report",
     },
-     {
+    {
       id: "renewable-energy",
       image: `${basePath}/assets/sectors_images/renewable.jpg`,
       title: "Critical Minerals for India's Renewable Energy Transition",
@@ -60,7 +60,7 @@ const DocumentSlider = () => {
       title: "Critical Pathways: Building India's Mineral Value Chain",
       link: "/supply-chain/critical-pathway",
       content:
-        "India's ambition for critical mineral independence rests on a complex sequence of capabilities that span the full length of the value chain...",
+        "India's ambition for critical mineral independence rests on a complex sequence of capabilities that span the full length of the value chain.",
       author: "Prerna Bountra",
       date: "July 2025",
       category: "Research Report",
@@ -72,7 +72,7 @@ const DocumentSlider = () => {
         "Closing the Loop: Strengthening India's Battery Recycling Supply Chains",
       link: "/supply-chain/closing-loop",
       content:
-        "This strategic report analyzes India's battery recycling ecosystem and its role in securing critical mineral supply chains...",
+        "This strategic report analyzes India's battery recycling ecosystem and its role in securing critical mineral supply chains.",
       author: "Ayan Barman",
       date: "July 2025",
       category: "Research Report",
@@ -83,7 +83,7 @@ const DocumentSlider = () => {
       title: "Breaking China's stranglehold over rare earth supplies",
       link: "/supply-chain/rare-earth-strategy",
       content:
-        "Chinese supplies of rare-earth doped magnets to India have not resumed... The problem must be tackled at multiple levels...",
+        "Chinese supplies of rare-earth doped magnets to India have not resumed, weeks after a political agreement had been reached to resume shipments to India.",
       author: "T K Arun",
       date: "September 2025",
       category: "Strategic Analysis",
@@ -94,7 +94,7 @@ const DocumentSlider = () => {
       title: "Magnets, Money, and Momentum: India's Rare-Earth PLI Push",
       link: "/supply-chain/magnets-money",
       content:
-        "In October 2025, the Indian Finance Ministry cleared a Rs. 7,300–7,350 crore (USD 880–885 million) Production-Linked Incentive (PLI) to establish domestic sintered..",
+        "In October 2025, the Indian Finance Ministry cleared a Rs. 7,300–7,350 crore (USD 880–885 million) Production-Linked Incentive (PLI) to establish domestic sintered...",
       author: "Ayan Barman",
       date: "October 2025",
       category: "Strategic Analysis",
@@ -116,7 +116,7 @@ const DocumentSlider = () => {
       title: "The Missing Discourse in CRM Recycling from E-Waste",
       link: "/supply-chain/recycling-e-waste",
       content:
-        "The recovery of critical raw materials (CRMs) from electronic waste has drawn significant attention in discussions on the circular economy and sustainable development..",
+        "The recovery of critical raw materials (CRMs) from electronic waste has drawn significant attention in discussions on the circular economy and sustainable development.",
       author: "Keerthi Lanka & Shivangi Aggarwal",
       date: "October 2025",
       category: "Industry Analysis",
@@ -198,7 +198,7 @@ const DocumentSlider = () => {
       title: "Karnataka bets on MiniMines for processing complex",
       link: "/supply-chain/karnatak",
       content:
-        "On November 28 2025, Karnataka signed a memorandum of understanding with Bengaluru based startup MiniMines Cleantech Solutions",
+        "On November 28 2025, Karnataka signed a memorandum of understanding with Bengaluru based startup MiniMines Cleantech Solutions.",
       author: "Aditya Pareek",
       date: "December 2025",
       category: "Industry Analysis",
@@ -216,14 +216,14 @@ const DocumentSlider = () => {
       category: "Industry Analysis",
     },
 
-       {
+    {
       id: 18,
       image: `${basePath}/assets/minerals_images/indai-europe.png`,
       title:
         "The Mother of All Deals and Critical Minerals",
       link: "/supply-chain/mother-of-all-deals",
       content:
-        "Global critical-raw-materials (CRM) supply chains today are thin, concentrated and geopolitically charged. China dominates processing and refining for many battery and rare- earth inputs, leaving miners and manufacturers outside China exposed to single-point chokepoints, export controls and price spikes.",
+        "Global critical-raw-materials (CRM) supply chains today are thin, concentrated and geopolitically charged.",
       author: "Ayan Barman",
       date: "January 2026",
       category: "Industry Analysis",
@@ -235,7 +235,7 @@ const DocumentSlider = () => {
         "Securing the Future : How India and Europe Can Co-Create Resilient Critical Mineral Supply Chains",
       link: "/supply-chain/securing-the-future",
       content:
-        "As India and the European Union (EU) edge closer to new trade and investment agreements, including a long-awaited free trade pact and investment protection deal, there is growing recognition that critical minerals must form a pillar of their economic partnership",
+        "As India and the European Union (EU) edge closer to new trade and investment agreements, including a long-awaited free trade pact and investment protection deal, there is growing recognition that critical minerals must form a pillar of their economic partnership.",
       author: "Mithilesh Phadke",
       date: "January 2026",
       category: "Industry Analysis",
@@ -248,7 +248,7 @@ const DocumentSlider = () => {
         "The Greenland Gambit: Strategic Minerals and Washington’s Return to the Arctic",
       link: "/supply-chain/greenland-gambit",
       content:
-        "The United States’ interest in Greenland is long-standing and well-documented. In 1946, Secretary of State James F.",
+        "The United States’ interest in Greenland is long-standing and well-documented.",
       author: "Ayan Barman",
       date: "January 2026",
       category: "Industry Analysis",
@@ -264,18 +264,18 @@ const DocumentSlider = () => {
       date: "January 2026",
       category: "Industry Analysis",
     },
-      {
+    {
       id: "latin",
       image: `${basePath}/assets/minerals_images/india-latin.jpg`,
       title: "India-Latin America Critical Minerals Agreement",
       link: "/supply-chain/india-latin",
       content:
-        "India’s search for critical minerals is entering a more assertive diplomatic phase, and Latin America is becoming central to that effort. As the global energy transition to greener sources accelerates, minerals such as lithium, copper, cobalt and rare earth elements have shifted from being niche commodities to strategic assets.",
+        "India’s search for critical minerals is entering a more assertive diplomatic phase, and Latin America is becoming central to that effort.",
       author: "Aditya Pareek",
       date: "February 2026",
       category: "Industry Analysis",
     },
-      {
+    {
       id: 20,
       image: `${basePath}/assets/minerals_images/jaishankar.jpg`,
       title: "Jaishankar in Washington: Critical Minerals and the Hard Geometry of Supply Chains",
@@ -286,20 +286,79 @@ const DocumentSlider = () => {
       date: "February 2026",
       category: "Industry Analysis",
     },
-     {
+    {
       id: 19,
       image: `${basePath}/assets/minerals_images/budget2026.jpeg`,
       title: "Union Budget Positions India in the Global Supply Chain with Rare Earth Corridor",
       link: "/supply-chain/union-budget",
       content:
-        "In the Union Budget for the financial year 2026–2027, the Government of India has articulated a clear strategy aimed at integrating the country more deeply into global supply and value chains for critical minerals,",
+        "In the Union Budget for the financial year 2026–2027, the Government of India has articulated a clear strategy aimed at integrating the country more deeply into global supply and value chains for critical minerals.",
       author: "Aditya Pareek",
       date: "February 2026",
       category: "Industry Analysis",
     },
-   
+    {
+      id: "jdk",
+      image: `${basePath}/assets/minerals_images/india-chile.jpg`,
+      title: "India Chile Trade Framework and Critical Minerals: What Chile Leads In, Who Operates the Assets, and Lessons for India",
+      link: "/supply-chain/india_chile_critical_minerals",
+      content:
+        "The recently expanded India–Chile trade framework marks a significant evolution in bilateral economic engagement, particularly in the context of critical minerals.",
+      author: "Mithilesh Phadke",
+      date: "27 February 2026",
+      category: "Industry Analysis",
+    },
+       {
+      id: "df",
+      image: `${basePath}/assets/minerals_images/helium.jpeg`,
+      title:
+        "Helium Under Pressure: Invisible Gas, Visible Crisis",
+      link: "/supply-chain/helium",
+      content:
+        "The Iran Crisis and West Asian escalation have triggered an unlikely but critical supply shock: helium.",
+      author: "Ayan Barman",
+      date: "March 2026",
+      category: "Industry Analysis",
+    },
+    {
+      id: "def",
+      image: `${basePath}/assets/minerals_images/us-japan.jpeg`,
+      title:
+        "How the US-Japan critical minerals framework is a template for India",
+      link: "/supply-chain/US-Japan-critical",
+      content:
+        "When Washington and Tokyo formalised their critical minerals framework agreement in October 2025, the immediate commentary focused on what it meant for the bilateral relationship and what it signalled to Beijing.",
+      author: "Aditya Pareek",
+      date: "March 2026",
+      category: "Industry Analysis",
+    },
+    {
+      id: "dfd",
+      image: `${basePath}/assets/minerals_images/strait-of-hourmous.jpg`,
+      title:
+        "Strait Flush: Pentagon's Rush and India's ICET Mineral Play",
+      link: "/supply-chain/strait-of-hourmous",
+      content:
+        "The Pentagon's urgent request for 13 critical minerals, including tungsten, yttrium, and germanium, made just hours before military strikes on Iran in early March 2026, has exposed a stark reality, i.e. one of the world's largest military powers faces acute supply- chain vulnerabilities during ‘Operation Epic Fury .’ For India, the crisis arrives at a precarious moment.",
+      author: "Ayan Barman",
+      date: "March 2026",
+      category: "Industry Analysis",
+    },
+    {
+      id: "df",
+      image: `${basePath}/assets/minerals_images/resource-nationalism.jpg`,
+      title:
+        "Resource nationalism's grip on global critical minerals supply chains",
+      link: "/supply-chain/resource-nationalism",
+      content:
+        "In an era of green energy transition, critical minerals such as lithium, cobalt, nickel, graphite, and Rare Earth Elements(REE)s fuel everything from Electric Vehicle(EV) batteries to wind turbines and semiconductors.",
+      author: "Aditya Pareek",
+      date: "March 2026",
+      category: "Industry Analysis",
+    },
+
+
   ];
-  
 
   const parseDate = (dateStr) => {
     const clean = dateStr
@@ -359,7 +418,7 @@ const DocumentSlider = () => {
   }, [updateArrowVisibility]);
 
   return (
-    <div className="document-slider-wrapper"  > 
+    <div className="document-slider-wrapper"  >
       <style>{`
         .document-slider-wrapper {
           position: relative;

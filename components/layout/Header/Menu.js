@@ -7,6 +7,15 @@ import { getAllSearchItems } from "@/util/searchItems";
 import Swal from "sweetalert2";
 import { usePathname } from "next/navigation";
 
+import { Lato } from "next/font/google";
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-lato",
+});
+
+
 // Get all search items by passing the required menu items
 const allSearchItems = getAllSearchItems(alternateTechItems, sectorItems);
 
@@ -245,18 +254,19 @@ export default function Menu({
     width: "100%",
   }}
 >
-          <motion.div
+<motion.div
+  className="d-none d-lg-flex"
   initial={{ opacity: 0, x: -20 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.4 }}
   style={{
     marginRight: "20px",
-    display: "flex",
     alignItems: "center",
   }}
 >
-  <Link href="/active-projects">
+  <Link className={lato.className} href="/active-projects">
     <button
+      className={lato.className}
       style={{
         background: "linear-gradient(135deg, #1FA3F3, #0d6efd)",
         border: "none",
@@ -267,15 +277,8 @@ export default function Menu({
         fontWeight: 500,
         cursor: "pointer",
         transition: "all 0.3s ease",
-        fontFamily: "'Inter', sans-serif",
         boxShadow: "0 4px 12px rgba(31,163,243,0.4)",
       }}
-      onMouseEnter={(e) =>
-        (e.target.style.boxShadow = "0 6px 18px rgba(31,163,243,0.6)")
-      }
-      onMouseLeave={(e) =>
-        (e.target.style.boxShadow = "0 4px 12px rgba(31,163,243,0.4)")
-      }
     >
       Active Projects
     </button>
@@ -513,16 +516,65 @@ export default function Menu({
                   )}
                 </Link>
               </motion.li> */}
+   <motion.li
+             
+                variants={{
+                  hidden: { opacity: 0, y: -20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      type: "spring",
+                      stiffness: 50,
+                      damping: 12,
+                    },
+                  },
+                }}
+                whileHover={{ scale: 1.05 }}
+                className={router.pathname === "/whats-new" ? "active" : ""}
+              >
+                <Link className={lato.className} href="/strategic-dialogues">
+                
+                  <span
+                  className={lato.className}
+                    style={{
+                      color: "white",
+                     
+                    }}
+                  >
+                  Strategic Dialogues
+                  </span>
+                  {router.pathname === "/whats-new" && (
+                    <motion.div
+                      className="nav-indicator"
+                      layoutId="navIndicator"
+                      initial={false}
+                      style={{
+                        position: "absolute",
+                        bottom: "0px",
+                        left: 0,
+                        right: 0,
+                        height: "2px",
+                        background: "var(--tg-theme-primary)",
+                      }}
+                    />
+                  )}
+                </Link>
+              </motion.li>
+
               {/* Alternate Tech */}
               <motion.li
+
+               className={lato.className}
                 onMouseEnter={() => setIsSubMenuOpen(true)}
                 onMouseLeave={() => setIsSubMenuOpen(false)}
               >
                 <Link href="#">
                   <span
+                  className={lato.className}
                     style={{
                       color: "white",
-                      fontFamily: "'Inter', sans-serif",
+                    
                     }}
                   >
                     Alternate Tech
@@ -615,6 +667,7 @@ export default function Menu({
               </motion.li>
               {/* What's New */}
               <motion.li
+             
                 variants={{
                   hidden: { opacity: 0, y: -20 },
                   visible: {
@@ -630,11 +683,13 @@ export default function Menu({
                 whileHover={{ scale: 1.05 }}
                 className={router.pathname === "/whats-new" ? "active" : ""}
               >
-                <Link href="/whats-new">
+                <Link className={lato.className} href="/whats-new">
+                
                   <span
+                  className={lato.className}
                     style={{
                       color: "white",
-                      fontFamily: "'Inter', sans-serif",
+                     
                     }}
                   >
                     What's New
@@ -658,6 +713,7 @@ export default function Menu({
               </motion.li>
               {/* About */}
               <motion.li
+              
                 variants={{
                   hidden: { opacity: 0, y: -20 },
                   visible: {
@@ -673,11 +729,12 @@ export default function Menu({
                 whileHover={{ scale: 1.05 }}
                 className={router.pathname === "/about" ? "active" : ""}
               >
-                <Link href="/about">
+                <Link className={lato.className} href="/about">
                   <span
+                  className={lato.className}
                     style={{
                       color: "white",
-                      fontFamily: "'Inter', sans-serif",
+                    
                     }}
                   >
                     About

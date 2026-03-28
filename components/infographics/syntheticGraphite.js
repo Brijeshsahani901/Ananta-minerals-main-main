@@ -908,6 +908,12 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function SyntheticGraphiteInfographic3D() {
   const [isHovered, setIsHovered] = useState(false);
@@ -946,6 +952,7 @@ export default function SyntheticGraphiteInfographic3D() {
   return (
     <div
       ref={containerRef}
+      
       className="w-100 d-flex justify-content-center align-items-center"
       style={{
         minHeight: "530px",
@@ -969,40 +976,9 @@ export default function SyntheticGraphiteInfographic3D() {
         }}
       />
 
-      {/* Animated floating particles */}
-      {/* <div style={{ position: "absolute", width: "100%", height: "100%" }}>
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            style={{
-              position: "absolute",
-              width: Math.random() * 2 + 1 + "px",
-              height: Math.random() * 2 + 1 + "px",
-              background:
-                i % 3 === 0 ? "#00ffc8" : i % 3 === 1 ? "#ff4444" : "#ffb800",
-              borderRadius: "50%",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: 0.2,
-            }}
-            animate={{
-              y: [0, -Math.random() * 50 - 25],
-              x: [0, Math.random() * 20 - 10],
-              opacity: [0, 0.3, 0],
-            }}
-            transition={{
-              duration: Math.random() * 4 + 3,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-              ease: "linear",
-            }}
-          />
-        ))}
-      </div> */}
-
-      {/* Main Container */}
       <motion.div
-        className="container-fluid"
+      className={montserrat.className}
+       
         style={{
           maxWidth: "1200px",
           padding: "15px",
@@ -1016,18 +992,18 @@ export default function SyntheticGraphiteInfographic3D() {
       >
         {/* Main Title */}
         <motion.div
+        
           className="text-center mb-3"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
         >
           <h2
+          className={montserrat.className}
             style={{
               color: "#ffffff",
-              fontSize: "22px",
+              fontSize: "20px",
               fontWeight: "800",
-              letterSpacing: "1.5px",
-              marginBottom: "5px",
             }}
           >
             From Coke to Batteries: How Synthetic Graphite Became a Global Essential
@@ -1056,6 +1032,7 @@ export default function SyntheticGraphiteInfographic3D() {
               transition={{ delay: 0.3, duration: 0.7 }}
             >
               <motion.div
+              className={montserrat.className}
                 style={{
                   width: "100%",
                   // height: "220px",
@@ -1074,6 +1051,7 @@ export default function SyntheticGraphiteInfographic3D() {
               >
                 <div className="text-center">
                   <div
+                  className={montserrat.className}
                     style={{
                       fontSize: "14px",
                       fontWeight: "600",
@@ -1136,6 +1114,7 @@ export default function SyntheticGraphiteInfographic3D() {
                   </div>
 
                   <div
+                  className={montserrat.className}
                     style={{
                       fontSize: "14px",
                       fontWeight: "500",
@@ -1169,6 +1148,7 @@ export default function SyntheticGraphiteInfographic3D() {
                 }}
               >
                 <div
+                className={montserrat.className}
                   style={{
                     fontSize: "14px",
                     color: "#e0e0e0",
@@ -1250,6 +1230,7 @@ export default function SyntheticGraphiteInfographic3D() {
                   }}
                 >
                   <div
+                  className={montserrat.className}
                     style={{
                       fontSize: "28px",
                       fontWeight: "900",
@@ -1258,7 +1239,9 @@ export default function SyntheticGraphiteInfographic3D() {
                   >
                     98%
                   </div>
+
                   <div
+                  className={montserrat.className}
                     style={{
                       fontSize: 9.3,
                       fontWeight: "600",
@@ -1294,6 +1277,7 @@ export default function SyntheticGraphiteInfographic3D() {
                 }}
               >
                 <div
+                className={montserrat.className}
                   style={{
                     fontSize: "14px",
                     color: "#e0e0e0",
@@ -1334,6 +1318,7 @@ export default function SyntheticGraphiteInfographic3D() {
               >
                 {/* Title */}
                 <div
+                className={montserrat.className}
                   style={{
                     fontSize: "13px",
                     fontWeight: "700",
@@ -1548,6 +1533,7 @@ export default function SyntheticGraphiteInfographic3D() {
                 }}
               >
                 <div
+                className={montserrat.className}
                   style={{
                     fontSize: "14px",
                     color: "#e0e0e0",

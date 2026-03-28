@@ -46,8 +46,6 @@ const Layout = ({ headerStyle, footerStyle, children, breadcrumbCategory, breadc
         })
     })
 
-    console.log(headerStyle)
-
     return (
         <>
             <PageHead headTitle={headTitle} />

@@ -1,3 +1,9 @@
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 export default function Home() {
   const countriesData = [
     {
@@ -107,14 +113,14 @@ export default function Home() {
 
   return (
     <div
+      className={montserrat.className} 
       style={{
         backgroundColor: "#0a1a3d",
         borderRadius: "10px",
         minHeight: "530px",
         padding: "12px 15px",
         color: "#fff",
-        fontFamily:
-          "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+       
         background: "linear-gradient(135deg, #0a1a3d 0%, #163f8c 100%)",
         height: "530px",
         overflow: "hidden",
@@ -125,6 +131,7 @@ export default function Home() {
       {/* Header - More Compact */}
       <div className="text-center mb-1" style={{ flexShrink: 0 }}>
         <h4
+          className={montserrat.className} 
           style={{
             letterSpacing: "3px",
             fontWeight: "700",
@@ -137,6 +144,7 @@ export default function Home() {
           EUROPE AND CRITICAL MINERALS
         </h4>
         <p
+          className={montserrat.className} 
           style={{
             fontSize: "13px",
             color: "#a0c8ff",
@@ -191,6 +199,7 @@ function CountryCard({
 }) {
   return (
     <div
+      className={montserrat.className} 
       style={{
         backgroundColor: false
           ? "rgba(30, 15, 70, 0.9)"
@@ -232,6 +241,7 @@ function CountryCard({
         />
         <div style={{ flex: 1 }}>
           <h6
+            className={montserrat.className} 
             style={{
               margin: 0,
               fontWeight: "700",
@@ -243,6 +253,7 @@ function CountryCard({
             {name}
           </h6>
           <div
+            className={montserrat.className} 
             style={{
               fontSize: "9px",
               color: highlighted ? "#a855f7" : "#a0c8ff",
@@ -257,6 +268,7 @@ function CountryCard({
 
       {/* Main Value Display */}
       <div
+        className={montserrat.className} 
         style={{
           fontSize: "18px", // 🔼 thoda bada
           fontWeight: "800",
@@ -296,6 +308,7 @@ function CountryCard({
 
       {/* Description - Optimized for text display */}
       <div
+        className={montserrat.className} 
         style={{
           fontSize: "9.5px",
           color: "#a0c8ff",

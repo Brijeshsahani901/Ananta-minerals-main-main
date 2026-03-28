@@ -76,15 +76,16 @@ export default function Home1() {
 
             </div> */}
             <div
-  className="px-2 pt-4"
+  className="px-2 pt-2"
  
 >
-  <div className="row px-md-5">
+  <div className="row px-md-4">
     <div className="col-12 col-lg-8 mb-4">
-      <div style={fadeInStyle}>
+      <div style={{...fadeInStyle, backgroundColor : "black", borderRadius: "12px"}} >
         <TechnologySlider />
       </div>
     </div>
+
 
     {/* Right: What's New section */}
     <WhatsNewSection />

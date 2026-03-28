@@ -142,7 +142,7 @@ export const exportImportRestrictions = [
 
 
 export const multilateralInitiatives = [
-    {
+  {
     name: "Mineral Security Partnership",
     countries: [
       "Australia",
@@ -190,7 +190,7 @@ export const multilateralInitiatives = [
     importance:
       "The Quad Critical Minerals Initiative is a plurilateral effort by the four Quad countries (Australia, India, Japan and the United States) launched in July 2025 to coordinate practical cooperation — from joint project development and financing to recycling, responsible sourcing, and regulatory/technical alignment — aimed at securing and diversifying supply chains for critical minerals. India, as a Quad member, is a co-participant in the Initiative and engages through diplomatic and technical channels to align Quad activities with its domestic Critical Minerals Mission and overseas sourcing priorities. The Initiative matters because it creates a trusted, action-oriented platform to reduce strategic dependence on single suppliers, accelerate investment in alternative upstream and value-addition projects, and scale recycling and ESG-compliant supply chains that are essential for India’s energy transition and industrial ambitions.",
   },
- {
+  {
     name: "Australia–Canada–India Trilateral Technology Partnership",
     countries: ["Australia", "Canada", "India"],
     importance: `
@@ -237,7 +237,11 @@ More resilient and diversified supply chains expand India’s geopolitical polic
       "Germany",
       "France",
       "India",
-      "United Kingdom"
+      "United Kingdom", "Israel",
+      "Australia",
+      "Qatar",
+      "Singapore",
+      "United Arab Emirates"
     ],
     importance: `
 Pax Silica describes the emerging U.S.-led semiconductor order in which advanced chip-producing democracies coordinate industrial policy, export controls, and supply chains. It reflects efforts to secure critical technologies, reduce reliance on China, and concentrate leading-edge semiconductor design and manufacturing within trusted allied nations for economic and national security

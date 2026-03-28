@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
+
 const Bar = dynamic(() => import("react-chartjs-2").then((m) => m.Bar), {
   ssr: false,
 });
@@ -17,6 +18,12 @@ import {
 } from "chart.js";
 
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 // REGISTER PLUGINS
 ChartJS.register(
@@ -166,6 +173,7 @@ export default function Infographic520Screenshot() {
 
   return (
     <div
+    className={montserrat.className}
       style={{
         width: "100%",
         minHeight: "530px",
@@ -191,6 +199,7 @@ export default function Infographic520Screenshot() {
         }}
       >
         <h1
+        className={montserrat.className}
           style={{
             fontSize: "clamp(16px, 3.5vw, 18px)",
             fontWeight: "800",
@@ -206,6 +215,7 @@ export default function Infographic520Screenshot() {
           Trajectory
         </h1>
         <p
+        className={montserrat.className}
           style={{
             fontSize: "clamp(9px, 1.8vw, 11px)",
             color: "rgba(255,255,255,0.7)",
@@ -230,6 +240,7 @@ export default function Infographic520Screenshot() {
       >
         {/* LEFT SIDE */}
         <div
+        className={montserrat.className}
           style={{
             flex: 2,
             display: "flex",
@@ -246,6 +257,7 @@ export default function Infographic520Screenshot() {
             }}
           >
             <div
+            className={montserrat.className}
               style={{
                 background: "linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%)",
                 borderRadius: "6px",
@@ -253,16 +265,17 @@ export default function Infographic520Screenshot() {
                 boxShadow: "0 4px 12px rgba(255, 107, 53, 0.3)",
               }}
             >
-              <div style={{ fontSize: 9, fontWeight: 700 }}>
+              <div className={montserrat.className} style={{ fontSize: 9, fontWeight: 700 }}>
                 CHINA'S SEMICONDUCTOR EXPORTS IN 2023
               </div>
-              <div style={{ fontSize: 18, fontWeight: 800 }}>$198B</div>
-              <div style={{ fontSize: 8, opacity: 0.8 }}>
+              <div className={montserrat.className} style={{ fontSize: 18, fontWeight: 800 }}>$198B</div>
+              <div className={montserrat.className} style={{ fontSize: 8, opacity: 0.8 }}>
                 ~25% of global market share
               </div>
             </div>
 
             <div
+            className={montserrat.className}
               style={{
                 background: "linear-gradient(135deg, #00b4a0 0%, #00c9b1 100%)",
                 borderRadius: "6px",
@@ -279,6 +292,7 @@ export default function Infographic520Screenshot() {
 
           {/* CHARTS */}
           <div
+          className={montserrat.className}
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -301,10 +315,11 @@ export default function Infographic520Screenshot() {
                   color: "#ff6b35",
                   marginBottom: 4,
                 }}
+                className={montserrat.className}
               >
                 TOP 5 EXPORTING COUNTRIES
               </div>
-              <div style={{ height: 95 }}>
+              <div className={montserrat.className} style={{ height: 95 }}>
                 {mounted && <Bar data={exportsData} options={exportsOptions} />}
               </div>
             </div>
@@ -317,6 +332,7 @@ export default function Infographic520Screenshot() {
                 padding: "10px",
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
+              className={montserrat.className}
             >
               <div
                 style={{
@@ -328,7 +344,7 @@ export default function Infographic520Screenshot() {
               >
                 TOP 5 IMPORTING COUNTRIES
               </div>
-              <div style={{ height: 95 }}>
+              <div className={montserrat.className} style={{ height: 95 }}>
                 {mounted && <Bar data={importsData} options={importsOptions} />}
               </div>
             </div>
@@ -336,6 +352,7 @@ export default function Infographic520Screenshot() {
 
           {/* MATERIAL TABLE */}
           <div
+          className={montserrat.className}
             style={{
               background: "rgba(255,255,255,0.04)",
               borderRadius: 6,
@@ -344,13 +361,14 @@ export default function Infographic520Screenshot() {
               flex: 1,
             }}
           >
-            <div style={{ fontSize: 10, fontWeight: 700, marginBottom: 4 }}>
+            <div className={montserrat.className} style={{ fontSize: 10, fontWeight: 700, marginBottom: 4 }}>
               Semiconductor Material Fab + Packaging projected demand for India
               till 2030
             </div>
 
             {materials.map((m, i) => (
               <div
+              className={montserrat.className}
                 key={i}
                 style={{
                   background: "rgba(255,255,255,0.05)",
@@ -376,6 +394,7 @@ export default function Infographic520Screenshot() {
           style={{ flex: 1, display: "flex", flexDirection: "column", gap: 10 }}
         >
           <div
+          className={montserrat.className}
             style={{
               background: "rgba(255,255,255,0.04)",
               padding: "12px",
@@ -391,6 +410,7 @@ export default function Infographic520Screenshot() {
                 color: "#ff6b35",
                 marginBottom: 10,
               }}
+              className={montserrat.className}
             >
               Six plus Semiconductor projects approved by the government till
               date will produce over 24 Million chips per annum.
@@ -404,12 +424,14 @@ export default function Infographic520Screenshot() {
                 borderRadius: 6,
                 marginBottom: 10,
               }}
+              className={montserrat.className}
             >
               India's Semiconductor Market Size is Projected to reach $110 M by
               2030
             </div>
 
             <div
+            className={montserrat.className}
               style={{
                 fontSize: 13,
                 background: "rgba(255,255,255,0.05)",
@@ -431,12 +453,13 @@ export default function Infographic520Screenshot() {
                 marginBottom: 10,
               }}
             >
-              <div style={{ fontSize: 11, marginBottom: 8 }}>
+              <div className={montserrat.className} style={{ fontSize: 11, marginBottom: 8 }}>
                 What volume/value of wafers, gases, chemicals and packaging do
                 you need to support a ~US$ 100 B+ chip market plus new
                 fabs/OSATs?
               </div>
               <div
+              className={montserrat.className}
                 style={{
                   fontSize: 18,
                   fontWeight: 800,
@@ -457,6 +480,7 @@ export default function Infographic520Screenshot() {
                 background: "rgba(255,255,255,0.04)",
                 borderRadius: 4,
               }}
+              className={montserrat.className}
             >
               Materials category includes various production and packaging
               materials.

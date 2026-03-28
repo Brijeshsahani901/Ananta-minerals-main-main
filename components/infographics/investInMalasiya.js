@@ -2,6 +2,13 @@
 
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 
 export default function AsiaMineralInfographic() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -228,7 +235,8 @@ export default function AsiaMineralInfographic() {
   };
 
   const CountryCard = ({ country, iconType, color1, color2, value, subtitle, label, description, isHovered, isActive, onHover, onClick }) => (
-    <div
+    <div 
+    
       className="col-md-4 text-center smooth-transition"
       style={{
         ...cardContainer,
@@ -254,17 +262,17 @@ export default function AsiaMineralInfographic() {
         zIndex: -1,
       }} />
       
-      <div style={iconCircle(color1, isHovered, isActive)}>
+      <div  className={montserrat.className} style={iconCircle(color1, isHovered, isActive)}>
         <CustomIcon type={iconType} color={color1} isHovered={isHovered} />
       </div>
 
-      <div style={arrowBlock(color1, color2, isHovered, isActive)}>
+      <div  className={montserrat.className} style={arrowBlock(color1, color2, isHovered, isActive)}>
         <div style={statValue}>{value}</div>
         <div style={statSubtitle}>{subtitle}</div>
         <div style={statLabel}>{label}</div>
       </div>
 
-      <p style={{ 
+      <p  className={montserrat.className} style={{ 
         ...desc, 
         opacity: isHovered ? 1 : 0.85,
         transform: isHovered ? "translateY(4px)" : "translateY(0)",
@@ -277,15 +285,15 @@ export default function AsiaMineralInfographic() {
   );
 
   return (
-    <div style={page}>
+    <div  className={montserrat.className} style={page}>
       <style>{styleTag}</style>
       <div style={backgroundGlow} />
       
-      <h2 style={title} className="px-5">
+  <h2 className={`${montserrat.className} px-5`} style={title}>
         Asia's Critical Mineral Powerhouses: Tracking Korea, Indonesia & Japan
       </h2>
 
-      <div className="row" style={cardsRow}>
+      <div   className="row" style={cardsRow}>
         <CountryCard
           country="japan"
           iconType="magnet"

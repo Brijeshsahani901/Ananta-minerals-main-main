@@ -3,6 +3,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const Bar = dynamic(() => import("react-chartjs-2").then(m => m.Bar), { ssr: false });
 
@@ -174,11 +180,12 @@ export default function GreenlandStrategy() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
+       className={montserrat.className} 
       style={{
         width: "100%",
         minHeight: "530px",
         padding: "2px 16px",
-        fontFamily: "Inter, sans-serif",
+       
         background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
         overflow: "hidden",
         position: "relative",
@@ -226,12 +233,13 @@ export default function GreenlandStrategy() {
         initial={{ y: -8, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.1 }}
+         className={montserrat.className} 
         style={{ 
           textAlign: "center",
           marginBottom: 15,
         }}
       >
-        <h2 style={{ 
+        <h2  className={montserrat.className} style={{ 
           fontWeight: 700,
           fontSize: "1rem",
           background: "linear-gradient(90deg, #f1f5f9 0%, #cbd5e1 100%)",
@@ -274,13 +282,14 @@ export default function GreenlandStrategy() {
               fontWeight: 600,
               color: "#f1f5f9",
               margin: "0 0 6px 0",
-            }}>
+            }}
+             className={montserrat.className} >
               India's Semiconductor Market (USD Billion)
             </h4>
             <div style={{ height: 100, marginTop: 30 }}>
               {mounted && <Bar data={marketData} options={marketOptions} />}
             </div>
-            <div style={{ 
+            <div  className={montserrat.className} style={{ 
               display: "flex", 
               justifyContent: "space-between",
               marginTop: 6,
@@ -303,6 +312,7 @@ export default function GreenlandStrategy() {
 
           {/* Production Stats */}
           <motion.div
+           className={montserrat.className} 
             initial={{ x: -8, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -319,7 +329,7 @@ export default function GreenlandStrategy() {
           >
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
-                <div style={{
+                <div  className={montserrat.className} style={{
                   width: 20,
                   height: 20,
                   background: "linear-gradient(135deg, #10b981, #34d399)",
@@ -334,10 +344,10 @@ export default function GreenlandStrategy() {
                   ⚡
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.8rem", fontWeight: 700, color: "#ffffff" }}>
+                  <div  className={montserrat.className}  style={{ fontSize: "0.8rem", fontWeight: 700, color: "#ffffff" }}>
                     70,000 Wafers/Month
                   </div>
-                  <div style={{ fontSize: "0.65rem", color: "#94a3b8" }}>
+                  <div  className={montserrat.className} style={{ fontSize: "0.65rem", color: "#94a3b8" }}>
                   Two major Wafer Fabs Announced in India 
                   </div>
                 </div>
@@ -390,7 +400,7 @@ export default function GreenlandStrategy() {
           }}
         >
           {/* Minerals Section */}
-          <div style={{
+          <div  className={montserrat.className}  style={{
             background: "rgba(30, 41, 59, 0.6)",
             borderRadius: 8,
             padding: 10,
@@ -400,7 +410,7 @@ export default function GreenlandStrategy() {
             flexDirection: "column",
           }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-              <h4 style={{ 
+              <h4  className={montserrat.className}  style={{ 
                 fontSize: "0.8rem", 
                 fontWeight: 600,
                 color: "#f1f5f9",
@@ -410,7 +420,7 @@ export default function GreenlandStrategy() {
               </h4>
             </div>
 
-            <p style={{ 
+            <p className={montserrat.className}  style={{ 
               fontSize: "0.7rem", 
               color: "#94a3b8",
               margin: "0 0 10px 0",
@@ -485,7 +495,7 @@ export default function GreenlandStrategy() {
             </div>
 
             {/* Import Table */}
-            <div style={{
+            <div  className={montserrat.className} style={{
               background: "rgba(15, 23, 42, 0.6)",
               borderRadius: "6px",
               overflow: "hidden",
@@ -522,6 +532,7 @@ export default function GreenlandStrategy() {
                 <tbody>
                   {importTable.map(([mineral, source], index) => (
                     <motion.tr 
+                     className={montserrat.className} 
                       key={mineral}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
