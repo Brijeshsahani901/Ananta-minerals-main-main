@@ -776,7 +776,7 @@ const MobileMenu = ({ handleMobileMenuClose, openClass }) => {
 
       }}
     >
-      Active Projects
+   Active Exploration Projects
     </button>
   </Link>
 </motion.div>

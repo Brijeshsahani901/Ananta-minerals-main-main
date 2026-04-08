@@ -151,6 +151,10 @@ export const authors = [
         path: "/supply-chain/resource-nationalism/",
         label: "Resource nationalism's grip on global critical minerals supply chains",
         type: "article",
+      },  {
+        path: "/supply-chain/venezeula/",
+        label: "A path for Indian state firms in US play for Venezuela's Critical Minerals",
+        type: "article",
       },
     ],
   },

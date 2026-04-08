@@ -1189,15 +1189,15 @@ export const whatsnew = [
     date: "17 March, 2026",
     img: "",
   }, {
-    id: 96,
+    id: 97,
     title:
-      "China-Vietnam Minerals Cooperation",
+      "EU-US Critical Minerals Tariff Talks",
     description:
-      "China's Foreign Minister Wang Yi urged Vietnam to enhance cooperation in critical minerals, alongside agriculture, electricity, finance, and tech innovation, during a March 17, 2026, Hanoi meeting with Deputy PM Bui Thanh Son. The call emphasizes railway connectivity and joint efforts to secure mineral supplies vital for global tech and energy transitions. This reflects growing bilateral ties amid regional supply chain diversification.",
+      "EU Trade Commissioner Valdis Dombrovskis met US officials on March 28, 2026, to discuss tariffs on critical minerals amid escalating trade tensions. The talks focused on avoiding punitive duties that could disrupt supply chains for batteries, renewables, and electronics. Both sides explored cooperative frameworks to secure non-Chinese sources, though no immediate resolutions were reached. This reflects broader efforts to diversify global mineral dependencies.",
     downloadUrl: "#",
-    path: "https://www.mining.com/web/china-vietnam-should-boost-cooperation-in-critical-minerals-foreign-minister-says/",
-    author: "Mining.com",
-    date: "17 March, 2026",
+    path: "https://www.reuters.com/sustainability/land-use-biodiversity/eu-trade-commissioner-discusses-critical-minerals-tariffs-with-us-2026-03-28/",
+    author: "Reuters",
+    date: "28 March, 2026",
     img: "",
   },
    {
@@ -1210,6 +1210,150 @@ export const whatsnew = [
     path: "https://www.reuters.com/business/energy/orion-raises-22-billion-mining-fund-race-critical-minerals-heats-up-2026-03-16/",
     author: "Reuters",
     date: "16 March, 2026",
+    img: "",
+  },
+     {
+    id: 98,
+    title:
+      "US Eases Venezuela Minerals Sanctions",
+    description:
+      "The US Treasury Department issued new general licenses on March 2026 related to Venezuela, allowing certain transactions involving critical minerals to proceed despite sanctions. These licenses aim to facilitate access to Venezuelan resources like gold, copper, and rare earths while maintaining pressure on the Maduro regime. The move balances geopolitical strategy with supply chain needs for US industries. Affected parties must comply with reporting requirements.",
+    downloadUrl: "#",
+    path: "https://theprint.in/world/us-issues-new-venezuela-related-general-licenses-for-critical-minerals-says-us-treasury-department/2890807/",
+    author: "The Print",
+    date: "28 March, 2026",
+    img: "",
+  },
+     {
+    id: 99,
+    title:
+      "Virginia Tech Critical Minerals Initiative",
+    description:
+      "Virginia Tech announced a major research partnership on March 2026 to advance critical minerals extraction and processing technologies. The video highlights innovations in sustainable mining and recycling for lithium, cobalt, and rare earths. Collaborators include industry leaders and government agencies aiming to boost US domestic production. Key projects focus on low-impact methods to meet clean energy demands.",
+    downloadUrl: "#",
+    path: "https://news.vt.edu/videos/y/2026/03/_5tZx-IBiJ4.html",
+    author: "Virginia Tech",
+    date: "27 March, 2026",
+    img: "",
+  },
+     {
+    id: 100,
+    title:
+      "India Eases China Equipment Procurement Rules",
+    description:
+      "India relaxed restrictions on March 27, 2026, for select state-run firms to procure critical equipment from China, prioritizing energy and infrastructure projects. The decision targets power plants and telecom gear to expedite development amid supply shortages. Approved entities include NTPC and Power Grid, with safeguards against security risks. This balances self-reliance goals with practical import needs.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/china/india-relaxes-rules-some-state-run-firms-procure-critical-equipment-china-2026-03-27/",
+    author: "Reuters",
+    date: "27 March, 2026",
+    img: "",
+  },
+     {
+    id: 101,
+    title:
+      "India's Pax Silica Alliance Entry: Parliamentary Question",
+    description:
+      "India signed the US-led Pax Silica Declaration on February 20, 2026, during the AI Impact Summit in New Delhi, joining efforts to secure silicon and critical minerals supply chains for semiconductors, AI, and advanced tech. Participation supports resilient chains, domestic manufacturing via Semicon India and Make in India, reducing import dependence through investments in processing and value addition. The government advances the National Critical Mineral Mission, incentives like REPM scheme, and duty exemptions to leverage rare earth reserves and align with export strategies",
+    downloadUrl: "#",
+    path: " https://www.mea.gov.in/lok-sabha.htm?dtl/40961/QUESTION+NO+5521+PAX+SILICA",
+    author: "PIB",
+    date: "27 March, 2026",
+    img: "",
+  },
+     {
+    id: 102,
+    title:
+      "Seventh Tranche Critical Blocks Auction",
+    description:
+      "India's central government plans to launch bids for 19 critical mineral blocks in the seventh tranche of auctions, focusing on lithium, graphite, and rare earths. States like Rajasthan, Odisha, and Jharkhand host promising sites identified via GSI surveys. The initiative accelerates domestic production under the Mines Ministry to cut imports. Bidding starts soon, with e-auctions expected by mid-2026.",
+    downloadUrl: "#",
+    path: "https://www.constructionworld.in/energy-infrastructure/coal-and-mining/centre-to-launch-bid-for-19-critical-mineral-blocks-in-seventh-tranche/88711",
+    author: "Construction World",
+    date: "26 March, 2026",
+    img: "",
+  },
+     {
+    id: 103,
+    title:
+      "PIB Release on Mineral Exploration",
+    description:
+      "The Press Information Bureau announced advances in India's critical minerals strategy, including new exploration licenses and private sector involvement as of March 2026. Highlights feature auctions of high-potential blocks and R&D funding for processing tech. This supports Atmanirbhar Bharat in energy security. Key minerals targeted: copper, nickel, PGE.",
+    downloadUrl: "#",
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245301&reg=3&lang=2",
+    author: "PIB Ministry of Mines",
+    date: "25 March, 2026",
+    img: "",
+  },
+     {
+    id: 104,
+    title:
+      "PIB Rare Earths Development Update",
+    description:
+      "PIB detailed progress on rare earth elements development, with new magnet manufacturing schemes and international partnerships. Investments exceed INR 7,000 crore for downstream capacity. Focus on sintered magnets for EVs and renewables. Aligns with global supply diversification.",
+    downloadUrl: "#",
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245038&reg=3&lang=2",
+    author: "PIB Department of Atomic Energy",
+    date: "26 March, 2026",
+    img: "",
+  },
+   {
+    id: 105,
+    title:
+      "Trafigura's Recycling Investment Impact",
+    description:
+      "Trafigura signed a $1.1 billion, 10-year offtake agreement with Nth Cycle in March 2026 for recycled nickel and lithium from black mass. Starting 2028, Trafigura will buy 2,000 metric tons of nickel in mixed hydroxide precipitate and 1,500 metric tons of lithium carbonate annually from 12,000 metric tons of shredded battery waste processed in modular US and European facilities. Nth Cycle's electro-extraction technology reduces capital costs by 70% and avoids chemical waste, addressing Western refining gaps where China dominates 85% of capacity. This validates recycling as a key supplement to primary mining for supply chain resilience",
+    downloadUrl: "#",
+    path: "https://www.latitudemedia.com/news/what-trafiguras-billion-dollar-recycling-bet-means-for-critical-minerals/",
+    author: "Latitude Media",
+    date: "31 March, 2026",
+    img: "",
+  },
+   {
+    id: 106,
+    title:
+      "India Cancels Sixth Tranche Auctions",
+    description:
+      "India's Ministry of Mines cancelled auctions for 11 critical mineral blocks in the sixth tranche on March 31, 2026, due to insufficient bids. Five blocks received no bids, five had fewer than three qualified bidders, and the Beku Rare Metal Block in West Bengal was also scrapped from the 23-block auction across 13 states launched in September 2025. Blocks contained lithium, cobalt, rare earths, niobium, tantalum, and vanadium vital for clean energy. This setback hampers domestic production efforts amid volatile global chains; 46 blocks awarded in prior six rounds.",
+    downloadUrl: "#",
+    path: "https://energy.economictimes.indiatimes.com/amp/news/coal/india-cancels-auction-of-critical-mi[…]ocks-sparks-concerns-over-energy-security/129922469",
+    author: "ET Energy World",
+    date: "31 March, 2026",
+    img: "",
+  },
+   {
+    id: 107,
+    title:
+      "PIB Critical Minerals Advancement",
+    description:
+      "The Press Information Bureau highlighted India's critical minerals progress in a March 2026 release, detailing new exploration licenses, private investments, and R&D funding. Key focuses include auctions of lithium and graphite blocks, processing tech development, and international collaborations under the National Critical Mineral Mission. Initiatives aim to reduce import reliance for energy security and EV manufacturing.",
+    downloadUrl: "#",
+    path: " https://www.pib.gov.in/PressReleasePage.aspx?PRID=2247302&reg=3&lang=2",
+    author: "PIB",
+    date: "31 March, 2026",
+    img: "",
+  },
+   {
+    id: 108,
+    title:
+      "US-India Strategic Partnership",
+    description:
+      "US Ambassador Sergio Gor emphasised 'win-win' US-India economic ties, prioritising resilient supply chains for semiconductors and critical minerals via the COMPACT framework. India joined the US-led Pax Silica initiative as the 10th signatory to secure silicon networks against China. Cooperation spans energy, manufacturing, and Quad defence exercises like Malabar, positioning bilateral ties as a 21st-century strategic anchor.",
+    downloadUrl: "#",
+    path: "https://www.dtnext.in/news/business/us-india-winwin-envoy",
+    author: "DT Next",
+    date: "29 March, 2026",
+    img: "",
+  },
+   {
+    id: 109,
+    title:
+      "Oil India-CSIR-IMMT R&D Pact",
+    description:
+      "Oil India Limited and CSIR-Institute of Minerals and Materials Technology (CSIR-IMMT) signed an MoU for joint R&D in critical minerals, aligning with the National Critical Mineral Mission. CSIR-IMMT, a NCMM Centre of Excellence, will collaborate on exploration, processing, and utilization of lithium, cobalt, and rare earths. The partnership boosts domestic capabilities, reducing import dependence for clean energy and defense.",
+    downloadUrl: "#",
+    path: "https://psuwatch.com/newsupdates/oil-india-csir-immt-sign-mou-for-joint-rd-in-critical-minerals",
+    author: "PSU Watch",
+    date: "31 March, 2026",
     img: "",
   },
 ];

@@ -36,43 +36,25 @@ export default function WhatsNewSection() {
   useEffect(() => {
     const el = whatsNewRef.current;
 
-    // const wheelFn = (e) => {
-    //   const { scrollTop, scrollHeight, clientHeight } = el;
-    //   const atTop = scrollTop === 0;
-    //   const atBottom = scrollTop + clientHeight >= scrollHeight;
+    const wheelFn = (e) => {
+      const { scrollTop, scrollHeight, clientHeight } = el;
+      const atTop = scrollTop === 0;
+      const atBottom = scrollTop + clientHeight >= scrollHeight - 1; 
 
-    //   if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) return;
+      if (!atTop && !atBottom) {
+        e.preventDefault();
+        el.scrollTop += e.deltaY;
+        return;
+      }
 
-    //   e.preventDefault();
-    //   el.scrollTop += e.deltaY;
-    // };
+      if (atTop && e.deltaY < 0) {
+        return;
+      }
 
- const wheelFn = (e) => {
-  const { scrollTop, scrollHeight, clientHeight } = el;
-  const atTop = scrollTop === 0;
-  const atBottom = scrollTop + clientHeight >= scrollHeight - 1; // tolerance
-
-  // If INSIDE scroll area → manually scroll
-  if (!atTop && !atBottom) {
-    e.preventDefault();
-    el.scrollTop += e.deltaY;
-    return;
-  }
-
-  // If AT TOP
-  if (atTop && e.deltaY < 0) {
-    // let page scroll naturally
-    return; 
-  }
-
-  // If AT BOTTOM
-  if (atBottom && e.deltaY > 0) {
-    // let page scroll naturally
-    return; 
-  }
-
-  // Otherwise normal behavior
-};
+      if (atBottom && e.deltaY > 0) {
+        return;
+      }
+    };
 
 
 
@@ -299,7 +281,7 @@ export default function WhatsNewSection() {
                   marginLeft: "7px",
                   color: "#2F4156",
                   fontWeight: 500,
-                  width : "100%"
+                  width: "100%"
                 }}
               >
                 <span

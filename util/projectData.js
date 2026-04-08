@@ -67,7 +67,141 @@ const projectData = {
   ],
 
   g3: [
-    // G3 Data - Complete from Excel
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Arunachal Pradesh",
+      agency: "M/s MMPL Pvt Ltd",
+      mineral: "Graphite and Vanadium",
+      cost: 10425814,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Odisha",
+      agency: "Tata Steel Ltd (NRD)",
+      mineral: "Chromite and associated minerals",
+      cost: 41781195,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Rajasthan",
+      agency: "Mining Tech Consultancy Services Ltd",
+      mineral: "REE and Associated minerals",
+      cost: 65564449,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Rajasthan",
+      agency: "Mining Tech Consultancy Services Ltd",
+      mineral: "REE and Associated minerals",
+      cost: 65564449,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Rajasthan",
+      agency: "Geovale Services Pvt Ltd",
+      mineral: "REE and Associated minerals",
+      cost: 65548684,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Rajasthan",
+      agency: "Tata Steel Ltd (NRD)",
+      mineral: "REE and Associated minerals",
+      cost: 65564449,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Rajasthan",
+      agency: "Hindmetal Exploration Services Pvt Ltd",
+      mineral: "REE and Associated minerals",
+      cost: 65564449,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Rajasthan",
+      agency: "Hindmetal Exploration Services Pvt Ltd",
+      mineral: "REE and Associated minerals",
+      cost: 65564449,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Rajasthan",
+      agency: "Ocean Drilling & Exploration Pvt Ltd",
+      mineral: "REE and Associated minerals",
+      cost: 68236468,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Odisha",
+      agency: "M/s MMPL Pvt Ltd",
+      mineral: "Graphite",
+      cost: 32572307,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Rajasthan",
+      agency: "Steiger Geoscience Pvt Ltd",
+      mineral: "REE, Base Metal & others",
+      cost: 48177314,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Karnataka",
+      agency: "Geovale Services Pvt Ltd",
+      mineral: "Gold",
+      cost: 19228450,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Gujarat",
+      agency: "CGM Gujarat",
+      mineral: "Limestone",
+      cost: 13185547,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Telangana",
+      agency: "MECL",
+      mineral: "Limestone",
+      cost: 12520959,
+      status: "In Progress"
+    },
+    {
+      name: "Preliminary Exploration",
+      stage: "G3",
+      state: "Telangana",
+      agency: "MECL",
+      mineral: "Limestone",
+      cost: 20932946,
+      status: "In Progress"
+    },
     {
       name: "Preliminary Exploration",
       stage: "G3",
@@ -1322,8 +1456,79 @@ const projectData = {
   ],
 
   g4: [
-    // G4 Data - First 50 entries
     {
+      name: "Reconnaissance Survey",
+      stage: "G4",
+      state: "Punjab",
+      agency: "MECL",
+      mineral: "Potash",
+      cost: 190311240,
+      status: "In Progress"
+    },
+    {
+      name: "Reconnaissance Survey",
+      stage: "G4",
+      state: "Rajasthan",
+      agency: "M/s Envirogreen Consultants (India)",
+      mineral: "Critical Mineral",
+      cost: 20540557,
+      status: "In Progress"
+    },
+    {
+      name: "Reconnaissance Survey",
+      stage: "G4",
+      state: "Chhattisgarh",
+      agency: "M/s MMPL Pvt Ltd",
+      mineral: "REE, RM, Critical Minerals, Iron, Copper & Gold",
+      cost: 13492791,
+      status: "In Progress"
+    },
+    {
+      name: "Reconnaissance Survey",
+      stage: "G4",
+      state: "Tamil Nadu",
+      agency: "MECL",
+      mineral: "REE, Zr and associated minerals",
+      cost: 9240881,
+      status: "In Progress"
+    },
+    {
+      name: "Reconnaissance Survey",
+      stage: "G4",
+      state: "Gujarat",
+      agency: "Geovale Ser. Pvt. Ltd.",
+      mineral: "REE",
+      cost: 13500083,
+      status: "In Progress"
+    },
+    {
+      name: "Reconnaissance Survey",
+      stage: "G4",
+      state: "Odisha",
+      agency: "CMPDIL",
+      mineral: "Graphite",
+      cost: 12359832,
+      status: "In Progress"
+    },
+    {
+      name: "Reconnaissance Survey",
+      stage: "G4",
+      state: "Madhya Pradesh",
+      agency: "CMPDIL",
+      mineral: "Copper",
+      cost: 9235726,
+      status: "In Progress"
+    },
+    {
+      name: "Reconnaissance Survey",
+      stage: "G4",
+      state: "Arunachal Pradesh",
+      agency: "M/s Eartnenviro Lab Pvt. Ltd.",
+      mineral: "Graphite and associated minerals",
+      cost: 7590079,
+      status: "In Progress"
+    }
+    , {
       name: "Reconnaissance Survey",
       stage: "G4",
       state: "Rajasthan",

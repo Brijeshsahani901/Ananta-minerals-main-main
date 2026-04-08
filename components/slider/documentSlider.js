@@ -356,16 +356,63 @@ const DocumentSlider = () => {
       date: "March 2026",
       category: "Industry Analysis",
     },
-
+     {
+      id: "lf",
+      image: `${basePath}/assets/minerals_images/thorium.jpg`,
+      title:
+        "Thorium: India’s Long Game in Nuclear Power",
+      link: "/supply-chain/thorium",
+      content:
+        "India is talking about thorium again as the country’s nuclear strategy is moving from aspiration to implementation.",
+      author: "Ayan Barman",
+      date: " April, 2026",
+      category: "Industry Analysis",
+    },
+ {
+      id: "dgf",
+      image: `${basePath}/assets/minerals_images/venezuela-flag.jpg`,
+      title:
+        "A path for Indian state firms in US play for Venezuela's Critical Minerals",
+      link: "/supply-chain/venezeula",
+      content:
+        "The conversation about US-Venezuela cooperation in critical minerals has so far been dominated by American and Canadian mining companies primarily because they are geographically the closest processing and production linked entities.",
+      author: "Aditya Pareek",
+      date: " April, 2026",
+      category: "Industry Analysis",
+    },
 
   ];
 
-  const parseDate = (dateStr) => {
-    const clean = dateStr
-      .replace(/(\d+)(st|nd|rd|th)/gi, "$1")
-      .replace(/,/g, "");
-    return new Date(clean);
-  };
+const parseDate = (dateStr) => {
+  if (!dateStr) return 0;
+
+  const clean = dateStr
+    .replace(/(\d+)(st|nd|rd|th)/gi, "$1")
+    .replace(/,/g, "")
+    .trim();
+
+  // Try parsing directly
+  let date = new Date(clean);
+
+  // If invalid → custom handling
+  if (isNaN(date)) {
+    const parts = clean.split(" ");
+
+    if (parts.length === 2) {
+      // Example: "March 2026"
+      const [month, year] = parts;
+      date = new Date(`${month} 1, ${year}`);
+    }
+
+    if (parts.length === 3) {
+      // Example: "27 February 2026"
+      const [day, month, year] = parts;
+      date = new Date(`${month} ${day}, ${year}`);
+    }
+  }
+
+  return isNaN(date) ? 0 : date.getTime();
+};
 
   const sortedSlides = [...slides].sort(
     (a, b) => parseDate(b.date) - parseDate(a.date),

@@ -280,7 +280,7 @@ export default function Menu({
         boxShadow: "0 4px 12px rgba(31,163,243,0.4)",
       }}
     >
-      Active Projects
+    Active Exploration Projects
     </button>
   </Link>
 </motion.div>

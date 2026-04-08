@@ -25,6 +25,8 @@ import RareEarthStory from "../infographics/RareEarthStory";
 import GCCConflict from "../infographics/GCCConflict";
 import CoastalBeaches from "../infographics/CoastalBeaches";
 import HeliumSignificance from "../infographics/HeliumSignificance";
+import MiningBottleneck from "../infographics/MiningBottleneck";
+import JapanIndiaCriticalMinerals from "../infographics/JapanIndiaCriticalMinerals";
 
 
 const BlackWrapper = ({ children }) => {
@@ -47,6 +49,9 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    
+     <BlackWrapper><JapanIndiaCriticalMinerals /></BlackWrapper>,
+    <BlackWrapper><MiningBottleneck /></BlackWrapper>,
     <BlackWrapper><HeliumSignificance /></BlackWrapper>,
      <BlackWrapper><CoastalBeaches /></BlackWrapper>,
      <BlackWrapper><GCCConflict /></BlackWrapper>,
