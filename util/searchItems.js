@@ -60,6 +60,11 @@ export const authors = [
         path: "/supply-chain/helium",
         label: "The Iran Crisis and West Asian escalation have triggered an unlikely but critical supply shock: helium.",
         type: "article",
+      },
+       {
+        path: "/supply-chain/thorium",
+        label: "   India is talking about thorium again as the country's nuclear strategy is moving from aspiration to implementation.",
+        type: "article",
       }   
     ]
   },
@@ -132,6 +137,11 @@ export const authors = [
     name: "Aditya Pareek",
     category: "Industry Analysis",
     routes: [
+        {
+        path: "/supply-chain/canberra-bet",
+        label: "Canberra's $5 Billion Bet on a Minerals Alliance, and the Energy Crisis Sharpening Its Logic.",
+        type: "article",
+      },
       {
         path: "/supply-chain/karnatak",
         label: "Karnataka bets on MiniMines for processing complex",

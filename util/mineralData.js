@@ -1356,4 +1356,173 @@ export const whatsnew = [
     date: "31 March, 2026",
     img: "",
   },
+    {
+    id: 110,
+    title:
+      "Auction Cancellation of Eleven Blocks",
+    description:
+      "India's Ministry of Mines cancelled auctions for 11 critical mineral blocks in the sixth tranche due to poor investor response, as announced on March 31, 2026. Five blocks received no bids, five had fewer than three qualified bidders, and the Beku Rare Metal Block in West Bengal was also annulled from the 23-block auction across 13 states launched in September 2025. These blocks hold lithium, cobalt, rare earths, niobium, tantalum, and vanadium, essential for clean energy transitions. The decision raises concerns over energy security and domestic production goals amid volatile global supply chains, despite 46 blocks successfully auctioned in prior rounds.",
+    downloadUrl: "#",
+    path: "https://www.constructionworld.in/energy-infrastructure/coal-and-mining/government-cancels-auction-of-eleven-critical-mineral-blocks/89578",
+    author: "ConstructionWorld.in",
+    date: "7 April, 2026",
+    img: "",
+  },
+    {
+    id: 111,
+    title:
+      "Mineral Auction Rules Amended",
+    description:
+      "The Ministry of Mines notified the Mineral (Auction) Second Amendment Rules, 2026, on March 30 to speed up mine operationalisation and ease business. Key changes include excluding non-feasible block portions (under 25% resource), a unified mining portal to streamline processes, reduced ML execution timelines for non-forest blocks, rationalised upfront payments, annulment relief, expanded NPEA participation, and auction premium exemptions for critical minerals. These reforms, post-stakeholder consultations, aim to boost efficiency, transparency, private investment, and critical mineral development for the energy and tech sectors.",
+    downloadUrl: "#",
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2249750&reg=3&lang=1",
+    author: "Ministry of Mines ,PIB",
+    date: "7 April, 2026",
+    img: "",
+  },
+    {
+    id: 112,
+    title:
+      "India-Japan JWG Inaugural Meeting",
+    description:
+      "India and Japan held the first Joint Working Group (JWG) meeting on critical minerals in March 2026, advancing bilateral cooperation under their Supply Chain Resilience Dialogue. Discussions covered joint exploration, processing technologies, supply chain resilience, and investment opportunities in lithium, rare earths, and graphite. Both nations committed to technology transfer, capacity building, and diversifying sources from China dominance. Outcomes include action plans for R&D collaboration and private sector partnerships, supporting India's NCMM and Japan's economic security. This strengthens Indo-Pacific mineral security.",
+    downloadUrl: "#",
+    path: "https://www.psuconnect.in/memorandum-of-understanding/india-japan-first-joint-working-group-meeting-critical-minerals",
+    author: "PSU Connect",
+    date: "6 April, 2026",
+    img: "",
+  },
+    {
+    id: 113,
+    title:
+      "PIB Strategic Minerals Update",
+    description:
+      "PIB released details in March 2026 about advancing critical and strategic minerals auctions, with the seventh tranche offering 19 blocks for mining leases and composite licenses. Covering diverse minerals for clean energy, tech, fertilisers, and defence, this follows 46 successful auctions in six prior tranches, showing industry confidence. Initiatives align with NCMM to ensure sustainable supply, reduce imports, and boost value chains from exploration to recycling. Government incentives and reforms accelerate domestic production.",
+    downloadUrl: "#",
+    path: "https://psuwatch.com/newsupdates/oil-india-csir-immt-sign-mou-for-joint-rd-in-critical-minerals",
+    author: "Ministry of Mines, PIB",
+    date: " 6 April, 2026",
+    img: "",
+  },
+    {
+    id: 114,
+    title:
+      "Black Mass Export Curbs Concerns",
+    description:
+      "Battery recyclers urged phased restrictions on black mass exports instead of sudden curbs, warning of market disruption on April 2026. Abrupt bans could harm R2 recyclers reliant on high export prices, lacking domestic refining capacity, leading to feedstock shortages and job losses. Industry calls for building CAM facilities, feedstock collection, and policy matching infrastructure. Post-refining exports remain unrestricted; refined materials serve EVs, steel, and chemicals. Phased approach ensures value retention without vulnerabilities.",
+    downloadUrl: "#",
+    path: "https://www.financialexpress.com/policy/economy/black-mass-recyclers-warn-against-sudden-export-curbs/4196075/",
+    author: "Financial Express",
+    date: "5 April, 2026",
+    img: "",
+  },
+    {
+    id: 115,
+    title:
+      "Madhya Pradesh 2026 Mineral Revolution",
+    description:
+      "India's critical mineral revolution gains momentum in 2026, focusing on unlocking lithium, cobalt, and rare earth reserves in Madhya Pradesh and other hubs. 2026-2027 emphasises foundation building with detailed geological surveys, auctions, and infrastructure in resource-rich areas. Reforms like NCMM, 5.9M-tonne lithium discovery in J&K, and budget corridors in Odisha-Kerala drive self-reliance. Reducing 60% China's rare earth imports via domestic mining supports EVs, semiconductors, and the green transition. Strategic autonomy enhances manufacturing in defence and renewables.",
+    downloadUrl: "#",
+    path: "https://discoveryalert.com.au/india-critical-mineral-revolution-2026-unlocking-resources/",
+    author: "Discovery Alert",
+    date: "5 April, 2026",
+    img: "",
+  },
+   {
+    id: 116,
+    title:
+      "Atlas Lithium's Neves Funding Nod",
+    description:
+      "Atlas Lithium's Neves lithium project in Brazil was selected for potential funding under the US-Japan Critical Minerals Partnership in early April 2026. The high-grade project, with 8.8Mt inferred resources at 1.27% Li2O, aligns with allied efforts to secure non-Chinese supplies for batteries. Funding supports development near highways and power, boosting regional production. This enhances supply chain resilience amid the global demand surge.",
+    downloadUrl: "#",
+    path: "https://www.mining.com/atlas-lithiums-neves-project-selected-for-potential-funding-under-us-japan-partnership/",
+    author: "Mining.com",
+    date: "2 April, 2026",
+    img: "",
+  },
+     {
+    id: 117,
+    title:
+      "Critical Minerals Processing Scheme Planned",
+    description:
+      "India's Ministry of Mines is preparing a new scheme to support domestic processing plants for critical minerals, announced by Mines Secretary Piyush Goyal on April 10, 2026. The initiative targets building value chains for lithium and nickel initially, complementing schemes for specialty steel and batteries, with private sector raw material supplies from overseas acquisitions. It aims to enhance self-reliance, reduce imports, and strengthen supply for EVs and tech, without specifying funding details yet. Public sector consortia also eye copper mines in Chile. This boosts India's NCMM goals.",
+    downloadUrl: "#",
+    path: "https://economictimes.indiatimes.com/industry/indl-goods/svs/metals-mining/new-scheme-in-wo[…]nts-mines-secretary/articleshow/130175926.cms?from=mdr",
+    author: "Economic Times",
+    date: "10 April, 2026",
+    img: "",
+  },
+     {
+    id: 118,
+    title:
+      "NTPC Mining-FAGMIL Critical Minerals MoU",
+    description:
+      "NTPC Mining Ltd and FAGMIL signed an MoU to strengthen India's critical minerals ecosystem, focusing on joint exploration, mining, and processing. The partnership leverages NTPC's infrastructure and FAGMIL's expertise for lithium, rare earths, and graphite. It supports domestic production, value addition, and supply chain resilience under NCMM. Key areas include technology sharing, auctions participation, and overseas ventures. This collaboration accelerates energy transition minerals for power and renewables sectors.",
+    downloadUrl: "#",
+    path: "https://www.psuconnect.in/memorandum-of-understanding/ntpc-mining-and-fagmil-sign-mou-to-strengthen-india-critical-minerals-ecosystem/",
+    author: "PSU Connect",
+    date: "11 April, 2026",
+    img: "",
+  },
+     {
+    id: 119,
+    title:
+      "Australia-US $3.5B Minerals Partnership",
+    description:
+      "Australia and the US announced a $3.5 billion package on April 12, 2026, to boost critical minerals cooperation, targeting lithium, nickel, and rare earths. Funds support joint projects, processing facilities, and supply chain diversification away from China. It includes incentives for investments, R&D, and workforce development. The pact counters geopolitical risks, enhances allied resilience for clean energy and defense. Outcomes feature new refineries and off-take agreements.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/china/australia-us-boost-support-critical-minerals-with-35-billion-2026-04-12/",
+    author: "Mining.com",
+    date: "2 April, 2026",
+    img: "",
+  },
+     {
+    id: 120,
+    title:
+      "46 Blocks Auctioned, Seventh Tranche Launched",
+    description:
+      "India successfully auctioned 46 critical mineral blocks across six tranches, launching the seventh with 19 more on April 13, 2026, stated Minister G Kishan Reddy. Tranche VII covers lithium, REE, PGE, and others in states like Rajasthan and Odisha. Reforms improved bidding success despite sixth tranche setbacks. This advances NCMM, ensuring supplies for EVs, defense, and renewables, reducing import dependence. Over 100 companies participated previously.",
+    downloadUrl: "#",
+    path: "https://www.aninews.in/news/business/india-auctions-46-critical-mineral-blocks-launches-7th-round-with-19-more-g-kishan-reddy20260413150116/",
+    author: "ANI",
+    date: " 13 April, 2026",
+    img: "",
+  },
+     {
+    id: 121,
+    title:
+      "Hindustan Zinc Secures Potash Block",
+    description:
+      "Hindustan Zinc won the 1,800-hectare Jhandawali-Satipura potash-halite block in Rajasthan's Hanumangarh district via e-auction under Tranche V, confirmed April 12, 2026. This strengthens its critical minerals portfolio alongside REE and tungsten blocks. The win supports reducing potash imports, vital for fertilisers. Strategic location aids development; the company eyes multi-mineral growth.",
+    downloadUrl: "#",
+    path: "-https://www.indianchemicalnews.com/chemical/lite/hindustan-zinc-wins-key-rajasthan-potash-block-30033",
+    author: "Indian Chemical News",
+    date: "14 April, 2026",
+    img: "",
+  },
+     {
+    id: 122,
+    title:
+      "India-Zambia Minerals Talks Stalled",
+    description:
+      "India-Zambia critical minerals talks stalled over mining rights assurances, reported April 15, 2026. Zambia allocated 9,000 sq km for cobalt and copper exploration last year; Indian geologists returned with samples. Three-year program planned private bids post-rights security. Lusaka's delay halts progress amid India's diversification push. Impacts EV battery supplies.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/india/india-zambia-talks-critical-minerals-stall-over-mining-rights-sources-say-2026-04-16/",
+    author: "Reuters",
+    date: "16 April, 2026",
+    img: "",
+  },
+    {
+    id: 123,
+    title:
+      "Australia-US $3.5B Minerals Partnership",
+    description:
+      "Australia and the US announced a $3.5 billion package on April 12, 2026, to boost critical minerals cooperation, targeting lithium, nickel, and rare earths. Funds support joint projects, processing facilities, and supply chain diversification away from China. It includes incentives for investments, R&D, and workforce development. The pact counters geopolitical risks, enhances allied resilience for clean energy and defense. Outcomes feature new refineries and off-take agreements.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/china/australia-us-boost-support-critical-minerals-with-35-billion-2026-04-12/",
+    author: "Reuters",
+    date: "12 April, 2026",
+    img: "",
+  },
+
 ];
