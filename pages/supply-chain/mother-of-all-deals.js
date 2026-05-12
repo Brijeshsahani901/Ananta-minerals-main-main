@@ -201,6 +201,11 @@ export default function MotherOfAllDeals() {
                     gains into a durable industrial advantage.
                   </p>
 
+                    <p style={{color: "#686868"}}>
+                                        Copyright ©️ 2025 by Ananta Aspen Centre<br/>
+                                            This text is protected by copyright and may not be reproduced, distributed, or modified without permission
+                                    </p>
+
                   <Card
                     className="d-flex flex-column flex-md-row gap-4 p-4 mt-5 shadow-sm"
                     style={{

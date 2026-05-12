@@ -1524,5 +1524,114 @@ export const whatsnew = [
     date: "12 April, 2026",
     img: "",
   },
+     {
+    id: 124,
+    title:
+      "MDBs Commit to Minerals Value Chains",
+    description:
+      "Multilateral Development Banks (MDBs) issued a joint statement on April 17, 2026, pledging cooperation to build resilient critical minerals to manufacturing value chains. They aim to scale investments for clean energy, digital transformation, and economic growth in developing countries beyond raw extraction. Focus areas include shared infrastructure like power and transport, corridor approaches for regional integration, ESG standards, and private sector mobilization via a Joint Collaboration Framework. This leverages MDB strengths for coordinated diagnostics and co-financing, fostering jobs, SME inclusion, and community benefits.",
+    downloadUrl: "#",
+    path: "https://www.worldbank.org/en/news/statement/2026/04/17/mdbs-powering-critical-minerals-value-chains",
+    author: "World Bank Group",
+    date: "17 April, 2026",
+    img: "",
+  },   {
+    id: 125,
+    title:
+      "Salween River Arsenic Pollution Crisis",
+    description:
+      "Asia's longest free-flowing river, the Salween, faces arsenic contamination from unregulated Myanmar mines, detected in Thailand tests from September 2025. Levels exceed WHO limits up to fivefold, with 0.554 mg/L in tributaries from 127 sites in Shan state, including rare earth leaching for tech and EVs. Armed groups control gold and mineral operations, leaching toxins downstream via Kok and Sai rivers. Impacts threaten ecosystems, health, and tourism; Thailand urges cross-border action amid Myanmar civil war. Local fears mount despite no immediate visible effects.",
+    downloadUrl: "#",
+    path: "https://news.mongabay.com/2026/04/asias-longest-free-flowing-river-contaminated-by-arsenic-linked-to-myanmar-mines/amp/",
+    author: "Mongabay Conservation News",
+    date: "20 April, 2026",
+    img: "",
+  },   {
+    id: 126,
+    title:
+      "USA Rare Earth takeover of Serra Verde",
+    description:
+      "USA Rare Earth announced a $2.8 billion acquisition of Brazil's Serra Verde Group on April 20, 2026, creating a vertically integrated rare earth supply chain outside China. The deal includes $300 million cash and 126.8 million new shares at $19.95, valuing Serra Verde's equity. Serra Verde's Pela Ema mine in Goiás, Latin America's sole producing rare earth operation, yields 6,400 tonnes TREO annually, rich in magnetic REEs like NdPrDyTb for EVs, wind turbines, and defense. Stage two expansion and a 15-year US-backed offtake secure revenues; Serra Verde CEO Thras Moraitis joins as USA RE president. Closure expected Q3 2026, boosting Western production over 50% heavy REEs by 2027.",
+    downloadUrl: "#",
+    path: "https://www.ft.com/content/8bd0a7bf-2ff1-4a50-8a1b-7d3feca59e45?syn-25a6b1a6=1",
+    author: "Financial Times",
+    date: "20 April, 2026",
+    img: "",
+  },   {
+    id: 127,
+    title:
+      "Navprakriti Odisha Refining Investment",
+    description:
+      "Navprakriti Resources plans over Rs 100 crore investment in a critical minerals refining facility in Odisha, announced April 2026. The plant will process lithium, cobalt, and rare earths from domestic auctions, supporting EV and renewable supply chains. It aligns with NCMM, creating jobs and boosting local value addition. Odisha's mineral-rich blocks attract such ventures.",
+    downloadUrl: "#",
+    path: "https://economictimes.indiatimes.com/news/india/navprakriti-to-invest-over-rs-100-crore-in-[…]-facility-in-odisha/articleshow/130413720.cms?from=mdr",
+    author: "The Economic Times",
+    date: "21 April, 2026",
+    img: "",
+  },  
+   {
+    id: 128,
+    title:
+      "USTR Urges Allies on Minerals Funding",
+    description:
+      "USTR Jamieson Greer called on US allies to pay more for critical minerals development, per Reuters on April 22, 2026. Amid diversification from China, the push seeks greater burden-sharing for mining and refining projects. This supports Trump's reelection focus on resource security.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/china/ustr-greer-urges-us-allies-pay-more-critical-minerals-ft-reports-2026-04-22/",
+    author: "Reuters",
+    date: "22 April, 2026",
+    img: "",
+  },
+  {id: 129,
+    title:
+      "OECD Critical Minerals Forum",
+    description:
+      "OECD hosts a forum on critical minerals in April 2026, addressing investment resilience, inclusive growth, and value chain future-proofing. Discussions cover demand projections, risks, and policies for sustainable supplies. Features World Bank mineral forecasts for iron, nickel, copper. Aims at coordinated global strategies.",
+    downloadUrl: "#",
+    path: "https://www.oecd.org/en/about/news/media-advisories/2026/04/oecd-critical-minerals.html",
+    author: "OECD",
+    date: "22 April, 2026",
+    img: "",
+  },
+   {id: 130,
+    title:
+      "India-EU EV Battery Recycling Initiative",
+    description:
+      "India and the EU launched a €15.2 million (~₹169 crore) joint initiative on May 6, 2026, to advance EV battery recycling under the India-EU Trade and Technology Council (TTC) Working Group 2 on Green and Clean Energy. Funded via the EU’s Horizon Europe and India’s Ministry of Heavy Industries, it targets high-recovery technologies, mixed chemistry handling, logistics, safety, and second-life uses for lithium, graphite, and cobalt. A joint India-EU pilot line will validate innovations, uniting researchers, industries, and startups; proposals due by September 15, 2026. Principal Scientific Adviser Ajay Kumar Sood hailed it for resource security and the circular economy.",
+    downloadUrl: "#",
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2258320&reg=3&lang=1",
+    author: "PIB",
+    date: "6 May, 2026",
+    img: "",
+  },   {id: 131,
+    title:
+      "58 Firms Approved for Recycling Scheme",
+    description:
+      "India's Ministry of Mines approved 58 companies under the ₹1,500 crore Incentive Scheme for Critical Mineral Recycling on April 29, 2026, part of the National Critical Mineral Mission. Firms pledged 850 KTPA capacity and ₹5,000 crore investment for recycling lithium-ion batteries, e-waste, and scrap to recover minerals like lithium and cobalt. It covers battery recycling, e-waste processing, and industrial waste recovery, reducing dependence on imports for clean energy and manufacturing. The next phase focuses on project execution and financial support.",
+    downloadUrl: "#",
+    path: "https://www.energetica-india.net/news/govt-approves-58-firms-under-critical-mineral-recycling-scheme",
+    author: "Energetica India",
+    date: "5 May, 2026",
+    img: "",
+  },   {id: 132,
+    title:
+      "Joint Initiative of IIT Dhanbad and TEXMiN",
+    description:
+      "TEXMiN at IIT-ISM Dhanbad joined NITI Aayog's policy dialogue on Mining 4.0 and critical minerals in early May 2026. Discussions emphasized AI, automation, digital tools for safety, productivity, and competitiveness. Aligns tech with national priorities for resilient mining ecosystem and mineral security. Reinforces India's sustainable development push.",
+    downloadUrl: "#",
+    path: "https://www.manufacturingtodayindia.com/texmin-iit-ism-dhanbad-joins-niti-aayog-mining-4-0-dialogue-on-critical-minerals",
+    author: "Manufacturing Today",
+    date: "3 May, 2026",
+    img: "",
+  },  
+   {id: 133,
+    title:
+      "Japan-Vietnam Leaders Summit",
+    description: "Japan's PM Sanae Takaichi met Vietnamese PM Le Minh Hung and Party Secretary To Lam in Hanoi on May 2, 2026, during a three-day visit. Talks covered bilateral ties, trade, energy security, supply chain resilience, and tech innovation. Emphasized 'free and open' Indo-Pacific cooperation, including critical minerals diversification. Strengthens economic partnerships.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/asia-pacific/japans-pm-takaichi-hanoi-meet-vietnamese-leaders-2026-05-02/",
+    author: "Reuters",
+    date: "2 May, 2026",
+    img: "",
+  },
 
 ];

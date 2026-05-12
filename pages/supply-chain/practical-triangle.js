@@ -97,7 +97,10 @@ export default function AsiaPlaybook() {
                   <p className="my-3">
                     In short, ACITI is a useful, timely experiment in multilateral cooperation. It is neither a silver bullet nor a geopolitical provocation; it is a pragmatic effort to integrate suppliers, technology, and manufacturers into more resilient supply chains. The next year will show whether it delivers pilot plants and offtake contracts, or whether it remains a diplomatic umbrella with modest operational bite.
                   </p>
-
+  <p style={{color: "#686868"}}>
+                                        Copyright ©️ 2025 by Ananta Aspen Centre<br/>
+                                            This text is protected by copyright and may not be reproduced, distributed, or modified without permission
+                                    </p>
                   <Card
                     className="d-flex flex-column flex-md-row gap-4 p-4 mt-5 shadow-sm"
                     style={{

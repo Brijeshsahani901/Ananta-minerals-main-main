@@ -12,18 +12,18 @@ export default function CriticalMineralsMarquee() {
   const [isPaused, setIsPaused] = useState(false);
 
 const mineralsData = [
-  { name: "Copper", price: 13.02, change: 0.020, previous: 12.766 },
-  { name: "Aluminium", price: 3.38, change: 0.093, previous: 3.093 },
+  { name: "Copper", price: 13.29, change: 2.074, previous: 13.020 },
+  { name: "Aluminium", price: 3.58, change: 5.917, previous: 3.380 },
   { name: "Cobalt", price: 56.290, change: 0.000, previous: 56.290 },
-  { name: "Gallium", price: 280.03, change: 0.073, previous: 261.040 },
-  { name: "Indium", price: 690.97, change: 0.072, previous: 644.480 },
-  { name: "Lithium", price: 23.06, change: 0.108, previous: 20.820 },
-  { name: "Nickel", price: 17.59, change: 0.017, previous: 17.290 },
-  { name: "Palladium", price: 54640.19, change: -0.043, previous: 57067.570 },
-  { name: "Silver", price: 2862.83, change: 0.016, previous: 2817.270 },
-  { name: "Tin", price: 50.68, change: 0.089, previous: 46.559 },
-  { name: "Uranium", price: 189.38, change: -0.039, previous: 197.090 },
-  { name: "Zinc", price: 3.35, change: 0.001, previous: 3.348 },
+  { name: "Gallium", price: 304.13, change: 8.606, previous: 280.030 },
+  { name: "Indium", price: 637.6, change: -7.724, previous: 690.970 },
+  { name: "Lithium", price: 25.38, change: 6.639, previous: 23.800 },
+  { name: "Nickel", price: 19.6, change: 11.427, previous: 17.590 },
+  { name: "Palladium", price: 47759.93, change: -12.592, previous: 54640.190 },
+  { name: "Silver", price: 2422.24, change: -15.390, previous: 2862.830 },
+  { name: "Tin", price: 50.33, change: -0.691, previous: 50.680 },
+  { name: "Uranium", price: 191.36, change: 1.046, previous: 189.380 },
+  { name: "Zinc", price: 3.4, change: 1.493, previous: 3.350 },
 ];
 
   useEffect(() => {

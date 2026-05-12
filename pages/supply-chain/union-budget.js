@@ -120,6 +120,11 @@ export default function IndiasProspective() {
                     In a global environment where supply security is a priority for economies pursuing decarbonisation and technological leadership, India's approach aligns with broader geopolitical shifts. The rare earth corridors, in particular, represent a bold attempt to capture more of the value embedded in critical minerals and to anchor high-tech manufacturing in Indian soil. While execution will be crucial, the policy framework outlined in this year's budget lays important groundwork for a more resilient, integrated and globally significant critical minerals ecosystem.
                   </p>
 
+                    <p style={{color: "#686868"}}>
+                                        Copyright ©️ 2025 by Ananta Aspen Centre<br/>
+                                            This text is protected by copyright and may not be reproduced, distributed, or modified without permission
+                                    </p>
+
                   <Card
                     className="d-flex flex-column flex-md-row gap-4 p-4 mt-5 shadow-sm"
                     style={{

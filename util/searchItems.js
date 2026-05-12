@@ -115,6 +115,11 @@ export const authors = [
         label: "The world depends on China for its critical minerals needs but China, in turn, depends on a remote state in war-torn Myanmar.",
         type: "article",
       },
+       {
+        path: "/supply-chain/drones",
+        label: "Drones have moved beyond the role of peripheral tools to become a core feature of contemporary warfare.",
+        type: "article",
+      },
     ],
   },
    {

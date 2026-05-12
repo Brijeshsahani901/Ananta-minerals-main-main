@@ -115,6 +115,11 @@ export default function VenezuelaIndiaCriticalMinerals() {
                     The most viable path for India's PSUs is probably the same contingent, preparatory posture that OFAC's General License 55 itself encodes. They should map the opportunity, build the bilateral relationships, and wait for the governance conditions that make serious capital deployment defensible. Venezuela's coltan and bauxite will still be there, whether India gets a seat at the table when the real allocation of access begins is the more pressing question.
                   </p>
 
+                    <p style={{color: "#686868"}}>
+                                        Copyright ©️ 2025 by Ananta Aspen Centre<br/>
+                                            This text is protected by copyright and may not be reproduced, distributed, or modified without permission
+                                    </p>
+
                   <Card
                     className="d-flex flex-column flex-md-row gap-4 p-4 mt-5 shadow-sm"
                     style={{

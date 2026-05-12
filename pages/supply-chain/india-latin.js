@@ -78,6 +78,12 @@ export default function IndianLatin() {
                                         However, such partnerships must be structured with sensitivity to local politics and environmental concerns. Mining projects in the developing world including Latin America often face scrutiny over water use, land rights and community impact. India will need to position itself as a responsible investor, aligning with global standards on sustainability and transparency. Doing so would enhance its credibility as a long-term partner and differentiate it from more extractive models of engagement that China often faces international criticism for.
                                     </p>
 
+
+                                      <p style={{color: "#686868"}}>
+                                        Copyright ©️ 2025 by Ananta Aspen Centre<br/>
+                                            This text is protected by copyright and may not be reproduced, distributed, or modified without permission
+                                    </p>
+
                                     <Card
                                         className="d-flex flex-column flex-md-row gap-4 p-4 mt-5 shadow-sm"
                                         style={{

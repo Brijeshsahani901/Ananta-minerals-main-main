@@ -82,6 +82,11 @@ export default function ResourceNationalism() {
                                         However measures such as India's <a href="https://mines.gov.in/admin/storage/ckeditor/SCHEME_GUIDELINES_02_1759320252.pdf" target="_blank" rel="noopener noreferrer">Production Linked Incentive(PLI)</a> elevate the debate from being focused on corporate profits and modern "just in time" efficiency practices. There is hope that global industrial giants will take appeals for diversification and multi-sourcing seriously, reducing the burden on historically over exploited supplier countries especially in the developing world and would give them time to move beyond the trauma and participate in the global value chains anew.
                                     </p>
 
+                                      <p style={{color: "#686868"}}>
+                                        Copyright ©️ 2025 by Ananta Aspen Centre<br/>
+                                            This text is protected by copyright and may not be reproduced, distributed, or modified without permission
+                                    </p>
+
                                     <Card
                                         className="d-flex flex-column flex-md-row gap-4 p-4 mt-5 shadow-sm"
                                         style={{

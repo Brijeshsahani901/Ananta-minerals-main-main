@@ -80,6 +80,10 @@ export default function Jaishankar() {
                     Ultimately, Jaishankar's visit reflects the maturation of U.S.–India relations. The partnership is evolving toward coordinated industrial strategy, resource security collaboration, and technology ecosystem integration. Critical minerals are no longer peripheral to diplomacy; they are central to it. The geometry of global power is increasingly defined by refining capacity, chemical conversion facilities, and battery precursor plants. In that context, this visit marks participation in shaping a new mineral order defined by distributed resilience among strategic partners.
                   </p>
 
+  <p style={{color: "#686868"}}>
+                                        Copyright ©️ 2025 by Ananta Aspen Centre<br/>
+                                            This text is protected by copyright and may not be reproduced, distributed, or modified without permission
+                                    </p>
                     <Card
                     className="d-flex flex-column flex-md-row gap-4 p-4 mt-5 shadow-sm"
                     style={{

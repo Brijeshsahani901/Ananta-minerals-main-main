@@ -1002,6 +1002,18 @@ const DocumentSlider = () => {
       date: "March 2026",
       category: "Industry Analysis",
     },
+       {
+      id: "",
+      image: `${basePath}/assets/minerals_images/drones.webp`,
+      title:
+        "Drones and Dependency: How Critical Minerals Shape Combat Power",
+      link: "/supply-chain/drones",
+      content:
+        "Drones have moved beyond the role of peripheral tools to become a core feature of contemporary warfare.",
+      author: "Maitrayee Jha",
+      date: " April, 2026",
+      category: "Industry Analysis",
+    },
     {
       id: "",
       image: `${basePath}/assets/minerals_images/canberra.jpg`,
@@ -1038,6 +1050,18 @@ const DocumentSlider = () => {
       date: " April, 2026",
       category: "Industry Analysis",
     },
+     {
+      id: "",
+      image: `${basePath}/assets/minerals_images/multilateral-lenders.webp`,
+      title:
+        "How multilateral lenders are moving to reshape Asia's critical minerals value chain",
+      link: "/supply-chain/multilateral-lenders",
+      content:
+        "The global race for critical minerals until 2010 when China and Japan had a brief dispute over the supply of Rare Earth Elements(REE)s, had been a story told almost entirely in extraction terms.",
+      author: "Aditya Pareek",
+      date: "May, 2026",
+      category: "Industry Analysis",
+    }
 
   ];
 
