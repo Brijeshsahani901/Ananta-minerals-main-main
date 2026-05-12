@@ -28,6 +28,7 @@ import HeliumSignificance from "../infographics/HeliumSignificance";
 import MiningBottleneck from "../infographics/MiningBottleneck";
 import JapanIndiaCriticalMinerals from "../infographics/JapanIndiaCriticalMinerals";
 import FeedingIndia from "../infographics/FeedingIndia";
+import DarkSideChinaMinerals from "../infographics/DarkSideChinaMinerals";
 
 
 const BlackWrapper = ({ children }) => {
@@ -50,6 +51,7 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    <BlackWrapper><DarkSideChinaMinerals /></BlackWrapper>,
     <BlackWrapper><FeedingIndia /></BlackWrapper>,
      <BlackWrapper><JapanIndiaCriticalMinerals /></BlackWrapper>,
     <BlackWrapper><MiningBottleneck /></BlackWrapper>,

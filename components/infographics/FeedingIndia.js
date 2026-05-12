@@ -119,15 +119,6 @@ export default function FeedingIndia() {
                         margin: "5px auto 0",
                     }}
                 />
-                <p style={{
-                    fontSize: "10px",
-                    color: "#C5E0B4",
-                    marginTop: "6px",
-                    letterSpacing: "0.5px",
-                    fontWeight: 500,
-                }}>
-                    CRITICAL MINERALS IN FERTILIZERS
-                </p>
             </div>
 
             {/* Scrollable grid */}
