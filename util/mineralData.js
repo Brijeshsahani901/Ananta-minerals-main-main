@@ -1633,5 +1633,25 @@ export const whatsnew = [
     date: "2 May, 2026",
     img: "",
   },
+    {id: 134,
+    title:
+      "Australia Forces China-Linked Investors to Exit Rare Earth Miner",
+    description: "Australia directed several China-linked investors to sell stakes in Northern Minerals, a company developing heavy rare earth deposits critical for permanent magnets and defence technologies. This shows how critical minerals are increasingly becoming a geopolitical and national-security issue. India is likely to strengthen scrutiny over strategic mineral assets and foreign participation in rare-earth supply chains.",
+    downloadUrl: "#",
+    path: "",
+    author: "Wall Street Journal",
+    date: "18 May, 2026",
+    img: "",
+  },
+    {id: 135,
+    title:
+      "China continues limiting exports of key heavy rare earth materials",
+    description: "New trade data shows exports of dysprosium, terbium, and yttrium from China remain significantly below historical levels despite some easing elsewhere. These minerals are essential for EV motors, Wind turbines, Defence electronics & Advanced magnets India’s dependence on imported magnets and refined rare earths remains a strategic vulnerability.",
+    downloadUrl: "#",
+    path: "",
+    author: "Mining.com",
+    date: "13 May, 2026",
+    img: "",
+  },
 
 ];

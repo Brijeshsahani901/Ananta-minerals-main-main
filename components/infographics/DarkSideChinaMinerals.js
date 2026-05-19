@@ -94,7 +94,7 @@ export default function MiningBottleneck() {
                     style={{
                         letterSpacing: "1.5px",
                         fontWeight: "800",
-                        fontSize: "11px",
+                        fontSize: "13px",
                         margin: 0,
                         color: "#E2E8F0",
                         textTransform: "uppercase",
@@ -185,7 +185,7 @@ function StatCard({ stat, label, description, category, highlight }) {
             {/* Category tag - smaller font */}
             <div
                 style={{
-                    fontSize: "11px",
+                    fontSize: "14px",
                     fontWeight: "700",
                     textTransform: "uppercase",
                     letterSpacing: "0.3px",
@@ -196,49 +196,13 @@ function StatCard({ stat, label, description, category, highlight }) {
                     gap: "3px",
                 }}
             >
-                <span
-                    style={{
-                        display: "inline-block",
-                        width: "4px",
-                        height: "4px",
-                        borderRadius: "50%",
-                        backgroundColor: borderColor,
-                    }}
-                />
                 {category}
-            </div>
-
-            {/* Stat + label - smaller stat font */}
-            <div style={{ marginBottom: "3px", display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: "3px" }}>
-                <span
-                    style={{
-                        fontSize: "19px",
-                        fontWeight: "800",
-                        color: "#1a202c",
-                        lineHeight: 1.1,
-                        letterSpacing: "-0.2px",
-                    }}
-                >
-                    {stat}
-                </span>
-                {label && (
-                    <span
-                        style={{
-                            fontSize: "9px",
-                            fontWeight: "600",
-                            color: "#4A5568",
-                            textTransform: "lowercase",
-                        }}
-                    >
-                        {label}
-                    </span>
-                )}
             </div>
 
             {/* Short description - tighter line height */}
             <div
                 style={{
-                    fontSize: "12px",
+                    fontSize: "13px",
                     fontWeight: "500",
                     color: "#2d3748",
                     lineHeight: 1.25,
