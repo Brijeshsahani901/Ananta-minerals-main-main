@@ -1052,6 +1052,16 @@ const DocumentSlider = () => {
     },
      {
       id: "",
+      image: `${basePath}/assets/minerals_images/food-security.jpeg`,
+      title: "Critical Minerals in Fertilizers, Challenges of Food Security and Road Ahead",
+      link: "/supply-chain/critical-minerals-fertilizers",
+      content: "Food security has always been central to India’s national stability, economic resilience, and strategic autonomy.",
+      author: "Mithilesh Phadke",
+      date: "May, 2026",
+      category: "Industry Analysis",
+    },
+     {
+      id: "",
       image: `${basePath}/assets/minerals_images/multilateral-lenders.webp`,
       title:
         "How multilateral lenders are moving to reshape Asia's critical minerals value chain",
@@ -1061,7 +1071,8 @@ const DocumentSlider = () => {
       author: "Aditya Pareek",
       date: "May, 2026",
       category: "Industry Analysis",
-    }
+    },
+    
 
   ];
 
