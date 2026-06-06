@@ -1653,5 +1653,81 @@ export const whatsnew = [
     date: "13 May, 2026",
     img: "",
   },
-
+  {
+    id: 136,
+    title: "India-US Critical Minerals Framework",
+    description:
+      "India and the US formalized a bilateral Framework on \"Securing of Supply in the Mining and Processing of Critical Minerals and Rare Earths\" on May 25, 2026, signed by EAM S. Jaishankar and US Secretary of State Marco Rubio in New Delhi. It deepens cooperation across the entire supply chain-mining, processing, recycling, investments, and scrap management—strengthening resilient, diversified chains amid China's dominance. Jaishankar called it timely, discussed at the Quad meeting. The pact supports semiconductors, clean energy, and defence tech.",
+    downloadUrl: "#",
+    path: "https://www.mea.gov.in/press-releases.htm?dtl/41236/IndiaUS_Framework_on_Securing_of_Supply_in_the_Mining_and_Processing_of_Critical_Minerals_and_Rare_Earths",
+    author: "The Ministry of External Affairs, GOI",
+    date: "26 May, 2026",
+    img: "",
+  },
+  {
+    id: 137,
+    title: "Quad Launches Critical Minerals Push",
+    description:
+      "Quad foreign ministers from India, US, Japan, and Australia met in New Delhi on May 26, 2026, unveiling the \"Quad Critical Minerals Framework\" to coordinate investments and policies for resilient mining, processing, and recycling chains. The bloc announced the \"Quad Initiative on Indo-Pacific Energy Security\" addressing market disruptions affecting fertilizers and energy. Focus includes critical technologies, AI, and maritime security to counter China's influence. Australia's Geoscience Minister mentioned joint projects.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/world/china/australia-india-japan-us-quad-seeks-relevance-foreign-ministers-meet-new-delhi-2026-05-26/",
+    author: "Reuters",
+    date: "26 May, 2026",
+    img: "",
+  },
+  {
+    id: 138,
+    title: "PIB Mineral Sector Update",
+    description:
+      "PIB released details on India's mineral sector progress in May 2026, highlighting record auctions, reforms, and critical mineral advancements under NCMM. Key points include 68 blocks awarded in FY25-26, ₹1,500 crore recycling scheme, and tech-driven exploration aligning with Atmanirbhar Bharat.",
+    downloadUrl: "#",
+    path: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2264946&reg=3&lang=2",
+    author: "The Ministry of Mines, GOI",
+    date: "25 May, 2026",
+    img: "",
+  },
+  {
+    id: 139,
+    title: "India's Record Mineral Auctions FY25-26",
+    description:
+      "India achieved its highest-ever mineral block auctions in FY2025-26, awarding 22 critical mineral blocks amid 68 total awards, reported DD News. This includes lithium, REE, PGE blocks in states like J&K, Odisha, Rajasthan, advancing NCMM goals. Reforms like unified portals and reduced timelines boosted success, reducing import dependence for EVs, defense, and renewables. Investment exceeds Rs. 5,000 crore.",
+    downloadUrl: "#",
+    path: "https://ddnews.gov.in/en/india-records-highest-ever-mineral-block-auctions-in-fy-2025-26-22-critical-mineral-blocks-awarded/",
+    author: "DD News",
+    date: "25 May, 2026",
+    img: "",
+  },
+  {
+    id: 140,
+    title: "Tanzania's Rare Earth Discovery",
+    description:
+      "Tanzania discovered significant rare earth element (REE) deposits in Mkiu Village, Ludewa District, Njombe Region, potentially positioning it as a key African producer. The deposits contain Neodymium and Praseodymium, vital for EVs, wind turbines, smartphones, and defense systems. Officials see this as a major economic boost amid global clean energy transition. Southern highlands exploration continues.",
+    downloadUrl: "#",
+    path: "https://africa.businessinsider.com/local/markets/tanzania-discovers-some-of-the-worlds-most-valuable-strategic-minerals-through/j4c1f34",
+    author: "Business Insider Africa",
+    date: "24 May, 2026",
+    img: "",
+  },
+  {
+    id: 141,
+    title: "Egypt's Aerial Mineral Survey",
+    description:
+      "Egypt launched its first comprehensive aerial mining survey in 42 years on May 23, 2026, covering Eastern/Western deserts and Sinai with Xcalibur Smart Mapping, Nuclear Materials Authority, and Drone Tech. Using advanced geophysics, it creates an accurate mining database to attract investment, reduce exploration risks, and identify gold, copper, phosphate, REE deposits. Energy Minister Karim Badawi called it strategic.",
+    downloadUrl: "#",
+    path: "https://africa.businessinsider.com/local/markets/why-egypt-is-racing-to-map-its-hidden-mineral-wealth-after-four-decades/eenckyy",
+    author: "Business Insider Africa",
+    date: "24 May, 2026",
+    img: "",
+  },
+  {
+    id: 142,
+    title: "TEXMiN-Moscow Institute Partnership",
+    description:
+      "TEXMiN Foundation at IIT (ISM) Dhanbad signed a Statement of Intent with Moscow's GIREDMET on May 21, 2026, at RAREMET-2026 Congress, for rare earth magnet and critical minerals research. Collaboration includes NdFeB magnet development, alloy sintering, high-coercivity processing, full metallurgy cycle, and recovery from tailings/spent magnets. Joint projects, academic exchanges, doctoral research, and circular chain support advance bilateral ties. Concrete proposals under development.",
+    downloadUrl: "#",
+    path: "https://theprint.in/india/iit-ism-dhanbads-texmin-partners-moscow-institute-for-critical-minerals-research/2938709/?amp",
+    author: "The Print",
+    date: "22 May, 2026",
+    img: "",
+  },
 ];

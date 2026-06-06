@@ -29,7 +29,7 @@ import MiningBottleneck from "../infographics/MiningBottleneck";
 import JapanIndiaCriticalMinerals from "../infographics/JapanIndiaCriticalMinerals";
 import FeedingIndia from "../infographics/FeedingIndia";
 import DarkSideChinaMinerals from "../infographics/DarkSideChinaMinerals";
-
+import GlobalMiningCompanies from "../infographics/GlobalMiningCompanies";
 
 const BlackWrapper = ({ children }) => {
   return (
@@ -51,32 +51,87 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
-    <BlackWrapper><DarkSideChinaMinerals /></BlackWrapper>,
-    <BlackWrapper><FeedingIndia /></BlackWrapper>,
-     <BlackWrapper><JapanIndiaCriticalMinerals /></BlackWrapper>,
-    <BlackWrapper><MiningBottleneck /></BlackWrapper>,
-    <BlackWrapper><HeliumSignificance /></BlackWrapper>,
-     <BlackWrapper><CoastalBeaches /></BlackWrapper>,
-     <BlackWrapper><GCCConflict /></BlackWrapper>,
-    <BlackWrapper><RareEarthStory /></BlackWrapper>,
-    <BlackWrapper><ChileSnapshot /></BlackWrapper>,
-    <BlackWrapper><CountryStats /></BlackWrapper>,
-    <BlackWrapper><IndiaUSFTA /></BlackWrapper>,
-    <BlackWrapper><SilverCriticalMineral /></BlackWrapper>,
-    <BlackWrapper><MineralsSnapshot /></BlackWrapper>,
-    <BlackWrapper><GreenlandStrategy /></BlackWrapper>,
-    <BlackWrapper><Venezuela /></BlackWrapper>,
-    <BlackWrapper><IndiaOmanMineralInfographic /></BlackWrapper>,
-    <BlackWrapper><CriticalMineralMission /></BlackWrapper>,
-    <BlackWrapper><Aluminium /></BlackWrapper>,
-    <BlackWrapper><SyntheticGraphite /></BlackWrapper>,
-    <BlackWrapper><Infographic520Screenshot /></BlackWrapper>,
-    <BlackWrapper><InvestInMalasiya /></BlackWrapper>,
-    <BlackWrapper><ChinaAdvantage /></BlackWrapper>,
-    <BlackWrapper><MalaysianMineralInfographic /></BlackWrapper>,
-    <BlackWrapper><IndiaAndMongolia /></BlackWrapper>,
-    <BlackWrapper><IndiaAfghanistan /></BlackWrapper>,
-    <BlackWrapper><RareEarthInfographic /></BlackWrapper>,
+    <BlackWrapper>
+      <GlobalMiningCompanies />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <DarkSideChinaMinerals />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <FeedingIndia />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <JapanIndiaCriticalMinerals />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <MiningBottleneck />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <HeliumSignificance />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <CoastalBeaches />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <GCCConflict />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <RareEarthStory />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <ChileSnapshot />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <CountryStats />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <IndiaUSFTA />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <SilverCriticalMineral />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <MineralsSnapshot />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <GreenlandStrategy />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <Venezuela />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <IndiaOmanMineralInfographic />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <CriticalMineralMission />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <Aluminium />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <SyntheticGraphite />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <Infographic520Screenshot />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <InvestInMalasiya />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <ChinaAdvantage />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <MalaysianMineralInfographic />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <IndiaAndMongolia />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <IndiaAfghanistan />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <RareEarthInfographic />
+    </BlackWrapper>,
   ];
 
   const total = slides.length;
@@ -105,7 +160,7 @@ export default function TechnologySlider() {
 
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000); 
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [index, isPaused]);
@@ -115,7 +170,8 @@ export default function TechnologySlider() {
       style={{
         position: "relative",
         overflow: "hidden",
-        minHeight: "540px", backgroundColor: "black"
+        minHeight: "540px",
+        backgroundColor: "black",
       }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -132,13 +188,20 @@ export default function TechnologySlider() {
       </div>
 
       {/* ===== CAROUSEL SHELL ===== */}
-      <Carousel activeIndex={0} controls={false} indicators={false} interval={null} slide={false}>
+      <Carousel
+        activeIndex={0}
+        controls={false}
+        indicators={false}
+        interval={null}
+        slide={false}
+      >
         <Carousel.Item style={{ minHeight: "540px", backgroundColor: "black" }}>
           <div
             style={{
               position: "relative",
               width: "100%",
-              minHeight: "540px", backgroundColor: "black"
+              minHeight: "540px",
+              backgroundColor: "black",
             }}
           >
             {/* OLD SLIDE (EXIT) */}
