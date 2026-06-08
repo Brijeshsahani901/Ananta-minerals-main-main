@@ -1730,4 +1730,59 @@ export const whatsnew = [
     date: "22 May, 2026",
     img: "",
   },
+  {
+    id: 143,
+    title: "PIB Critical Minerals Processing Update",
+    description:
+      "The Press Information Bureau (PIB) announced in June 2026 that India is advancing critical mineral processing infrastructure under the National Critical Mineral Mission (NCMM). The government plans to set up four processing plants for lithium, rare earths, and other strategic minerals, reducing import dependence for EVs, defense, and semiconductors. These facilities will leverage domestic auctions and recycling schemes, with investments exceeding ₹5,000 crore. The initiative aligns with Atmanirbhar Bharat, supported by the ₹1,500 crore recycling incentive scheme and streamlined auction reforms. Global partnerships and private sector participation are key to accelerating capacity building for clean energy transition.",
+    downloadUrl: "#",
+    path: "https://www.mea.gov.in/press-releases.htm?dtl/41236/IndiaUS_Framework_on_Securing_of_Supply_in_the_Mining_and_Processing_of_Critical_Minerals_and_Rare_Earths",
+    author: "PIB",
+    date: "30 May, 2026",
+    img: "",
+  },
+  {
+    id: 144,
+    title: "Four Critical Mineral Processing Plants Planned",
+    description:
+      "India will set up four critical mineral processing plants across multiple states by 2028, announced Mines Minister G Kishan Reddy in June 2026. The plants will process lithium, nickel, cobalt, and rare earth elements, initially targeting 10,000 tonnes annual capacity for battery-grade materials. Locations include Odisha, Jharkhand, Andhra Pradesh, and Rajasthan, leveraging nearby mineral blocks. Investment of ₹7,500 crore will create 5,000 jobs, supported by PLI schemes and NCMM. These facilities address refining bottlenecks, reducing reliance on Chinese imports for EV batteries and renewable energy storage. Private-public partnerships will drive operationalization.",
+    downloadUrl: "#",
+    path: "https://www.msn.com/en-in/news/insight/india-to-set-up-four-critical-mineral-processing-plants/gm-GM7F1CEF23?gemSnapshotKey=GM7F1CEF23-snapshot-37&uxmode=ruby",
+    author: "MSN",
+    date: "31 May, 2026",
+    img: "",
+  },
+  {
+    id: 145,
+    title: "World Bank-Japan Critical Minerals Partnership",
+    description:
+      "The World Bank Group and Japan expanded cooperation on June 1, 2026, to strengthen critical minerals supply chains and energy resilience through a new partnership framework. The initiative includes $2 billion in financing for lithium, cobalt, and rare earth projects in developing countries, focusing on sustainable mining, processing infrastructure, and recycling. Japan's Ministry of Economy and the World Bank's Climate-Smart Mining Initiative will collaborate on ESG-compliant projects, reducing China's market dominance. Key areas include battery recycling, workforce development, and seismic-resistant infrastructure. This supports global energy transition and supply chain diversification for clean tech manufacturing.",
+    downloadUrl: "#",
+    path: "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099042726084042630",
+    author: "World Bank Group",
+    date: "1 June, 2026",
+    img: "",
+  },
+  {
+    id: 146,
+    title: "India- Myanmar Critical Minerals Cooperation",
+    description:
+      "India and Myanmar agreed to maintain regular dialogue on critical minerals and rare earths after MEA discussions in June 2026, despite Myanmar's political instability. The MEA emphasized taking cooperation forward on exploration, technology sharing, and supply chain security for rare earth elements vital for India's electronics and defense sectors. Myanmar's Kachin region holds significant deposits, but security concerns limit large-scale investments. India will monitor the situation while continuing bilateral engagement. This cautious approach balances strategic needs with risk management, complementing India's broader diversification efforts in Africa and Latin America for critical minerals security.",
+    downloadUrl: "#",
+    path: "https://energy.economictimes.indiatimes.com/amp/news/coal/india-myanmar-to-stay-in-touch-on-issue-of-critical-minerals-rare-earths-take-cooperation-forward-mea/131441999",
+    author: "ET Energy World",
+    date: "1 June, 2026",
+    img: "",
+  },
+  {
+    id: 147,
+    title: "Morocco's Strategic Antimony Mining Project",
+    description:
+      "Morocco is advancing the Talsint antimony mining project while China dominates 85% of the global antimony supply, reported June 2026. The project, involving Canadian miner Antimony Corp, targets 15,000 tonnes of annual production at one of the world's largest undeveloped deposits. Antimony is critical for flame retardants, military applications, and solar panels. Morocco's strategic location and stable governance attract Western investment to diversify supply chains. The government offers tax incentives and streamlined permitting. This positions Morocco as a key non-Chinese supplier, supporting NATO countries' defence industrial bases and reducing geopolitical risks in critical-mineral markets.",
+    downloadUrl: "#",
+    path: "https://africa.businessinsider.com/local/markets/as-china-dominates-antimony-supply-morocco-advances-strategic-mining-project/r62evw7",
+    author: "Business Insider Africa",
+    date: "3 June, 2026",
+    img: "",
+  }
 ];

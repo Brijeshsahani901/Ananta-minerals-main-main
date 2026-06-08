@@ -30,6 +30,7 @@ import JapanIndiaCriticalMinerals from "../infographics/JapanIndiaCriticalMinera
 import FeedingIndia from "../infographics/FeedingIndia";
 import DarkSideChinaMinerals from "../infographics/DarkSideChinaMinerals";
 import GlobalMiningCompanies from "../infographics/GlobalMiningCompanies";
+import BariteSnapshot from "../infographics/BariteSnapshot";
 
 const BlackWrapper = ({ children }) => {
   return (
@@ -51,6 +52,9 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    <BlackWrapper>
+      <BariteSnapshot />
+    </BlackWrapper>,
     <BlackWrapper>
       <GlobalMiningCompanies />
     </BlackWrapper>,
