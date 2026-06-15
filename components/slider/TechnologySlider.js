@@ -31,6 +31,7 @@ import FeedingIndia from "../infographics/FeedingIndia";
 import DarkSideChinaMinerals from "../infographics/DarkSideChinaMinerals";
 import GlobalMiningCompanies from "../infographics/GlobalMiningCompanies";
 import BariteSnapshot from "../infographics/BariteSnapshot";
+import QuantumMineralsSnapshot from "../infographics/QuantumMineralsSnapshot";
 
 const BlackWrapper = ({ children }) => {
   return (
@@ -52,6 +53,9 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    <BlackWrapper>
+      <QuantumMineralsSnapshot />
+    </BlackWrapper>,
     <BlackWrapper>
       <BariteSnapshot />
     </BlackWrapper>,
@@ -164,7 +168,7 @@ export default function TechnologySlider() {
 
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 50000);
 
     return () => clearInterval(interval);
   }, [index, isPaused]);

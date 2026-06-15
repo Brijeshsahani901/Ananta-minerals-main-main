@@ -113,6 +113,7 @@ export const WorldMap = ({
   onInitiativeSelect,
   position,
   setTooltipContent,
+  onPositionChange,
 }) => {
   const geoUrl = geo;
 
@@ -133,7 +134,15 @@ export const WorldMap = ({
           fill="#cc0000"
         />
 
-        <ZoomableGroup center={position.coordinates} zoom={position.zoom}>
+        <ZoomableGroup
+          center={position.coordinates}
+          zoom={position.zoom}
+          onMoveEnd={(newPosition) => {
+            if (onPositionChange) {
+              onPositionChange(newPosition);
+            }
+          }}
+        >
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geoItem) => {

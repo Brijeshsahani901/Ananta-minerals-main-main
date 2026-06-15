@@ -14,31 +14,65 @@ export default function GlobalRestrictionsExplorer() {
   const [tooltipContent, setTooltipContent] = useState("");
   const [position, setPosition] = useState({ coordinates: [0, 20], zoom: 1 });
   const [openSection, setOpenSection] = useState("export");
+  const [isMapManuallyChanged, setIsMapManuallyChanged] = useState(false);
+  const [resetCount, setResetCount] = useState(0);
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
   };
 
   const handleCountrySelect = (country) => {
-    setSelectedCountry(country);
-    setSelectedInitiative(null);
-    if (country) {
-      setPosition({ coordinates: country.coordinates, zoom: 2 });
-    } else {
+    if (selectedCountry && country && selectedCountry.country === country.country) {
+      setSelectedCountry(null);
+      setSelectedInitiative(null);
       setPosition({ coordinates: [0, 20], zoom: 1 });
+      setIsMapManuallyChanged(false);
+      setResetCount((prev) => prev + 1);
+    } else {
+      setSelectedCountry(country);
+      setSelectedInitiative(null);
+      if (country) {
+        setPosition({ coordinates: country.coordinates, zoom: 2 });
+      } else {
+        setPosition({ coordinates: [0, 20], zoom: 1 });
+      }
+      setIsMapManuallyChanged(false);
+      setResetCount((prev) => prev + 1);
     }
   };
 
-const handleInitiativeSelect = (initiative) => {
-  setSelectedInitiative(initiative);
-  setSelectedCountry(null);
+  const handleInitiativeSelect = (initiative) => {
+    if (selectedInitiative && initiative && selectedInitiative.name === initiative.name) {
+      setSelectedInitiative(null);
+      setSelectedCountry(null);
+      setPosition({ coordinates: [0, 20], zoom: 1 });
+      setIsMapManuallyChanged(false);
+      setResetCount((prev) => prev + 1);
+    } else {
+      setSelectedInitiative(initiative);
+      setSelectedCountry(null);
 
-  // 🔍 Slight Zoom-In when initiative selected
-  setPosition({
-    coordinates: [0, 20], // Center world
-    zoom: 1.6,            // 👈 Zoom increased from 1 to 1.6
-  });
-};
+      // 🔍 Slight Zoom-In when initiative selected
+      setPosition({
+        coordinates: [0, 20], // Center world
+        zoom: 1.6,            // 👈 Zoom increased from 1 to 1.6
+      });
+      setIsMapManuallyChanged(false);
+      setResetCount((prev) => prev + 1);
+    }
+  };
+
+  const handlePositionChange = (newPosition) => {
+    const isSame =
+      Math.abs(newPosition.coordinates[0] - position.coordinates[0]) < 0.01 &&
+      Math.abs(newPosition.coordinates[1] - position.coordinates[1]) < 0.01 &&
+      Math.abs(newPosition.zoom - position.zoom) < 0.01;
+
+    if (!isSame) {
+      setPosition(newPosition);
+      setIsMapManuallyChanged(true);
+    }
+  };
 
   return (
     <div className="mt-4">
@@ -155,38 +189,45 @@ const handleInitiativeSelect = (initiative) => {
   </motion.div>
 
         <div className=" my-3">
-       <button
-  onClick={() => {
-    setSelectedCountry(null);
-    setSelectedInitiative(null);
-    setPosition({ coordinates: [0, 20], zoom: 1 });
-  }}
-  className="btn text-white"
-  style={{
-    backgroundColor: "#1e3a8a", // 🔵 Premium Blue
-    fontSize: "0.85rem",
-    padding: "4px 12px",
-    border: "none",
-    textTransform: "capitalize",
-    borderRadius: "4px",
-    transition: "all 0.2s ease-in-out",
-  }}
->
-  Reset Map View
-</button>
-      </div>
+          <button
+            onClick={() => {
+              setSelectedCountry(null);
+              setSelectedInitiative(null);
+              setPosition({ coordinates: [0, 20], zoom: 1 });
+              setIsMapManuallyChanged(false);
+              setResetCount((prev) => prev + 1);
+            }}
+            disabled={!isMapManuallyChanged && !selectedCountry && !selectedInitiative}
+            className="btn text-white"
+            style={{
+              backgroundColor: (!isMapManuallyChanged && !selectedCountry && !selectedInitiative) ? "#94a3b8" : "#1e3a8a", // Slate gray when disabled, Premium Blue when active
+              fontSize: "0.85rem",
+              padding: "4px 12px",
+              border: "none",
+              textTransform: "capitalize",
+              borderRadius: "4px",
+              transition: "all 0.2s ease-in-out",
+              cursor: (!isMapManuallyChanged && !selectedCountry && !selectedInitiative) ? "not-allowed" : "pointer",
+              opacity: (!isMapManuallyChanged && !selectedCountry && !selectedInitiative) ? 0.6 : 1,
+            }}
+          >
+            Reset Map View
+          </button>
+        </div>
 </div>
 
         {/* Map Section - REDUCED HEIGHT */}
         <div className="section map">
           <div className="card shadow-sm h-100 position-relative">
             <WorldMap
+              key={resetCount}
               selectedCountry={selectedCountry}
               selectedInitiative={selectedInitiative}
               onCountrySelect={handleCountrySelect}
               onInitiativeSelect={handleInitiativeSelect}
               position={position}
               setTooltipContent={setTooltipContent}
+              onPositionChange={handlePositionChange}
             />
             {tooltipContent && (
               <div
