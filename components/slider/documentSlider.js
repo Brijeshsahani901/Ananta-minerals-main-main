@@ -2,6 +2,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import clsx from "clsx";
 
 const DocumentSlider = () => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -439,6 +440,40 @@ const DocumentSlider = () => {
       date: "May, 2026",
       category: "Industry Analysis",
     },
+    {
+      id: "",
+      image: `${basePath}/assets/minerals_images/g7.webp`,
+      title: "The G7’s new critical minerals action plan",
+      link: "/supply-chain/g7",
+      content:
+        "At their summit’s second and final day on June 17, 2026, the leaders of the Group of Seven (G7) nations adopted a document laying out the titular Critical Minerals Action Plan, which sets out a shared commitment to rethinking how supply chain relevant critical minerals are found, extracted, processed, and traded.",
+      author: "Aditya Pareek",
+      date: "June, 2026",
+      category: "Industry Analysis",
+    },
+    {
+      id: "",
+      image: `${basePath}/assets/minerals_images/quantum-computers.webp`,
+      title: "Quantum Computing and the Critical Mineral Race",
+      link: "/supply-chain/quantum-computing",
+      content:
+        "Quantum computing is becoming strategically important for the same reason semiconductors did—not because it will replace every existing computer, but because it could become decisive infrastructure for a narrow set of high-value tasks in science ...",
+      author: "Mithilesh Phadke",
+      date: "June, 2026",
+      category: "Industry Analysis",
+    },
+    {
+      id: "",
+      image: `${basePath}/assets/minerals_images/pentagon-critical-merals.webp`,
+      title:
+        "The Pentagon’s critical minerals rush meets foreign civil society pressure",
+      link: "/supply-chain/pentagon-critical-minerals",
+      content:
+        "The US Department of War is confronting a potential supply chain crisis as its involvement in the combat operations in the West Asia region continues to drag on and its arsenal and inventory requires replacements for expended material.",
+      author: "Aditya Pareek",
+      date: "June, 2026",
+      category: "Industry Analysis",
+    },
   ];
 
   const parseDate = (dateStr) => {
@@ -631,7 +666,7 @@ const DocumentSlider = () => {
       {/* Left Arrow */}
       {showLeftArrow && (
         <button
-          className="nav-arrow left"
+          className={clsx("nav-arrow", "left")}
           onClick={() => scroll("left")}
           aria-label="Scroll left"
         >
@@ -648,7 +683,7 @@ const DocumentSlider = () => {
       {/* Right Arrow */}
       {showRightArrow && (
         <button
-          className="nav-arrow right"
+          className={clsx("nav-arrow", "right")}
           onClick={() => scroll("right")}
           aria-label="Scroll right"
         >

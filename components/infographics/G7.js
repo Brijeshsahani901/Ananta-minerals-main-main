@@ -5,69 +5,60 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-export default function QuantumCriticalMinerals() {
+export default function G7CriticalMinerals() {
   const mineralsData = [
     {
-      mineral: "Silicon",
+      category: "The 70% Chokepoint",
       description:
-        "Silicon forms the foundation of quantum chips, control electronics, and semiconductor fabrication. With India targeting $500 billion in electronics manufacturing by 2030, secure access to high-purity silicon is critical for future quantum hardware development.",
-      category: "SILICON",
+        "A secure G7+ mineral strategy starts by attacking the processing bottleneck, not just finding new mines. China is still the lead refiner for 19 of 20 strategic minerals, with an average market share around 70%, while rare earth separation and magnet production remain especially concentrated.",
       highlight: true,
     },
     {
-      mineral: "Niobium",
+      category: "Brazil-USA Rare Earth Bridge",
       description:
-        "Niobium is the preferred material for superconducting quantum circuits used by IBM and Google. India's near-total import dependence makes supply security a strategic concern. ~90% of global niobium supply comes from Brazil.",
-      category: "NIOBIUM",
+        "USA Rare Earth announced a roughly US$2.8 billion acquisition of Brazil's Serra Verde Group, who is the only producer outside Asia able to supply all four key magnetic rare earths — Nd, Pr, Dy and Tb — at scale. By 2027, Serra Verde is expected to produce more than half of non-China heavy rare earth output.",
       highlight: true,
     },
     {
-      mineral: "Tantalum",
+      category: "Australia as the G7's Launchpad",
       description:
-        "Tantalum is emerging as a key material for next-generation quantum processors. Access to reliable supplies can support India's ambitions to develop indigenous quantum hardware. 3× longer qubit coherence demonstrated in tantalum-based devices.",
-      category: "TANTALUM",
+        "The 2025 US-Australia critical minerals framework committed each country to at least US$1 billion toward a pipeline of projects worth about US$8.5 billion, including Australian gallium and rare earth oxide projects aimed at US and Australian commercial and defence buyers rather than China-dependent routes.",
       highlight: true,
     },
     {
-      mineral: "Helium",
+      category: "USA × UK",
       description:
-        "Quantum computers operate at ~0.01 Kelvin (~273°C). Helium-3 and helium-4 are indispensable for cooling superconducting quantum computers. India currently depends entirely on imports for helium supply.",
-      category: "HELIUM",
+        "USA Rare Earth has acquired Less Common Metals, a rare earth metals and alloys manufacturer, for a reported US$100 million cash plus shares. This is important because magnet supply chains do not stop at separated oxides; they need metal-making and alloying capability before NdFeB magnets can be produced.",
       highlight: true,
     },
     {
-      mineral: "Rare Earth Elements",
+      category: "Australia × Japan",
       description:
-        "China controls >85% of global rare earth processing. Rare earths enable quantum lasers, magnets, and sensing technologies. Neodymium, Dysprosium, Yttrium are the major REE used in Quantum Computers.",
-      category: "RARE EARTHS",
+        "Lynas Rare Earths in Australia has long been backed by Japanese partners seeking non-China supply, and its latest supply arrangement with Japan Australia Rare Earths, or JARE, reportedly extends the partnership through 2038. The deal includes a price floor around US$110/kg for NdPr, at least 5,000 tonnes of NdPr annually, and access to half of Lynas' heavy rare earth output.",
       highlight: true,
     },
     {
-      mineral: "Ytterbium",
+      category: "South Korea × USA × Canada",
       description:
-        "Ytterbium-based trapped-ion quantum computers are among the most accurate quantum platforms. Securing access supports advanced research under the National Quantum Mission. 99.99% qubit fidelity achieved in leading trapped-ion systems.",
-      category: "YTTERBIUM ",
+        "The value chain logic is clear: Canadian location and policy support, Korean cathode chemistry, US automaker demand, and North American battery qualification under friend-shored rules.",
       highlight: true,
     },
     {
-      mineral: "Indium",
+      category: "Japan × South Korea × Canada",
       description:
-        "Indium is essential for photonic quantum chips and quantum communication networks. Limited global production makes supply chains particularly sensitive. Global indium production is only ~1,000 tonnes per year.",
-      category: "INDIUM",
+        "Honda plans EV and battery capacity in Ontario, while also exploring joint ventures with POSCO Future M of South Korea and Asahi Kasei of Japan for battery materials.",
       highlight: true,
     },
     {
-      mineral: "Gallium",
+      category: "Australia × Germany",
       description:
-        "China accounts for >90% of global gallium processing. Gallium is critical for quantum photonics and advanced semiconductors. Export restrictions have highlighted the importance of diversified sourcing strategies.",
-      category: "GALLIUM",
+        "Vulcan Energy secured roughly US$3.9 billion for its German lithium and renewable energy project. Phase one targets 24,000 tonnes of lithium hydroxide monohydrate per year, described as enough for about 500,000 EV batteries annually.",
       highlight: true,
     },
     {
-      mineral: "Gold",
+      category: "Brazil × Canada × USA",
       description:
-        "Gold provides ultra-reliable cryogenic interconnects and chip packaging. While not a qubit material, it remains indispensable across quantum hardware systems.",
-      category: "GOLD",
+        "Brazil's Vale is not just a Brazilian miner; through Vale Canada / Vale Base Metals, it is deeply embedded in Canada's nickel, copper, cobalt and PGM ecosystem.",
       highlight: true,
     },
   ];
@@ -76,8 +67,7 @@ export default function QuantumCriticalMinerals() {
     <div
       className={montserrat.className}
       style={{
-        background:
-          "linear-gradient(135deg, #0B132B 0%, #1C2541 50%, #3A506B 100%)",
+        background: "#2A3A5A",
         borderRadius: "14px",
         padding: "8px 12px",
         color: "#FFFFFF",
@@ -86,7 +76,7 @@ export default function QuantumCriticalMinerals() {
         flexDirection: "column",
         boxShadow: "0 8px 20px rgba(0,0,0,0.3)",
         overflow: "hidden",
-        border: "1px solid rgba(91, 192, 235, 0.3)",
+        border: "none",
       }}
     >
       {/* Compact Header */}
@@ -95,19 +85,20 @@ export default function QuantumCriticalMinerals() {
           style={{
             letterSpacing: "1.5px",
             fontWeight: "800",
-            fontSize: "13px",
+            fontSize: "12px",
             margin: 0,
-            color: "#E0F7FA",
+            color: "#FFFFFF",
             textTransform: "uppercase",
+            lineHeight: "1.4",
           }}
         >
-          Quantum Computing Runs on Critical Minerals
+          G7+ CRM CORRIDOR : REDUCING DEPENDENCY THROUGH TRUSTED PARTNERSHIPS
         </h4>
         <div
           style={{
             width: "30px",
             height: "2px",
-            backgroundColor: "#5BC0EB",
+            backgroundColor: "rgba(255, 255, 255, 0.3)",
             margin: "4px auto 0",
           }}
         />
@@ -135,11 +126,11 @@ export default function QuantumCriticalMinerals() {
           width: 3px;
         }
         .minerals-grid::-webkit-scrollbar-track {
-          background: #1c2541;
+          background: rgba(0, 0, 0, 0.2);
           border-radius: 3px;
         }
         .minerals-grid::-webkit-scrollbar-thumb {
-          background: #5bc0eb;
+          background: rgba(255, 255, 255, 0.3);
           border-radius: 3px;
         }
 
@@ -159,8 +150,7 @@ export default function QuantumCriticalMinerals() {
   );
 }
 
-function MineralCard({ mineral, description, category, highlight }) {
-  const borderColor = highlight ? "#5BC0EB" : "#3A506B";
+function MineralCard({ description, category, highlight }) {
   const bgAccent = highlight ? "#EBF5FF" : "#F0F4F8";
 
   return (
@@ -184,12 +174,11 @@ function MineralCard({ mineral, description, category, highlight }) {
         e.currentTarget.style.boxShadow = "0 1px 4px rgba(0,0,0,0.08)";
       }}
     >
-      {/* Category tag with mineral name */}
+      {/* Category tag */}
       <div
         style={{
-          fontSize: "13px",
+          fontSize: "12px",
           fontWeight: "700",
-          textTransform: "uppercase",
           letterSpacing: "0.3px",
           color: "#1C5D99",
           marginBottom: "4px",
@@ -204,7 +193,7 @@ function MineralCard({ mineral, description, category, highlight }) {
       {/* Description */}
       <div
         style={{
-          fontSize: "13px",
+          fontSize: "12px",
           fontWeight: "500",
           color: "#1B2B42",
           lineHeight: 1.3,

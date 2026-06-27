@@ -32,6 +32,8 @@ import DarkSideChinaMinerals from "../infographics/DarkSideChinaMinerals";
 import GlobalMiningCompanies from "../infographics/GlobalMiningCompanies";
 import BariteSnapshot from "../infographics/BariteSnapshot";
 import QuantumMineralsSnapshot from "../infographics/QuantumMineralsSnapshot";
+import G7 from "../infographics/G7";
+import clsx from "clsx";
 
 const BlackWrapper = ({ children }) => {
   return (
@@ -53,6 +55,9 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    <BlackWrapper>
+      <G7 />
+    </BlackWrapper>,
     <BlackWrapper>
       <QuantumMineralsSnapshot />
     </BlackWrapper>,
@@ -168,7 +173,7 @@ export default function TechnologySlider() {
 
     const interval = setInterval(() => {
       nextSlide();
-    }, 50000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [index, isPaused]);
@@ -186,11 +191,11 @@ export default function TechnologySlider() {
     >
       {/* ===== ARROWS ===== */}
       <div className="slider-arrows">
-        <div onClick={prevSlide} className="arrow arrow-left">
+        <div onClick={prevSlide} className={clsx("arrow", "arrow-left")}>
           <FiChevronLeft size={30} color="#fff" />
         </div>
 
-        <div onClick={nextSlide} className="arrow arrow-right">
+        <div onClick={nextSlide} className={clsx("arrow", "arrow-right")}>
           <FiChevronRight size={30} color="#fff" />
         </div>
       </div>
