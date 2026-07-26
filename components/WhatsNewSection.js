@@ -1,17 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { whatsnew } from "@/util/mineralData";
+import clsx from "clsx";
 
 export default function WhatsNewSection() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-  const sortedMineralPosts = [...whatsnew].sort((a, b) => {
-    const dateA = new Date(a.date.replace(/(\d+)(st|nd|rd|th)/, "$1"));
-    const dateB = new Date(b.date.replace(/(\d+)(st|nd|rd|th)/, "$1"));
-    return dateB - dateA;
-  });
+  const sortedMineralPosts = useMemo(() => {
+    return [...whatsnew]
+      .map(item => ({
+        ...item,
+        parsedDate: new Date(item.date.replace(/(\d+)(st|nd|rd|th)/, "$1")).getTime()
+      }))
+      .sort((a, b) => b.parsedDate - a.parsedDate);
+  }, []);
 
   const [isMobile, setIsMobile] = useState(false);
   const whatsNewRef = useRef(null);
@@ -39,7 +43,7 @@ export default function WhatsNewSection() {
     const wheelFn = (e) => {
       const { scrollTop, scrollHeight, clientHeight } = el;
       const atTop = scrollTop === 0;
-      const atBottom = scrollTop + clientHeight >= scrollHeight - 1; 
+      const atBottom = scrollTop + clientHeight >= scrollHeight - 1;
 
       if (!atTop && !atBottom) {
         e.preventDefault();
@@ -55,8 +59,6 @@ export default function WhatsNewSection() {
         return;
       }
     };
-
-
 
     el?.addEventListener("wheel", wheelFn, { passive: false });
     return () => el?.removeEventListener("wheel", wheelFn);
@@ -76,7 +78,7 @@ export default function WhatsNewSection() {
   return (
     <div
       ref={whatsNewRef}
-      className="col-12 col-lg-4 px-3"
+      className={clsx("col-12", "col-lg-4", "px-3")}
       style={{
         height: "535px",
         maxHeight: isMobile ? "none" : "535px",
@@ -88,7 +90,7 @@ export default function WhatsNewSection() {
         backgroundColor: "#ffffff",
         scrollbarWidth: "thin",
         scrollbarColor: "#c1c1c1 #f1f1f1",
-        overscrollBehavior: "auto"
+        overscrollBehavior: "auto",
       }}
     >
       {/* HEADER */}
@@ -281,7 +283,7 @@ export default function WhatsNewSection() {
                   marginLeft: "7px",
                   color: "#2F4156",
                   fontWeight: 500,
-                  width: "100%"
+                  width: "100%",
                 }}
               >
                 <span

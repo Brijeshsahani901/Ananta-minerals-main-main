@@ -474,6 +474,41 @@ const DocumentSlider = () => {
       date: "June, 2026",
       category: "Industry Analysis",
     },
+    {
+      id: "",
+      image: `${basePath}/assets/minerals_images/minerals-agreement.webp`,
+      title:
+        "India’s string of critical minerals agreements and the logic behind them",
+      link: "/supply-chain/minerals-agreement",
+      content:
+        "In 2026, India's push to secure critical mineral supplies gained fresh momentum with a string of bilateral agreements and deals being struck with the United States, Australia, Brazil, Japan, France, and Indonesia.",
+      author: "Aditya Pareek",
+      date: "July, 2026",
+      category: "Industry Analysis",
+    },
+    {
+      id: "",
+      image: `${basePath}/assets/minerals_images/dysporium.webp`,
+      title: "Dysprosium and Terbium for India’s Net Zero Transition",
+      link: "/supply-chain/dysporium-and-teribium",
+      content:
+        "From India’s perspective, dysprosium and terbium are not simply “rare earths”; they are the narrowest technical chokepoints inside the permanent-magnet supply chain that underpins high-efficiency motors and generators. ",
+      author: "Mithilesh Phadke",
+      date: "July, 2026",
+      category: "Industry Analysis",
+    },
+    {
+      id: "",
+      image: `${basePath}/assets/minerals_images/india-japan.webp`,
+      title:
+        "Japan and India to boost cooperation on critical minerals value chain",
+      link: "/supply-chain/india-japan",
+      content:
+        "The Geological Survey of India (GSI) and Japan's Japan Organisation for Metals and Energy Security (JOGMEC), concluded an agreement around the 16th India-Japan Annual Summit in New Delhi on July 2 2026.",
+      author: "Aditya Pareek",
+      date: "July, 2026",
+      category: "Industry Analysis",
+    },
   ];
 
   const parseDate = (dateStr) => {

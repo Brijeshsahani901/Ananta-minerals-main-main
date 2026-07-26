@@ -27,12 +27,17 @@ import CoastalBeaches from "../infographics/CoastalBeaches";
 import HeliumSignificance from "../infographics/HeliumSignificance";
 import MiningBottleneck from "../infographics/MiningBottleneck";
 import JapanIndiaCriticalMinerals from "../infographics/JapanIndiaCriticalMinerals";
+import JapanIndiaValueChain from "../infographics/JapanIndiaValueChain";
 import FeedingIndia from "../infographics/FeedingIndia";
 import DarkSideChinaMinerals from "../infographics/DarkSideChinaMinerals";
 import GlobalMiningCompanies from "../infographics/GlobalMiningCompanies";
 import BariteSnapshot from "../infographics/BariteSnapshot";
 import QuantumMineralsSnapshot from "../infographics/QuantumMineralsSnapshot";
 import G7 from "../infographics/G7";
+import QuadSprintMarathon from "../infographics/QuadSprintMarathon";
+import QuadCriticalMineralPartnership from "../infographics/QuadCriticalMineralPartnership";
+import DysprosiumTerbiumCritical from "../infographics/DysprosiumTerbiumCritical";
+import SodiumIonBatteries from "../infographics/SodiumIonBatteries";
 import clsx from "clsx";
 
 const BlackWrapper = ({ children }) => {
@@ -55,6 +60,21 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    // <BlackWrapper>
+    //   <JapanIndiaCriticalMinerals />
+    // </BlackWrapper>,
+    <BlackWrapper>
+      <SodiumIonBatteries />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <DysprosiumTerbiumCritical />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <QuadCriticalMineralPartnership />
+    </BlackWrapper>,
+    <BlackWrapper>
+      <JapanIndiaValueChain />
+    </BlackWrapper>,
     <BlackWrapper>
       <G7 />
     </BlackWrapper>,
@@ -173,7 +193,7 @@ export default function TechnologySlider() {
 
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 500000);
 
     return () => clearInterval(interval);
   }, [index, isPaused]);

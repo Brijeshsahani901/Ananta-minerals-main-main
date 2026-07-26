@@ -1945,4 +1945,289 @@ export const whatsnew = [
     date: "22 June 2026",
     img: "",
   },
+  {
+    id: 169,
+    title:
+      "Canada backs critical mineral mining corridors and the Greenland molybdenum project",
+    description:
+      "Canada announced up to $73 million for 12 projects, including critical mineral infrastructure and support for Fortune Minerals’ NICO cobalt-gold-bismuth-copper access road. It also supports Greenland Resources’ molybdenum programme. For India, this shows how mining strategy is being paired with roads, processing facilities, Indigenous/community partnership, and export routes — a useful model for Northeast India and mineral-rich regions.",
+    downloadUrl: "#",
+    path: "https://www.miningweekly.com/article/canada-announces-more-federal-investment-for-projects-to-advance-critical-minerals-mining-2026-06-29",
+    author: "Mining Weekly",
+    date: "29 June 2026",
+    img: "",
+  },
+  {
+    id: 170,
+    title:
+      "AI-led exploration begins across Morocco and Botswana critical mineral assets",
+    description:
+      "Aterian and Lithosquare have started exploration programmes using hyperspectral satellite imagery, AI-driven target generation, geophysics, geochemistry, and drilling. For India, this is directly relevant to GSI and state exploration agencies: AI-assisted targeting can help prioritise graphite, REE, nickel-cobalt, and copper prospects before committing expensive drilling budgets.",
+    downloadUrl: "#",
+    path: "https://www.miningweekly.com/article/aterian-lithosquare-start-joint-exploration-programmes-in-morocco-botswana-2026-07-01",
+    author: "Mining Weekly",
+    date: "1 July 2026",
+    img: "",
+  },
+  {
+    id: 171,
+    title:
+      "South Africa gallium potential found alongside rare earth mineralisation",
+    description:
+      "MRG Metals reported significant gallium oxide levels associated with rare earths and magnetite at its Garies project, with further metallurgical test work planned to see whether gallium can be recovered as a by-product. India should track this closely because gallium is critical for semiconductors, EV fast chargers, 5G components, and defence radar — areas where India wants domestic capability.",
+    downloadUrl: "#",
+    path: "https://www.miningweekly.com/article/mrg-metals-confirms-high-levels-of-gallium-in-south-africa-for-byproduct-production-2026-07-02",
+    author: "Mining Weekly",
+    date: "2 July 2026",
+    img: "",
+  },
+  {
+    id: 172,
+    title:
+      "Momentum demonstrates high-purity rare earth recovery from ore and waste",
+    description:
+      "Momentum Technologies produced high-purity Nd-Pr oxide from e-waste and magnet waste, dysprosium from magnet waste, and yttrium from mined feedstock using its modular MSX platform. For India, this is one of the most important tech signals: magnet recycling and modular separation could support India’s REE magnet scheme and reduce dependence on imported separated oxides.",
+    downloadUrl: "#",
+    path: "https://www.miningweekly.com/article/us-rare-earths-refiner-demonstrates-high-purity-rare-earths-production-possible-from-primary-and-waste-streams-2026-06-30",
+    author: "Mining Weekly",
+    date: "30 June 2026",
+    img: "",
+  },
+  {
+    id: 173,
+    title:
+      "MIT spinout validates low-cost copper and gold recovery from BHP waste streams",
+    description:
+      "SiTration tested silicon filtration plus electro-extraction on BHP-linked waste streams, recovering 99.99% gold and 99.9% copper. The company says the method can recover copper, cobalt, nickel, rare earths, and precious metals from difficult waste streams. India’s copper, zinc, aluminium, and mining tailings sectors should track this as a potential route for secondary critical mineral recovery.",
+    downloadUrl: "#",
+    path: "https://www.miningweekly.com/article/mit-spinout-verifies-breakthrough-low-cost-copper-recovery-process-at-bhp-operation-2026-07-01",
+    author: "Mining Weekly",
+    date: "1 July 2026",
+    img: "",
+  },
+  {
+    id: 174,
+    title:
+      "Canada launches critical-minerals accelerator with Teck as first investment agreement",
+    description:
+      "Canada launched the Canada Critical Minerals Accelerator and announced its first strategic investment agreement with Canada Growth Fund and Teck Resources. The framework supports expansion of Teck’s Trail Operations in British Columbia, with potential to double germanium and antimony capacity and add gallium production, strengthening allied refining capacity for strategic materials.",
+    downloadUrl: "#",
+    path: "https://www.canada.ca/en/natural-resources-canada/news/2026/07/canada-announces-first-agreement-under-new-canada-critical-minerals-accelerator.html",
+    author: "Natural Resources Canada",
+    date: "7 July 2026",
+    img: "",
+  },
+  {
+    id: 175,
+    title: "India and France hold first critical-minerals working group",
+    description:
+      "India and France convened their first joint working group on critical minerals, focused on cooperation in exploration, processing, recycling and value-chain diversification. The participation of BRGM and GSI makes this a practical institutional step toward India-Europe collaboration on resilient rare earth and critical mineral supply chains.",
+    downloadUrl: "#",
+    path: "https://economictimes.indiatimes.com/industry/indl-goods/svs/metals-mining/india-and-france-deliberate-critical-minerals-partnerships/articleshow/132241120.cms",
+    author: "The Economic Times",
+    date: "7 July 2026",
+    img: "",
+  },
+  {
+    id: 176,
+    title:
+      "Lynas and JS Link move ahead with Malaysian rare-earth magnet factory",
+    description:
+      "Lynas and South Korea’s JS Link signed a long-term partnership agreement to develop a 3,000 tpa NdFeB permanent magnet plant in Kuantan, Malaysia. Lynas will invest about A$50 million in JS Link and supply rare earth materials to JS Link’s South Korean and Malaysian magnet plants under an exclusive arrangement through January 2038.",
+    downloadUrl: "#",
+    path: "https://company-announcements.afr.com/asx/lyc/6913613f-7989-11f1-b916-36992b3febfd.pdf",
+    author: "Lynas Rare Earths",
+    date: "7 July 2026",
+    img: "",
+  },
+  {
+    id: 177,
+    title:
+      "Eni backs EnergyX’s Chile lithium project with strategic investment",
+    description:
+      "EnergyX announced a $225 million strategic investment from Eni into Project Black Giant in Chile’s Antofagasta region. The deal gives Eni rights to up to about 25% of future lithium production and helps fund a planned direct lithium extraction project targeting 52,500 tpa of lithium carbonate across its first two phases.",
+    downloadUrl: "#",
+    path: "https://energyx.com/press-release/energyx-eni-strategic-investment/",
+    author: "EnergyX",
+    date: "6 July 2026",
+    img: "",
+  },
+  {
+    id: 178,
+    title:
+      "New South Wales selects first projects for critical-minerals royalty deferral",
+    description:
+      "The NSW Government approved Iluka’s Balranald project and Sunrise Energy Metals’ Syerston scandium project as the first users of its royalty deferral scheme. The decision is intended to unlock A$776 million in capital investment and support early-stage production of zircon, rutile, ilmenite, rare earth-bearing concentrates and scandium for civilian and defence supply chains.",
+    downloadUrl: "#",
+    path: "https://www.nsw.gov.au/ministerial-releases/two-major-nsw-critical-minerals-projects-to-benefit-from-australia-first-royalty-deferral-scheme",
+    author: "NSW Government",
+    date: "4 July 2026",
+    img: "",
+  },
+  {
+    id: 179,
+    title:
+      "U.S. DOE awards $75 million for critical materials recovery from coal-based feedstocks",
+    description:
+      "DOE selected five projects to pilot recovery of rare earths and other critical materials from coal and coal-based feedstocks. The awards target market-ready outputs including rare earth elements, germanium, gallium and aluminum, adding another route for domestic U.S. critical-material supply beyond conventional mining.",
+    downloadUrl: "#",
+    path: "https://www.energy.gov/cmei/articles/does-office-critical-minerals-and-energy-innovation-awards-75-million-accelerate",
+    author: "U.S. Department of Energy",
+    date: "1 July 2026",
+    img: "",
+  },
+  {
+    id: 180,
+    title:
+      "DRC tightens cobalt export quota control by reclaiming unused allocations",
+    description:
+      "The Democratic Republic of Congo’s strategic minerals regulator said unused first-half cobalt export quotas would be forfeited and reallocated to the regulator’s own quota. Since Congo accounts for the dominant share of global cobalt supply, this move may prolong tightness in battery-material markets and reinforce the government’s push for more local processing and value addition.",
+    downloadUrl: "#",
+    path: "https://www.supplychainbrain.com/articles/44362-congo-orders-cobalt-miners-to-give-up-unused-export-quotas",
+    author: "Bloomberg via SupplyChainBrain",
+    date: "1 July 2026",
+    img: "",
+  },
+  {
+    id: 181,
+    title:
+      "Arafura signs India-linked offtake term sheet for Nolans rare-earth magnet feed",
+    description:
+      "Arafura signed a binding term sheet with an SPV linked to a privately owned Indian industrial group for up to 500 tpa of rare earth magnet feed from the Nolans project over an initial five-year term. The deal is tied to India’s rare-earth permanent magnet manufacturing incentive scheme and supports Nolans’ role as a non-China source of NdPr, dysprosium and terbium.",
+    downloadUrl: "#",
+    path: "https://wcsecure.weblink.com.au/pdf/ARU/03105455.pdf",
+    author: "Arafura Rare Earths",
+    date: "30 June 2026",
+    img: "",
+  },
+  {
+    id: 182,
+    title:
+      "Kamoa-Kakula copper output update points to second-half recovery after disruption",
+    description:
+      "Ivanhoe reported 64,328 tonnes of copper produced by Kamoa-Kakula in Q2 2026 and said improved mining rates and destocking should materially lift H2 production. The update is relevant for copper supply security because the DRC operation is one of the world’s most important new copper districts and has been recovering from earlier operational disruptions.",
+    downloadUrl: "#",
+    path: "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-reports-64328-tonnes-of-copper-produced-by-kamoa-kakula-in-q2-2026/",
+    author: "Ivanhoe Mines",
+    date: "8 July 2026",
+    img: "",
+  },
+  {
+    id: 183,
+    title:
+      "China’s rare-earth export controls squeeze yttrium-dependent supply chains",
+    description:
+      "The Financial Times reported that China’s tighter rare-earth controls, especially affecting yttrium, are pressuring Japanese and other foreign advanced-material producers while helping Chinese suppliers move up the value chain. The development highlights how export licensing can become a supply-chain choke point for ceramics, electronics and other high-tech uses of rare earths.",
+    downloadUrl: "#",
+    path: "https://www.ft.com/content/541e9027-1e3b-49d8-bfdb-4b54fba1a97e",
+    author: "Financial Times",
+    date: "9 July 2026",
+    img: "",
+  },
+  {
+    id: 184,
+    title: "IEA warns critical mineral security risks are intensifying",
+    description:
+      "The IEA’s new Global Critical Minerals Outlook flags three linked risks: concentrated supply, export restrictions, and declining investment. It notes that fuller implementation of China’s rare earth controls could put major downstream production outside China at risk.",
+    downloadUrl: "#",
+    path: "https://www.iea.org",
+    author: "IEA",
+    date: "16 July 2026",
+    img: "",
+  },
+  {
+    id: 185,
+    title: "EU prepares crisis response for possible rare earth disruption",
+    description:
+      "The European Commission is reportedly forming an emergency task force focused first on China-linked rare earth supply risks, including potential renewed export-control pressure later this year. The move reflects rising concern over Europe’s exposure in automotive, semiconductor, clean-tech, and defence supply chains.",
+    downloadUrl: "#",
+    path: "https://www.ft.com",
+    author: "Financial Times",
+    date: "16 July 2026",
+    img: "",
+  },
+  {
+    id: 186,
+    title:
+      "Critical minerals become a more explicit arena of geopolitical competition",
+    description:
+      "Fresh reporting highlights how China’s controls on rare earths and niche metals are reshaping market behaviour and accelerating Western efforts around stockpiles, domestic processing, and strategic partnerships. The main takeaway is that minerals diplomacy is moving from long-term strategy into near-term crisis management.",
+    downloadUrl: "#",
+    path: "https://www.ft.com",
+    author: "Financial Times",
+    date: "15 July 2026",
+    img: "",
+  },
+  {
+    id: 187,
+    title:
+      "UN pushes critical mineral governance from principles to implementation",
+    description:
+      "At a high-level UN meeting, the UN Task Force on Critical Energy Transition Minerals advanced work on value addition, traceability, mining legacies, artisanal mining, circularity, and country support. The agenda is especially relevant for producer-country bargaining power and responsible supply chains.",
+    downloadUrl: "#",
+    path: "https://unctad.org",
+    author: "UNCTAD",
+    date: "14 July 2026",
+    img: "",
+  },
+  {
+    id: 188,
+    title:
+      "Australia tightens control over China-linked stakes in Northern Minerals",
+    description:
+      "Australia reportedly blocked China-linked investors from voting shares in Northern Minerals, a company tied to the Browns Range heavy rare earths project. The action underscores how foreign-investment screening is becoming a core tool in critical-minerals security policy.",
+    downloadUrl: "#",
+    path: "https://www.theaustralian.com.au",
+    author: "The Australian",
+    date: "14 July 2026",
+    img: "",
+  },
+  {
+    id: 189,
+    title:
+      "India and Australia deepen critical minerals and resource cooperation",
+    description:
+      "India and Australia reaffirmed cooperation on critical minerals, including a refreshed Geoscience Australia-Geological Survey of India MoU for resource mapping and exploration. The leaders also emphasized offtake, processing, value addition, and secure supply chains.",
+    downloadUrl: "#",
+    path: "https://www.pm.gov.au",
+    author: "Australia-India Joint Statement",
+    date: "10 July 2026",
+    img: "",
+  },
+  {
+    id: 190,
+    title:
+      "Australia-India uranium arrangement adds resource-security dimension",
+    description:
+      "Australia and India finalized an administrative arrangement enabling Australian uranium exports to India for peaceful purposes, alongside broader energy and critical-minerals cooperation. This gives India another supply option as it expands non-fossil power capacity.",
+    downloadUrl: "#",
+    path: "https://www.pm.gov.au",
+    author: "Prime Minister of Australia",
+    date: "10 July 2026",
+    img: "",
+  },
+  {
+    id: 191,
+    title:
+      "Canada and Saudi Arabia sign mining and critical minerals agreements",
+    description:
+      "Canada and Saudi Arabia announced 13 commercial agreements and MOUs worth over $1 billion, including mining, critical minerals, and clean-energy projects. The package reflects Saudi Arabia’s push to build mining capacity under Vision 2030 and Canada’s strategy to diversify mineral partnerships.",
+    downloadUrl: "#",
+    path: "https://www.pm.gc.ca",
+    author: "Prime Minister of Canada",
+    date: "9 July 2026",
+    img: "",
+  },
+  {
+    id: 192,
+    title:
+      "Bengaluru startup Vimag Labs advances rare earth-free EV motor platform",
+    description:
+      "Vimag Labs secured an Indian patent for its software-defined, magnet-free electric motor architecture, which aims to deliver permanent-magnet motor performance without rare-earth magnets. The company says it is piloting the technology with two-wheeler and passenger vehicle manufacturers, making it a notable India-linked attempt to reduce EV supply-chain exposure to China-dominated rare earth magnet supply.",
+    downloadUrl: "#",
+    path: "https://electrek.co/2026/07/13/vimag-labs-magnet-free-ev-motor-patent/",
+    author: "ETAuto",
+    date: "13 July 2026",
+    img: "",
+  },
 ];
