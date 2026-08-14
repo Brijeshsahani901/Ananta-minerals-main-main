@@ -6,7 +6,7 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-export default function SodiumIonBatteries() {
+export default function BeyondLithiumIon() {
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -35,57 +35,51 @@ export default function SodiumIonBatteries() {
 
   const data = [
     {
-      category: "62 Mt",
+      category: "Sodium Ion Battery",
       description:
-        "Indonesia holds 62 million tonnes of nickel reserves, supporting long-term supply for stainless steel, batteries and growing domestic processing industries across Sulawesi and Maluku.",
+        "CATL's Naxtra sodium-ion battery has reached a mass-production energy density of 175 Wh/kg and can support electric-car ranges above 400 km. Sodium is abundant and reduces dependence on lithium, nickel and cobalt.",
+      bestSuitedFor: "Affordable EVs, two-wheelers and stationary storage",
+      devStage: "Entering mass production",
       highlight: true,
     },
     {
-      category: "2.6 Mt",
+      category: "Solid-State Batteries",
       description:
-        "Indonesia mined 2.6 million tonnes of nickel in 2025, roughly two-thirds of global production, making it the decisive swing supplier shaping prices, investment decisions and international battery supply chains.",
+        "Factorial and Stellantis have demonstrated automotive-scale solid-state cells with 375 Wh/kg, charging from 15% to 90% in 18 minutes. In June 2026, the technology entered road testing in a Stellantis development vehicle.",
+      bestSuitedFor: "Premium EVs and electric aviation",
+      devStage: "Vehicle testing and pilot production",
       highlight: true,
     },
     {
-      category: "60+ Smelters",
+      category: "Silicon-Anode Lithium-Ion",
       description:
-        "More than 60 operating nickel smelters were recorded by 2024, compared with only two before 2014, showing how export restrictions transformed Indonesia from ore exporter into a processing powerhouse.",
+        "Amprius has launched commercially available silicon-anode cells delivering up to 450 Wh/kg—around 73–80% more energy than conventional graphite-anode lithium-ion cells. Some versions can charge from 0% to 80% in approximately six minutes.",
+      bestSuitedFor: "Drones, satellites, aviation and high-performance vehicles",
+      devStage: "Early commercial deployment",
       highlight: true,
     },
     {
-      category: "355,000 t/year",
+      category: "Lithium-Sulfur Batteries",
       description:
-        "Indonesia's HPAL facilities provide about 355,000 tonnes of annual mixed hydroxide precipitate capacity, converting low-grade laterite into nickel-cobalt electric-vehicle battery production.",
+        "Lithium-sulfur batteries replace nickel- and cobalt-heavy cathodes with abundant sulfur. Lyten reports cells that can be up to 50% lighter than NMC batteries and contain no nickel, manganese, cobalt or graphite. Li-S batteries are already being supplied for UAV applications.",
+      bestSuitedFor: "Aviation, drones, defence and satellites",
+      devStage: "Early commercial and demonstration projects",
       highlight: true,
     },
     {
-      category: "44,000 t",
+      category: "Iron-Air Batteries",
       description:
-        "Indonesia produced 44,000 tonnes of cobalt in 2025, representing 14 percent of global mine output, behind only the Democratic Republic of Congo.",
+        "Form Energy's rechargeable iron-air battery is designed to store electricity for up to 100 hours, using abundant materials including iron, water and air. It targets multi-day renewable-energy gaps rather than electric vehicles.",
+      bestSuitedFor: "National grids and renewable-energy storage",
+      devStage: "Commercial manufacturing and deployment",
       highlight: true,
     },
     {
-      category: "61,000 t",
+      category: "Vanadium Flow Batteries",
       description:
-        "Indonesia produced 61,000 tonnes of tin in 2025 and held 1.4 million tonnes of reserves, sustaining its importance to global electronics, solder, chemicals, packaging and industrial alloy markets.",
-      highlight: true,
-    },
-    {
-      category: "2.9 Bt",
-      description:
-        "Indonesia holds 2.9 billion tonnes of bauxite reserves and mined 10 million tonnes in 2025, providing substantial domestic feedstock for expanding alumina refining and broader aluminium value-chain development.",
-      highlight: true,
-    },
-    {
-      category: "1.5 Mt",
-      description:
-        "Indonesia refined approximately 1.5 million tonnes of alumina in 2025, up from 1.2 million tonnes in 2024, reflecting new capacity and stronger domestic processing following restrictions on raw bauxite exports.",
-      highlight: true,
-    },
-    {
-      category: "US$38-40 Bn",
-      description:
-        "Nickel-derivative exports reached an estimated US$38–40 billion in 2024, rising from US$11.9 billion in 2020 and illustrating the trade impact of Indonesia’s mandatory domestic processing and ore-export restriction strategy.",
+        "Vanadium flow batteries store energy in liquid electrolytes held in external tanks. Invinity's systems provide 4–18 hours of storage, unlimited cycling and an operating life exceeding 30 years. A proposed Swiss project could reach 1.5 GWh, with later expansion to 2.1 GWh.",
+      bestSuitedFor: "Solar and wind integration, industrial sites and microgrids",
+      devStage: "Commercial deployment",
       highlight: true,
     },
   ];
@@ -94,17 +88,16 @@ export default function SodiumIonBatteries() {
     <div
       className={montserrat.className}
       style={{
-        background:
-          "linear-gradient(135deg, #0B132B 0%, #1C2541 50%, #3A506B 100%)",
+        background: "linear-gradient(135deg, #4e342e 0%, #3e2723 50%, #2d2119 100%)",
         borderRadius: "14px",
         padding: "8px 12px",
-        color: "#FFFFFF",
+        color: "#f5ebe0",
         height: "530px",
         display: "flex",
         flexDirection: "column",
-        boxShadow: "0 8px 20px rgba(0,0,0,0.3)",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.5)",
         overflow: "hidden",
-        border: "1px solid rgba(91, 192, 235, 0.3)",
+        border: "1px solid rgba(212, 163, 115, 0.4)",
       }}
     >
       {/* Compact Header */}
@@ -115,17 +108,17 @@ export default function SodiumIonBatteries() {
             fontWeight: "800",
             fontSize: "15px",
             margin: 0,
-            color: "#E0F7FA",
+            color: "#d4a373", // Tan/Bronze
             textTransform: "uppercase",
           }}
         >
-          Indonesia rise in critical minerals ecosystem
+          Beyond Lithium-Ion: The New Age of Batteries
         </h4>
         <div
           style={{
             width: "30px",
             height: "2px",
-            backgroundColor: "#5BC0EB",
+            backgroundColor: "#d4a373",
             margin: "4px auto 0",
           }}
         />
@@ -159,11 +152,11 @@ export default function SodiumIonBatteries() {
           width: 3px;
         }
         .minerals-grid::-webkit-scrollbar-track {
-          background: #1c2541;
+          background: #3e2723;
           border-radius: 3px;
         }
         .minerals-grid::-webkit-scrollbar-thumb {
-          background: #5bc0eb;
+          background: #d4a373;
           border-radius: 3px;
         }
 
@@ -183,9 +176,9 @@ export default function SodiumIonBatteries() {
   );
 }
 
-function MineralCard({ description, category, highlight }) {
-  const borderColor = highlight ? "#5BC0EB" : "#3A506B";
-  const bgAccent = highlight ? "#EBF5FF" : "#F0F4F8";
+function MineralCard({ description, category, bestSuitedFor, devStage, highlight }) {
+  const borderColor = highlight ? "#d4a373" : "#4e342e";
+  const bgAccent = highlight ? "#f5ebe0" : "#e3d5ca";
 
   return (
     <div
@@ -198,6 +191,7 @@ function MineralCard({ description, category, highlight }) {
         flexDirection: "column",
         transition: "transform 0.15s ease, box-shadow 0.15s ease",
         cursor: "pointer",
+        height: "100%",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = "translateY(-1px)";
@@ -215,7 +209,7 @@ function MineralCard({ description, category, highlight }) {
           fontWeight: "700",
           textTransform: "uppercase",
           letterSpacing: "0.3px",
-          color: "#1C5D99",
+          color: "#9c6644",
           marginBottom: "4px",
           display: "flex",
           alignItems: "center",
@@ -230,12 +224,31 @@ function MineralCard({ description, category, highlight }) {
         style={{
           fontSize: "13px",
           fontWeight: "500",
-          color: "#1B2B42",
+          color: "#4e342e",
           lineHeight: 1.3,
           marginTop: "2px",
+          flexGrow: 1,
         }}
       >
         {description}
+      </div>
+      
+      {/* Additional details */}
+      <div
+        style={{
+          fontSize: "11px",
+          color: "#5d4037",
+          borderTop: "1px solid #d4a373",
+          paddingTop: "4px",
+          marginTop: "6px"
+        }}
+      >
+        <div style={{ marginBottom: "2px" }}>
+          <strong style={{ color: "#3e2723" }}>Best suited for:</strong> {bestSuitedFor}
+        </div>
+        <div>
+          <strong style={{ color: "#3e2723" }}>Development stage:</strong> {devStage}
+        </div>
       </div>
     </div>
   );

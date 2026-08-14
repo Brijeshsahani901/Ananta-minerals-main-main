@@ -509,6 +509,18 @@ const DocumentSlider = () => {
       date: "July, 2026",
       category: "Industry Analysis",
     },
+    {
+      id: "",
+      image: `${basePath}/assets/minerals_images/india-uzbekistan.webp`,
+      title:
+        "Central Asia and Uzbekistan pop up on India’s critical minerals agenda",
+      link: "/supply-chain/india-uzbekistan",
+      content:
+        "Central Asia has occupied a curious position in India’s foreign policy thinking for three decades since the fall of the Soviet Union.",
+      author: "Aditya Pareek",
+      date: "August, 2026",
+      category: "Industry Analysis",
+    },
   ];
 
   const parseDate = (dateStr) => {

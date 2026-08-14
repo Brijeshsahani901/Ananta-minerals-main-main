@@ -38,6 +38,7 @@ import QuadSprintMarathon from "../infographics/QuadSprintMarathon";
 import QuadCriticalMineralPartnership from "../infographics/QuadCriticalMineralPartnership";
 import DysprosiumTerbiumCritical from "../infographics/DysprosiumTerbiumCritical";
 import SodiumIonBatteries from "../infographics/SodiumIonBatteries";
+import BeyondLithiumIon from "../infographics/BeyondLithiumIon";
 import clsx from "clsx";
 
 const BlackWrapper = ({ children }) => {
@@ -63,6 +64,10 @@ export default function TechnologySlider() {
     // <BlackWrapper>
     //   <JapanIndiaCriticalMinerals />
     // </BlackWrapper>,
+
+    <BlackWrapper>
+      <BeyondLithiumIon />
+    </BlackWrapper>,
     <BlackWrapper>
       <SodiumIonBatteries />
     </BlackWrapper>,
@@ -193,7 +198,7 @@ export default function TechnologySlider() {
 
     const interval = setInterval(() => {
       nextSlide();
-    }, 500000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [index, isPaused]);
