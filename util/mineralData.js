@@ -2394,5 +2394,145 @@ export const whatsnew = [
     author: "NOAA",
     date: "3 August 2026",
     img: "",
-  }
+  },
+  {
+    id: 208,
+    title:
+      "U.S. backs commercial-scale silicon-anode production with a US$1.4 billion loan",
+    description:
+      "The U.S. Department of War’s Office of Strategic Capital announced a conditional US$1.4 billion loan for Sila Nanotechnologies. The financing is intended to expand domestic silicon-carbon anode manufacturing and support specialty battery cells for demanding industrial, drone and defence applications, addressing a major upstream dependency in advanced lithium-ion batteries.",
+    downloadUrl: "#",
+    path: "https://www.whitehouse.gov/",
+    author: "White House / Associated Press",
+    date: "7 August 2026",
+    img: "",
+  },
+  {
+    id: 209,
+    title:
+      "Pentagon offers US$400 million for an allied scandium mine in Australia",
+    description:
+      "The Office of Strategic Capital signed a conditional US$400 million loan commitment with Sunrise Energy Metals for the Syerston Scandium Project in New South Wales. The project would establish a primary mine-to-metal scandium supply chain outside China for aerospace and defence-grade aluminium alloys.",
+    downloadUrl: "#",
+    path: "https://www.whitehouse.gov/",
+    author: "White House / Associated Press",
+    date: "7 August 2026",
+    img: "",
+  },
+  {
+    id: 210,
+    title:
+      "Niron Magnetics receives US$150 million to scale rare-earth-free magnets",
+    description:
+      "The U.S. government committed US$150 million to expand Niron Magnetics’ iron-nitride permanent-magnet production. The technology uses abundant iron and nitrogen instead of neodymium and other rare earths, offering a potential alternative for motors and defence systems exposed to concentrated magnet supply chains.",
+    downloadUrl: "#",
+    path: "https://www.whitehouse.gov/",
+    author: "White House / Associated Press",
+    date: "7 August 2026",
+    img: "",
+  },
+  {
+    id: 211,
+    title:
+      "U.S. EXIM advances a potential US$1 billion-plus package for Arizona copper",
+    description:
+      "The White House said the U.S. Export-Import Bank is working toward more than US$1 billion of financing for Ivanhoe Electric’s Santa Cruz project in Arizona. The proposed mine is designed to produce 99.99% pure copper cathode on site, avoiding an external smelting step and strengthening domestic refined-copper capacity; the financing remains subject to EXIM’s approval process.",
+    downloadUrl: "#",
+    path: "https://www.whitehouse.gov/",
+    author: "White House / Ivanhoe Electric",
+    date: "7 August 2026",
+    img: "",
+  },
+  {
+    id: 212,
+    title: "Westwater secures US$25 million for Alabama battery-grade graphite",
+    description:
+      "U.S. EXIM approved a US$25 million loan for Westwater Resources’ Alabama graphite platform, which links the Coosa natural-flake deposit with the Kellyton processing plant. The funding advances a prospective domestic source of coated spherical purified graphite, a high-volume lithium-ion battery anode material for which the United States remains heavily import-dependent.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/",
+    author: "Reuters / White House",
+    date: "7 August 2026",
+    img: "",
+  },
+  {
+    id: 213,
+    title:
+      "Global Advanced Metals receives US$25 million for tantalum and niobium processing",
+    description:
+      "U.S. EXIM approved a US$25 million loan to expand Global Advanced Metals’ processing of Australian-mined tantalum and niobium in Pennsylvania. The investment targets two import-dependent materials used in electronics, aerospace alloys, pipelines and other strategic applications.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/",
+    author: "Reuters / White House",
+    date: "7 August 2026",
+    img: "",
+  },
+  {
+    id: 214,
+    title: "U.S. EXIM provides US$8 million for California boron development",
+    description:
+      "5E Advanced Materials is set to receive an US$8 million EXIM loan to advance output from its Fort Cady boron project in California. Boron was added to the U.S. critical-minerals list in 2025 and is important to nuclear energy, armour, specialty glass and advanced materials; the project is targeting commercial production in 2028.",
+    downloadUrl: "#",
+    path: "https://www.reuters.com/",
+    author: "Reuters / White House",
+    date: "7 August 2026",
+    img: "",
+  },
+  {
+    id: 215,
+    title: "New reference prices target opaque critical-mineral markets",
+    description:
+      "S&P Global introduced reference prices for gallium, germanium, tungsten, antimony and neodymium-praseodymium. The U.S. Treasury said the benchmarks should improve price discovery and investment decisions and could support negotiations on mineral-specific price floors among trusted partners, directly addressing a persistent obstacle to financing non-Chinese supply.",
+    downloadUrl: "#",
+    path: "https://home.treasury.gov/",
+    author: "U.S. Department of the Treasury",
+    date: "7 August 2026",
+    img: "",
+  },
+  {
+    id: 216,
+    title:
+      "Elk Creek study expands planned output to eight critical-mineral products",
+    description:
+      "NioCorp’s updated feasibility study recast Nebraska’s Elk Creek project as a 40-year integrated operation producing niobium, scandium, titanium and five rare-earth products. The study estimates a US$4.1 billion pre-tax net present value and US$1.85 billion of upfront capital; completing it also satisfies a key due-diligence requirement for the company’s U.S. EXIM financing application.",
+    downloadUrl: "#",
+    path: "https://niocorp.com/",
+    author: "NioCorp",
+    date: "10 August 2026",
+    img: "",
+  },
+  {
+    id: 217,
+    title:
+      "REalloys fully funds North American heavy-rare-earth expansion",
+    description:
+      "REalloys said the Saskatchewan Research Council rare-earth processing upgrade and a linked heavy-rare-earth metallization facility are now fully funded. The plans target annual capacity of about 525 tonnes of NdPr metal, 30 tonnes of dysprosium oxide and 15 tonnes of terbium oxide at SRC, alongside a separate 50-tonne dysprosium-terbium metallization facility, strengthening a key non-Chinese midstream route.",
+    downloadUrl: "#",
+    path: "https://finance.yahoo.com/",
+    author: "REalloys / GlobeNewswire via Yahoo Finance",
+    date: "13 August 2026",
+    img: "",
+  },
+  {
+    id: 218,
+    title: "India Parliament passes MMDR Amendment Bill, 2026",
+    description:
+      "Parliament passed the Mines and Minerals (Development and Regulation) Amendment Bill, 2026 after introduction in Lok Sabha on 10 August, Lok Sabha passage on 12 August, and Rajya Sabha passage on 13 August. The legislation restricts states’ ability to levy taxes/cesses on mineral rights and mineral-bearing land except under conditions prescribed by the Centre, and contains provisions relevant to critical and strategic mineral development. This is a material change to India’s mining fiscal/regulatory framework and investment environment.",
+    downloadUrl: "#",
+    path: "https://prsindia.org/billtrack/the-mines-and-minerals-development-and-regulation-amendment-bill-2026",
+    author: "PRS",
+    date: "13 August 2026",
+    img: "",
+  },
+  {
+    id: 219,
+    title:
+      "India’s ₹7,280 crore rare-earth permanent magnet scheme attracts 20 bids",
+    description:
+      "The Ministry of Heavy Industries received 20 bids for the Sintered Rare Earth Permanent Magnet (REPM) Manufacturing Scheme. Reported bidders include Larsen & Toubro, Coal India, ReNew, Attero Recycling, 20 Microns, Lohum Magnets & Energy Solutions, NEO Performance Materials, Proterial India and Prozeal Green Energy. The programme targets 6,000 TPA of integrated sintered NdFeB permanent-magnet capacity, with five beneficiaries ultimately expected to receive up to 1,200 TPA each. It is intended to develop an integrated domestic chain from NdPr oxide through finished magnets and reduce India’s exposure to concentrated overseas magnet supply.",
+    downloadUrl: "#",
+    path: "https://pib.gov.in/PressReleasePage.aspx?PRID=2242811&lang=2&reg=48",
+    author: "The Economic Times / PIB",
+    date: "13 August 2026",
+    img: "",
+  },
 ];
