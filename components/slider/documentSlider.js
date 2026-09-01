@@ -509,6 +509,18 @@ const DocumentSlider = () => {
       date: "July, 2026",
       category: "Industry Analysis",
     },
+     {
+      id: "",
+      image: `${basePath}/assets/minerals_images/india-germany.webp`,
+      title:
+        "India-Germany critical minerals cooperation",
+      link: "/supply-chain/india-germany",
+      content:
+        "India permitted 100% foreign direct investment in mineral exploration and mining through the automatic route after the country’s Ministry of Mines introduced a dedicated exploration licence for deep-seated and critical minerals in July 2023.",
+      author: "Aditya Pareek",
+      date: "August, 2026",
+      category: "Industry Analysis",
+    },
     {
       id: "",
       image: `${basePath}/assets/minerals_images/india-uzbekistan.webp`,

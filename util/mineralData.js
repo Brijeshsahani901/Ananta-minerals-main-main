@@ -2535,4 +2535,108 @@ export const whatsnew = [
     date: "13 August 2026",
     img: "",
   },
+  {
+    id: 220,
+    title: "India launches a critical-minerals innovation challenge",
+    description:
+      "The Ministry of Mines launched the Critical Minerals Innovation Hackathon 2026 under the National Critical Mineral Mission, with JNARDDC as host. It seeks working concepts for lithium or rare-earth prospectivity mapping from open data and for a web-based critical-minerals R&D and patent tracker. Entries close on 20 September; this is an early-stage innovation programme, not a project award or commercial deployment.",
+    downloadUrl: "#",
+    path: "https://pib.gov.in/",
+    author: "Press Information Bureau, Government of India",
+    date: "25 August 2026",
+    img: "",
+  },
+  {
+    id: 221,
+    title:
+      "U.S.-backed financing puts Serra Verde’s long-term rare-earth offtake into effect",
+    description:
+      "The special-purpose vehicle supporting purchases from Brazil’s operating Pela Ema mine completed a US$750 million U.S. Department of War capitalization and secured a commitment letter for a further US$500 million debt facility. The government also entered a forward-purchase contract for at least US$300 million of rare-earth products over five years. Serra Verde says its 15-year Phase I offtake, covering mixed rare-earth carbonate with price floors for four magnet elements, is now effective and deliveries are expected in Q4 2026; the debt facility remains subject to final documentation and funding.",
+    downloadUrl: "#",
+    path: "https://www.sec.gov/",
+    author: "U.S. SEC filing — USA Rare Earth / Serra Verde",
+    date: "24 August 2026",
+    img: "",
+  },
+  {
+    id: 222,
+    title:
+      "The Philippines formalizes a policy push into mineral processing and downstream industry",
+    description:
+      "The Department of Finance disclosed Executive Order No. 122, signed on 21 August, establishing a unified framework for the mining and critical-minerals sector. It directs agencies to promote value-added processing, streamline approvals and develop supporting industries such as logistics, recycling and critical-mineral recovery. The order creates a policy and coordination framework; specific projects and incentives still require follow-through.",
+    downloadUrl: "#",
+    path: "https://www.dof.gov.ph/",
+    author: "Philippines Department of Finance",
+    date: "25 August 2026",
+    img: "",
+  },
+  {
+    id: 223,
+    title:
+      "Glencore reaches first nickel ore at its C$2 billion Onaping Depth project",
+    description:
+      "Glencore completed the internal shaft and accessed the high-grade nickel-copper orebody beneath Craig Mine in Sudbury. The project is preparing its first stopes, expects production to begin ramping up ahead of project completion in 2027, and is intended to extend Sudbury nickel output beyond 2040 using an all-electric underground fleet.",
+    downloadUrl: "#",
+    path: "https://www.glencore.ca/",
+    author: "Glencore Canada / Natural Resources Canada",
+    date: "27 August 2026",
+    img: "",
+  },
+  {
+    id: 224,
+    title: "U.S. adds US$100 million to preserve domestic alumina refining",
+    description:
+      "The Department of War announced a follow-on preferred-equity investment in Atlantic Alumina Company, operator of the country’s sole remaining alumina refinery. The new commitment takes federal support to US$400 million and has been paired with US$350 million already committed by existing backers, with another US$50 million expected. The intervention targets a major upstream vulnerability in the aluminum supply chain.",
+    downloadUrl: "#",
+    path: "https://www.defense.gov/",
+    author: "U.S. Department of War",
+    date: "28 August 2026",
+    img: "",
+  },
+  {
+    id: 225,
+    title: "Antimony processing equipment begins moving to Alaska",
+    description:
+      "Nova Minerals shipped nearly 500 tonnes of crushing, ore-sorting, milling, flotation and refining equipment from Seattle to Port MacKenzie. The machinery is expected to arrive in early September so plant construction can begin. The company targets first antimony production in 2027 under a US$43.4 million Defense Production Act award, but commissioning, mine development and related infrastructure remain to be completed.",
+    downloadUrl: "#",
+    path: "https://novaminerals.com.au/",
+    author: "Nova Minerals",
+    date: "27 August 2026",
+    img: "",
+  },
+  {
+    id: 226,
+    title:
+      "South Korean magnet expansion secures a larger power-infrastructure plan",
+    description:
+      "Evolution Metals & Technologies agreed principal terms with KEPCO to expand electricity infrastructure serving its Pohang operations from 130 MW to 750 MW. The company plans a larger factory, adjacent land acquisition and additional equipment to raise rare-earth permanent-magnet capacity from 1,000 to about 10,000 tonnes a year. The scale-up remains prospective: power-supply documents, construction, equipment installation and a conditional Korean government grant must still be completed.",
+    downloadUrl: "#",
+    path: "https://evolutionmetals.com/",
+    author: "Evolution Metals & Technologies",
+    date: "27 August 2026",
+    img: "",
+  },
+  {
+    id: 227,
+    title:
+      "U.S. funds a scalable germanium-recovery demonstration in Missouri",
+    description:
+      "Doe Run received a US$4.08 million Department of War cooperative agreement to move germanium recovery and processing beyond prior pilot work toward a repeatable demonstration using material from its existing operations. The programme is intended to generate the technical and operating evidence needed for a domestic processing pathway; it is not yet commercial production.",
+    downloadUrl: "#",
+    path: "https://www.doerun.com/",
+    author: "The Doe Run Company",
+    date: "27 August 2026",
+    img: "",
+  },
+  {
+    id: 228,
+    title: "NVRO completes a continuous tailings-processing demonstration",
+    description:
+      "NVRO Metals ran its integrated process continuously for 202 hours on material from Hecla Mining’s Greens Creek operation in Alaska, generating engineering, operating and metallurgical data under representative conditions. The campaign supports evaluation of a proposed 35,000-tonne commercial processing trial for complex sulfide tailings containing zinc, copper and other critical metals; a commercial deployment decision has not yet been made.",
+    downloadUrl: "#",
+    path: "https://nvrometals.com/",
+    author: "NVRO Metals",
+    date: "28 August 2026",
+    img: "",
+  },
 ];
