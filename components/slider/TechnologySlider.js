@@ -39,6 +39,7 @@ import QuadCriticalMineralPartnership from "../infographics/QuadCriticalMineralP
 import DysprosiumTerbiumCritical from "../infographics/DysprosiumTerbiumCritical";
 import SodiumIonBatteries from "../infographics/SodiumIonBatteries";
 import BeyondLithiumIon from "../infographics/BeyondLithiumIon";
+import RareEarthReservesRefined from "../infographics/RareEarthReservesRefined";
 import clsx from "clsx";
 
 const BlackWrapper = ({ children }) => {
@@ -61,10 +62,9 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
-    // <BlackWrapper>
-    //   <JapanIndiaCriticalMinerals />
-    // </BlackWrapper>,
-
+    <BlackWrapper key="rare-earth-reserves-refined">
+      <RareEarthReservesRefined />
+    </BlackWrapper>,
     <BlackWrapper>
       <BeyondLithiumIon />
     </BlackWrapper>,

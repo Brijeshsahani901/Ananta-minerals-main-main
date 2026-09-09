@@ -2639,4 +2639,98 @@ export const whatsnew = [
     date: "28 August 2026",
     img: "",
   },
+  {
+    id: 229,
+    title: "India broadens critical-minerals partnership talks",
+    description:
+      "Commerce and Industry Minister Piyush Goyal said India is working with the United States and is also discussing collaboration with the United Kingdom and European partners to secure access to critical minerals and expand processing for domestic needs. These are government-to-government discussions rather than concluded agreements, but they place critical-mineral supply security more firmly within India’s trade and manufacturing diplomacy.",
+    downloadUrl: "#",
+    path: "",
+    author: "Press Information Bureau, Government of India / The Economic Times",
+    date: "2 September 2026",
+    img: "",
+  },
+  {
+    id: 230,
+    title: "Brazil’s Senate clears a national critical-minerals policy",
+    description:
+      "The Senate approved PL 2,780/2024 without substantive changes and sent it for presidential assent. The bill would establish a national policy and industrialization council, provide up to R$7 billion in public support, prioritize domestic processing and traceability, and extend incentive-financing tools to mineral exploration. It is approved legislation awaiting signature, not yet an enacted and implemented law.",
+    downloadUrl: "#",
+    path: "",
+    author: "Brazilian Federal Senate",
+    date: "2 September 2026",
+    img: "",
+  },
+  {
+    id: 231,
+    title:
+      "South32’s Hermosa project completes the U.S. FAST-41 federal permitting process",
+    description:
+      "The U.S. Permitting Council said the US$3.3 billion Arizona zinc-and-manganese mining and processing project became the first mining project covered by FAST-41 to complete federal permitting. Hermosa is designed to produce as many as five federally designated critical minerals; construction and operating execution still lie ahead.",
+    downloadUrl: "#",
+    path: "",
+    author: "U.S. Federal Permitting Improvement Steering Council",
+    date: "2 September 2026",
+    img: "",
+  },
+  {
+    id: 232,
+    title:
+      "Lindian and Carester tie African rare-earth feed to processing in Kazakhstan and France",
+    description:
+      "Lindian Resources signed a technology and engineering agreement for a proposed 8,000-tonne-per-year rare-earth oxide separation facility at Stepnogorsk, Kazakhstan, alongside a binding 10-year offtake with two five-year extension options. Carester would buy 70% of planned mixed heavy rare-earth output for its government-backed Caremag refinery in France; the Kazakhstan facility remains at definitive-feasibility-study stage.",
+    downloadUrl: "#",
+    path: "",
+    author: "Lindian Resources",
+    date: "3 September 2026",
+    img: "",
+  },
+  {
+    id: 233,
+    title: "LG Energy Solution secures long-term U.S. lithium supply",
+    description:
+      "LG Energy Solution announced a binding take-or-pay agreement under which Standard Lithium and Equinor’s Smackover Lithium venture would supply 8,000 tonnes a year of battery-quality lithium carbonate for ten years from the South West Arkansas direct-lithium-extraction project. The contract brings roughly 90% of the project’s targeted offtake volume under commitment, but supply depends on financing, a final investment decision and planned commercial production in 2029.",
+    downloadUrl: "#",
+    path: "",
+    author: "LG Energy Solution / Smackover Lithium",
+    date: "1 September 2026",
+    img: "",
+  },
+  {
+    id: 234,
+    title:
+      "Ownership of Greenland’s Sarfartoq magnet-rare-earth project changes hands",
+    description:
+      "Greenland Mines completed its acquisition of the undeveloped Sarfartoq neodymium-praseodymium project after Greenland government approval, paying US$20 million in cash and US$15 million in securities. Neo Performance Materials became a strategic shareholder and retained rights to take up to 60% of future ore or concentrate for its Silmet separation plant in Estonia; the project is still advancing toward pre-feasibility work and has no declared mineral reserve.",
+    downloadUrl: "#",
+    path: "",
+    author: "Greenland Mines",
+    date: "1 September 2026",
+    img: "",
+  },
+  {
+    id: 235,
+    title:
+      "Geomega moves a Canadian magnet-recycling demonstration plant toward commissioning",
+    description:
+      "Geomega said its rare-earth magnet recycling facility had entered final installation and integration, with process piping more than 75% complete and commissioning targeted for November. Separately, it reported completing bench- and pilot-scale validation of a bauxite-residue circuit that produced titanium dioxide above 98% purity and a rare-earth concentrate above 90%; neither process has yet demonstrated commercial operation.",
+    downloadUrl: "#",
+    path: "",
+    author: "Geomega Resources",
+    date: "2 September 2026",
+    img: "",
+  },
+  {
+    id: 236,
+    title:
+      "U.S. and Australian partners outline a US$100 million magnet-recycling venture in Missouri",
+    description:
+      "US Strategic Metals and Ionic Rare Earths signed a term sheet for a 50:50 joint venture to develop neodymium-iron-boron and samarium-cobalt magnet recycling at USSM’s permitted Fredericktown campus. The proposal combines USSM’s planned US$95 million contribution with Ionic’s recycling technology, but remains non-binding and conditional on definitive agreements and capital commitments.",
+    downloadUrl: "#",
+    path: "",
+    author: "US Strategic Metals",
+    date: "3 September 2026",
+    img: "",
+  },
 ];
+

@@ -533,6 +533,18 @@ const DocumentSlider = () => {
       date: "August, 2026",
       category: "Industry Analysis",
     },
+    {
+      id: "",
+      image: `${basePath}/assets/minerals_images/zambia.webp`,
+      title:
+        "India seeks Copper in Zambia",
+      link: "/supply-chain/india-seeks-copper",
+      content:
+        "India’s search for critical minerals partnerships is not only international but also trans continental, with no one geography being central to its vision.",
+      author: "Aditya Pareek",
+      date: "September, 2026",
+      category: "Industry Analysis",
+    },
   ];
 
   const parseDate = (dateStr) => {
