@@ -133,12 +133,10 @@ export default function RareEarthReservesRefined() {
                 <div className="reserves-heading">
                   <span className="legend-dot reserves-dot" />
                   <span className="heading-title">Reserves</span>
-                  <span className="legend-value">% of total</span>
                 </div>
                 <div className="production-heading">
                   <span className="legend-dot production-dot" />
                   <span className="heading-title">Production</span>
-                  <span className="legend-value">% of total</span>
                 </div>
               </div>
 
@@ -223,11 +221,8 @@ export default function RareEarthReservesRefined() {
           {/* ================= RIGHT SECTION (Refined Imports) ================= */}
           <div className="section-column section-right">
             <div className="section-header">
-              <h3 className="section-title">
-                China&apos;s Share of Refined Metal Imports
-                <span className="title-sub">
-                  Top 10 economies in 2026 by nominal GDP
-                </span>
+              <h3 className="section-title mb-3">
+                Top 10 economies in 2026 by nominal GDP
               </h3>
             </div>
 

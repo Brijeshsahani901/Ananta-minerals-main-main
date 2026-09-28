@@ -533,6 +533,18 @@ const DocumentSlider = () => {
       date: "August, 2026",
       category: "Industry Analysis",
     },
+     {
+      id: "",
+      image: `${basePath}/assets/minerals_images/summit.webp`,
+      title:
+        "Critical Minerals at the 18th BRICS summit",
+      link: "/supply-chain/summit",
+      content:
+        "At the 18th BRICS Summit hosted by India between September 12-13 2026, discussions focused primarily on multilateral cooperation in both economic and security spheres.",
+      author: "Aditya Pareek",
+      date: "September, 2026",
+      category: "Industry Analysis",
+    },
     {
       id: "",
       image: `${basePath}/assets/minerals_images/zambia.webp`,

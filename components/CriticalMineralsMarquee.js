@@ -11,38 +11,98 @@ export default function CriticalMineralsMarquee() {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  const mineralsData = [
-    { name: "Aluminium", price: 3.24, change: -8.475, previous: 3.54 },
-    { name: "Cobalt", price: 56.29, change: 0.0, previous: 56.29 },
-    { name: "Copper", price: 14.52, change: 1.61, previous: 14.29 },
-    { name: "Gallium", price: 269.07, change: -11.242, previous: 303.15 },
-    { name: "Indium", price: 815.38, change: 16.083, previous: 702.41 },
-    { name: "Lithium", price: 21.87, change: -13.249, previous: 25.21 },
-    {
-      name: "Molybdenum",
-      price: 91.54,
-      change: 4.474,
-      previous: 87.62,
-    },
-    {
-      name: "Neodymium",
-      price: 141.58,
-      change: 2.128,
-      previous: 138.63,
-    },
-    { name: "Nickel", price: 16.77, change: -5.734, previous: 17.79 },
-    {
-      name: "Palladium",
-      price: 42471.14,
-      change: 2.882,
-      previous: 41281.56,
-    },
-    { name: "Silver", price: 2078.87, change: -3.535, previous: 2155.06 },
-    { name: "Tellurium", price: 119.34, change: -1.583, previous: 121.26 },
-    { name: "Tin", price: 55.82, change: 5.62, previous: 52.85 },
-    { name: "Uranium", price: 192.13, change: 2.11, previous: 188.16 },
-    { name: "Zinc", price: 3.74, change: 4.469, previous: 3.58 },
-  ];
+const mineralsData = [
+  {
+    name: "Aluminium",
+    price: 3.26,
+    change: 0.62,
+    previous: 3.24,
+  },
+  {
+    name: "Cobalt",
+    price: 39.77,
+    change: -29.35,
+    previous: 56.29,
+  },
+  {
+    name: "Copper",
+    price: 14.75,
+    change: 1.58,
+    previous: 14.52,
+  },
+  {
+    name: "Gallium",
+    price: 262.85,
+    change: -2.31,
+    previous: 269.07,
+  },
+  {
+    name: "Indium",
+    price: 787.81,
+    change: -3.38,
+    previous: 815.38,
+  },
+  {
+    name: "Lithium",
+    price: 20.07,
+    change: -8.23,
+    previous: 21.87,
+  },
+  {
+    name: "Molybdenum",
+    price: 92.67,
+    change: 1.23,
+    previous: 91.54,
+  },
+  {
+    name: "Neodymium",
+    price: 141.88,
+    change: 0.21,
+    previous: 141.58,
+  },
+  {
+    name: "Nickel",
+    price: 16.38,
+    change: -2.33,
+    previous: 16.77,
+  },
+  {
+    name: "Palladium",
+    price: 42262.16,
+    change: -0.49,
+    previous: 42471.14,
+  },
+  {
+    name: "Silver",
+    price: 2117.77,
+    change: 1.87,
+    previous: 2078.87,
+  },
+  {
+    name: "Tellurium",
+    price: 119.25,
+    change: -0.08,
+    previous: 119.34,
+  },
+  {
+    name: "Tin",
+    price: 53.7,
+    change: -3.8,
+    previous: 55.82,
+  },
+  {
+    name: "Uranium",
+    price: 197.75,
+    change: 2.93,
+    previous: 192.13,
+  },
+  {
+    name: "Zinc",
+    price: 3.92,
+    change: 4.81,
+    previous: 3.74,
+  },
+];
 
   useEffect(() => {
     const animate = (time) => {

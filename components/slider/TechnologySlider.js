@@ -40,6 +40,7 @@ import DysprosiumTerbiumCritical from "../infographics/DysprosiumTerbiumCritical
 import SodiumIonBatteries from "../infographics/SodiumIonBatteries";
 import BeyondLithiumIon from "../infographics/BeyondLithiumIon";
 import RareEarthReservesRefined from "../infographics/RareEarthReservesRefined";
+import IndiaNetZeroMinerals from "../infographics/IndiaNetZeroMinerals";
 import clsx from "clsx";
 
 const BlackWrapper = ({ children }) => {
@@ -62,6 +63,9 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    <BlackWrapper key="india-net-zero-minerals">
+      <IndiaNetZeroMinerals />
+    </BlackWrapper>,
     <BlackWrapper key="rare-earth-reserves-refined">
       <RareEarthReservesRefined />
     </BlackWrapper>,
