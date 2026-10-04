@@ -535,6 +535,18 @@ const DocumentSlider = () => {
     },
      {
       id: "",
+      image: `${basePath}/assets/minerals_images/green-hydrogen.webp`,
+      title:
+        "The Mineral Behind India’s Green Hydrogen Ambition",
+      link: "/supply-chain/green-hydrogen",
+      content:
+        "In 2023, India announced a target of producing at least five million metric tonnes (MMT) of green hydrogen annually by 2030.",
+      author: "Mithilesh Phadke",
+      date: "September, 2026",
+      category: "Industry Analysis",
+    },
+     {
+      id: "",
       image: `${basePath}/assets/minerals_images/summit.webp`,
       title:
         "Critical Minerals at the 18th BRICS summit",
@@ -545,6 +557,7 @@ const DocumentSlider = () => {
       date: "September, 2026",
       category: "Industry Analysis",
     },
+    
     {
       id: "",
       image: `${basePath}/assets/minerals_images/zambia.webp`,

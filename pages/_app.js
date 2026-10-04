@@ -1,4 +1,5 @@
-import { Inter } from 'next/font/google'
+import { Inter } from "@/lib/fonts"
+import Head from "next/head"
 import Preloader from "@/components/elements/Preloader"
 import { useEffect, useState } from "react"
 import 'swiper/css'

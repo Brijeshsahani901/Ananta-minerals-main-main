@@ -18,7 +18,7 @@ import {
 } from "chart.js";
 
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import { Montserrat } from "next/font/google";
+import { Montserrat } from "@/lib/fonts";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

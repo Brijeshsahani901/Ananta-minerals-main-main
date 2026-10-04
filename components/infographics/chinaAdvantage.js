@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { Montserrat } from "next/font/google";
+import { Montserrat } from "@/lib/fonts";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

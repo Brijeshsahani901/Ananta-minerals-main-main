@@ -41,6 +41,7 @@ import SodiumIonBatteries from "../infographics/SodiumIonBatteries";
 import BeyondLithiumIon from "../infographics/BeyondLithiumIon";
 import RareEarthReservesRefined from "../infographics/RareEarthReservesRefined";
 import IndiaNetZeroMinerals from "../infographics/IndiaNetZeroMinerals";
+import GreenHydrogenElectrolysers from "../infographics/GreenHydrogenElectrolysers";
 import clsx from "clsx";
 
 const BlackWrapper = ({ children }) => {
@@ -63,6 +64,9 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    <BlackWrapper key="green-hydrogen-electrolysers">
+      <GreenHydrogenElectrolysers />
+    </BlackWrapper>,
     <BlackWrapper key="india-net-zero-minerals">
       <IndiaNetZeroMinerals />
     </BlackWrapper>,

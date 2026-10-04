@@ -8,7 +8,7 @@ import {
   Battery,
   DollarSign,
 } from "react-feather";
-import { Montserrat } from "next/font/google";
+import { Montserrat } from "@/lib/fonts";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

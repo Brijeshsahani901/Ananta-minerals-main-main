@@ -908,7 +908,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
-import { Montserrat } from "next/font/google";
+import { Montserrat } from "@/lib/fonts";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

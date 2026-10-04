@@ -1,4 +1,4 @@
-import { Montserrat, Playfair_Display } from "next/font/google";
+import { Montserrat, Playfair_Display } from "@/lib/fonts";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

@@ -1,4 +1,4 @@
-import { Montserrat } from "next/font/google";
+import { Montserrat } from "@/lib/fonts";
 import { useState, useEffect } from "react";
 
 const montserrat = Montserrat({

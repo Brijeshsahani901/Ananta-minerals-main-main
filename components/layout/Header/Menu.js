@@ -7,7 +7,7 @@ import { getAllSearchItems } from "@/util/searchItems";
 import Swal from "sweetalert2";
 import { usePathname } from "next/navigation";
 
-import { Lato } from "next/font/google";
+import { Lato } from "@/lib/fonts";
 
 const lato = Lato({
   subsets: ["latin"],
