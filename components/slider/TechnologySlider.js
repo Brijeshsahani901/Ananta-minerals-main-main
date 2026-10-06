@@ -42,6 +42,7 @@ import BeyondLithiumIon from "../infographics/BeyondLithiumIon";
 import RareEarthReservesRefined from "../infographics/RareEarthReservesRefined";
 import IndiaNetZeroMinerals from "../infographics/IndiaNetZeroMinerals";
 import GreenHydrogenElectrolysers from "../infographics/GreenHydrogenElectrolysers";
+import FertilizerCrossfire from "../infographics/FertilizerCrossfire";
 import clsx from "clsx";
 
 const BlackWrapper = ({ children }) => {
@@ -64,6 +65,9 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    <BlackWrapper key="fertilizer-crossfire">
+      <FertilizerCrossfire />
+    </BlackWrapper>,
     <BlackWrapper key="green-hydrogen-electrolysers">
       <GreenHydrogenElectrolysers />
     </BlackWrapper>,
