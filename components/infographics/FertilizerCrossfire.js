@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Montserrat, Playfair_Display } from 'next/font/google';
+import React, { useState } from "react";
+import { Montserrat, Playfair_Display } from "next/font/google";
 
-const montserrat = Montserrat({ subsets: ['latin'] });
-const playfair = Playfair_Display({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ["latin"] });
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export default function FertilizerCrossfire() {
   const [hoveredInfo, setHoveredInfo] = useState(null);
@@ -68,7 +68,11 @@ export default function FertilizerCrossfire() {
               International Sulphur price <span>(USD/ Metric Tonne)</span>
             </h3>
             <div className="fc-svg-container">
-              <svg viewBox="0 0 380 210" className="fc-svg" preserveAspectRatio="xMidYMid meet">
+              <svg
+                viewBox="0 0 380 220"
+                className="fc-svg"
+                preserveAspectRatio="xMidYMid meet"
+              >
                 <defs>
                   <marker
                     id="arrow-iran-1"
@@ -126,7 +130,7 @@ export default function FertilizerCrossfire() {
                   <text
                     key={idx}
                     x={item.x}
-                    y="212"
+                    y="210"
                     textAnchor="middle"
                     fontSize="9.5"
                     fontWeight="500"
@@ -152,7 +156,12 @@ export default function FertilizerCrossfire() {
                   r="3.5"
                   fill="#2cb5a0"
                   className="fc-interactive-dot"
-                  onMouseEnter={() => setHoveredInfo({ label: "Jul 2025 Price", val: "$280 / MT" })}
+                  onMouseEnter={() =>
+                    setHoveredInfo({
+                      label: "Jul 2025 Price",
+                      val: "$280 / MT",
+                    })
+                  }
                   onMouseLeave={() => setHoveredInfo(null)}
                 />
                 <text
@@ -174,7 +183,12 @@ export default function FertilizerCrossfire() {
                   r="3.5"
                   fill="#2cb5a0"
                   className="fc-interactive-dot"
-                  onMouseEnter={() => setHoveredInfo({ label: "Jan 2026 Price", val: "$534 / MT" })}
+                  onMouseEnter={() =>
+                    setHoveredInfo({
+                      label: "Jan 2026 Price",
+                      val: "$534 / MT",
+                    })
+                  }
                   onMouseLeave={() => setHoveredInfo(null)}
                 />
                 <text
@@ -196,7 +210,12 @@ export default function FertilizerCrossfire() {
                   r="3.5"
                   fill="#2cb5a0"
                   className="fc-interactive-dot"
-                  onMouseEnter={() => setHoveredInfo({ label: "Jul 2026 Price", val: "$1,050 / MT" })}
+                  onMouseEnter={() =>
+                    setHoveredInfo({
+                      label: "Jul 2026 Price",
+                      val: "$1,050 / MT",
+                    })
+                  }
                   onMouseLeave={() => setHoveredInfo(null)}
                 />
                 <text
@@ -240,10 +259,15 @@ export default function FertilizerCrossfire() {
           {/* Chart 2: Top Producers of Sulphur in 2025 */}
           <div className="fc-panel fc-panel-bar1">
             <h3 className="fc-panel-title">
-              Top Producers of Sulphur in 2025 <span>(Million Metric Tonne)</span>
+              Top Producers of Sulphur in 2025{" "}
+              <span>(Million Metric Tonne)</span>
             </h3>
             <div className="fc-svg-container">
-              <svg viewBox="0 0 420 210" className="fc-svg" preserveAspectRatio="xMidYMid meet">
+              <svg
+                viewBox="0 0 420 220"
+                className="fc-svg"
+                preserveAspectRatio="xMidYMid meet"
+              >
                 {/* Horizontal Grid lines */}
                 {[
                   { val: "20", y: 25 },
@@ -291,7 +315,10 @@ export default function FertilizerCrossfire() {
                         fill="#2b6cb0"
                         className="fc-bar-hover"
                         onMouseEnter={() =>
-                          setHoveredInfo({ label: d.country, val: `${d.value} Million Tonnes` })
+                          setHoveredInfo({
+                            label: d.country,
+                            val: `${d.value} Million Tonnes`,
+                          })
                         }
                         onMouseLeave={() => setHoveredInfo(null)}
                       />
@@ -324,16 +351,24 @@ export default function FertilizerCrossfire() {
             <div className="fc-purple-legend">
               <div className="fc-legend-item">
                 <span className="fc-legend-dot fc-dot-blue" />
-                <span className="fc-legend-text">West Asia (Million Tonnes)</span>
+                <span className="fc-legend-text">
+                  West Asia (Million Tonnes)
+                </span>
               </div>
               <div className="fc-legend-item">
                 <span className="fc-legend-dot fc-dot-teal" />
-                <span className="fc-legend-text">Other regions (Million Tonnes)</span>
+                <span className="fc-legend-text">
+                  Other regions (Million Tonnes)
+                </span>
               </div>
             </div>
 
             <div className="fc-svg-container">
-              <svg viewBox="0 0 350 195" className="fc-svg" preserveAspectRatio="xMidYMid meet">
+              <svg
+                viewBox="0 0 350 205"
+                className="fc-svg"
+                preserveAspectRatio="xMidYMid meet"
+              >
                 {/* Horizontal Grid lines */}
                 {[
                   { val: "2.5", y: 15 },
@@ -433,14 +468,18 @@ export default function FertilizerCrossfire() {
         </div>
 
         {/* Bottom Section - 2 Columns */}
-        <div className="fc-bottom-grid">
+        <div className="fc-bottom-grid mt-4">
           {/* Chart 4: Phosphoric Acid Import Price */}
           <div className="fc-panel fc-panel-line2">
             <h3 className="fc-panel-title">
               Phosphoric Acid Import Price <span>US$ per Tonne</span>
             </h3>
             <div className="fc-svg-container">
-              <svg viewBox="0 0 540 200" className="fc-svg" preserveAspectRatio="xMidYMid meet">
+              <svg
+                viewBox="0 0 540 206"
+                className="fc-svg"
+                preserveAspectRatio="xMidYMid meet"
+              >
                 <defs>
                   <marker
                     id="arrow-iran-2"
@@ -520,7 +559,10 @@ export default function FertilizerCrossfire() {
                       fill="#2cb5a0"
                       className="fc-interactive-dot"
                       onMouseEnter={() =>
-                        setHoveredInfo({ label: `${d.period} Price`, val: `$${d.price} / Tonne` })
+                        setHoveredInfo({
+                          label: `${d.period} Price`,
+                          val: `$${d.price} / Tonne`,
+                        })
                       }
                       onMouseLeave={() => setHoveredInfo(null)}
                     />
@@ -567,13 +609,24 @@ export default function FertilizerCrossfire() {
 
           {/* Chart 5: Potash Contract Price */}
           <div className="fc-panel fc-panel-bar2">
-            <h3 className="fc-panel-title" style={{ textAlign: 'left' }}>
+            <h3 className="fc-panel-title" style={{ textAlign: "left" }}>
               Potash contract price <span>US$ per Tonne</span>
             </h3>
             <div className="fc-svg-container">
-              <svg viewBox="0 0 480 200" className="fc-svg" preserveAspectRatio="xMidYMid meet">
+              <svg
+                viewBox="0 0 480 206"
+                className="fc-svg"
+                preserveAspectRatio="xMidYMid meet"
+              >
                 {/* Horizontal Baseline & Ticks at Bottom */}
-                <line x1="85" y1="168" x2="385" y2="168" stroke="#cbd5e1" strokeWidth="1.2" />
+                <line
+                  x1="85"
+                  y1="168"
+                  x2="385"
+                  y2="168"
+                  stroke="#cbd5e1"
+                  strokeWidth="1.2"
+                />
 
                 {[
                   { val: "0", x: 85 },
@@ -624,7 +677,10 @@ export default function FertilizerCrossfire() {
                     fill="#2b6cb0"
                     className="fc-bar-hover"
                     onMouseEnter={() =>
-                      setHoveredInfo({ label: "June 2025 Potash Price", val: "$350 / Tonne" })
+                      setHoveredInfo({
+                        label: "June 2025 Potash Price",
+                        val: "$350 / Tonne",
+                      })
                     }
                     onMouseLeave={() => setHoveredInfo(null)}
                   />
@@ -650,7 +706,10 @@ export default function FertilizerCrossfire() {
                     fill="#2b6cb0"
                     className="fc-bar-hover"
                     onMouseEnter={() =>
-                      setHoveredInfo({ label: "June 2026 Potash Price", val: "$384 / Tonne" })
+                      setHoveredInfo({
+                        label: "June 2026 Potash Price",
+                        val: "$384 / Tonne",
+                      })
                     }
                     onMouseLeave={() => setHoveredInfo(null)}
                   />
@@ -658,8 +717,8 @@ export default function FertilizerCrossfire() {
 
                 {/* Change : 9.7% Annotation */}
                 <text
-                  x="385"
-                  y="102"
+                  x="340"
+                  y="34"
                   textAnchor="start"
                   fontSize="13.5"
                   fontWeight="700"
@@ -677,6 +736,7 @@ export default function FertilizerCrossfire() {
       <style jsx>{`
         .fc-outer-wrapper {
           width: 100%;
+          height: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -686,32 +746,36 @@ export default function FertilizerCrossfire() {
         }
 
         .fc-card {
-          width: 100%; 
-          height: 530px; 
+          width: 100%;
+          height: 540px;
+          min-height: 540px;
           /* Adjusted gradient: Much lighter at top, darker at bottom */
           background: linear-gradient(to bottom, #f7f9f8 0%, #b8c7be 100%);
-          border-radius: 0px; 
-          box-shadow: none; 
+          border-radius: 0px;
+          box-shadow: none;
           color: #111827;
           position: relative;
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
-          padding: 20px 24px;
+          padding: 0 24px;
         }
 
         .fc-main-header {
           text-align: center;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
+          padding-top: 14px;
+          flex-shrink: 0;
         }
 
         .fc-title {
-          font-size: 28px; 
+          font-size: 25px;
           font-weight: 700;
           color: #111827;
-          margin: 0;
-          letter-spacing: -0.5px;
-          line-height: 1.2;
+          margin: 0 auto;
+          max-width: 82%;
+          letter-spacing: -0.4px;
+          line-height: 1.25;
         }
 
         .fc-floating-tooltip {
@@ -745,8 +809,8 @@ export default function FertilizerCrossfire() {
           grid-template-columns: 31% 37% 32%;
           gap: 16px;
           align-items: stretch;
-          margin-bottom: 20px;
-          flex: 1; 
+          margin-bottom: 12px;
+          flex: 1;
           min-height: 0;
         }
 
@@ -754,10 +818,11 @@ export default function FertilizerCrossfire() {
         .fc-bottom-grid {
           display: grid;
           grid-template-columns: 52% 48%;
-          gap: 20px;
+          gap: 50px;
           align-items: stretch;
-          flex: 1; 
+          flex: 1;
           min-height: 0;
+          margin-bottom: 6px;
         }
 
         .fc-panel {
@@ -773,9 +838,8 @@ export default function FertilizerCrossfire() {
           background: transparent;
         }
 
-        /* Pushes the content to the bottom to align the heading closer to the chart */
         .fc-panel-bar2 {
-          justify-content: flex-end; 
+          justify-content: space-between;
         }
 
         .fc-panel-title {
@@ -788,7 +852,7 @@ export default function FertilizerCrossfire() {
         }
 
         .fc-panel-title span {
-          font-weight: 700; 
+          font-weight: 700;
           font-style: italic;
           color: #111827;
         }
@@ -850,7 +914,9 @@ export default function FertilizerCrossfire() {
         }
 
         .fc-bar-hover {
-          transition: opacity 0.2s ease, filter 0.2s ease;
+          transition:
+            opacity 0.2s ease,
+            filter 0.2s ease;
           cursor: pointer;
         }
 
@@ -897,11 +963,7 @@ export default function FertilizerCrossfire() {
 
           .fc-bottom-grid {
             grid-template-columns: 1fr;
-            gap: 20px;
-          }
-
-          .fc-card {
-            padding: 16px 14px;
+            gap: 50px;
           }
         }
 
