@@ -3172,5 +3172,104 @@ export const whatsnew = [
     date: "30 September 2026",
     img: "",
   },
+  {
+    id: 277,
+    title: "India opens applications for its first regulated mineral exchange",
+    description:
+      "The Indian Bureau of Mines invited eligible companies to establish and operate a technology-enabled, delivery-based mineral exchange under the Mineral Exchange Rules, 2026. The initial framework covers iron ore, chromite, bauxite, limestone and manganese; applications close on 2 November, and registration would run for 25 years. This moves India’s mineral-exchange framework from rulemaking toward operator selection and eventual market-based price discovery.",
+    downloadUrl: "#",
+    path: "https://ibm.gov.in/IBMPortal/news/news/notice-for-inviting-application-for-registration-of-mineral-exchange",
+    author: "Indian Bureau of Mines, Business Standard",
+    date: "3 October 2026",
+    img: "",
+  },
+  {
+    id: 278,
+    title: "Construction begins at Australia’s integrated Nolans rare-earth project",
+    description:
+      "Site construction formally started at Arafura Rare Earths’ Nolans project in the Northern Territory. The ore-to-oxide development is backed by A$1.2 billion of Australian government support alongside financing from allied-country agencies, and the government says it could supply 4–5% of global rare-earth demand once operating.",
+    downloadUrl: "#",
+    path: "https://www.minister.industry.gov.au/t-ayres/media/construction-starts-arafura-rare-earths-project",
+    author: "Australian Department of Industry, Science and Resources",
+    date: "8 October 2026",
+    img: "",
+  },
+  {
+    id: 279,
+    title: "Greenland approves Tanbreez mining and closure plans through 2050",
+    description:
+      "Greenland’s government formally approved the operating and rehabilitation plans for Critical Metals Corp.’s Tanbreez heavy-rare-earth project. The company still requires activity-specific operating permits before construction, so this is a major regulatory de-risking step rather than a final construction authorization.",
+    downloadUrl: "#",
+    path: "https://www.criticalmetalscorp.com/critical-metals-corp-nasdaq-crml-announces-receipt-of-formal-greenland-government-mining-approvals-for-the-tanbreez-mine-valid-through-the-year-2050/",
+    author: "Critical Metals Corp.",
+    date: "5 October 2026",
+    img: "",
+  },
+  {
+    id: 280,
+    title: "Aclara advances both separation and rare-earth alloy-making",
+    description:
+      "Aclara expanded its planned Louisiana separation plant to include yttrium, gadolinium and samarium alongside NdPr, dysprosium and terbium, and began installing additional solvent-extraction circuits at its Virginia demonstration facility. A day later, its 50:50 venture with CAP inaugurated a Chilean demonstration plant designed to produce up to 175 kg per day of rare-earth metal and alloy at a minimum 99.5% purity. Together, the milestones extend the proposed chain from ionic-clay feedstock through separated oxides to metals and alloys, while remaining at demonstration and pre-construction stages.",
+    downloadUrl: "#",
+    path: "https://www.prnewswire.com/news-releases/aclara-expands-project-dynamo-to-include-yttrium-gadolinium-and-samarium-separation-302899683.html",
+    author: "Aclara, PR Newswire",
+    date: "6–7 October 2026",
+    img: "",
+  },
+  {
+    id: 281,
+    title: "Renascor produces battery-grade spherical graphite at its Adelaide demonstration plant",
+    description:
+      "Renascor reported 99.97% carbon purity from batch trials using third-party graphite, above the roughly 99.95% benchmark generally required for lithium-ion anodes. The result validates the plant’s hydrofluoric-acid-free purification flow sheet at demonstration scale; runs using Siviour feedstock and customer qualification remain ahead.",
+    downloadUrl: "#",
+    path: "https://renascor.com.au/asx-announcements/",
+    author: "Renascor ASX announcements, Australian Mining",
+    date: "7 October 2026",
+    img: "",
+  },
+  {
+    id: 282,
+    title: "SQM and Marubeni add funding for Altilium’s UK battery-recycling scale-up",
+    description:
+      "The strategic investors joined Altilium’s Series B2 round, with the undisclosed follow-on investment directed toward the ACT3 commercial refinery under construction in Plymouth. ACT3 is designed to process 24,000 end-of-life EV batteries annually into products including nickel mixed hydroxide precipitate, lithium sulphate and graphite; it also has £18.5 million of UK DRIVE35 grant support.",
+    downloadUrl: "#",
+    path: "https://altilium.tech/2026/10/06/strategic-investors-sqm-and-marubeni-reaffirm-commitment-to-altilium-with-follow-on-investment-for-battery-materials-scale-up/",
+    author: "Altilium",
+    date: "6 October 2026",
+    img: "",
+  },
+  {
+    id: 283,
+    title: "NMG and McGill develop a bio-based coating for graphite anode material",
+    description:
+      "Laboratory electrochemical tests found capacity, first-cycle efficiency and fast-charging performance comparable with conventional petroleum-pitch coating. NMG estimates the process could cut direct coating emissions by about 130 kg CO₂e per tonne of coated spherical purified graphite and holds commercial exclusivity, but long-duration cycling and industrial-scale validation are still required.",
+    downloadUrl: "#",
+    path: "https://markets.financialcontent.com/stocks/article/bizwire-2026-10-7-nmg-develops-low-carbon-footprint-anode-material-coating-process-in-collaboration-with-mcgill-university",
+    author: "Nouveau Monde Graphite, Business Wire",
+    date: "7 October 2026",
+    img: "",
+  },
+  {
+    id: 284,
+    title: "Alvo completes its acquisition of Brazil’s Bluebush heavy-rare-earth project",
+    description:
+      "Alvo finalized the purchase contract for the expanded 9,859-hectare tenure and reported new shallow ionic-clay drilling intercepts enriched in dysprosium and terbium. Earlier testwork achieved up to 83% recovery of magnet rare-earth oxides under mild conditions, while new column-leach work is underway; the project remains at exploration and metallurgical-test stage, with no maiden resource yet.",
+    downloadUrl: "#",
+    path: "https://www.marketindex.com.au/asx/alv/announcements/bluebush-contract-completion-and-diamond-drilling-results-3A703629",
+    author: "Alvo Minerals ASX announcement",
+    date: "8 October 2026",
+    img: "",
+  },
+  {
+    id: 285,
+    title: "Feasibility drilling starts at Oregon’s McDermitt lithium project",
+    description:
+      "HiTech Minerals began the first phase of a staged program of up to 168 drill sites, with the 2026 campaign focused on infill, hydrogeological, geotechnical, environmental and metallurgical data. Results are expected in early 2027 and are intended to support a feasibility study; the associated US Elemental business combination remains subject to closing conditions.",
+    downloadUrl: "#",
+    path: "https://uselemental.com/2026/10/05/us-elemental-announces-commencement-of-mcdermitt-phase-1-drilling-program/",
+    author: "US Elemental",
+    date: "5 October 2026",
+    img: "",
+  },
 ];
 

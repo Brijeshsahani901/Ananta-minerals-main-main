@@ -509,11 +509,10 @@ const DocumentSlider = () => {
       date: "July, 2026",
       category: "Industry Analysis",
     },
-     {
+    {
       id: "",
       image: `${basePath}/assets/minerals_images/india-germany.webp`,
-      title:
-        "India-Germany critical minerals cooperation",
+      title: "India-Germany critical minerals cooperation",
       link: "/supply-chain/india-germany",
       content:
         "India permitted 100% foreign direct investment in mineral exploration and mining through the automatic route after the country’s Ministry of Mines introduced a dedicated exploration licence for deep-seated and critical minerals in July 2023.",
@@ -533,11 +532,10 @@ const DocumentSlider = () => {
       date: "August, 2026",
       category: "Industry Analysis",
     },
-     {
+    {
       id: "",
       image: `${basePath}/assets/minerals_images/green-hydrogen.webp`,
-      title:
-        "The Mineral Behind India’s Green Hydrogen Ambition",
+      title: "The Mineral Behind India’s Green Hydrogen Ambition",
       link: "/supply-chain/green-hydrogen",
       content:
         "In 2023, India announced a target of producing at least five million metric tonnes (MMT) of green hydrogen annually by 2030.",
@@ -545,11 +543,10 @@ const DocumentSlider = () => {
       date: "September, 2026",
       category: "Industry Analysis",
     },
-     {
+    {
       id: "",
       image: `${basePath}/assets/minerals_images/summit.webp`,
-      title:
-        "Critical Minerals at the 18th BRICS summit",
+      title: "Critical Minerals at the 18th BRICS summit",
       link: "/supply-chain/summit",
       content:
         "At the 18th BRICS Summit hosted by India between September 12-13 2026, discussions focused primarily on multilateral cooperation in both economic and security spheres.",
@@ -557,17 +554,29 @@ const DocumentSlider = () => {
       date: "September, 2026",
       category: "Industry Analysis",
     },
-    
+
     {
       id: "",
       image: `${basePath}/assets/minerals_images/zambia.webp`,
-      title:
-        "India seeks Copper in Zambia",
+      title: "India seeks Copper in Zambia",
       link: "/supply-chain/india-seeks-copper",
       content:
         "India’s search for critical minerals partnerships is not only international but also trans continental, with no one geography being central to its vision.",
       author: "Aditya Pareek",
       date: "September, 2026",
+      category: "Industry Analysis",
+    },
+
+    {
+      id: "",
+      image: `${basePath}/assets/minerals_images/fertiliser-crossfire.webp`,
+      title:
+        "Fertiliser in the Crossfire: India’s Dependence on Sulphur, Phosphate and Potash",
+      link: `${basePath}/supply-chain/fertiliser-crossfire`,
+      content:
+        "On 28 September 2026, India’s External Affairs Minister, Dr S. Jaishankar, at a New York Conference highlighted the “4F” crisis: Food, Fuel, Fertilisers and Finance.",
+      author: "Mithilesh Phadke",
+      date: "October, 2026",
       category: "Industry Analysis",
     },
   ];

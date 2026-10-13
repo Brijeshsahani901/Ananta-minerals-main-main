@@ -210,7 +210,7 @@ export default function TechnologySlider() {
 
     const interval = setInterval(() => {
       nextSlide();
-    }, 500000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [index, isPaused]);
