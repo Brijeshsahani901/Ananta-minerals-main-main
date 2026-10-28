@@ -43,6 +43,7 @@ import RareEarthReservesRefined from "../infographics/RareEarthReservesRefined";
 import IndiaNetZeroMinerals from "../infographics/IndiaNetZeroMinerals";
 import GreenHydrogenElectrolysers from "../infographics/GreenHydrogenElectrolysers";
 import FertilizerCrossfire from "../infographics/FertilizerCrossfire";
+import MofcomAnnouncement48 from "../infographics/MofcomAnnouncement48";
 import clsx from "clsx";
 
 const BlackWrapper = ({ children }) => {
@@ -65,6 +66,9 @@ const BlackWrapper = ({ children }) => {
 
 export default function TechnologySlider() {
   const slides = [
+    <BlackWrapper key="mofcom-announcement-48">
+      <MofcomAnnouncement48 />
+    </BlackWrapper>,
     <BlackWrapper key="fertilizer-crossfire">
       <FertilizerCrossfire />
     </BlackWrapper>,

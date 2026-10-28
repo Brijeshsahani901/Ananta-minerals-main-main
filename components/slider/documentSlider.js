@@ -569,6 +569,18 @@ const DocumentSlider = () => {
 
     {
       id: "",
+      image: `${basePath}/assets/minerals_images/india-canada.webp`,
+      title: "India-Canada CEPA and Critical Minerals Cooperation",
+      link: `${basePath}/supply-chain/india-canada`,
+      content:
+        "India and Canada are moving towards concluding a Comprehensive Economic Partnership Agreement (CEPA). Purportedly, one of the key pillars of negotiations is cooperation on critical minerals and related sectors.",
+      author: "Aditya Pareek",
+      date: "October, 2026",
+      category: "Industry Analysis",
+    },
+
+    {
+      id: "",
       image: `${basePath}/assets/minerals_images/fertiliser-crossfire.webp`,
       title:
         "Fertiliser in the Crossfire: India’s Dependence on Sulphur, Phosphate and Potash",

@@ -7,11 +7,19 @@ export default function WhatsNew() {
   const criticalRef = useRef(null);
   const sortedWhatsnew = useMemo(() => {
     return [...whatsnew]
-      .map(item => ({
-        ...item,
-        parsedDate: new Date(item.date.replace(/(\d+)(st|nd|rd|th)/, "$1")).getTime()
-      }))
-      .sort((a, b) => b.parsedDate - a.parsedDate);
+      .map(item => {
+        const cleanedDate = item.date
+          ? item.date
+              .replace(/(\d+)\s*[\u2010-\u2015\u2212\-\–\—]\s*(\d+)/, "$2")
+              .replace(/(\d+)(st|nd|rd|th)/gi, "$1")
+          : "";
+        const parsed = new Date(cleanedDate).getTime();
+        return {
+          ...item,
+          parsedDate: isNaN(parsed) ? 0 : parsed,
+        };
+      })
+      .sort((a, b) => (b.parsedDate - a.parsedDate) || (b.id - a.id));
   }, []);
 
   return (

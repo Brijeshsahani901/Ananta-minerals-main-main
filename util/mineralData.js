@@ -3271,5 +3271,115 @@ export const whatsnew = [
     date: "5 October 2026",
     img: "",
   },
+  {
+    id: 286,
+    title: "World Bank and India set a $5 billion critical-minerals partnership target",
+    description:
+      "The World Bank Group launched minerals partnerships with eight countries and plans to lift its sector support fivefold to $19 billion through FY2030. India's partnership aims to mobilize $5 billion by 2031 for exploration, processing parks, rare-earth corridors, advanced manufacturing, recycling and skills.",
+    downloadUrl: "#",
+    path: "https://www.worldbank.org/en/news/press-release/2026/10/16/metals-minerals-country-compacts-launch",
+    author: "World Bank Group",
+    date: "16 October 2026",
+    img: "",
+  },
+  {
+    id: 287,
+    title: "Meerut startup signs MoU for a battery and rare-earth recycling refinery",
+    description:
+      "Circulogy Cleantech signed an MoU with Invest UP for a proposed ₹200 crore refinery in Meerut. The phased project targets 10,000 tonnes of annual material processing at full scale to recover lithium, cobalt and nickel from batteries and rare earths from end-of-life magnets; no commissioning timetable has been disclosed.",
+    downloadUrl: "#",
+    path: "https://www.freepressjournal.in/uttar-pradesh/ups-meerut-to-get-200-crore-lithium-ion-battery-rare-earth-refinery-project-expected-to-create-1300-jobs",
+    author: "Free Press Journal",
+    date: "20 October 2026",
+    img: "",
+  },
+  {
+    id: 288,
+    title: "Hudbay and Mitsubishi approve construction of Arizona's Copper World mine",
+    description:
+      "The partners made a final investment decision on the $2.07 billion initial development, with first production targeted for the second half of 2029. The feasibility study projects average output of 102,000 tonnes of copper a year over the first decade, while Mitsubishi approved an additional equity contribution of up to $423 million.",
+    downloadUrl: "#",
+    path: "https://hudbayminerals.com/investors/press-releases/press-release-details/2026/Hudbay-and-Mitsubishi-Approve-Copper-World-Project-Construction-Advancing-Next-Major-U-S--Copper-Mine-Towards-First-Production-in-2029/default.aspx",
+    author: "Hudbay Minerals",
+    date: "21 October 2026",
+    img: "",
+  },
+  {
+    id: 289,
+    title: "Phoenix Tailings selects Rochester for commercial rare-earth separation",
+    description:
+      "Phoenix chose Eastman Business Park for the separation arm of its $1.2 billion-plus Freedom Project. The planned plant would process more than 18,000 tonnes of mined and recycled feedstock and produce over 4,400 tonnes of separated rare-earth oxides annually at full capacity, with ramp-up planned in 2027 and full production in 2028.",
+    downloadUrl: "#",
+    path: "https://phoenixtailings.com/press/phoenix-tailings-selects-rochester",
+    author: "Phoenix Tailings",
+    date: "20 October 2026",
+    img: "",
+  },
+  {
+    id: 290,
+    title: "Canada and Ontario back Ring of Fire access roads in an $8.7 billion industry plan",
+    description:
+      "The federal and provincial governments announced a joint industrial-support package that includes Ottawa matching Ontario's initial investment of up to C$1 billion over three years for road infrastructure intended to unlock critical-mineral development in northern Ontario's Ring of Fire.",
+    downloadUrl: "#",
+    path: "https://news.ontario.ca/en/release/1008173/premier_ford_and_prime_minister_carney_launch_new_action_plan_to_protect_workers_from_tariffs_and_strengthen_ontario_industries",
+    author: "Government of Ontario",
+    date: "21 October 2026",
+    img: "",
+  },
+  {
+    id: 291,
+    title: "United States finalizes terms for its first offshore minerals lease sale",
+    description:
+      "The Marine Minerals Administration issued the final leasing notice for two areas off American Samoa ahead of a 19 November auction. A lease would initially authorize mapping and other preliminary work only; physical exploration, testing and commercial recovery would still require later regulatory approvals.",
+    downloadUrl: "#",
+    path: "https://www.boem.gov/newsroom/press-releases/mma-announces-final-leasing-notice-first-ever-offshore-mineral-lease-sale",
+    author: "Marine Minerals Administration",
+    date: "19 October 2026",
+    img: "",
+  },
+  {
+    id: 292,
+    title: "Chile plans five additional lithium tenders for 2027",
+    description:
+      "Mining Minister Daniel Mas said the government intends to tender about five more lithium projects after five privately operated projects now awaiting approval are cleared, which he hopes will occur early next year. The plan is intended to help raise annual output from roughly 300,000 tonnes to 700,000 tonnes within five to ten years.",
+    downloadUrl: "#",
+    path: "https://www.miningweekly.com/article/chile-plans-five-new-lithium-tenders-in-push-to-double-output-2026-10-21",
+    author: "Reuters via Mining Weekly",
+    date: "21 October 2026",
+    img: "",
+  },
+  {
+    id: 293,
+    title: "CME prepares the first exchange-traded tungsten futures contract",
+    description:
+      "CME Group plans to launch financially settled tungsten futures in early 2027, subject to regulatory review. The contract will use Fastmarkets' ammonium paratungstate assessment for Rotterdam and Baltimore, creating a forward-pricing and hedging tool for a market that currently relies on spot transactions.",
+    downloadUrl: "#",
+    path: "https://investor.cmegroup.com/news-releases/news-release-details/cme-group-launch-tungsten-futures-meet-rising-demand-critical",
+    author: "CME Group",
+    date: "19 October 2026",
+    img: "",
+  },
+  {
+    id: 294,
+    title: "Strike notice raises near-term risk at Highland Valley Copper",
+    description:
+      "Teck received notice allowing unionized workers at its British Columbia operation to begin strike action from 24 October. The mine remained operating when the notice was issued, and Teck said contingency plans were in place while collective-agreement talks continued.",
+    downloadUrl: "#",
+    path: "https://www.teck.com/news/news-releases/2026/teck-receives-highland-valley-copper-operations-strike-notice",
+    author: "Teck Resources",
+    date: "21 October 2026",
+    img: "",
+  },
+  {
+    id: 295,
+    title: "Saltworks reports lower-cost second-generation direct lithium extraction",
+    description:
+      "Saltworks said its patented flowsheet combines adsorption and pressurized membranes to produce lithium eluate at more than 90% purity while reducing downstream unit operations. Company pilot and engineering comparisons indicate 25% lower capital cost, 40% lower operating cost and 15% higher recovery than its first-generation design; the technology remains at continuous demonstration scale at Project Aurora rather than proven commercial lithium production.",
+    downloadUrl: "#",
+    path: "https://www.saltworkstech.com/news/saltworks-transformative-direct-lithium-extraction-dle-flowsheet-advancements/",
+    author: "Saltworks Technologies",
+    date: "16 October 2026",
+    img: "",
+  },
 ];
 
